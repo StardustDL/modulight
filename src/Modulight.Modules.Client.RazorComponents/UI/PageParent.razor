@@ -1,0 +1,13 @@
+﻿
+<CascadingValue Value="@this" TValue="PageParent">
+    @if (ChildContent is not null)
+    {
+        @ChildContent(this)
+    }
+</CascadingValue>
+
+
+@code{
+    [Parameter]
+    public RenderFragment<PageParent>? ChildContent { get; set; }
+}

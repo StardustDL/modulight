@@ -1,0 +1,48 @@
+﻿@page
+@namespace Modulight.UI.Blazor.Hosting.Areas.Modulights.Pages
+@using Modulight.UI.Blazor.Hosting
+@model HostModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject Modulight.UI.Blazor.Services.IBlazorUIProvider UIProvider
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading... - @UIProvider.SiteInfo.Name</title>
+    <base href="~/" />
+    <link href="@(UIProvider.AppAssembly.GetName().Name).styles.css" rel="stylesheet" />
+</head>
+<body>
+    <component type="@UIProvider.RootComponent" render-mode="@Model.AppRenderMode" />
+
+    <div id="blazor-error-ui" class="alert alert-danger mdi mdi-alert" role="alert" style="display: none">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    @switch (Model.Options.HostingModel)
+    {
+        case HostingModel.Server:
+            <script src="_framework/blazor.server.js"></script>
+            break;
+        case HostingModel.Client:
+            <script src="_framework/blazor.webassembly.js"></script>
+            if (Model.Options.EnableServiceWorker)
+            {
+                <script>navigator.serviceWorker.register('service-worker.js');</script>
+            }
+            break;
+    }
+</body>
+</html>

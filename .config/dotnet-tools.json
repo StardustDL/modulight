@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "strawberryshake.tools": {
+      "version": "11.0.0-preview.138",
+      "commands": [
+        "dotnet-graphql"
+      ]
+    },
+    "dotnet-reportgenerator-globaltool": {
+      "version": "4.8.4",
+      "commands": [
+        "reportgenerator"
+      ]
+    }
+  }
+}

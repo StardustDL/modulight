@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+defaults:
+  run:
+    shell: pwsh
+
+env:
+  COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+
+jobs:
+  ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install docfx
+      run: choco install docfx -y
+    - name: Publish
+      run: ./build.ps1 -t publish
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-${{ matrix.os }}
+        path: ./dist
+  deploy:
+    needs: ci
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: test-windows-latest
+        path: ./dist
+    - name: Deploy packages
+      env:
+        AZ_AUTH_TOKEN: ${{ secrets.AZ_TOKEN }}
+        NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
+      run: ./build.ps1 -e -t Deploy-Packages
+    - name: Deploy documents
+      uses: JamesIves/github-pages-deploy-action@4.0.0
+      with:
+        token: ${{ secrets.PA_TOKEN }}
+        branch: gh-pages
+        folder: ./dist/docs/_site

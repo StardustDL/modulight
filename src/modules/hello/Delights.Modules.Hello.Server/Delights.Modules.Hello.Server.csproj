@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Modulight.Modules.Server.GraphQL\Modulight.Modules.Server.GraphQL.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Delights.Modules.Hello.Shared\Delights.Modules.Hello.Shared.projitems" Label="Shared" />
+
+</Project>

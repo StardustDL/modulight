@@ -1,0 +1,17 @@
+﻿@inject IRazorComponentClientModuleCollection ModuleHost
+
+@ComponentDeclared()
+
+@code{
+    private RenderFragment ComponentDeclared() => builder =>
+    {
+        foreach (var c in ModuleHost.LoadedModules)
+        {
+            foreach (var r in c.GlobalComponents)
+            {
+                builder.OpenComponent(0, r);
+                builder.CloseComponent();
+            }
+        }
+    };
+}

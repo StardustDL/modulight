@@ -1,0 +1,27 @@
+﻿@inject IServiceProvider ServiceProvider
+
+@if (Module?.Icon is null)
+{
+    if (Fallback is not null)
+    {
+        @Fallback
+    }
+}
+else
+{
+    @Module.Icon
+}
+
+@code {
+    /// <summary>
+    /// Module.
+    /// </summary>
+    [Parameter]
+    public IRazorComponentClientModule? Module { get; set; }
+
+    /// <summary>
+    /// Fallback when the module has no icon.
+    /// </summary>
+    [Parameter]
+    public RenderFragment? Fallback { get; set; }
+}

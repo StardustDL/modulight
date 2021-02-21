@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
+    <Authors>StardustDL</Authors>
+    <Copyright>StardustDL</Copyright>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/StardustDL/delights</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StardustDL/delights</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Provide user interfaces for blazor client module hosting.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.3" />
+    <PackageReference Include="StardustDL.RazorComponents.AntDesigns" Version="0.0.2-preview.12" />
+    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="0.0.2-preview.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
+  </ItemGroup>
+
+</Project>

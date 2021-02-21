@@ -1,0 +1,13 @@
+﻿@inject IBlazorUIProvider UIProvider
+
+<Icon>
+    <Component>
+        <ModuleIcon Module="Module" Fallback="@UIProvider.DefaultModuleIcon">
+        </ModuleIcon>
+    </Component>
+</Icon>
+
+@code {
+    [Parameter]
+    public IRazorComponentClientModule? Module { get; set; }
+}

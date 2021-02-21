@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.2" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modulight.Modules.Client.RazorComponents\Modulight.Modules.Client.RazorComponents.csproj" />
+    <ProjectReference Include="..\Modulight.Modules.Core\Modulight.Modules.Core.csproj" />
+    <ProjectReference Include="..\Modulight.Modules.Server.AspNet\Modulight.Modules.Server.AspNet.csproj" />
+    <ProjectReference Include="..\Modulight.Modules.Server.GraphQL\Modulight.Modules.Server.GraphQL.csproj" />
+  </ItemGroup>
+
+</Project>

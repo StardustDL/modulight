@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+		<Authors>StardustDL</Authors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Description>Basic types for razor component client modules in Modulight modular framework.</Description>
+		<PackageProjectUrl>https://github.com/StardustDL/delights</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/StardustDL/delights</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Modulight.Modules.Core\Modulight.Modules.Core.csproj" />
+	</ItemGroup>
+
+</Project>

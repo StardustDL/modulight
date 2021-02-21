@@ -1,0 +1,25 @@
+@using System.Reflection
+@inject IRazorComponentClientModuleCollection ClientModuleHost
+@inject IBlazorUIProvider UIProvider
+
+<Modulight.Modules.Client.RazorComponents.UI.ResourceDeclare />
+
+<Router AppAssembly="@UIProvider.AppAssembly"
+        PreferExactMatches="@true" AdditionalAssemblies="@AdditionalAssemblies"
+        OnNavigateAsync="@OnNavigateAsync" NotFound="@UIProvider.RouterNotFound" Navigating="@UIProvider.RouterNavigating">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@UIProvider.DefaultLayout" />
+    </Found>
+</Router>
+
+@code {
+    List<Assembly> AdditionalAssemblies = new List<Assembly>();
+
+    protected async Task OnNavigateAsync(NavigationContext context)
+    {
+        AdditionalAssemblies.Clear();
+
+        var results = await ClientModuleHost.GetAssembliesForRouting(context.Path, cancellationToken: context.CancellationToken);
+        AdditionalAssemblies.AddRange(results.Where(x => x != UIProvider.AppAssembly));
+    }
+}

@@ -1,0 +1,20 @@
+﻿@code{
+    public static RenderFragment Icon =@<MdiIcon Type="home"></MdiIcon>;
+public static RenderFragment DefaultModuleIcon = @<MdiIcon Type="puzzle" />;
+public static RenderFragment Empty = @<span></span>;
+public static RenderFragment<IBlazorUIProvider> DefaultFooter = context => @<span>
+    <MdiIcon Type="copyright" />
+    @context.SiteInfo.StartTime.Year - @DateTimeOffset.Now.Year, @context.SiteInfo.Onwer, @context.SiteInfo.Name. All rights reserved.
+    Powered by <a href="https://github.com/StardustDL/delights">Modulight</a>.
+</span>;
+public static RenderFragment DefaultRouterNotFound = @<span>
+    <LayoutView Layout="@typeof(MainLayout)">
+        <Result Status="404" Title="Not Found" SubTitle="Sorry, there's nothing at this address."></Result>
+    </LayoutView>
+</span>;
+public static RenderFragment DefaultRouterNavigating = @<span>
+    <LayoutView Layout="@typeof(MainLayout)">
+        <Skeleton Active="true"></Skeleton>
+    </LayoutView>
+</span>;
+}

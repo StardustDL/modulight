@@ -1,0 +1,13 @@
+﻿@page "/"
+@inherits BasePage<Delights.Modules.Hello.HelloModule>
+
+@inject AntDesign.MessageService MessageService
+
+<h3>Index</h3>
+
+@code { 
+    protected override async Task OnInitializedAsync()
+    {
+        await MessageService.Info("Test info");
+    }
+}

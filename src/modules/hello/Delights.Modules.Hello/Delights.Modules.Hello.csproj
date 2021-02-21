@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>annotations</Nullable>
+    <BerryNamespace>$(RootNamespace).GraphQL</BerryNamespace>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="0.0.2-preview.11" />
+    <PackageReference Include="StrawberryShake" Version="11.0.0-preview.137" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Modulight.Modules.Client.RazorComponents\Modulight.Modules.Client.RazorComponents.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Delights.Modules.Hello.Shared\Delights.Modules.Hello.Shared.projitems" Label="Shared" />
+</Project>

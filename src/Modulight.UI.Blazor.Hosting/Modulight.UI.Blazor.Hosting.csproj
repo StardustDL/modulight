@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
+    <Authors>StardustDL</Authors>
+    <Copyright>StardustDL</Copyright>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/StardustDL/delights</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StardustDL/delights</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Support ASP.NET hosting for Modulight.UI.Blazor.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Modulight.Modules.Server.AspNet" Version="0.0.4-preview.25" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modulight.UI.Blazor\Modulight.UI.Blazor.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+﻿@page "/hello"
+@inherits BasePage<Delights.Modules.Hello.HelloModule>
+@inject Hello.ModuleService Service
+
+<h1>Hello World! from @Module.Manifest.Name </h1>
+
+<button @onclick="@OnClick">Click</button>
+
+@foreach(var message in messages)
+{
+    <p>@message.Content</p>
+    <br/>
+}
+
+@code{
+    List<GraphQL.IMessage> messages = new List<GraphQL.IMessage>();
+
+    protected override void OnInitialized()
+    {
+        Parent.Title = "Hello";
+        base.OnInitialized();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        messages = (await Service.GraphQLClient.GetMessagesAsync()).Data?.Messages.Nodes.ToList() ?? new List<GraphQL.IMessage>();
+    }
+
+    void OnClick()
+    {
+        Parent.Title = "Hello!";
+    }
+}

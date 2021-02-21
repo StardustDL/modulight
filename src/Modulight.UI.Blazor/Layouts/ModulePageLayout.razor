@@ -1,0 +1,87 @@
+﻿@inherits LayoutComponentBase
+@inject IBlazorUIProvider UIProvider
+@layout MainLayout
+@inject IModuleHost ModuleHost
+
+<PageParent>
+    <Microsoft.AspNetCore.Components.Web.Extensions.Head.Title Value="@($"{context.Title} - {context.Module?.Manifest.DisplayName} - {UIProvider.SiteInfo.Name}")"></Microsoft.AspNetCore.Components.Web.Extensions.Head.Title>
+
+    <PageHeader>
+        <PageHeaderTitle>
+            @if (context.TitleFragment is not null)
+            {
+                @context.TitleFragment
+            }
+            else
+            {
+                <span>@context.Title</span>
+            }
+        </PageHeaderTitle>
+        <PageHeaderBreadcrumb>
+            @if (context.Breadcrumb is not null)
+            {
+                @context.Breadcrumb
+            }
+            else
+            {
+                <Breadcrumb>
+                    <BreadcrumbItem>
+                        <span>
+                            <AntModuleIcon Module="context.Module"></AntModuleIcon>
+                            <span>@(context.Module?.Manifest.Name ?? "")</span>
+                        </span>
+                    </BreadcrumbItem>
+                </Breadcrumb>
+            }
+        </PageHeaderBreadcrumb>
+        <PageHeaderSubtitle>
+            @if (context.SubtitleFragment is not null)
+            {
+                @context.SubtitleFragment
+            }
+            else
+            {
+            }
+        </PageHeaderSubtitle>
+        <PageHeaderTags>
+            @if (context.Tags is not null)
+            {
+                @context.Tags
+            }
+            else
+            {
+            }
+        </PageHeaderTags>
+        <PageHeaderFooter>
+            @if (context.HeaderFooter is not null)
+            {
+                @context.HeaderFooter
+            }
+            else
+            {
+            }
+        </PageHeaderFooter>
+        <PageHeaderExtra>
+            @if (context.HeaderExtra is not null)
+            {
+                @context.HeaderExtra
+            }
+            else
+            {
+            }
+        </PageHeaderExtra>
+        <PageHeaderContent>
+            @if (context.HeaderContent is not null)
+            {
+                @context.HeaderContent
+            }
+            else
+            {
+            }
+        </PageHeaderContent>
+    </PageHeader>
+
+    <div class="container">
+        @Body
+    </div>
+</PageParent>

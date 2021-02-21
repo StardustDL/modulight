@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\modules\hello\Delights.Modules.Hello.UI\Delights.Modules.Hello.UI.csproj" />
+    <ProjectReference Include="..\..\src\modules\hello\Delights.Modules.Hello\Delights.Modules.Hello.csproj" />
+    <ProjectReference Include="..\..\src\Modulight.UI.Blazor.Hosting\Modulight.UI.Blazor.Hosting.csproj" />
+    <ProjectReference Include="..\Test.Modulights.UI.Wasm\Test.Modulights.UI.Wasm.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
+</Project>
