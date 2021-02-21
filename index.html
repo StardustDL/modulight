@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Modulight | Modulight </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Modulight | Modulight ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    <meta property="docfx:rel" content="">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="modulight">Modulight</h1>
+
+<p><img src="https://github.com/StardustDL/modulight/workflows/CI/badge.svg" alt=""> <img src="https://img.shields.io/github/license/StardustDL/modulight.svg" alt=""> <a href="https://www.nuget.org/packages/Modulight.Modules.Core/"><img src="https://buildstats.info/nuget/Modulight.Modules.Core" alt=""></a></p>
+<p><a href="https://github.com/StardustDL/modulight">Modulight</a> is a light modular framework aimed to be low intrusive based on dependency injection for .NET 5, ASP.NET Core and Blazor.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Dependency injection</li>
+<li>Unified services registering</li>
+<li>Client (Blazor)
+<ul>
+<li>Unified CSS &amp; JS lazy loading &amp; prerendering. No need to append <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code> repeatedly for every razor components, especially when use different hosting models.</li>
+<li>Unified assembly lazy loading.</li>
+<li>Interop between modules and host.</li>
+</ul>
+</li>
+<li>Server (GraphQL cooperated with <a href="https://github.com/ChilliCream/hotchocolate">ChilliCream GraphQL Platform</a>)
+<ul>
+<li>Unified query/mutation/subscription definition</li>
+</ul>
+</li>
+<li>Builtin module options support</li>
+</ul>
+<p>It provides a place to unify resources, and it can be used to make Razor component library easy to use and manage. The user needn't to take care of related services and <code>&lt;script&gt;</code> or <code>&lt;link&gt;</code> tags in <code>index.html</code>.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="use-modules">Use modules</h3>
+<ol>
+<li>Register modules.</li>
+</ol>
+<p>For Razor component &amp; AspNet server modules:</p>
+<pre><code class="lang-cs">services.AddModules(builder =&gt; {
+    builder.AddModule&lt;FooModule&gt;();
+});
+</code></pre>
+<p>For GraphQL server modules:</p>
+<pre><code class="lang-cs">services.AddModules(builder =&gt; {
+    builder.UseGraphQLServerModules().AddModule&lt;FooModule&gt;();
+});
+</code></pre>
+<p>Additional step for AspNet server modules:</p>
+<pre><code class="lang-cs">// in Startup: void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+app.UseAspNetServerModuleMiddlewares();
+
+app.UseEndpoints(endpoints =&gt;
+{
+    // modules mapper
+    endpoints.MapAspNetServerModuleEndpoints();
+    endpoints.MapGraphQLServerModuleEndpoints(postMapEndpoint: (module, builder) =&gt;
+    {
+        builder.RequireCors(cors =&gt;
+        {
+            cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        });
+    });
+    // other mapper, eg:
+    endpoints.MapControllers();
+});
+</code></pre>
+<p>Additional step for GraphQL server modules:</p>
+<pre><code class="lang-cs">// in Startup: void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+app.UseEndpoints(endpoints =&gt;
+{
+    // modules mapper
+    endpoints.MapGraphQLServerModuleEndpoints(postMapEndpoint: (module, builder) =&gt;
+    {
+        builder.RequireCors(cors =&gt;
+        {
+            cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        });
+    });
+    // other mapper, eg:
+    endpoints.MapControllers();
+});
+</code></pre>
+<ol start="3">
+<li>Configure the module initilizing &amp; shutdown.</li>
+</ol>
+<pre><code class="lang-cs">// in Program: Task Main(string[] args)
+
+var host = CreateHostBuilder(args).Build();
+await using var _ = await host.Services.UseModuleHost();
+await host.RunAsync();
+</code></pre>
+<ol start="4">
+<li>For razor components, add <code>ResourceDeclare</code> component to App.razor to load UI resources.</li>
+</ol>
+<pre><code class="lang-razor">&lt;Modulight.Modules.Client.RazorComponents.UI.ResourceDeclare /&gt;
+</code></pre>
+<p>This component will find all resources defined in modules, and render HTML tags for them.</p>
+<p>This works for normal cases, but if you use WebAssembly target, no prerenderring, and the component library need the javascript files to be loaded initially. You can use the following codes to load resources manually.</p>
+<pre><code class="lang-cs">// WebAssemblyHost host;
+await host.Services.GetRazorComponentClientModuleCollection().LoadResources();
+</code></pre>
+<h3 id="use-blazor-ui-template">Use Blazor UI Template</h3>
+<p>Modulight provide a template project for Blazor hosting with Razor Component Client modules.</p>
+<p>Use package <a href="https://www.nuget.org/packages/Modulight.UI.Blazor/">Modulight.UI.Blazor <img src="https://buildstats.info/nuget/Modulight.UI.Blazor?includePreReleases=true" alt=""></a> and <a href="https://www.nuget.org/packages/Modulight.UI.Blazor.Hosting/">Modulight.UI.Blazor.Hosting <img src="https://buildstats.info/nuget/Modulight.UI.Blazor.Hosting?includePreReleases=true" alt=""></a> to try it.</p>
+<p>It provides a navigation layout generated by client modules, and supports prerendering.</p>
+<pre><code class="lang-cs">class CustomBlazorUIProvider : BlazorUIProvider
+ {
+     public CustomBlazorUIProvider(IRazorComponentClientModuleCollection razorComponentClientModuleCollection) : base(razorComponentClientModuleCollection)
+     {
+     }
+ }
+
+// void ConfigureServices(IServiceCollection services)
+
+services.AddModules(builder =&gt;
+{
+    builder.AddServerSideBlazorUI&lt;CustomBlazorUIProvider&gt;();
+});
+
+// void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+app.UseAspNetServerModuleMiddlewares();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseEndpoints(endpoints =&gt;
+{
+    endpoints.MapAspNetServerModuleEndpoints();
+});
+</code></pre>
+<p>A <a href="https://github.com/StardustDL/delights/blob/master/test/Test.Modulights.UI/Startup.cs">Sample startup</a>.</p>
+<h2 id="example-codes">Example codes</h2>
+<p>They are based on nightly build package at:</p>
+<p><a href="https://sparkshine.pkgs.visualstudio.com/StardustDL/_packaging/feed/nuget/v3/index.json">NUGET source</a></p>
+<h3 id="design-a-client-blazor-module">Design a client (Blazor) module</h3>
+<ul>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello/HelloModule.cs">HelloModule.cs</a> Client module definition.</li>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello.UI/Pages/Index.razor">Index.razor</a> Client module pages. It belongs to a different assembly from which Module belongs to because we want this assembly is lazy loading.</li>
+</ul>
+<h3 id="design-a-graphql-server-module">Design a GraphQL server module</h3>
+<ul>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello.Server/HelloServerModule.cs">HelloServerModule.cs</a> GraphQL server module definition.</li>
+</ul>
+<h3 id="use-a-client-module-in-blazor-websites">Use a client module in Blazor websites</h3>
+<ul>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.UI/Shared/ModulePageLayout.razor">ModulePageLayout.razor</a> Layout and container for module pages.</li>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.UI/App.razor">App.razor</a> Lazy loading for js/css/sassemblies when routing.</li>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.UI/UIModule.cs">UIModule.cs</a> Definition of JS/CSS resources.</li>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.Client.Shared/ModuleSetup.cs">ModuleSetup.cs</a> Use modules in client.</li>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.Client/Startup.cs">Startup.cs</a> Blazor Server hosting.</li>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.Client.WebAssembly/Program.cs">Program.cs</a> Blazor WebAssembly hosting.</li>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.Client.WebAssembly/wwwroot/index.html">index.html</a> Clean index.html.</li>
+</ul>
+<h3 id="use-a-graphql-server-module">Use a GraphQL server module</h3>
+<ul>
+<li><a href="https://github.com/StardustDL/delights/blob/master/src/Delights.Api/Startup.cs">Startup.cs</a> GraphQL server integrating.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © StardustDL.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
