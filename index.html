@@ -192,18 +192,18 @@ app.UseEndpoints(endpoints =&gt;
     endpoints.MapAspNetServerModuleEndpoints();
 });
 </code></pre>
-<p>A <a href="https://github.com/StardustDL/delights/blob/master/test/Test.Modulights.UI/Startup.cs">Sample startup</a>.</p>
+<p>A <a href="https://github.com/StardustDL/modulight/blob/master/test/Test.Modulights.UI/Startup.cs">Sample startup</a>.</p>
 <h2 id="example-codes">Example codes</h2>
 <p>They are based on nightly build package at:</p>
 <p><a href="https://sparkshine.pkgs.visualstudio.com/StardustDL/_packaging/feed/nuget/v3/index.json">NUGET source</a></p>
 <h3 id="design-a-client-blazor-module">Design a client (Blazor) module</h3>
 <ul>
-<li><a href="https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello/HelloModule.cs">HelloModule.cs</a> Client module definition.</li>
-<li><a href="https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello.UI/Pages/Index.razor">Index.razor</a> Client module pages. It belongs to a different assembly from which Module belongs to because we want this assembly is lazy loading.</li>
+<li><a href="https://github.com/StardustDL/modulight/blob/master/src/modules/hello/Delights.Modules.Hello/HelloModule.cs">HelloModule.cs</a> Client module definition.</li>
+<li><a href="https://github.com/StardustDL/modulight/blob/master/src/modules/hello/Delights.Modules.Hello.UI/Pages/Index.razor">Index.razor</a> Client module pages. It belongs to a different assembly from which Module belongs to because we want this assembly is lazy loading.</li>
 </ul>
 <h3 id="design-a-graphql-server-module">Design a GraphQL server module</h3>
 <ul>
-<li><a href="https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello.Server/HelloServerModule.cs">HelloServerModule.cs</a> GraphQL server module definition.</li>
+<li><a href="https://github.com/StardustDL/modulight/blob/master/src/modules/hello/Delights.Modules.Hello.Server/HelloServerModule.cs">HelloServerModule.cs</a> GraphQL server module definition.</li>
 </ul>
 <h3 id="use-a-client-module-in-blazor-websites">Use a client module in Blazor websites</h3>
 <ul>
