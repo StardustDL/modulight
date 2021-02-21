@@ -9,8 +9,8 @@
 		<Authors>StardustDL</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<Description>Basic types for razor component client modules in Modulight modular framework.</Description>
-		<PackageProjectUrl>https://github.com/StardustDL/delights</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/StardustDL/delights</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/StardustDL/modulight</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/StardustDL/modulight</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 	</PropertyGroup>
 

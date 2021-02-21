@@ -8,8 +8,8 @@
     <Authors>StardustDL</Authors>
     <Copyright>StardustDL</Copyright>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/StardustDL/delights</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/StardustDL/delights</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/StardustDL/modulight</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StardustDL/modulight</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Provide user interfaces for blazor client module hosting.</Description>

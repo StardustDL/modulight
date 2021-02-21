@@ -142,7 +142,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-A [Sample startup](https://github.com/StardustDL/delights/blob/master/test/Test.Modulights.UI/Startup.cs).
+A [Sample startup](https://github.com/StardustDL/modulight/blob/master/test/Test.Modulights.UI/Startup.cs).
 
 ## Example codes
 
@@ -152,12 +152,12 @@ They are based on nightly build package at:
 
 ### Design a client (Blazor) module
 
-- [HelloModule.cs](https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello/HelloModule.cs) Client module definition.
-- [Index.razor](https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello.UI/Pages/Index.razor) Client module pages. It belongs to a different assembly from which Module belongs to because we want this assembly is lazy loading.
+- [HelloModule.cs](https://github.com/StardustDL/modulight/blob/master/src/modules/hello/Delights.Modules.Hello/HelloModule.cs) Client module definition.
+- [Index.razor](https://github.com/StardustDL/modulight/blob/master/src/modules/hello/Delights.Modules.Hello.UI/Pages/Index.razor) Client module pages. It belongs to a different assembly from which Module belongs to because we want this assembly is lazy loading.
 
 ### Design a GraphQL server module
 
-- [HelloServerModule.cs](https://github.com/StardustDL/delights/blob/master/src/modules/hello/Delights.Modules.Hello.Server/HelloServerModule.cs) GraphQL server module definition.
+- [HelloServerModule.cs](https://github.com/StardustDL/modulight/blob/master/src/modules/hello/Delights.Modules.Hello.Server/HelloServerModule.cs) GraphQL server module definition.
 
 ### Use a client module in Blazor websites
 
