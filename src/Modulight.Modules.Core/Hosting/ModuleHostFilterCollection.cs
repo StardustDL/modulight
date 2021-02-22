@@ -8,13 +8,13 @@ namespace Modulight.Modules.Hosting
     /// Filter modules in exact type.
     /// </summary>
     /// <typeparam name="TModule"></typeparam>
-    public class ModuleHostFilter<TModule> : IModuleCollection<TModule> where TModule : IModule
+    public class ModuleHostFilterCollection<TModule> : IModuleCollection<TModule> where TModule : IModule
     {
         /// <summary>
         /// Create the filter instance.
         /// </summary>
         /// <param name="host"></param>
-        public ModuleHostFilter(IModuleHost host)
+        public ModuleHostFilterCollection(IModuleHost host)
         {
             Host = host;
         }

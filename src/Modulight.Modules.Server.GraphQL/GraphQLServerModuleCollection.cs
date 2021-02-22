@@ -20,7 +20,7 @@ namespace Modulight.Modules.Server.GraphQL
         void MapEndpoints(IEndpointRouteBuilder builder, Action<IGraphQLServerModule, GraphQLEndpointConventionBuilder>? postMapEndpoint = null);
     }
 
-    internal class GraphQLServerModuleCollection : ModuleHostFilter<IGraphQLServerModule>, IGraphQLServerModuleCollection
+    internal class GraphQLServerModuleCollection : ModuleHostFilterCollection<IGraphQLServerModule>, IGraphQLServerModuleCollection
     {
         public GraphQLServerModuleCollection(IModuleHost host) : base(host)
         {

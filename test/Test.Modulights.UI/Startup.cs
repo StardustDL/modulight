@@ -32,7 +32,7 @@ namespace Test.Modulights.UI
         {
             services.AddModules(builder =>
             {
-                builder.AddClientSideBlazorUI<TestBlazorUIProvider>()
+                builder.AddServerSideBlazorUI<TestBlazorUIProvider>()
                     .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001");
             });
         }

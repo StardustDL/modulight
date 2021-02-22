@@ -26,7 +26,7 @@ namespace Modulight.Modules.Server.AspNet
         void UseMiddlewares(IApplicationBuilder builder);
     }
 
-    internal class AspNetServerModuleCollection : ModuleHostFilter<IAspNetServerModule>, IAspNetServerModuleCollection
+    internal class AspNetServerModuleCollection : ModuleHostFilterCollection<IAspNetServerModule>, IAspNetServerModuleCollection
     {
         public AspNetServerModuleCollection(IModuleHost host) : base(host)
         {

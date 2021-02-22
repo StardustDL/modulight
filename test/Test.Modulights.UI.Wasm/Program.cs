@@ -40,11 +40,7 @@ namespace Test.Modulights.UI.Wasm
                     .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001");
             });
 
-            var host = builder.Build();
-
-            await using var _ = await host.Services.UseModuleHost();
-
-            await host.RunAsync();
+            await builder.Build().RunAsyncWithModules();
         }
     }
 }

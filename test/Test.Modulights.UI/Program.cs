@@ -13,14 +13,7 @@ namespace Test.Modulights.UI
 {
     public class Program
     {
-        public static async Task Main(string[] args)
-        {
-            var host = CreateHostBuilder(args).Build();
-
-            await using var _ = await host.Services.UseModuleHost();
-
-            await host.RunAsync();
-        }
+        public static Task Main(string[] args) => CreateHostBuilder(args).Build().RunAsyncWithModules();
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

@@ -49,12 +49,12 @@ namespace Modulight.Modules.Hosting
         /// Create a context to control module host initializing, shutdown.
         /// For example:
         /// <code>
-        /// await using var _ = await services.UseModuleHost();
+        /// await using var _ = await services.UseModules();
         /// </code>
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static async Task<IAsyncDisposable> UseModuleHost(this IServiceProvider services)
+        public static async Task<IAsyncDisposable> UseModules(this IServiceProvider services)
         {
             var host = services.GetModuleHost();
             await host.Initialize().ConfigureAwait(false);

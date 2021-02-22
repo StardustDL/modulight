@@ -56,7 +56,7 @@ namespace Modulight.Modules.Client.RazorComponents
         public static Task LoadResources<T>(this IRazorComponentClientModuleCollection collection) where T : IModule => collection.LoadResources(typeof(T));
     }
 
-    internal class RazorComponentClientModuleCollection : ModuleHostFilter<IRazorComponentClientModule>, IRazorComponentClientModuleCollection
+    internal class RazorComponentClientModuleCollection : ModuleHostFilterCollection<IRazorComponentClientModule>, IRazorComponentClientModuleCollection
     {
         public RazorComponentClientModuleCollection(IModuleHost host) : base(host)
         {

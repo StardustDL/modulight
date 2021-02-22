@@ -123,7 +123,7 @@ namespace Modulight.Modules.Test.Context
         {
             await UseHostAsync(async host =>
             {
-                await using (var _ = await host.Services.UseModuleHost())
+                await using (var _ = await host.Services.UseModules())
                 {
                     if (action is not null)
                         action(host);
@@ -137,7 +137,7 @@ namespace Modulight.Modules.Test.Context
         {
             await UseHostAsync(async host =>
             {
-                await using (var _ = await host.Services.UseModuleHost())
+                await using (var _ = await host.Services.UseModules())
                 {
                     if (action is not null)
                         await action(host);

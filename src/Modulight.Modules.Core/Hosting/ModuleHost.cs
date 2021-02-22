@@ -76,13 +76,6 @@ namespace Modulight.Modules.Hosting
         /// <param name="moduleType"></param>
         /// <returns></returns>
         T GetOption<T>(IServiceProvider provider, Type moduleType) where T : class;
-
-        /// <summary>
-        /// Get logger for the module.
-        /// </summary>
-        /// <typeparam name="TModule"></typeparam>
-        /// <returns></returns>
-        ILogger<TModule> GetLogger<TModule>();
     }
 
     internal class DefaultModuleHost : IModuleHost
@@ -178,19 +171,6 @@ namespace Modulight.Modules.Hosting
             foreach (var module in LoadedModules.Reverse())
             {
                 await module.Shutdown();
-            }
-        }
-
-        public virtual ILogger<TModule> GetLogger<TModule>()
-        {
-            var type = typeof(TModule);
-            if (_DefinedModules.ContainsKey(type))
-            {
-                return Services.GetRequiredService<ILogger<TModule>>();
-            }
-            else
-            {
-                throw new Exception($"No such module: {type.FullName}.");
             }
         }
     }
