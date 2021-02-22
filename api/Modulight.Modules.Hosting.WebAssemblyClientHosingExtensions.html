@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ModuleHostFilter&lt;TModule&gt;
+    <title>Class WebAssemblyClientHosingExtensions
    | Modulight </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ModuleHostFilter&lt;TModule&gt;
+    <meta name="title" content="Class WebAssemblyClientHosingExtensions
    | Modulight ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -78,22 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1">
+            <article class="content wrap" id="_content" data-uid="Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions">
   
   
-  <h1 id="Modulight_Modules_Hosting_ModuleHostFilter_1" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1" class="text-break">Class ModuleHostFilter&lt;TModule&gt;
+  <h1 id="Modulight_Modules_Hosting_WebAssemblyClientHosingExtensions" data-uid="Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions" class="text-break">Class WebAssemblyClientHosingExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Filter modules in exact type.</p>
+  <div class="markdown level0 summary"><p>Extension methods for WebAssembly hosting.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ModuleHostFilter&lt;TModule&gt;</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html">IModuleCollection</a>&lt;TModule&gt;</div>
+    <div class="level1"><span class="xref">WebAssemblyClientHosingExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -120,36 +116,21 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Hosting.html">Modulight.Modules.Hosting</a></h6>
-  <h6><strong>Assembly</strong>: Modulight.Modules.Core.dll</h6>
-  <h5 id="Modulight_Modules_Hosting_ModuleHostFilter_1_syntax">Syntax</h5>
+  <h6><strong>Assembly</strong>: Modulight.Modules.Client.RazorComponents.dll</h6>
+  <h5 id="Modulight_Modules_Hosting_WebAssemblyClientHosingExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ModuleHostFilter&lt;TModule&gt; : IModuleCollection&lt;TModule&gt; where TModule : IModule</code></pre>
+    <pre><code class="lang-csharp hljs">public static class WebAssemblyClientHosingExtensions</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TModule</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
-  <a id="Modulight_Modules_Hosting_ModuleHostFilter_1__ctor_" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.#ctor*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostFilter_1__ctor_Modulight_Modules_Hosting_IModuleHost_" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.#ctor(Modulight.Modules.Hosting.IModuleHost)">ModuleHostFilter(IModuleHost)</h4>
-  <div class="markdown level1 summary"><p>Create the filter instance.</p>
+  <a id="Modulight_Modules_Hosting_WebAssemblyClientHosingExtensions_RunAsyncWithModules_" data-uid="Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules*"></a>
+  <h4 id="Modulight_Modules_Hosting_WebAssemblyClientHosingExtensions_RunAsyncWithModules_Microsoft_AspNetCore_Components_WebAssembly_Hosting_WebAssemblyHost_" data-uid="Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost)">RunAsyncWithModules(WebAssemblyHost)</h4>
+  <div class="markdown level1 summary"><p>Run with modules</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ModuleHostFilter(IModuleHost host)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task RunAsyncWithModules(this WebAssemblyHost host)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,24 +143,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHost.html">IModuleHost</a></td>
+        <td><span class="xref">Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost</span></td>
         <td><span class="parametername">host</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <a id="Modulight_Modules_Hosting_ModuleHostFilter_1_DefinedModules_" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.DefinedModules*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostFilter_1_DefinedModules" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.DefinedModules">DefinedModules</h4>
-  <div class="markdown level1 summary"><p>Get all defined module types.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Type&gt; DefinedModules { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -189,63 +159,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Modulight_Modules_Hosting_ModuleHostFilter_1_Host_" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.Host*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostFilter_1_Host" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.Host">Host</h4>
-  <div class="markdown level1 summary"><p>The inner <a class="xref" href="Modulight.Modules.Hosting.IModuleHost.html">IModuleHost</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IModuleHost Host { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHost.html">IModuleHost</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_ModuleHostFilter_1_LoadedModules_" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.LoadedModules*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostFilter_1_LoadedModules" data-uid="Modulight.Modules.Hosting.ModuleHostFilter`1.LoadedModules">LoadedModules</h4>
-  <div class="markdown level1 summary"><p>Get all loaded modules.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TModule&gt; LoadedModules { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TModule&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html">IModuleCollection&lt;TModule&gt;</a>
-  </div>
 </article>
           </div>
           

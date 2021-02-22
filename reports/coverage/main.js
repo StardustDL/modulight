@@ -243,10 +243,12 @@ var assemblies = [
       { "name": "Modulight.Modules.Client.RazorComponents.UI.ScriptDeclare", "rp": "Modulight.Modules.Client.RazorComponents_ScriptDeclare.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 10, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 4, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Client.RazorComponents.UI.StyleSheetDeclare", "rp": "Modulight.Modules.Client.RazorComponents_StyleSheetDeclare.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 10, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 4, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Client.RazorComponents.UI.UIResource", "rp": "Modulight.Modules.Client.RazorComponents_UIResource.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 36, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions", "rp": "Modulight.Modules.Client.RazorComponents_WebAssemblyClientHosingExtensions.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 8, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "Modulight.Modules.Server.AspNet",
     "classes": [
+      { "name": "Modulight.Modules.Hosting.AspNetServerHosingExtensions", "rp": "Modulight.Modules.Server.AspNet_AspNetServerHosingExtensions.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 8, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Server.AspNet.AspnetServerCoreModule", "rp": "Modulight.Modules.Server.AspNet_AspnetServerCoreModule.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Server.AspNet.AspNetServerModule", "rp": "Modulight.Modules.Server.AspNet_AspNetServerModule.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Server.AspNet.AspNetServerModuleCollection", "rp": "Modulight.Modules.Server.AspNet_AspNetServerModuleCollection.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 53, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 6, "lch": [], "bch": [], "hc": [] },

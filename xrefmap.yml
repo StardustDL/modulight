@@ -863,6 +863,25 @@ references:
   commentId: N:Modulight.Modules.Hosting
   fullName: Modulight.Modules.Hosting
   nameWithType: Modulight.Modules.Hosting
+- uid: Modulight.Modules.Hosting.AspNetServerHosingExtensions
+  name: AspNetServerHosingExtensions
+  href: api/Modulight.Modules.Hosting.AspNetServerHosingExtensions.html
+  commentId: T:Modulight.Modules.Hosting.AspNetServerHosingExtensions
+  fullName: Modulight.Modules.Hosting.AspNetServerHosingExtensions
+  nameWithType: AspNetServerHosingExtensions
+- uid: Modulight.Modules.Hosting.AspNetServerHosingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
+  name: RunAsyncWithModules(IHost)
+  href: api/Modulight.Modules.Hosting.AspNetServerHosingExtensions.html#Modulight_Modules_Hosting_AspNetServerHosingExtensions_RunAsyncWithModules_Microsoft_Extensions_Hosting_IHost_
+  commentId: M:Modulight.Modules.Hosting.AspNetServerHosingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
+  fullName: Modulight.Modules.Hosting.AspNetServerHosingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
+  nameWithType: AspNetServerHosingExtensions.RunAsyncWithModules(IHost)
+- uid: Modulight.Modules.Hosting.AspNetServerHosingExtensions.RunAsyncWithModules*
+  name: RunAsyncWithModules
+  href: api/Modulight.Modules.Hosting.AspNetServerHosingExtensions.html#Modulight_Modules_Hosting_AspNetServerHosingExtensions_RunAsyncWithModules_
+  commentId: Overload:Modulight.Modules.Hosting.AspNetServerHosingExtensions.RunAsyncWithModules
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.AspNetServerHosingExtensions.RunAsyncWithModules
+  nameWithType: AspNetServerHosingExtensions.RunAsyncWithModules
 - uid: Modulight.Modules.Hosting.IModuleCollection`1
   name: IModuleCollection<TModule>
   href: api/Modulight.Modules.Hosting.IModuleCollection-1.html
@@ -912,22 +931,6 @@ references:
   commentId: T:Modulight.Modules.Hosting.IModuleHost
   fullName: Modulight.Modules.Hosting.IModuleHost
   nameWithType: IModuleHost
-- uid: Modulight.Modules.Hosting.IModuleHost.GetLogger*
-  name: GetLogger
-  href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_GetLogger_
-  commentId: Overload:Modulight.Modules.Hosting.IModuleHost.GetLogger
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.IModuleHost.GetLogger
-  nameWithType: IModuleHost.GetLogger
-- uid: Modulight.Modules.Hosting.IModuleHost.GetLogger``1
-  name: GetLogger<TModule>()
-  href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_GetLogger__1
-  commentId: M:Modulight.Modules.Hosting.IModuleHost.GetLogger``1
-  name.vb: GetLogger(Of TModule)()
-  fullName: Modulight.Modules.Hosting.IModuleHost.GetLogger<TModule>()
-  fullName.vb: Modulight.Modules.Hosting.IModuleHost.GetLogger(Of TModule)()
-  nameWithType: IModuleHost.GetLogger<TModule>()
-  nameWithType.vb: IModuleHost.GetLogger(Of TModule)()
 - uid: Modulight.Modules.Hosting.IModuleHost.GetManifest(System.Type)
   name: GetManifest(Type)
   href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_GetManifest_System_Type_
@@ -1428,19 +1431,19 @@ references:
   fullName.vb: Modulight.Modules.Hosting.ModuleHostExtensions.GetService(Of TModule, T)(Modulight.Modules.Hosting.IModuleHost, System.IServiceProvider)
   nameWithType: ModuleHostExtensions.GetService<TModule, T>(IModuleHost, IServiceProvider)
   nameWithType.vb: ModuleHostExtensions.GetService(Of TModule, T)(IModuleHost, IServiceProvider)
-- uid: Modulight.Modules.Hosting.ModuleHostExtensions.UseModuleHost(System.IServiceProvider)
-  name: UseModuleHost(IServiceProvider)
-  href: api/Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_UseModuleHost_System_IServiceProvider_
-  commentId: M:Modulight.Modules.Hosting.ModuleHostExtensions.UseModuleHost(System.IServiceProvider)
-  fullName: Modulight.Modules.Hosting.ModuleHostExtensions.UseModuleHost(System.IServiceProvider)
-  nameWithType: ModuleHostExtensions.UseModuleHost(IServiceProvider)
-- uid: Modulight.Modules.Hosting.ModuleHostExtensions.UseModuleHost*
-  name: UseModuleHost
-  href: api/Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_UseModuleHost_
-  commentId: Overload:Modulight.Modules.Hosting.ModuleHostExtensions.UseModuleHost
+- uid: Modulight.Modules.Hosting.ModuleHostExtensions.UseModules(System.IServiceProvider)
+  name: UseModules(IServiceProvider)
+  href: api/Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_UseModules_System_IServiceProvider_
+  commentId: M:Modulight.Modules.Hosting.ModuleHostExtensions.UseModules(System.IServiceProvider)
+  fullName: Modulight.Modules.Hosting.ModuleHostExtensions.UseModules(System.IServiceProvider)
+  nameWithType: ModuleHostExtensions.UseModules(IServiceProvider)
+- uid: Modulight.Modules.Hosting.ModuleHostExtensions.UseModules*
+  name: UseModules
+  href: api/Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_UseModules_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostExtensions.UseModules
   isSpec: "True"
-  fullName: Modulight.Modules.Hosting.ModuleHostExtensions.UseModuleHost
-  nameWithType: ModuleHostExtensions.UseModuleHost
+  fullName: Modulight.Modules.Hosting.ModuleHostExtensions.UseModules
+  nameWithType: ModuleHostExtensions.UseModules
 - uid: Modulight.Modules.Hosting.ModuleHostExtensions.UsePlugin*
   name: UsePlugin
   href: api/Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_UsePlugin_
@@ -1457,83 +1460,102 @@ references:
   fullName.vb: Modulight.Modules.Hosting.ModuleHostExtensions.UsePlugin(Of T)(Modulight.Modules.Hosting.IModuleHostBuilder)
   nameWithType: ModuleHostExtensions.UsePlugin<T>(IModuleHostBuilder)
   nameWithType.vb: ModuleHostExtensions.UsePlugin(Of T)(IModuleHostBuilder)
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1
-  name: ModuleHostFilter<TModule>
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html
-  commentId: T:Modulight.Modules.Hosting.ModuleHostFilter`1
-  name.vb: ModuleHostFilter(Of TModule)
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule)
-  nameWithType: ModuleHostFilter<TModule>
-  nameWithType.vb: ModuleHostFilter(Of TModule)
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.#ctor(Modulight.Modules.Hosting.IModuleHost)
-  name: ModuleHostFilter(IModuleHost)
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1__ctor_Modulight_Modules_Hosting_IModuleHost_
-  commentId: M:Modulight.Modules.Hosting.ModuleHostFilter`1.#ctor(Modulight.Modules.Hosting.IModuleHost)
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.ModuleHostFilter(Modulight.Modules.Hosting.IModuleHost)
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).ModuleHostFilter(Modulight.Modules.Hosting.IModuleHost)
-  nameWithType: ModuleHostFilter<TModule>.ModuleHostFilter(IModuleHost)
-  nameWithType.vb: ModuleHostFilter(Of TModule).ModuleHostFilter(IModuleHost)
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.#ctor*
-  name: ModuleHostFilter
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1__ctor_
-  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilter`1.#ctor
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1
+  name: ModuleHostFilterCollection<TModule>
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html
+  commentId: T:Modulight.Modules.Hosting.ModuleHostFilterCollection`1
+  name.vb: ModuleHostFilterCollection(Of TModule)
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule)
+  nameWithType: ModuleHostFilterCollection<TModule>
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule)
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.#ctor(Modulight.Modules.Hosting.IModuleHost)
+  name: ModuleHostFilterCollection(IModuleHost)
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1__ctor_Modulight_Modules_Hosting_IModuleHost_
+  commentId: M:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.#ctor(Modulight.Modules.Hosting.IModuleHost)
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.ModuleHostFilterCollection(Modulight.Modules.Hosting.IModuleHost)
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).ModuleHostFilterCollection(Modulight.Modules.Hosting.IModuleHost)
+  nameWithType: ModuleHostFilterCollection<TModule>.ModuleHostFilterCollection(IModuleHost)
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).ModuleHostFilterCollection(IModuleHost)
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.#ctor*
+  name: ModuleHostFilterCollection
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1__ctor_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.#ctor
   isSpec: "True"
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.ModuleHostFilter
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).ModuleHostFilter
-  nameWithType: ModuleHostFilter<TModule>.ModuleHostFilter
-  nameWithType.vb: ModuleHostFilter(Of TModule).ModuleHostFilter
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.DefinedModules
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.ModuleHostFilterCollection
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).ModuleHostFilterCollection
+  nameWithType: ModuleHostFilterCollection<TModule>.ModuleHostFilterCollection
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).ModuleHostFilterCollection
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.DefinedModules
   name: DefinedModules
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1_DefinedModules
-  commentId: P:Modulight.Modules.Hosting.ModuleHostFilter`1.DefinedModules
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.DefinedModules
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).DefinedModules
-  nameWithType: ModuleHostFilter<TModule>.DefinedModules
-  nameWithType.vb: ModuleHostFilter(Of TModule).DefinedModules
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.DefinedModules*
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_DefinedModules
+  commentId: P:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.DefinedModules
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.DefinedModules
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).DefinedModules
+  nameWithType: ModuleHostFilterCollection<TModule>.DefinedModules
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).DefinedModules
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.DefinedModules*
   name: DefinedModules
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1_DefinedModules_
-  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilter`1.DefinedModules
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_DefinedModules_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.DefinedModules
   isSpec: "True"
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.DefinedModules
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).DefinedModules
-  nameWithType: ModuleHostFilter<TModule>.DefinedModules
-  nameWithType.vb: ModuleHostFilter(Of TModule).DefinedModules
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.Host
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.DefinedModules
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).DefinedModules
+  nameWithType: ModuleHostFilterCollection<TModule>.DefinedModules
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).DefinedModules
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.Host
   name: Host
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1_Host
-  commentId: P:Modulight.Modules.Hosting.ModuleHostFilter`1.Host
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.Host
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).Host
-  nameWithType: ModuleHostFilter<TModule>.Host
-  nameWithType.vb: ModuleHostFilter(Of TModule).Host
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.Host*
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_Host
+  commentId: P:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.Host
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.Host
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).Host
+  nameWithType: ModuleHostFilterCollection<TModule>.Host
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).Host
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.Host*
   name: Host
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1_Host_
-  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilter`1.Host
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_Host_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.Host
   isSpec: "True"
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.Host
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).Host
-  nameWithType: ModuleHostFilter<TModule>.Host
-  nameWithType.vb: ModuleHostFilter(Of TModule).Host
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.LoadedModules
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.Host
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).Host
+  nameWithType: ModuleHostFilterCollection<TModule>.Host
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).Host
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.LoadedModules
   name: LoadedModules
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1_LoadedModules
-  commentId: P:Modulight.Modules.Hosting.ModuleHostFilter`1.LoadedModules
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.LoadedModules
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).LoadedModules
-  nameWithType: ModuleHostFilter<TModule>.LoadedModules
-  nameWithType.vb: ModuleHostFilter(Of TModule).LoadedModules
-- uid: Modulight.Modules.Hosting.ModuleHostFilter`1.LoadedModules*
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_LoadedModules
+  commentId: P:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.LoadedModules
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.LoadedModules
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).LoadedModules
+  nameWithType: ModuleHostFilterCollection<TModule>.LoadedModules
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).LoadedModules
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.LoadedModules*
   name: LoadedModules
-  href: api/Modulight.Modules.Hosting.ModuleHostFilter-1.html#Modulight_Modules_Hosting_ModuleHostFilter_1_LoadedModules_
-  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilter`1.LoadedModules
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_LoadedModules_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.LoadedModules
   isSpec: "True"
-  fullName: Modulight.Modules.Hosting.ModuleHostFilter<TModule>.LoadedModules
-  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilter(Of TModule).LoadedModules
-  nameWithType: ModuleHostFilter<TModule>.LoadedModules
-  nameWithType.vb: ModuleHostFilter(Of TModule).LoadedModules
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.LoadedModules
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).LoadedModules
+  nameWithType: ModuleHostFilterCollection<TModule>.LoadedModules
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).LoadedModules
+- uid: Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions
+  name: WebAssemblyClientHosingExtensions
+  href: api/Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.html
+  commentId: T:Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions
+  fullName: Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions
+  nameWithType: WebAssemblyClientHosingExtensions
+- uid: Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost)
+  name: RunAsyncWithModules(WebAssemblyHost)
+  href: api/Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.html#Modulight_Modules_Hosting_WebAssemblyClientHosingExtensions_RunAsyncWithModules_Microsoft_AspNetCore_Components_WebAssembly_Hosting_WebAssemblyHost_
+  commentId: M:Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost)
+  fullName: Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost)
+  nameWithType: WebAssemblyClientHosingExtensions.RunAsyncWithModules(WebAssemblyHost)
+- uid: Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules*
+  name: RunAsyncWithModules
+  href: api/Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.html#Modulight_Modules_Hosting_WebAssemblyClientHosingExtensions_RunAsyncWithModules_
+  commentId: Overload:Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.WebAssemblyClientHosingExtensions.RunAsyncWithModules
+  nameWithType: WebAssemblyClientHosingExtensions.RunAsyncWithModules
 - uid: Modulight.Modules.IModule
   name: IModule
   href: api/Modulight.Modules.IModule.html
