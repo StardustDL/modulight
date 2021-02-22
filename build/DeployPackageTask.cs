@@ -104,7 +104,7 @@ namespace Build
 
             foreach (var pkgName in packageList)
             {
-                var file = context.Globber.GetFiles(Paths.Dist.Packages.CombineWithFilePath(pkgName + context.BuildVersion).FullPath + "*.nupkg").FirstOrDefault();
+                var file = context.Globber.GetFiles(Paths.Dist.Packages.CombineWithFilePath($"{pkgName}.{context.BuildVersion}").FullPath + "*.nupkg").FirstOrDefault();
                 if (file is null)
                 {
                     context.Log.Warning($"No package {pkgName} found.");

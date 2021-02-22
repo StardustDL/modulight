@@ -35,7 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Modulights.UI", "test\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modulight.UI.Blazor.Hosting", "src\Modulight.UI.Blazor.Hosting\Modulight.UI.Blazor.Hosting.csproj", "{B7C6927F-DF6E-42F0-8220-4EE93E763D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Modulights.UI.Wasm", "test\Test.Modulights.UI.Wasm\Test.Modulights.UI.Wasm.csproj", "{654F5EB8-2CF9-4578-9137-123B0FC2955C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Modulights.UI.Wasm", "test\Test.Modulights.UI.Wasm\Test.Modulights.UI.Wasm.csproj", "{654F5EB8-2CF9-4578-9137-123B0FC2955C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9098AF37-1239-46EA-9DC5-233B944E8733}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Build", "build\Build.csproj", "{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -208,6 +212,18 @@ Global
 		{654F5EB8-2CF9-4578-9137-123B0FC2955C}.Release|x64.Build.0 = Release|Any CPU
 		{654F5EB8-2CF9-4578-9137-123B0FC2955C}.Release|x86.ActiveCfg = Release|Any CPU
 		{654F5EB8-2CF9-4578-9137-123B0FC2955C}.Release|x86.Build.0 = Release|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Debug|x64.Build.0 = Debug|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Debug|x86.Build.0 = Debug|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Release|x64.ActiveCfg = Release|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Release|x64.Build.0 = Release|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Release|x86.ActiveCfg = Release|Any CPU
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -221,6 +237,7 @@ Global
 		{DE633E7B-2562-4A5A-A522-847C8A5C9802} = {DD934DD7-12BA-4B29-AC96-8812DFEA7EAD}
 		{03ED459E-8288-47DF-977A-BD73B7E7D6C6} = {193F731A-A3DE-4DDC-842C-56AFA5D2B8F5}
 		{654F5EB8-2CF9-4578-9137-123B0FC2955C} = {193F731A-A3DE-4DDC-842C-56AFA5D2B8F5}
+		{6516817A-6BBE-4945-ADEF-CFEEA7A99F23} = {9098AF37-1239-46EA-9DC5-233B944E8733}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {98F4A001-F8D2-4F67-9C6E-8AC3C64E45A4}
