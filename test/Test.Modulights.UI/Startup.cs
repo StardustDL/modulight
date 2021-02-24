@@ -1,4 +1,5 @@
 using Delights.Modules.Hello;
+using Delights.Modules.Hello.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Server.AspNet;
+using Modulight.Modules.Server.GraphQL;
 using Modulight.UI.Blazor;
 using Modulight.UI.Blazor.Hosting;
 using System;
@@ -32,8 +34,10 @@ namespace Test.Modulights.UI
         {
             services.AddModules(builder =>
             {
-                builder.AddServerSideBlazorUI<TestBlazorUIProvider>()
-                    .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001");
+                builder.AddServerSideBlazorUI<TestBlazorUIProvider>().AddModule<Wasm.TestModule>()
+                    .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001/graphql");
+                builder.UseGraphQLServerModules()
+                    .AddHelloServerModule();
             });
         }
 
@@ -62,6 +66,7 @@ namespace Test.Modulights.UI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapAspNetServerModuleEndpoints();
+                endpoints.MapGraphQLServerModuleEndpoints();
             });
         }
     }

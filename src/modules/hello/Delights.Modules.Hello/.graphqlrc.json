@@ -1,0 +1,12 @@
+{
+  "schema": "schema.graphql",
+  "documents": "**/*.graphql",
+  "extensions": {
+    "strawberryShake": {
+      "name": "HelloClient",
+      "url": "https://localhost:5001/graphql/Hello/",
+      "namespace": "Delights.Modules.Hello.GraphQL",
+      "dependencyInjection": true
+    }
+  }
+}

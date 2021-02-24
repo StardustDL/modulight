@@ -46,22 +46,21 @@ namespace Delights.Modules.Hello
     {
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient(
-                "HelloGraphQLClient", (sp, client) =>
+            services.AddHttpClient<HelloClient>((sp, client) =>
                 {
                     var option = sp.GetRequiredService<IOptions<ModuleOption>>().Value;
                     client.BaseAddress = new Uri(option.GraphQLEndpoint.TrimEnd('/') + $"/Hello");
                 });
-            services.AddHelloGraphQLClient();
+            services.AddHelloClient();
             base.ConfigureServices(services);
         }
     }
 
     public class ModuleService
     {
-        public IHelloGraphQLClient GraphQLClient { get; }
+        public HelloClient GraphQLClient { get; }
 
-        public ModuleService(IHelloGraphQLClient graphQLClient)
+        public ModuleService(HelloClient graphQLClient)
         {
             GraphQLClient = graphQLClient;
         }

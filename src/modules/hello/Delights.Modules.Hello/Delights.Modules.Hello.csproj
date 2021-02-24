@@ -3,9 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>annotations</Nullable>
-    <BerryNamespace>$(RootNamespace).GraphQL</BerryNamespace>
   </PropertyGroup>
-
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -15,8 +13,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.3" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
-    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="0.0.2-preview.11" />
-    <PackageReference Include="StrawberryShake" Version="11.0.0-preview.137" />
+    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="0.0.2-preview.12" />
+    <PackageReference Include="StrawberryShake.CodeGeneration.CSharp.Analyzers" Version="11.1.0-preview.59" />
+    <PackageReference Include="StrawberryShake.Transport.Http" Version="11.1.0-preview.59" />
   </ItemGroup>
 
   <ItemGroup>

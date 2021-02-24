@@ -9,7 +9,7 @@
     <Sider Collapsible Theme="SiderTheme.Light" Breakpoint="BreakpointType.Xl" OnCollapse="OnCollapse">
         <Menu Mode="MenuMode.Inline" Theme="MenuTheme.Light">
             <MenuItem Class="text-center p-0">
-                @UIProvider.SiteInfo.Name
+                <MenuLink Href="/">@UIProvider.SiteInfo.Name</MenuLink>
             </MenuItem>
             @foreach (var module in UIProvider.GetVisibleClientModules())
             {

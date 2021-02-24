@@ -44,6 +44,8 @@ namespace Delights.Modules.Hello.Server
 
     public record Message
     {
+        public string Id { get; init; } = "";
+
         public string Content { get; init; } = "";
     }
 

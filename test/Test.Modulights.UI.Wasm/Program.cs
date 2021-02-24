@@ -25,6 +25,13 @@ namespace Test.Modulights.UI
 
 namespace Test.Modulights.UI.Wasm
 {
+    public class TestModule : RazorComponentClientModule
+    {
+        public TestModule(IModuleHost host) : base(host)
+        {
+        }
+    }
+
     public class Program
     {
         public static async Task Main(string[] args)
@@ -37,7 +44,8 @@ namespace Test.Modulights.UI.Wasm
             builder.Services.AddModules(builder =>
             {
                 builder.AddBlazorUI<TestBlazorUIProvider>()
-                    .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001");
+                    .AddModule<TestModule>()
+                    .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001/graphql");
             });
 
             await builder.Build().RunAsyncWithModules();
