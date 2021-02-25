@@ -33,7 +33,7 @@ namespace Modulight.Modules
     /// </summary>
     public abstract class Module : IModule
     {
-        Lazy<ModuleManifest> _manifest;
+        readonly Lazy<ModuleManifest> _manifest;
 
         /// <summary>
         /// Get the module host.

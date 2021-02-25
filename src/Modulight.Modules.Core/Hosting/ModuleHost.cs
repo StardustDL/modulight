@@ -58,24 +58,6 @@ namespace Modulight.Modules.Hosting
         /// </summary>
         /// <returns></returns>
         Task Shutdown();
-
-        /// <summary>
-        /// Get service that belongs to the module.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="provider"></param>
-        /// <param name="moduleType"></param>
-        /// <returns></returns>
-        T GetService<T>(IServiceProvider provider, Type moduleType) where T : notnull;
-
-        /// <summary>
-        /// Get option that belongs to the module.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="provider"></param>
-        /// <param name="moduleType"></param>
-        /// <returns></returns>
-        T GetOption<T>(IServiceProvider provider, Type moduleType) where T : class;
     }
 
     internal class DefaultModuleHost : IModuleHost
@@ -89,65 +71,26 @@ namespace Modulight.Modules.Hosting
             Services = services;
 
             _DefinedModules = new Dictionary<Type, ModuleManifest>(definedModules.Select(x => new KeyValuePair<Type, ModuleManifest>(x.Item1, x.Item2)));
-            DefinedModules = definedModules.Select(x => x.Item1);
         }
 
-        public virtual IEnumerable<IModule> LoadedModules { get; protected set; } = Array.Empty<IModule>();
+        public virtual IEnumerable<IModule> LoadedModules => _LoadedModules.Values.AsEnumerable();
 
-        public virtual IEnumerable<Type> DefinedModules { get; protected set; }
+        public virtual IEnumerable<Type> DefinedModules => _DefinedModules.Keys.AsEnumerable();
 
         public virtual IServiceProvider Services { get; protected set; }
 
         public virtual ModuleManifest GetManifest(Type moduleType)
         {
-            if (_DefinedModules.TryGetValue(moduleType, out var value))
-            {
-                return value;
-            }
-            else
-            {
-                throw new Exception($"No such defined module: {moduleType.FullName}.");
-            }
+            return _DefinedModules.TryGetValue(moduleType, out var value)
+                ? value
+                : throw new Exception($"No such defined module: {moduleType.FullName}.");
         }
 
         public virtual IModule GetModule(Type moduleType)
         {
-            if (_LoadedModules.TryGetValue(moduleType, out var value))
-            {
-                return value;
-            }
-            else
-            {
-                throw new Exception($"No such loaded module: {moduleType.FullName}.");
-            }
-        }
-
-        public virtual T GetService<T>(IServiceProvider provider, Type moduleType) where T : notnull
-        {
-            var manifest = GetManifest(moduleType);
-            var type = typeof(T);
-            if (manifest.Services.Any(x => x.ServiceType == type))
-            {
-                return provider.GetRequiredService<T>();
-            }
-            else
-            {
-                throw new Exception($"No such service for the module {moduleType.FullName}: {type.FullName}.");
-            }
-        }
-
-        public virtual T GetOption<T>(IServiceProvider provider, Type moduleType) where T : class
-        {
-            var manifest = GetManifest(moduleType);
-            var type = typeof(T);
-            if (manifest.Options.Any(x => x == type))
-            {
-                return provider.GetRequiredService<IOptionsSnapshot<T>>().Value;
-            }
-            else
-            {
-                throw new Exception($"No such option for the module {moduleType.FullName}: {type.FullName}.");
-            }
+            return _LoadedModules.TryGetValue(moduleType, out var value)
+                ? value
+                : throw new Exception($"No such loaded module: {moduleType.FullName}.");
         }
 
         public virtual async Task Initialize()
@@ -158,7 +101,6 @@ namespace Modulight.Modules.Hosting
                 modules.Add((type, (IModule)Services.GetRequiredService(type)));
             }
             _LoadedModules = new Dictionary<Type, IModule>(modules.Select(x => new KeyValuePair<Type, IModule>(x.Item1, x.Item2)));
-            LoadedModules = modules.Select(x => x.Item2);
 
             foreach (var module in LoadedModules)
             {
@@ -172,6 +114,8 @@ namespace Modulight.Modules.Hosting
             {
                 await module.Shutdown();
             }
+
+            _LoadedModules = new Dictionary<Type, IModule>();
         }
     }
 }

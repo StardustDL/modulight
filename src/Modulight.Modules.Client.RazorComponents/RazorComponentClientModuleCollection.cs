@@ -165,14 +165,9 @@ namespace Modulight.Modules.Client.RazorComponents
                     try
                     {
                         // Logger.LogInformation($"Loading assembly {current}");
-                        if (Environment.OSVersion.Platform == PlatformID.Other)
-                        {
-                            assembly = (await lazyLoader.LoadAssembliesAsync(new[] { current + ".dll" })).FirstOrDefault();
-                        }
-                        else
-                        {
-                            assembly = Assembly.Load(current);
-                        }
+                        assembly = Environment.OSVersion.Platform == PlatformID.Other
+                            ? (await lazyLoader.LoadAssembliesAsync(new[] { current + ".dll" })).FirstOrDefault()
+                            : Assembly.Load(current);
                     }
                     catch (Exception ex)
                     {

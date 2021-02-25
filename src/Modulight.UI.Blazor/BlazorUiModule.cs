@@ -24,10 +24,7 @@ namespace Modulight.UI.Blazor
         /// <returns></returns>
         public static IModuleHostBuilder AddBlazorUI<TUIProvider>(this IModuleHostBuilder builder) where TUIProvider : class, IBlazorUIProvider
         {
-            return builder.ConfigureServices(sc =>
-            {
-                sc.AddScoped<IBlazorUIProvider, TUIProvider>();
-            }).AddModule<BlazorUiModule>();
+            return builder.ConfigureServices(sc => sc.AddScoped<IBlazorUIProvider, TUIProvider>()).AddModule<BlazorUiModule>();
         }
     }
 

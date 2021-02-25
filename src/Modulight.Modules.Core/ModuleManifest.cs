@@ -23,46 +23,46 @@ namespace Modulight.Modules
         /// <summary>
         /// Name
         /// </summary>
-        public string Name { get; init; } = "";
+    public string Name { get; init; } = "";
 
-        /// <summary>
-        /// Display name
-        /// </summary>
-        public string DisplayName { get; init; } = "";
+    /// <summary>
+    /// Display name
+    /// </summary>
+    public string DisplayName { get; init; } = "";
 
-        /// <summary>
-        /// Description
-        /// </summary>
-        public string Description { get; init; } = "";
+    /// <summary>
+    /// Description
+    /// </summary>
+    public string Description { get; init; } = "";
 
-        /// <summary>
-        /// Version
-        /// </summary>
-        public string Version { get; init; } = "";
+    /// <summary>
+    /// Version
+    /// </summary>
+    public string Version { get; init; } = "";
 
-        /// <summary>
-        /// Author
-        /// </summary>
-        public string Author { get; init; } = "";
+    /// <summary>
+    /// Author
+    /// </summary>
+    public string Author { get; init; } = "";
 
-        /// <summary>
-        /// Project URL
-        /// </summary>
-        public string Url { get; init; } = "";
+    /// <summary>
+    /// Project URL
+    /// </summary>
+    public string Url { get; init; } = "";
 
-        /// <summary>
-        /// Services
-        /// </summary>
-        public ModuleServiceDescriptor[] Services { get; init; } = Array.Empty<ModuleServiceDescriptor>();
+    /// <summary>
+    /// Services
+    /// </summary>
+    public ModuleServiceDescriptor[] Services { get; init; } = Array.Empty<ModuleServiceDescriptor>();
 
-        /// <summary>
-        /// Options
-        /// </summary>
-        public Type[] Options { get; init; } = Array.Empty<Type>();
+    /// <summary>
+    /// Options
+    /// </summary>
+    public Type[] Options { get; init; } = Array.Empty<Type>();
 
-        /// <summary>
-        /// Dependencies
-        /// </summary>
-        public Type[] Dependencies { get; init; } = Array.Empty<Type>();
-    }
+    /// <summary>
+    /// Dependencies
+    /// </summary>
+    public Type[] Dependencies { get; init; } = Array.Empty<Type>();
+}
 }

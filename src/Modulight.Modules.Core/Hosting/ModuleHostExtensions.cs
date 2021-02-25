@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Modulight.Modules.Hosting
@@ -70,6 +72,39 @@ namespace Modulight.Modules.Hosting
         public static ModuleManifest GetManifest<TModule>(this IModuleHost host) where TModule : IModule => host.GetManifest(typeof(TModule));
 
         /// <summary>
+        /// Get service that belongs to the module.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="host"></param>
+        /// <param name="provider"></param>
+        /// <param name="moduleType"></param>
+        /// <returns></returns>
+        public static T GetService<T>(this IModuleHost host, IServiceProvider provider, Type moduleType) where T : notnull
+        {
+            var manifest = host.GetManifest(moduleType);
+            var type = typeof(T);
+            return manifest.Services.Any(x => x.ServiceType == type)
+                ? provider.GetRequiredService<T>()
+                : throw new Exception($"No such service for the module {moduleType.FullName}: {type.FullName}.");
+        }
+
+        /// <summary>
+        /// Get option that belongs to the module.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="host"></param>
+        /// <param name="provider"></param>
+        /// <param name="moduleType"></param>
+        /// <returns></returns>
+        public static T GetOption<T>(this IModuleHost host, IServiceProvider provider, Type moduleType) where T : class
+        {
+            var manifest = host.GetManifest(moduleType);
+            var type = typeof(T);
+            return manifest.Options.Any(x => x == type)
+                ? provider.GetRequiredService<IOptionsSnapshot<T>>().Value
+                : throw new Exception($"No such option for the module {moduleType.FullName}: {type.FullName}.");
+        }
+        /// <summary>
         /// Get the module instance with module type.
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -122,10 +157,7 @@ namespace Modulight.Modules.Hosting
         /// <returns></returns>
         public static IModuleHostBuilder ConfigureBuilderOptions<T>(this IModuleHostBuilder builder, Action<T, IServiceProvider> configureOptions) where T : class
         {
-            return builder.ConfigureBuilderServices(services =>
-            {
-                services.AddOptions<T>().Configure(configureOptions);
-            });
+            return builder.ConfigureBuilderServices(services => services.AddOptions<T>().Configure(configureOptions));
         }
 
         /// <summary>
@@ -137,10 +169,7 @@ namespace Modulight.Modules.Hosting
         /// <returns></returns>
         public static IModuleHostBuilder ConfigureOptions<T>(this IModuleHostBuilder builder, Action<T, IServiceProvider> configureOptions) where T : class
         {
-            return builder.ConfigureServices(services =>
-            {
-                services.AddOptions<T>().Configure(configureOptions);
-            });
+            return builder.ConfigureServices(services => services.AddOptions<T>().Configure(configureOptions));
         }
 
         internal static bool IsHostBuilderPlugin(this Type type) => type.IsAssignableTo(typeof(IModuleHostBuilderPlugin));

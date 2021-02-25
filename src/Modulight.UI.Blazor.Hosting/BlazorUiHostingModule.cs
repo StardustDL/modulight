@@ -21,7 +21,7 @@ namespace Modulight.UI.Blazor.Hosting
         /// <param name="builder"></param>
         /// <param name="configureOptions"></param>
         /// <returns></returns>
-        public static IModuleHostBuilder AddBlazorUIHostingModule(this IModuleHostBuilder builder, Action<BlazorUiHostingModuleOption, IServiceProvider>? configureOptions = null)
+        public static IModuleHostBuilder AddBlazorUIHosting(this IModuleHostBuilder builder, Action<BlazorUiHostingModuleOption, IServiceProvider>? configureOptions = null)
         {
             builder.AddModule<BlazorUiHostingModule>();
             if (configureOptions is not null)
@@ -44,7 +44,7 @@ namespace Modulight.UI.Blazor.Hosting
             {
                 services.AddRazorPages();
                 services.AddServerSideBlazor();
-            }).AddBlazorUI<TUIProvider>().AddBlazorUIHostingModule(
+            }).AddBlazorUI<TUIProvider>().AddBlazorUIHosting(
                     (o, sp) =>
                     {
                         o.HostingModel = HostingModel.Server;
@@ -62,10 +62,7 @@ namespace Modulight.UI.Blazor.Hosting
         /// <returns></returns>
         public static IModuleHostBuilder AddClientSideBlazorUI<TUIProvider>(this IModuleHostBuilder builder, Action<BlazorUiHostingModuleOption, IServiceProvider>? configureOptions = null) where TUIProvider : class, IBlazorUIProvider
         {
-            return builder.ConfigureServices(services =>
-            {
-                services.AddRazorPages();
-            }).AddBlazorUI<TUIProvider>().AddBlazorUIHostingModule(
+            return builder.ConfigureServices(services => services.AddRazorPages()).AddBlazorUI<TUIProvider>().AddBlazorUIHosting(
                     (o, sp) =>
                     {
                         o.HostingModel = HostingModel.Client;
