@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Server.AspNet;
 using Modulight.Modules.Server.GraphQL;
@@ -34,7 +35,7 @@ namespace Test.Modulights.UI
         {
             services.AddModules(builder =>
             {
-                builder.AddServerSideBlazorUI<TestBlazorUIProvider>().AddModule<Wasm.TestModule>()
+                builder.UseRazorComponentClientModules().AddServerSideBlazorUI<TestBlazorUIProvider>().AddModule<Wasm.TestModule>()
                     .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001/graphql");
                 builder.UseGraphQLServerModules()
                     .AddHelloServerModule();

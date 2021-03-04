@@ -11,8 +11,4 @@
     <ProjectReference Include="..\Test.Modulights.UI.Wasm\Test.Modulights.UI.Wasm.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\" />
-  </ItemGroup>
-
 </Project>

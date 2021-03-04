@@ -13,11 +13,17 @@ using System.Threading.Tasks;
 
 namespace Modulight.Modules.Client.RazorComponents
 {
+
     /// <summary>
     /// Specifies the contract for razor component module hosts.
     /// </summary>
     public interface IRazorComponentClientModuleCollection : IModuleCollection<IRazorComponentClientModule>
     {
+        /// <summary>
+        /// Get manifest for the module.
+        /// </summary>
+        RazorComponentClientModuleManifest GetManifest(Type module);
+
         /// <summary>
         /// Load related assemblies for a given route.
         /// </summary>
@@ -58,9 +64,15 @@ namespace Modulight.Modules.Client.RazorComponents
 
     internal class RazorComponentClientModuleCollection : ModuleHostFilterCollection<IRazorComponentClientModule>, IRazorComponentClientModuleCollection
     {
+        Dictionary<Type, RazorComponentClientModuleManifest> Manifests { get; } = new Dictionary<Type, RazorComponentClientModuleManifest>();
+
         public RazorComponentClientModuleCollection(IModuleHost host) : base(host)
         {
             Logger = host.Services.GetRequiredService<ILogger<RazorComponentClientModuleCollection>>();
+            foreach (var item in host.Services.GetServices<ModuleManifestItem>())
+            {
+                Manifests.Add(item.Type, item.Manifest);
+            }
         }
 
         public ILogger<RazorComponentClientModuleCollection> Logger { get; }
@@ -77,9 +89,9 @@ namespace Modulight.Modules.Client.RazorComponents
                 targetModules = targetModules.Where(x => x.GetType().IsModule(moduleType));
             }
 
-            foreach (var module in targetModules)
+            foreach (var manifest in Manifests.Values)
             {
-                foreach (var resource in module.Resources)
+                foreach (var resource in manifest.Resources)
                 {
                     try
                     {
@@ -95,7 +107,7 @@ namespace Modulight.Modules.Client.RazorComponents
                     }
                     catch (JSException ex)
                     {
-                        Logger.LogError(ex, $"Failed to load resource {resource.Path} in module {module.Manifest.Name}");
+                        Logger.LogError(ex, $"Failed to load resource {resource.Path}");
                     }
                 }
             }
@@ -141,7 +153,7 @@ namespace Modulight.Modules.Client.RazorComponents
 
                 if (module.Contains(path))
                 {
-                    foreach (var resource in module.Resources.Where(x => x.Type is UIResourceType.Assembly))
+                    foreach (var resource in GetManifest(module.GetType()).Resources.Where(x => x.Type is UIResourceType.Assembly))
                     {
                         cancellationToken.ThrowIfCancellationRequested();
 
@@ -207,5 +219,7 @@ namespace Modulight.Modules.Client.RazorComponents
 
             return results;
         }
+
+        public RazorComponentClientModuleManifest GetManifest(Type module) => Manifests[module];
     }
 }

@@ -8,7 +8,7 @@ namespace Modulight.Modules.Server.GraphQL
 {
     internal sealed class GraphQLServerModulePlugin : ModuleHostBuilderPlugin
     {
-        public override void AfterModule(ModuleDefinition module, IServiceCollection services)
+        public override void AfterModule(ModuleDefinition module, IServiceCollection services, IServiceProvider builderServices)
         {
             if (module.Type.IsModule<IGraphQLServerModule>())
             {
@@ -37,7 +37,7 @@ namespace Modulight.Modules.Server.GraphQL
                     builder.AddFiltering().AddSorting().AddProjections();
                 }
             }
-            base.AfterModule(module, services);
+            base.AfterModule(module, services, builderServices);
         }
     }
 }

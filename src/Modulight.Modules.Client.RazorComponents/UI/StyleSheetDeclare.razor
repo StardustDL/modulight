@@ -1,9 +1,9 @@
 ﻿@inject IRazorComponentClientModuleCollection ModuleHost
 @inject IServiceProvider ServiceProvider
 
-@foreach (var c in ModuleHost.LoadedModules)
+@foreach (var c in ModuleHost.DefinedModules)
 {
-    foreach (var r in c.Resources.Where(x => x.Type is UIResourceType.StyleSheet))
+    foreach (var r in ModuleHost.GetManifest(c).Resources.Where(x => x.Type is UIResourceType.StyleSheet))
     {
         @((MarkupString)($"<link type=\"text/css\" rel=\"stylesheet\" href=\"{r.Path}\" {Modulight.Modules.Client.RazorComponents.UI.ModuleUILoader.ResourceTagAttrName}=\"{r.Path}\"/>"))
     }
