@@ -21,29 +21,37 @@ namespace Modulight.Modules.Hosting
         /// Get all defined module types.
         /// </summary>
         IEnumerable<Type> DefinedModules { get; }
-    }
-
-    /// <summary>
-    /// Specifies the contract for module hosts.
-    /// </summary>
-    public interface IModuleHost : IModuleCollection<IModule>
-    {
-        /// <summary>
-        /// Service provider.
-        /// </summary>
-        IServiceProvider Services { get; }
-
-        /// <summary>
-        /// Get manifest for the module.
-        /// </summary>
-        ModuleManifest GetManifest(Type moduleType);
 
         /// <summary>
         /// Get the module instance with module type.
         /// </summary>
         /// <param name="moduleType"></param>
         /// <returns></returns>
-        IModule GetModule(Type moduleType);
+        TModule GetModule(Type moduleType);
+    }
+
+    /// <summary>
+    /// A collection of typed modules.
+    /// </summary>
+    /// <typeparam name="TModule"></typeparam>
+    /// <typeparam name="TManifest"></typeparam>
+    public interface IModuleCollection<TModule, TManifest> : IModuleCollection<TModule> where TModule : IModule where TManifest : ModuleManifest<TModule>
+    {
+        /// <summary>
+        /// Get manifest for the module.
+        /// </summary>
+        TManifest GetManifest(Type moduleType);
+    }
+
+    /// <summary>
+    /// Specifies the contract for module hosts.
+    /// </summary>
+    public interface IModuleHost : IModuleCollection<IModule, ModuleManifest>
+    {
+        /// <summary>
+        /// Service provider.
+        /// </summary>
+        IServiceProvider Services { get; }
 
         /// <summary>
         /// Initialize the module.
@@ -64,11 +72,11 @@ namespace Modulight.Modules.Hosting
 
         IReadOnlyDictionary<Type, ModuleManifest> _DefinedModules { get; set; }
 
-        public DefaultModuleHost(IServiceProvider services, (Type, ModuleManifest)[] definedModules)
+        public DefaultModuleHost(IServiceProvider services)
         {
             Services = services;
 
-            _DefinedModules = new Dictionary<Type, ModuleManifest>(definedModules.Select(x => new KeyValuePair<Type, ModuleManifest>(x.Item1, x.Item2)));
+            _DefinedModules = new Dictionary<Type, ModuleManifest>(services.GetModuleManifests<IModule, ModuleManifest>().Select(x => new KeyValuePair<Type, ModuleManifest>(x.Type, x.Manifest)));
         }
 
         public virtual IEnumerable<IModule> LoadedModules => _LoadedModules.Values.AsEnumerable();

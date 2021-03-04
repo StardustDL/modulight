@@ -39,12 +39,8 @@ namespace Modulight.Modules.Server.GraphQL
         /// <inheritdoc/>
         public virtual GraphQLEndpointConventionBuilder? MapEndpoint(IEndpointRouteBuilder builder)
         {
-            GraphQLModuleTypeAttribute? attribute = GetType().GetCustomAttribute<GraphQLModuleTypeAttribute>();
-            if (attribute is not null)
-            {
-                return builder.MapGraphQL(attribute.Endpoint.TrimEnd('/'), attribute.SchemaName);
-            }
-            return null;
+            var manifest = Host.GetGraphQLServerModuleCollection().GetManifest(GetType());
+            return builder.MapGraphQL(manifest.Endpoint.TrimEnd('/'), manifest.SchemaName);
         }
     }
 

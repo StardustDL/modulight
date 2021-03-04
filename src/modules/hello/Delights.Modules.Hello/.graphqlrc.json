@@ -4,7 +4,7 @@
   "extensions": {
     "strawberryShake": {
       "name": "HelloClient",
-      "url": "https://localhost:5001/graphql/Hello/",
+      "url": "https://localhost:44378/graphql/Hello/",
       "namespace": "Delights.Modules.Hello.GraphQL",
       "dependencyInjection": true
     }

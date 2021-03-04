@@ -1,9 +1,11 @@
 ﻿using HotChocolate.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Server.GraphQL;
 using System;
+using System.Reflection;
 
 namespace Modulight.Modules.Hosting
 {
@@ -17,7 +19,13 @@ namespace Modulight.Modules.Hosting
         /// </summary>
         /// <param name="modules"></param>
         /// <returns></returns>
-        public static IModuleHostBuilder UseGraphQLServerModules(this IModuleHostBuilder modules) => modules.UsePlugin<GraphQLServerModulePlugin>();
+        public static IModuleHostBuilder UseGraphQLServerModules(this IModuleHostBuilder modules)
+        {
+            return modules.ConfigureBuilderServices(services =>
+            {
+                services.TryAddTransient<IGraphQLServerModuleManifestBuilder, DefaultGraphQLServerModuleManifestBuilder>();
+            }).UsePlugin<GraphQLServerModulePlugin>();
+        }
 
 
         /// <summary>
@@ -26,6 +34,28 @@ namespace Modulight.Modules.Hosting
         /// <param name="host"></param>
         /// <returns></returns>
         public static IGraphQLServerModuleCollection GetGraphQLServerModuleCollection(this IModuleHost host) => host.Services.GetRequiredService<IGraphQLServerModuleCollection>();
+
+        /// <summary>
+        /// Configure the builder by default from attributes.
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static IGraphQLServerModuleManifestBuilder WithDefaultsFromModuleType(this IGraphQLServerModuleManifestBuilder builder, Type type)
+        {
+            {
+                GraphQLModuleTypeAttribute? attribute = type.GetCustomAttribute<GraphQLModuleTypeAttribute>();
+                if (attribute is not null)
+                {
+                    builder.SchemaName = attribute.SchemaName;
+                    builder.Endpoint = attribute.Endpoint;
+                    builder.QueryType = attribute.QueryType;
+                    builder.MutationType = attribute.MutationType;
+                    builder.SubscriptionType = attribute.SubscriptionType;
+                }
+            }
+            return builder;
+        }
     }
 }
 

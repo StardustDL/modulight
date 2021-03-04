@@ -241,6 +241,7 @@ namespace Modulight.Modules.Hosting
 
                 BeforeModule(services, definition, plugins, builderService);
 
+                services.RegisterModuleManifest(new ModuleManifestServiceEntry<IModule, ModuleManifest>(type, manifest));
                 services.AddSingleton(type);
                 foreach (var service in manifest.Services)
                 {
@@ -264,8 +265,7 @@ namespace Modulight.Modules.Hosting
 
             AfterBuild(services, modules.ToArray(), plugins, builderService);
 
-            var definedModules = modules.Select(x => (x.Type, x.Manifest)).ToArray();
-            services.TryAddSingleton<IModuleHost>(sp => new DefaultModuleHost(sp, definedModules));
+            services.TryAddSingleton<IModuleHost, DefaultModuleHost>();
         }
 
         public IModuleHostBuilder ConfigureBuilderServices(Action<IServiceCollection> configureBuilderServices)

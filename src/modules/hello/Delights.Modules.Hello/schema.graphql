@@ -7,17 +7,19 @@ type ModuleQuery {
 }
 
 type Message {
-  content: String!
   id: String!
+  content: String!
 }
 
 input MessageFilterInput {
   and: [MessageFilterInput!]
   or: [MessageFilterInput!]
+  id: StringOperationFilterInput
   content: StringOperationFilterInput
 }
 
 input MessageSortInput {
+  id: SortEnumType
   content: SortEnumType
 }
 

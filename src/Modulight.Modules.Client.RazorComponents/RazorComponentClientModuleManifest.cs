@@ -6,7 +6,7 @@ namespace Modulight.Modules.Client.RazorComponents
     /// <summary>
     /// Manifest for <see cref="RazorComponentClientModule"/>.
     /// </summary>
-    public record RazorComponentClientModuleManifest
+    public record RazorComponentClientModuleManifest : ModuleManifest<IRazorComponentClientModule>
     {
         /// <summary>
         /// Get module UI resources.

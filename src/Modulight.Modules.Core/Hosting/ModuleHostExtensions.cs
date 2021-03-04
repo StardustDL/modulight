@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Modulight.Modules;
 using Modulight.Modules.Hosting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -62,6 +64,32 @@ namespace Microsoft.Extensions.DependencyInjection
             var host = services.GetModuleHost();
             await host.Initialize().ConfigureAwait(false);
             return new ModuleHostContext(host);
+        }
+
+        /// <summary>
+        /// Register module manifest.
+        /// </summary>
+        /// <typeparam name="TModule"></typeparam>
+        /// <typeparam name="TManifest"></typeparam>
+        /// <param name="services"></param>
+        /// <param name="entry"></param>
+        /// <returns></returns>
+        public static IServiceCollection RegisterModuleManifest<TModule, TManifest>(this IServiceCollection services, ModuleManifestServiceEntry<TModule, TManifest> entry) where TModule : IModule where TManifest : ModuleManifest<TModule>
+        {
+            services.AddSingleton(entry);
+            return services;
+        }
+
+        /// <summary>
+        /// Get all registered module manifests.
+        /// </summary>
+        /// <typeparam name="TModule"></typeparam>
+        /// <typeparam name="TManifest"></typeparam>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IEnumerable<ModuleManifestServiceEntry<TModule, TManifest>> GetModuleManifests<TModule, TManifest>(this IServiceProvider services) where TModule : IModule where TManifest : ModuleManifest<TModule>
+        {
+            return services.GetServices<ModuleManifestServiceEntry<TModule, TManifest>>();
         }
     }
 }

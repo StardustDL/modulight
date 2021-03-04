@@ -8,7 +8,7 @@ namespace Modulight.Modules.Client.RazorComponents
     /// <summary>
     /// Specifies the interface to build a module manifest.
     /// </summary>
-    public interface IRazorComponentClientModuleManifestBuilder
+    public interface IRazorComponentClientModuleManifestBuilder : IModuleManifestBuilder<IRazorComponentClientModule, RazorComponentClientModuleManifest>
     {
         /// <summary>
         /// Get module UI resources.
@@ -19,12 +19,6 @@ namespace Modulight.Modules.Client.RazorComponents
         /// Get global components.
         /// </summary>
         IList<Type> GlobalComponents { get; }
-
-        /// <summary>
-        /// Build the manifest.
-        /// </summary>
-        /// <returns></returns>
-        RazorComponentClientModuleManifest Build();
     }
 
     class DefaultRazorComponentClientModuleManifestBuilder : IRazorComponentClientModuleManifestBuilder

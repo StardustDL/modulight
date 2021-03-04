@@ -4,8 +4,6 @@ using System;
 
 namespace Modulight.Modules.Client.RazorComponents
 {
-    internal record ModuleManifestItem(Type Type, RazorComponentClientModuleManifest Manifest);
-
     internal sealed class RazorComponentClientModulePlugin : ModuleHostBuilderPlugin
     {
         public RazorComponentClientModulePlugin(IServiceProvider builderServices) => BuilderServices = builderServices;
@@ -26,7 +24,7 @@ namespace Modulight.Modules.Client.RazorComponents
 
                 var manifest = manifestBuilder.Build();
 
-                services.AddSingleton(new ModuleManifestItem(module.Type, manifest));
+                services.RegisterModuleManifest(new ModuleManifestServiceEntry<IRazorComponentClientModule, RazorComponentClientModuleManifest>(module.Type, manifest));
             }
             base.AfterModule(module, services);
         }

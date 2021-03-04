@@ -12,6 +12,12 @@ namespace Modulight.Modules.Server.GraphQL
         /// </summary>
         /// <param name="builder"></param>
         void ConfigureGraphQLSchema(IRequestExecutorBuilder builder);
+
+        /// <summary>
+        /// Configure manifest for graphql server module.
+        /// </summary>
+        /// <param name="builder"></param>
+        void ConfigureGraphQLServerModuleManifest(IGraphQLServerModuleManifestBuilder builder);
     }
 
     /// <summary>
@@ -21,5 +27,8 @@ namespace Modulight.Modules.Server.GraphQL
     {
         /// <inheritdoc/>
         public virtual void ConfigureGraphQLSchema(IRequestExecutorBuilder builder) { }
+
+        /// <inheritdoc/>
+        public virtual void ConfigureGraphQLServerModuleManifest(IGraphQLServerModuleManifestBuilder builder) { }
     }
 }

@@ -5,9 +5,23 @@ using System.Linq;
 namespace Modulight.Modules
 {
     /// <summary>
+    /// Specifies the interface to build a manifest.
+    /// </summary>
+    /// <typeparam name="TModule"></typeparam>
+    /// <typeparam name="TManifest"></typeparam>
+    public interface IModuleManifestBuilder<TModule, TManifest> where TManifest : ModuleManifest<TModule> where TModule : IModule
+    {
+        /// <summary>
+        /// Build the manifest.
+        /// </summary>
+        /// <returns></returns>
+        TManifest Build();
+    }
+
+    /// <summary>
     /// Specifies the interface to build a module manifest.
     /// </summary>
-    public interface IModuleManifestBuilder
+    public interface IModuleManifestBuilder : IModuleManifestBuilder<IModule, ModuleManifest>
     {
         /// <summary>
         /// Name
@@ -53,12 +67,6 @@ namespace Modulight.Modules
         /// Dependencies
         /// </summary>
         IList<Type> Dependencies { get; }
-
-        /// <summary>
-        /// Build the manifest.
-        /// </summary>
-        /// <returns></returns>
-        ModuleManifest Build();
     }
 
     class DefaultModuleManifestBuilder : IModuleManifestBuilder

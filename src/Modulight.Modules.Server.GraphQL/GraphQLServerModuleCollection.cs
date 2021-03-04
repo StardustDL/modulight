@@ -9,7 +9,7 @@ namespace Modulight.Modules.Server.GraphQL
     /// <summary>
     /// Specifies the contract for graphql module hosts.
     /// </summary>
-    public interface IGraphQLServerModuleCollection : IModuleCollection<IGraphQLServerModule>
+    public interface IGraphQLServerModuleCollection : IModuleCollection<IGraphQLServerModule, GraphQLServerModuleManifest>
     {
         /// <summary>
         /// Map all registered module's endpoints.
@@ -20,7 +20,7 @@ namespace Modulight.Modules.Server.GraphQL
         void MapEndpoints(IEndpointRouteBuilder builder, Action<IGraphQLServerModule, GraphQLEndpointConventionBuilder>? postMapEndpoint = null);
     }
 
-    internal class GraphQLServerModuleCollection : ModuleHostFilterCollection<IGraphQLServerModule>, IGraphQLServerModuleCollection
+    internal class GraphQLServerModuleCollection : ModuleHostFilterCollection<IGraphQLServerModule, GraphQLServerModuleManifest>, IGraphQLServerModuleCollection
     {
         public GraphQLServerModuleCollection(IModuleHost host) : base(host)
         {

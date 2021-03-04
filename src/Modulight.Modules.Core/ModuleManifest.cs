@@ -3,19 +3,40 @@ using System;
 
 namespace Modulight.Modules
 {
+
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
+
     /// <summary>
     /// Service descriptor for module services.
     /// </summary>
-#pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
     public record ModuleServiceDescriptor(Type ImplementationType, Type ServiceType, ServiceLifetime Lifetime = ServiceLifetime.Scoped, ServiceRegisterBehavior RegisterBehavior = ServiceRegisterBehavior.Normal)
-#pragma warning restore CS1591 // 缺少对公共可见类型或成员的 XML 注释
     {
+    }
+
+    /// <summary>
+    /// A entry in service collection for module manifest.
+    /// </summary>
+    /// <typeparam name="TModule"></typeparam>
+    /// <typeparam name="TManifest"></typeparam>
+    public record ModuleManifestServiceEntry<TModule, TManifest>(Type Type, TManifest Manifest) where TModule : IModule where TManifest : ModuleManifest<TModule>
+    {
+    }
+
+#pragma warning restore CS1591 // 缺少对公共可见类型或成员的 XML 注释
+
+    /// <summary>
+    /// Generic manifest for modules
+    /// </summary>
+    /// <typeparam name="TModule"></typeparam>
+    public record ModuleManifest<TModule> where TModule : IModule
+    {
+
     }
 
     /// <summary>
     /// Manifest for module
     /// </summary>
-    public record ModuleManifest
+    public record ModuleManifest : ModuleManifest<IModule>
     {
         /// <summary>
         /// Name

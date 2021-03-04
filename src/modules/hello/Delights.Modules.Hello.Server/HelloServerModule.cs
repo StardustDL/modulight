@@ -56,8 +56,8 @@ namespace Delights.Modules.Hello.Server
         public ILogger<HelloServerModule> Logger { get; private set; }
 
         public List<Message> Messages { get; } = new List<Message>() {
-            new Message { Content = "Message 1" },
-            new Message { Content = "Message 2" },
+            new Message { Content = "Message 1", Id = "a" },
+            new Message { Content = "Message 2", Id = "b" },
         };
     }
 }

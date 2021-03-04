@@ -26,7 +26,7 @@ namespace Test.Modulights.UI
             services.AddModules(builder =>
             {
                 builder.UseRazorComponentClientModules().AddServerSideBlazorUI<TestBlazorUIProvider>().AddModule<Wasm.TestModule>()
-                    .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001/graphql");
+                    .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:44378/graphql");
                 builder.UseGraphQLServerModules()
                     .AddHelloServerModule();
             });
