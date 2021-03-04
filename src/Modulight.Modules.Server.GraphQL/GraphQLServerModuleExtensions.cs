@@ -27,7 +27,6 @@ namespace Modulight.Modules.Hosting
             }).UsePlugin<GraphQLServerModulePlugin>();
         }
 
-
         /// <summary>
         /// Get graphql module host from service provider.
         /// </summary>

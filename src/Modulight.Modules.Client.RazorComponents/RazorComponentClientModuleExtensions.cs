@@ -11,7 +11,7 @@ namespace Modulight.Modules.Hosting
     /// <summary>
     /// Extension methods for aspnet modules.
     /// </summary>
-    public static class GraphQLServerModuleExtensions
+    public static class RazorComponentClientModuleExtensions
     {
         /// <summary>
         /// Use building plugin for razor component modules.

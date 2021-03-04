@@ -22,10 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Modulight.Modules.Client.RazorComponents\Modulight.Modules.Client.RazorComponents.csproj" />
     <ProjectReference Include="..\..\src\Modulight.Modules.Core\Modulight.Modules.Core.csproj" />
-    <ProjectReference Include="..\..\src\Modulight.Modules.Server.AspNet\Modulight.Modules.Server.AspNet.csproj" />
-    <ProjectReference Include="..\..\src\Modulight.Modules.Server.GraphQL\Modulight.Modules.Server.GraphQL.csproj" />
     <ProjectReference Include="..\..\src\Modulight.Modules.Test\Modulight.Modules.Test.csproj" />
   </ItemGroup>
 
