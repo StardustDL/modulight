@@ -1,21 +1,20 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Client.RazorComponents.UI;
-using Modulight.Modules.Hosting;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 
-namespace Modulight.Modules.Client.RazorComponents
+namespace Modulight.Modules.Hosting
 {
     /// <summary>
-    /// Extension methods for razor component modules.
+    /// Extension methods for aspnet modules.
     /// </summary>
-    public static class RazorComponentClientModuleExtensions
+    public static class GraphQLServerModuleExtensions
     {
         /// <summary>
-        /// Use building plugin for graphql modules.
+        /// Use building plugin for razor component modules.
         /// </summary>
         /// <param name="modules"></param>
         /// <returns></returns>
@@ -30,10 +29,19 @@ namespace Modulight.Modules.Client.RazorComponents
         /// <summary>
         /// Get razor component module host from service provider.
         /// </summary>
-        /// <param name="provider"></param>
+        /// <param name="host"></param>
         /// <returns></returns>
-        public static IRazorComponentClientModuleCollection GetRazorComponentClientModuleCollection(this IServiceProvider provider) => provider.GetRequiredService<IRazorComponentClientModuleCollection>();
+        public static IRazorComponentClientModuleCollection GetRazorComponentClientModuleCollection(this IModuleHost host) => host.Services.GetRequiredService<IRazorComponentClientModuleCollection>();
+    }
+}
 
+namespace Modulight.Modules
+{
+    /// <summary>
+    /// Extension methods for razor component modules.
+    /// </summary>
+    public static class RazorComponentClientModuleExtensions
+    {
         /// <summary>
         /// Add resource to manifest.
         /// </summary>
@@ -80,7 +88,6 @@ namespace Modulight.Modules.Client.RazorComponents
         {
             {
                 var attrs = type.GetCustomAttributes<ModuleUIResourceAttribute>();
-                List<UIResource> resources = new List<UIResource>();
                 foreach (var attr in attrs)
                 {
                     builder.WithResource(new UIResource(attr.Type, attr.Path) { Attributes = attr.Attributes });
@@ -88,7 +95,6 @@ namespace Modulight.Modules.Client.RazorComponents
             }
             {
                 var attrs = type.GetCustomAttributes<ModuleUIGlobalComponentAttribute>();
-                List<Type> resources = new List<Type>();
                 foreach (var attr in attrs)
                 {
                     builder.WithGlobalComponent(attr.Type);

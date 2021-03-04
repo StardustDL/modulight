@@ -1,6 +1,5 @@
 ﻿using Modulight.Modules.Client.RazorComponents.UI;
 using System;
-using System.Linq;
 
 namespace Modulight.Modules.Client.RazorComponents
 {

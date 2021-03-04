@@ -1,12 +1,12 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 
-namespace Modulight.Modules.Hosting
+namespace Microsoft.Extensions.Hosting
 {
     /// <summary>
     /// Extension methods for Asp.NET hosting.
     /// </summary>
-    public static class AspNetServerHosingExtensions
+    public static class AspNetServerModuleHostingExtensions
     {
         /// <summary>
         /// Run with modules

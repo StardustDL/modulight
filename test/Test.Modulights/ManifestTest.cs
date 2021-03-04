@@ -1,10 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Test;
 using Modulight.Modules.Test.Context;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Test.Modulights

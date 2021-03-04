@@ -1,16 +1,13 @@
 ﻿using Delights.Modules.Hello.GraphQL;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.JSInterop;
 using Modulight.Modules;
 using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
 using StardustDL.RazorComponents.MaterialDesignIcons;
 using System;
-using System.Threading.Tasks;
 
 namespace Delights.Modules.Hello
 {

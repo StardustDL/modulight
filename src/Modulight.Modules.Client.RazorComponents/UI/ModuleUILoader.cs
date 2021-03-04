@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.JSInterop;
+﻿using Microsoft.JSInterop;
 using System.Threading.Tasks;
 
 namespace Modulight.Modules.Client.RazorComponents.UI

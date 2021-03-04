@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Hosting;
 using System;
-using System.Collections.Generic;
 
 namespace Modulight.Modules.Client.RazorComponents
 {
@@ -9,17 +8,15 @@ namespace Modulight.Modules.Client.RazorComponents
 
     internal sealed class RazorComponentClientModulePlugin : ModuleHostBuilderPlugin
     {
-        public override void BeforeBuild(IList<Type> modules, IServiceCollection services, IServiceProvider builderServices)
-        {
+        public RazorComponentClientModulePlugin(IServiceProvider builderServices) => BuilderServices = builderServices;
 
-            base.BeforeBuild(modules, services, builderServices);
-        }
+        IServiceProvider BuilderServices { get; }
 
-        public override void AfterModule(ModuleDefinition module, IServiceCollection services, IServiceProvider builderServices)
+        public override void AfterModule(ModuleDefinition module, IServiceCollection services)
         {
             if (module.Type.IsModule<IRazorComponentClientModule>())
             {
-                var manifestBuilder = builderServices.GetRequiredService<IRazorComponentClientModuleManifestBuilder>();
+                var manifestBuilder = BuilderServices.GetRequiredService<IRazorComponentClientModuleManifestBuilder>();
                 manifestBuilder.WithDefaultsFromModuleType(module.Type);
 
                 if (module.Startup is IRazorComponentClientModuleStartup startup)
@@ -31,7 +28,7 @@ namespace Modulight.Modules.Client.RazorComponents
 
                 services.AddSingleton(new ModuleManifestItem(module.Type, manifest));
             }
-            base.AfterModule(module, services, builderServices);
+            base.AfterModule(module, services);
         }
     }
 

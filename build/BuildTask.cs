@@ -1,5 +1,4 @@
-﻿using Cake.Common.IO;
-using Cake.Common.Tools.DotNetCore;
+﻿using Cake.Common.Tools.DotNetCore;
 using Cake.Common.Tools.DotNetCore.Build;
 using Cake.Frosting;
 

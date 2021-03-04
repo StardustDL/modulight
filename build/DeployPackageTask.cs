@@ -1,13 +1,13 @@
-﻿using Cake.Common.IO;
+﻿using Cake.Common;
+using Cake.Common.IO;
 using Cake.Common.Tools.DotNetCore;
+using Cake.Common.Tools.DotNetCore.NuGet.Push;
+using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Frosting;
-using Cake.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cake.Core.Diagnostics;
-using Cake.Common.Tools.DotNetCore.NuGet.Push;
-using System;
 
 namespace Build
 {

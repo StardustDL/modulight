@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Modulight.Modules.Hosting;
+﻿using Modulight.Modules.Hosting;
 using System;
 using System.Threading.Tasks;
 

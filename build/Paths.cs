@@ -1,7 +1,5 @@
 ﻿using Cake.Core.IO;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 
 namespace Build
 {

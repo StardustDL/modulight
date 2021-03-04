@@ -2,10 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules.Hosting;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modulight.Modules.Test
 {

@@ -31,6 +31,6 @@ namespace Modulight.Modules.Client.RazorComponents.UI
         /// <summary>
         /// Attributes for the resource.
         /// </summary>
-    public string[] Attributes { get; init; } = Array.Empty<string>();
-}
+        public string[] Attributes { get; init; } = Array.Empty<string>();
+    }
 }

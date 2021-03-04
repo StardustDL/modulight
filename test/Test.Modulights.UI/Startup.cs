@@ -1,22 +1,12 @@
 using Delights.Modules.Hello;
 using Delights.Modules.Hello.Server;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Modulight.Modules.Client.RazorComponents;
+using Modulight.Modules;
 using Modulight.Modules.Hosting;
-using Modulight.Modules.Server.AspNet;
-using Modulight.Modules.Server.GraphQL;
-using Modulight.UI.Blazor;
-using Modulight.UI.Blazor.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Test.Modulights.UI
 {

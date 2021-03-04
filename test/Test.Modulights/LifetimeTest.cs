@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Test;
 using Modulight.Modules.Test.Context;

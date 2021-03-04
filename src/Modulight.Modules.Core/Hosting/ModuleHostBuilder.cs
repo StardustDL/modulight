@@ -75,7 +75,7 @@ namespace Modulight.Modules.Hosting
         {
             foreach (var plugin in plugins)
             {
-                plugin.BeforeBuild(modules, services, builderServices);
+                plugin.BeforeBuild(modules, services);
             }
             services.AddLogging().AddOptions();
         }
@@ -84,7 +84,7 @@ namespace Modulight.Modules.Hosting
         {
             foreach (var plugin in plugins)
             {
-                plugin.AfterBuild(modules, services, builderServices);
+                plugin.AfterBuild(modules, services);
             }
         }
 
@@ -92,7 +92,7 @@ namespace Modulight.Modules.Hosting
         {
             foreach (var plugin in plugins)
             {
-                plugin.BeforeModule(module, services, builderServices);
+                plugin.BeforeModule(module, services);
             }
         }
 
@@ -100,7 +100,7 @@ namespace Modulight.Modules.Hosting
         {
             foreach (var plugin in plugins)
             {
-                plugin.AfterModule(module, services, builderServices);
+                plugin.AfterModule(module, services);
             }
         }
 

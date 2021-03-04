@@ -4,7 +4,6 @@ using Cake.Common.Tools.DotNetCore.MSBuild;
 using Cake.Core;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO;
-using Cake.Core.Tooling;
 using Cake.Frosting;
 using System;
 using System.Collections.Generic;
@@ -19,9 +18,9 @@ namespace Build
 
     public class BuildContext : FrostingContext
     {
-        const string Version = "0.0.4";
+        const string Version = "0.0.5";
 
-        const int BuildRunNumberOffset = -31;
+        const int BuildRunNumberOffset = 19;
 
         public string CommitMessage { get; set; }
 

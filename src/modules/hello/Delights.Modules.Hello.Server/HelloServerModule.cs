@@ -46,18 +46,18 @@ namespace Delights.Modules.Hello.Server
     {
         public string Id { get; init; } = "";
 
-    public string Content { get; init; } = "";
-}
+        public string Content { get; init; } = "";
+    }
 
-public class ModuleService
-{
-    public ModuleService(ILogger<HelloServerModule> logger) => Logger = logger;
+    public class ModuleService
+    {
+        public ModuleService(ILogger<HelloServerModule> logger) => Logger = logger;
 
-    public ILogger<HelloServerModule> Logger { get; private set; }
+        public ILogger<HelloServerModule> Logger { get; private set; }
 
-    public List<Message> Messages { get; } = new List<Message>() {
+        public List<Message> Messages { get; } = new List<Message>() {
             new Message { Content = "Message 1" },
             new Message { Content = "Message 2" },
         };
-}
+    }
 }

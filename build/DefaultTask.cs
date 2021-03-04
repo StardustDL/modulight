@@ -1,5 +1,4 @@
-﻿using Cake.DocFx.Metadata;
-using Cake.Frosting;
+﻿using Cake.Frosting;
 
 namespace Build
 {

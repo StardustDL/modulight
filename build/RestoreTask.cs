@@ -1,10 +1,9 @@
 ﻿using Cake.Common.Tools.DotNetCore;
 using Cake.Common.Tools.DotNetCore.Tool;
+using Cake.Core.Diagnostics;
 using Cake.Core.IO.Arguments;
 using Cake.Frosting;
-using Cake.Common.Tools.Chocolatey;
 using System;
-using Cake.Core.Diagnostics;
 
 namespace Build
 {

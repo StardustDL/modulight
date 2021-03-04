@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -53,7 +52,6 @@ namespace Modulight.Modules.Client.RazorComponents
                 if (attr is not null)
                     RootPath = attr.RootPath;
             }
-            
         }
 
         /// <inheritdoc/>

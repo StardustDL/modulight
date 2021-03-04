@@ -22,6 +22,24 @@ jobs:
       env:
         NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
       run: ./build.ps1 -t Deploy
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: artifacts
+        path: ./dist
+  deploy:
+    needs: ci
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: artifacts
+        path: ./dist
     - name: Deploy documents
       uses: JamesIves/github-pages-deploy-action@4.0.0
       with:

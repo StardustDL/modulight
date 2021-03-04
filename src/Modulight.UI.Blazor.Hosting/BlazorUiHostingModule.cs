@@ -5,73 +5,9 @@ using Microsoft.Extensions.Options;
 using Modulight.Modules;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Server.AspNet;
-using Modulight.UI.Blazor.Services;
-using System;
 
 namespace Modulight.UI.Blazor.Hosting
 {
-    /// <summary>
-    /// Extension methods for default Blazor UI.
-    /// </summary>
-    public static class ModuleExtensions
-    {
-        /// <summary>
-        /// Add Blazor UI Hosting Module.
-        /// </summary>
-        /// <param name="builder"></param>
-        /// <param name="configureOptions"></param>
-        /// <returns></returns>
-        public static IModuleHostBuilder AddBlazorUIHosting(this IModuleHostBuilder builder, Action<BlazorUiHostingModuleOption, IServiceProvider>? configureOptions = null)
-        {
-            builder.AddModule<BlazorUiHostingModule>();
-            if (configureOptions is not null)
-            {
-                builder.ConfigureOptions(configureOptions);
-            }
-            return builder;
-        }
-
-        /// <summary>
-        /// Add default server side blazor UI.
-        /// </summary>
-        /// <typeparam name="TUIProvider"></typeparam>
-        /// <param name="builder"></param>
-        /// <param name="configureOptions"></param>
-        /// <returns></returns>
-        public static IModuleHostBuilder AddServerSideBlazorUI<TUIProvider>(this IModuleHostBuilder builder, Action<BlazorUiHostingModuleOption, IServiceProvider>? configureOptions = null) where TUIProvider : class, IBlazorUIProvider
-        {
-            return builder.ConfigureServices(services =>
-            {
-                services.AddRazorPages();
-                services.AddServerSideBlazor();
-            }).AddBlazorUI<TUIProvider>().AddBlazorUIHosting(
-                    (o, sp) =>
-                    {
-                        o.HostingModel = HostingModel.Server;
-                        if (configureOptions is not null)
-                            configureOptions(o, sp);
-                    });
-        }
-
-        /// <summary>
-        /// Add default server hosting client side blazor UI.
-        /// </summary>
-        /// <typeparam name="TUIProvider"></typeparam>
-        /// <param name="builder"></param>
-        /// <param name="configureOptions"></param>
-        /// <returns></returns>
-        public static IModuleHostBuilder AddClientSideBlazorUI<TUIProvider>(this IModuleHostBuilder builder, Action<BlazorUiHostingModuleOption, IServiceProvider>? configureOptions = null) where TUIProvider : class, IBlazorUIProvider
-        {
-            return builder.ConfigureServices(services => services.AddRazorPages()).AddBlazorUI<TUIProvider>().AddBlazorUIHosting(
-                    (o, sp) =>
-                    {
-                        o.HostingModel = HostingModel.Client;
-                        if (configureOptions is not null)
-                            configureOptions(o, sp);
-                    });
-        }
-    }
-
     /// <summary>
     /// Blazor UI Hosting Module
     /// </summary>

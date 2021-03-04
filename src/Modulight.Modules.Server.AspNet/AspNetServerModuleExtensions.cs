@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Routing;
+﻿using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Hosting;
-using System;
+using Modulight.Modules.Server.AspNet;
 
-namespace Modulight.Modules.Server.AspNet
+namespace Modulight.Modules.Hosting
 {
     /// <summary>
     /// Extension methods for aspnet modules.
@@ -14,10 +13,19 @@ namespace Modulight.Modules.Server.AspNet
         /// <summary>
         /// Get aspnet module host from service provider.
         /// </summary>
-        /// <param name="provider"></param>
+        /// <param name="host"></param>
         /// <returns></returns>
-        public static IAspNetServerModuleCollection GetAspNetServerModuleCollection(this IServiceProvider provider) => provider.GetRequiredService<IAspNetServerModuleCollection>();
+        public static IAspNetServerModuleCollection GetAspNetServerModuleCollection(this IModuleHost host) => host.Services.GetRequiredService<IAspNetServerModuleCollection>();
+    }
+}
 
+namespace Microsoft.AspNetCore.Builder
+{
+    /// <summary>
+    /// Extension methods for aspnet modules.
+    /// </summary>
+    public static class AspNetServerModuleExtensions
+    {
         /// <summary>
         /// Use all registered aspnet server module's middlewares.
         /// </summary>
@@ -25,7 +33,7 @@ namespace Modulight.Modules.Server.AspNet
         /// <returns></returns>
         public static IApplicationBuilder UseAspNetServerModuleMiddlewares(this IApplicationBuilder builder)
         {
-            builder.ApplicationServices.GetAspNetServerModuleCollection().UseMiddlewares(builder);
+            builder.ApplicationServices.GetModuleHost().GetAspNetServerModuleCollection().UseMiddlewares(builder);
             return builder;
         }
 
@@ -36,7 +44,7 @@ namespace Modulight.Modules.Server.AspNet
         /// <returns></returns>
         public static IEndpointRouteBuilder MapAspNetServerModuleEndpoints(this IEndpointRouteBuilder builder)
         {
-            builder.ServiceProvider.GetAspNetServerModuleCollection().MapEndpoints(builder);
+            builder.ServiceProvider.GetModuleHost().GetAspNetServerModuleCollection().MapEndpoints(builder);
             return builder;
         }
     }

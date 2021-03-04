@@ -1,5 +1,3 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Modulight.Modules;
 using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Client.RazorComponents.UI;
@@ -7,27 +5,9 @@ using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Services;
 using StardustDL.RazorComponents.AntDesigns;
 using StardustDL.RazorComponents.MaterialDesignIcons;
-using System;
 
 namespace Modulight.UI.Blazor
 {
-    /// <summary>
-    /// Extension methods for default Blazor UI.
-    /// </summary>
-    public static class ModuleExtensions
-    {
-        /// <summary>
-        /// Add Blazor UI Module with customed UI provider.
-        /// </summary>
-        /// <typeparam name="TUIProvider"></typeparam>
-        /// <param name="builder"></param>
-        /// <returns></returns>
-        public static IModuleHostBuilder AddBlazorUI<TUIProvider>(this IModuleHostBuilder builder) where TUIProvider : class, IBlazorUIProvider
-        {
-            return builder.ConfigureServices(sc => sc.AddScoped<IBlazorUIProvider, TUIProvider>()).AddModule<BlazorUiModule>();
-        }
-    }
-
     /// <summary>
     /// Blazor UI Module
     /// </summary>

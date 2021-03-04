@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 
-namespace Modulight.Modules.Hosting
+namespace Microsoft.AspNetCore.Components.WebAssembly.Hosting
 {
     /// <summary>
     /// Extension methods for WebAssembly hosting.
     /// </summary>
-    public static class WebAssemblyClientHosingExtensions
+    public static class WebAssemblyClientModuleHostingExtensions
     {
         /// <summary>
         /// Run with modules

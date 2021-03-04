@@ -1,10 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Modulight.Modules.Hosting;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Modulight.Modules.Hosting
+namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// Extensions for module host.
@@ -62,7 +63,16 @@ namespace Modulight.Modules.Hosting
             await host.Initialize().ConfigureAwait(false);
             return new ModuleHostContext(host);
         }
+    }
+}
 
+namespace Modulight.Modules.Hosting
+{
+    /// <summary>
+    /// Extensions for module host.
+    /// </summary>
+    public static class ModuleHostExtensions
+    {
         /// <summary>
         /// Get manifest for the module.
         /// </summary>

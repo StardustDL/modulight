@@ -1,9 +1,9 @@
 ﻿using Cake.Common.IO;
 using Cake.Common.Tools.DotNetCore;
-using Cake.Frosting;
-using Cake.Coverlet;
 using Cake.Common.Tools.DotNetCore.Test;
 using Cake.Core.IO.Arguments;
+using Cake.Coverlet;
+using Cake.Frosting;
 
 namespace Build
 {

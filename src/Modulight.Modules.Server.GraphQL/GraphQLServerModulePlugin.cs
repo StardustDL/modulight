@@ -1,14 +1,12 @@
-﻿using HotChocolate.Execution.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Hosting;
-using System;
 using System.Reflection;
 
 namespace Modulight.Modules.Server.GraphQL
 {
     internal sealed class GraphQLServerModulePlugin : ModuleHostBuilderPlugin
     {
-        public override void AfterModule(ModuleDefinition module, IServiceCollection services, IServiceProvider builderServices)
+        public override void AfterModule(ModuleDefinition module, IServiceCollection services)
         {
             if (module.Type.IsModule<IGraphQLServerModule>())
             {
@@ -37,7 +35,7 @@ namespace Modulight.Modules.Server.GraphQL
                     builder.AddFiltering().AddSorting().AddProjections();
                 }
             }
-            base.AfterModule(module, services, builderServices);
+            base.AfterModule(module, services);
         }
     }
 }

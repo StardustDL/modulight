@@ -1,4 +1,4 @@
-﻿using Modulight.Modules.Server.AspNet;
+﻿using Modulight.Modules.Hosting;
 using Modulight.Modules.Server.GraphQL;
 
 namespace Modulight.Modules.Test.Context
