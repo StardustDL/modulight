@@ -24,7 +24,7 @@
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        messages = (await Service.GraphQLClient.GetMessagesQuery.ExecuteAsync()).Data?.Messages?.Nodes?.ToList() ?? new List<GraphQL.IGetMessages_Messages_Nodes>();
+        messages = (await Service.GraphQLClient.GetMessages.ExecuteAsync()).Data?.Messages?.Nodes?.ToList() ?? new List<GraphQL.IGetMessages_Messages_Nodes>();
     }
 
     void OnClick()

@@ -12,8 +12,7 @@ namespace Modulight.Modules.Server.GraphQL
     public static class GraphQLServerModuleExtensions
     {
         /// <summary>
-        /// Use building middlewares for graphql modules.
-        /// It will register <see cref="IGraphQLServerModuleCollection"/> service.
+        /// Use building plugin for graphql modules.
         /// </summary>
         /// <param name="modules"></param>
         /// <returns></returns>

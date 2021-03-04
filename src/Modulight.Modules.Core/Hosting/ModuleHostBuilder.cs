@@ -71,36 +71,36 @@ namespace Modulight.Modules.Hosting
             return this;
         }
 
-        protected virtual void BeforeBuild(IList<Type> modules, IServiceCollection services, IReadOnlyList<IModuleHostBuilderPlugin> plugins)
+        protected virtual void BeforeBuild(IList<Type> modules, IServiceCollection services, IReadOnlyList<IModuleHostBuilderPlugin> plugins, IServiceProvider builderServices)
         {
             foreach (var plugin in plugins)
             {
-                plugin.BeforeBuild(modules, services);
+                plugin.BeforeBuild(modules, services, builderServices);
             }
             services.AddLogging().AddOptions();
         }
 
-        protected virtual void AfterBuild(IServiceCollection services, ModuleDefinition[] modules, IReadOnlyList<IModuleHostBuilderPlugin> plugins)
+        protected virtual void AfterBuild(IServiceCollection services, ModuleDefinition[] modules, IReadOnlyList<IModuleHostBuilderPlugin> plugins, IServiceProvider builderServices)
         {
             foreach (var plugin in plugins)
             {
-                plugin.AfterBuild(modules, services);
+                plugin.AfterBuild(modules, services, builderServices);
             }
         }
 
-        protected virtual void BeforeModule(IServiceCollection services, ModuleDefinition module, IReadOnlyList<IModuleHostBuilderPlugin> plugins)
+        protected virtual void BeforeModule(IServiceCollection services, ModuleDefinition module, IReadOnlyList<IModuleHostBuilderPlugin> plugins, IServiceProvider builderServices)
         {
             foreach (var plugin in plugins)
             {
-                plugin.BeforeModule(module, services);
+                plugin.BeforeModule(module, services, builderServices);
             }
         }
 
-        protected virtual void AfterModule(IServiceCollection services, ModuleDefinition module, IReadOnlyList<IModuleHostBuilderPlugin> plugins)
+        protected virtual void AfterModule(IServiceCollection services, ModuleDefinition module, IReadOnlyList<IModuleHostBuilderPlugin> plugins, IServiceProvider builderServices)
         {
             foreach (var plugin in plugins)
             {
-                plugin.AfterModule(module, services);
+                plugin.AfterModule(module, services, builderServices);
             }
         }
 
@@ -223,7 +223,7 @@ namespace Modulight.Modules.Hosting
 
             IList<Type> initialModules = new List<Type>(Modules.ToArray());
 
-            BeforeBuild(initialModules, services, plugins);
+            BeforeBuild(initialModules, services, plugins, builderService);
 
             var modules = ResolveModuleDependency(initialModules, builderService);
             Dictionary<Type, Type> moduleStartups = new Dictionary<Type, Type>();
@@ -239,7 +239,7 @@ namespace Modulight.Modules.Hosting
                     startup.ConfigureServices(services);
                 }
 
-                BeforeModule(services, definition, plugins);
+                BeforeModule(services, definition, plugins, builderService);
 
                 services.AddSingleton(type);
                 foreach (var service in manifest.Services)
@@ -257,12 +257,12 @@ namespace Modulight.Modules.Hosting
                 }
 
 
-                AfterModule(services, definition, plugins);
+                AfterModule(services, definition, plugins, builderService);
 
                 logger.LogInformation($"Processed module {type.FullName}.");
             }
 
-            AfterBuild(services, modules.ToArray(), plugins);
+            AfterBuild(services, modules.ToArray(), plugins, builderService);
 
             var definedModules = modules.Select(x => (x.Type, x.Manifest)).ToArray();
             services.TryAddSingleton<IModuleHost>(sp => new DefaultModuleHost(sp, definedModules));

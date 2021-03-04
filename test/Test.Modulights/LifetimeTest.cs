@@ -32,11 +32,6 @@ namespace Test.Modulights
                 var module = host.EnsureGetLoadedModule<TestModule>();
                 Assert.IsTrue(module.HasInitialized);
                 Assert.IsFalse(module.HasShutdowned);
-            }, host =>
-            {
-                var module = host.EnsureGetLoadedModule<TestModule>();
-                Assert.IsTrue(module.HasInitialized);
-                Assert.IsTrue(module.HasShutdowned);
             });
         }
     }

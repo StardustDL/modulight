@@ -23,8 +23,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Install docfx
       run: choco install docfx -y
-    - name: Publish
-      run: ./build.ps1 -t publish
+    - name: Integration
+      run: ./build.ps1 -t integration
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       with:

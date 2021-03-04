@@ -21,11 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Server.AspNet" Version="0.0.4-preview.25" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Modulight.Modules.Server.AspNet\Modulight.Modules.Server.AspNet.csproj" />
     <ProjectReference Include="..\Modulight.UI.Blazor\Modulight.UI.Blazor.csproj" />
   </ItemGroup>
 

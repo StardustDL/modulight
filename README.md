@@ -24,7 +24,7 @@ It provides a place to unify resources, and it can be used to make Razor compone
 
 1. Register modules.
 
-For general modules (includes Razor component & AspNet server modules):
+For general modules:
 
 ```cs
 services.AddModules(builder => {
@@ -32,20 +32,35 @@ services.AddModules(builder => {
 });
 ```
 
-2. Configure the module initilizing & shutdown.
+1. Configure the module initilizing & shutdown.
 
 ```cs
 var host = services.GetModuleHost();
 await host.Initialize();
+
+// do something
+
 await host.Shutdown();
+
+// Or use context:
 
 // context: IServiceProvider services (provided by package Modulight.Modules.Core)
 await using var _ = await services.UseModuleHost();
+
+// do something
 ```
 
 ### Addition steps
 
 #### Use Razor component modules
+
+```cs
+// in Startup: void ConfigureServices(ISeviceCollection services)
+
+services.AddModules(builder => {
+    builder.UseRazorComponentClientModules().AddModule<FooModule>();
+});
+```
 
 For razor components, add `ResourceDeclare` component to App.razor to load UI resources.
 
