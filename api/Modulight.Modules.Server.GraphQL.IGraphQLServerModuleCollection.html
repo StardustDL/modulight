@@ -89,17 +89,23 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-2.html#Modulight_Modules_Hosting_IModuleCollection_2_GetManifest_System_Type_">IModuleCollection&lt;IGraphQLServerModule, GraphQLServerModuleManifest&gt;.GetManifest(Type)</a>
+    </div>
+    <div>
       <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_LoadedModules">IModuleCollection&lt;IGraphQLServerModule&gt;.LoadedModules</a>
     </div>
     <div>
       <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_DefinedModules">IModuleCollection&lt;IGraphQLServerModule&gt;.DefinedModules</a>
+    </div>
+    <div>
+      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_GetModule_System_Type_">IModuleCollection&lt;IGraphQLServerModule&gt;.GetModule(Type)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Server.GraphQL.html">Modulight.Modules.Server.GraphQL</a></h6>
   <h6><strong>Assembly</strong>: Modulight.Modules.Server.GraphQL.dll</h6>
   <h5 id="Modulight_Modules_Server_GraphQL_IGraphQLServerModuleCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IGraphQLServerModuleCollection : IModuleCollection&lt;IGraphQLServerModule&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGraphQLServerModuleCollection : IModuleCollection&lt;IGraphQLServerModule, GraphQLServerModuleManifest&gt;, IModuleCollection&lt;IGraphQLServerModule&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>

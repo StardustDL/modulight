@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Modulight.Modules.Server.GraphQL
+    <title>Interface IModuleManifestBuilder&lt;TModule, TManifest&gt;
    | Modulight </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Modulight.Modules.Server.GraphQL
+    <meta name="title" content="Interface IModuleManifestBuilder&lt;TModule, TManifest&gt;
    | Modulight ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -78,38 +78,66 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Modulight.Modules.Server.GraphQL">
+            <article class="content wrap" id="_content" data-uid="Modulight.Modules.IModuleManifestBuilder`2">
   
-  <h1 id="Modulight_Modules_Server_GraphQL" data-uid="Modulight.Modules.Server.GraphQL" class="text-break">Namespace Modulight.Modules.Server.GraphQL
+  
+  <h1 id="Modulight_Modules_IModuleManifestBuilder_2" data-uid="Modulight.Modules.IModuleManifestBuilder`2" class="text-break">Interface IModuleManifestBuilder&lt;TModule, TManifest&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Specifies the interface to build a manifest.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
+  <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.html">Modulight.Modules</a></h6>
+  <h6><strong>Assembly</strong>: Modulight.Modules.Core.dll</h6>
+  <h5 id="Modulight_Modules_IModuleManifestBuilder_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IModuleManifestBuilder&lt;TModule, TManifest&gt;
+    where TModule : IModule where TManifest : ModuleManifest&lt;TModule&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TModule</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TManifest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
   </h3>
-      <h4><a class="xref" href="Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.html">GraphQLModuleTypeAttribute</a></h4>
-      <section><p>Specifies the object types for GraphQL server.</p>
-</section>
-      <h4><a class="xref" href="Modulight.Modules.Server.GraphQL.GraphQLServerModule.html">GraphQLServerModule</a></h4>
-      <section><p>Basic implement for <a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html">IGraphQLServerModule</a></p>
-</section>
-      <h4><a class="xref" href="Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html">GraphQLServerModuleStartup</a></h4>
-      <section><p>Empty implementation for <a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html">IGraphQLServerModuleStartup</a>.</p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html">IGraphQLServerModule</a></h4>
-      <section><p>Specifies the contract for graphql modules.</p>
-</section>
-      <h4><a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.html">IGraphQLServerModuleCollection</a></h4>
-      <section><p>Specifies the contract for graphql module hosts.</p>
-</section>
-      <h4><a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html">IGraphQLServerModuleManifestBuilder</a></h4>
-      <section><p>Specifies the interface to build a module manifest.</p>
-</section>
-      <h4><a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html">IGraphQLServerModuleStartup</a></h4>
-      <section><p>Startup for graphql server module.</p>
-</section>
+  <a id="Modulight_Modules_IModuleManifestBuilder_2_Build_" data-uid="Modulight.Modules.IModuleManifestBuilder`2.Build*"></a>
+  <h4 id="Modulight_Modules_IModuleManifestBuilder_2_Build" data-uid="Modulight.Modules.IModuleManifestBuilder`2.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Build the manifest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TManifest Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TManifest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

@@ -90,6 +90,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ModuleHostFilterCollection&lt;TModule&gt;</span></div>
+      <div class="level2"><a class="xref" href="Modulight.Modules.Hosting.ModuleHostFilterCollection-2.html">ModuleHostFilterCollection&lt;TModule, TManifest&gt;</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -177,7 +178,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Type&gt; DefinedModules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Type&gt; DefinedModules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -225,7 +226,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TModule&gt; LoadedModules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;TModule&gt; LoadedModules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,6 +239,49 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TModule&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Modulight_Modules_Hosting_ModuleHostFilterCollection_1_GetModule_" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`1.GetModule*"></a>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostFilterCollection_1_GetModule_System_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`1.GetModule(System.Type)">GetModule(Type)</h4>
+  <div class="markdown level1 summary"><p>Get the module instance with module type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TModule GetModule(Type moduleType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">moduleType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TModule</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -133,6 +133,38 @@ references:
   isSpec: "True"
   fullName: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleHost
   nameWithType: ModuleHostExtensions.GetModuleHost
+- uid: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests*
+  name: GetModuleManifests
+  href: api/Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.html#Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleManifests_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests
+  nameWithType: ModuleHostExtensions.GetModuleManifests
+- uid: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests``2(System.IServiceProvider)
+  name: GetModuleManifests<TModule, TManifest>(IServiceProvider)
+  href: api/Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.html#Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleManifests__2_System_IServiceProvider_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests``2(System.IServiceProvider)
+  name.vb: GetModuleManifests(Of TModule, TManifest)(IServiceProvider)
+  fullName: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests<TModule, TManifest>(System.IServiceProvider)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests(Of TModule, TManifest)(System.IServiceProvider)
+  nameWithType: ModuleHostExtensions.GetModuleManifests<TModule, TManifest>(IServiceProvider)
+  nameWithType.vb: ModuleHostExtensions.GetModuleManifests(Of TModule, TManifest)(IServiceProvider)
+- uid: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.RegisterModuleManifest*
+  name: RegisterModuleManifest
+  href: api/Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.html#Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_RegisterModuleManifest_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.RegisterModuleManifest
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.RegisterModuleManifest
+  nameWithType: ModuleHostExtensions.RegisterModuleManifest
+- uid: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.RegisterModuleManifest``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,ModuleManifestServiceEntry{``0,``1})
+  name: RegisterModuleManifest<TModule, TManifest>(IServiceCollection, ModuleManifestServiceEntry<TModule, TManifest>)
+  href: api/Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.html#Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_RegisterModuleManifest__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_ModuleManifestServiceEntry___0___1__
+  commentId: M:Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.RegisterModuleManifest``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,ModuleManifestServiceEntry{``0,``1})
+  name.vb: RegisterModuleManifest(Of TModule, TManifest)(IServiceCollection, ModuleManifestServiceEntry(Of TModule, TManifest))
+  fullName: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.RegisterModuleManifest<TModule, TManifest>(Microsoft.Extensions.DependencyInjection.IServiceCollection, ModuleManifestServiceEntry<TModule, TManifest>)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.RegisterModuleManifest(Of TModule, TManifest)(Microsoft.Extensions.DependencyInjection.IServiceCollection, ModuleManifestServiceEntry(Of TModule, TManifest))
+  nameWithType: ModuleHostExtensions.RegisterModuleManifest<TModule, TManifest>(IServiceCollection, ModuleManifestServiceEntry<TModule, TManifest>)
+  nameWithType.vb: ModuleHostExtensions.RegisterModuleManifest(Of TModule, TManifest)(IServiceCollection, ModuleManifestServiceEntry(Of TModule, TManifest))
 - uid: Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.UseModules(System.IServiceProvider)
   name: UseModules(IServiceProvider)
   href: api/Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.html#Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_UseModules_System_IServiceProvider_
@@ -247,19 +279,6 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetAssembliesForRouting
   nameWithType: IRazorComponentClientModuleCollection.GetAssembliesForRouting
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetManifest(System.Type)
-  name: GetManifest(Type)
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_GetManifest_System_Type_
-  commentId: M:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetManifest(System.Type)
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetManifest(System.Type)
-  nameWithType: IRazorComponentClientModuleCollection.GetManifest(Type)
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetManifest*
-  name: GetManifest
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_GetManifest_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetManifest
-  isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetManifest
-  nameWithType: IRazorComponentClientModuleCollection.GetManifest
 - uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.LoadResources(System.Type)
   name: LoadResources(Type)
   href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_LoadResources_System_Type_
@@ -292,19 +311,6 @@ references:
   commentId: T:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder
   fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder
   nameWithType: IRazorComponentClientModuleManifestBuilder
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.Build
-  name: Build()
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_Build
-  commentId: M:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.Build
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.Build()
-  nameWithType: IRazorComponentClientModuleManifestBuilder.Build()
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.Build*
-  name: Build
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_Build_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.Build
-  isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.Build
-  nameWithType: IRazorComponentClientModuleManifestBuilder.Build
 - uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.GlobalComponents
   name: GlobalComponents
   href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_GlobalComponents
@@ -1109,6 +1115,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Hosting.GraphQLServerModuleExtensions.UseGraphQLServerModules
   nameWithType: GraphQLServerModuleExtensions.UseGraphQLServerModules
+- uid: Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder,System.Type)
+  name: WithDefaultsFromModuleType(IGraphQLServerModuleManifestBuilder, Type)
+  href: api/Modulight.Modules.Hosting.GraphQLServerModuleExtensions.html#Modulight_Modules_Hosting_GraphQLServerModuleExtensions_WithDefaultsFromModuleType_Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_System_Type_
+  commentId: M:Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder,System.Type)
+  fullName: Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder, System.Type)
+  nameWithType: GraphQLServerModuleExtensions.WithDefaultsFromModuleType(IGraphQLServerModuleManifestBuilder, Type)
+- uid: Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType*
+  name: WithDefaultsFromModuleType
+  href: api/Modulight.Modules.Hosting.GraphQLServerModuleExtensions.html#Modulight_Modules_Hosting_GraphQLServerModuleExtensions_WithDefaultsFromModuleType_
+  commentId: Overload:Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType
+  nameWithType: GraphQLServerModuleExtensions.WithDefaultsFromModuleType
 - uid: Modulight.Modules.Hosting.IModuleCollection`1
   name: IModuleCollection<TModule>
   href: api/Modulight.Modules.Hosting.IModuleCollection-1.html
@@ -1135,6 +1154,23 @@ references:
   fullName.vb: Modulight.Modules.Hosting.IModuleCollection(Of TModule).DefinedModules
   nameWithType: IModuleCollection<TModule>.DefinedModules
   nameWithType.vb: IModuleCollection(Of TModule).DefinedModules
+- uid: Modulight.Modules.Hosting.IModuleCollection`1.GetModule(System.Type)
+  name: GetModule(Type)
+  href: api/Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_GetModule_System_Type_
+  commentId: M:Modulight.Modules.Hosting.IModuleCollection`1.GetModule(System.Type)
+  fullName: Modulight.Modules.Hosting.IModuleCollection<TModule>.GetModule(System.Type)
+  fullName.vb: Modulight.Modules.Hosting.IModuleCollection(Of TModule).GetModule(System.Type)
+  nameWithType: IModuleCollection<TModule>.GetModule(Type)
+  nameWithType.vb: IModuleCollection(Of TModule).GetModule(Type)
+- uid: Modulight.Modules.Hosting.IModuleCollection`1.GetModule*
+  name: GetModule
+  href: api/Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_GetModule_
+  commentId: Overload:Modulight.Modules.Hosting.IModuleCollection`1.GetModule
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.IModuleCollection<TModule>.GetModule
+  fullName.vb: Modulight.Modules.Hosting.IModuleCollection(Of TModule).GetModule
+  nameWithType: IModuleCollection<TModule>.GetModule
+  nameWithType.vb: IModuleCollection(Of TModule).GetModule
 - uid: Modulight.Modules.Hosting.IModuleCollection`1.LoadedModules
   name: LoadedModules
   href: api/Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_LoadedModules
@@ -1152,38 +1188,38 @@ references:
   fullName.vb: Modulight.Modules.Hosting.IModuleCollection(Of TModule).LoadedModules
   nameWithType: IModuleCollection<TModule>.LoadedModules
   nameWithType.vb: IModuleCollection(Of TModule).LoadedModules
+- uid: Modulight.Modules.Hosting.IModuleCollection`2
+  name: IModuleCollection<TModule, TManifest>
+  href: api/Modulight.Modules.Hosting.IModuleCollection-2.html
+  commentId: T:Modulight.Modules.Hosting.IModuleCollection`2
+  name.vb: IModuleCollection(Of TModule, TManifest)
+  fullName: Modulight.Modules.Hosting.IModuleCollection<TModule, TManifest>
+  fullName.vb: Modulight.Modules.Hosting.IModuleCollection(Of TModule, TManifest)
+  nameWithType: IModuleCollection<TModule, TManifest>
+  nameWithType.vb: IModuleCollection(Of TModule, TManifest)
+- uid: Modulight.Modules.Hosting.IModuleCollection`2.GetManifest(System.Type)
+  name: GetManifest(Type)
+  href: api/Modulight.Modules.Hosting.IModuleCollection-2.html#Modulight_Modules_Hosting_IModuleCollection_2_GetManifest_System_Type_
+  commentId: M:Modulight.Modules.Hosting.IModuleCollection`2.GetManifest(System.Type)
+  fullName: Modulight.Modules.Hosting.IModuleCollection<TModule, TManifest>.GetManifest(System.Type)
+  fullName.vb: Modulight.Modules.Hosting.IModuleCollection(Of TModule, TManifest).GetManifest(System.Type)
+  nameWithType: IModuleCollection<TModule, TManifest>.GetManifest(Type)
+  nameWithType.vb: IModuleCollection(Of TModule, TManifest).GetManifest(Type)
+- uid: Modulight.Modules.Hosting.IModuleCollection`2.GetManifest*
+  name: GetManifest
+  href: api/Modulight.Modules.Hosting.IModuleCollection-2.html#Modulight_Modules_Hosting_IModuleCollection_2_GetManifest_
+  commentId: Overload:Modulight.Modules.Hosting.IModuleCollection`2.GetManifest
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.IModuleCollection<TModule, TManifest>.GetManifest
+  fullName.vb: Modulight.Modules.Hosting.IModuleCollection(Of TModule, TManifest).GetManifest
+  nameWithType: IModuleCollection<TModule, TManifest>.GetManifest
+  nameWithType.vb: IModuleCollection(Of TModule, TManifest).GetManifest
 - uid: Modulight.Modules.Hosting.IModuleHost
   name: IModuleHost
   href: api/Modulight.Modules.Hosting.IModuleHost.html
   commentId: T:Modulight.Modules.Hosting.IModuleHost
   fullName: Modulight.Modules.Hosting.IModuleHost
   nameWithType: IModuleHost
-- uid: Modulight.Modules.Hosting.IModuleHost.GetManifest(System.Type)
-  name: GetManifest(Type)
-  href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_GetManifest_System_Type_
-  commentId: M:Modulight.Modules.Hosting.IModuleHost.GetManifest(System.Type)
-  fullName: Modulight.Modules.Hosting.IModuleHost.GetManifest(System.Type)
-  nameWithType: IModuleHost.GetManifest(Type)
-- uid: Modulight.Modules.Hosting.IModuleHost.GetManifest*
-  name: GetManifest
-  href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_GetManifest_
-  commentId: Overload:Modulight.Modules.Hosting.IModuleHost.GetManifest
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.IModuleHost.GetManifest
-  nameWithType: IModuleHost.GetManifest
-- uid: Modulight.Modules.Hosting.IModuleHost.GetModule(System.Type)
-  name: GetModule(Type)
-  href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_GetModule_System_Type_
-  commentId: M:Modulight.Modules.Hosting.IModuleHost.GetModule(System.Type)
-  fullName: Modulight.Modules.Hosting.IModuleHost.GetModule(System.Type)
-  nameWithType: IModuleHost.GetModule(Type)
-- uid: Modulight.Modules.Hosting.IModuleHost.GetModule*
-  name: GetModule
-  href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_GetModule_
-  commentId: Overload:Modulight.Modules.Hosting.IModuleHost.GetModule
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.IModuleHost.GetModule
-  nameWithType: IModuleHost.GetModule
 - uid: Modulight.Modules.Hosting.IModuleHost.Initialize
   name: Initialize()
   href: api/Modulight.Modules.Hosting.IModuleHost.html#Modulight_Modules_Hosting_IModuleHost_Initialize
@@ -1668,6 +1704,23 @@ references:
   fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).DefinedModules
   nameWithType: ModuleHostFilterCollection<TModule>.DefinedModules
   nameWithType.vb: ModuleHostFilterCollection(Of TModule).DefinedModules
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.GetModule(System.Type)
+  name: GetModule(Type)
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_GetModule_System_Type_
+  commentId: M:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.GetModule(System.Type)
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.GetModule(System.Type)
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).GetModule(System.Type)
+  nameWithType: ModuleHostFilterCollection<TModule>.GetModule(Type)
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).GetModule(Type)
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.GetModule*
+  name: GetModule
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_GetModule_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilterCollection`1.GetModule
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule>.GetModule
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).GetModule
+  nameWithType: ModuleHostFilterCollection<TModule>.GetModule
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule).GetModule
 - uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`1.Host
   name: Host
   href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_Host
@@ -1702,6 +1755,81 @@ references:
   fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule).LoadedModules
   nameWithType: ModuleHostFilterCollection<TModule>.LoadedModules
   nameWithType.vb: ModuleHostFilterCollection(Of TModule).LoadedModules
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`2
+  name: ModuleHostFilterCollection<TModule, TManifest>
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-2.html
+  commentId: T:Modulight.Modules.Hosting.ModuleHostFilterCollection`2
+  name.vb: ModuleHostFilterCollection(Of TModule, TManifest)
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule, TManifest>
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule, TManifest)
+  nameWithType: ModuleHostFilterCollection<TModule, TManifest>
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule, TManifest)
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`2.#ctor(Modulight.Modules.Hosting.IModuleHost)
+  name: ModuleHostFilterCollection(IModuleHost)
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-2.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_2__ctor_Modulight_Modules_Hosting_IModuleHost_
+  commentId: M:Modulight.Modules.Hosting.ModuleHostFilterCollection`2.#ctor(Modulight.Modules.Hosting.IModuleHost)
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule, TManifest>.ModuleHostFilterCollection(Modulight.Modules.Hosting.IModuleHost)
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule, TManifest).ModuleHostFilterCollection(Modulight.Modules.Hosting.IModuleHost)
+  nameWithType: ModuleHostFilterCollection<TModule, TManifest>.ModuleHostFilterCollection(IModuleHost)
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule, TManifest).ModuleHostFilterCollection(IModuleHost)
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`2.#ctor*
+  name: ModuleHostFilterCollection
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-2.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_2__ctor_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilterCollection`2.#ctor
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule, TManifest>.ModuleHostFilterCollection
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule, TManifest).ModuleHostFilterCollection
+  nameWithType: ModuleHostFilterCollection<TModule, TManifest>.ModuleHostFilterCollection
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule, TManifest).ModuleHostFilterCollection
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`2.GetManifest(System.Type)
+  name: GetManifest(Type)
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-2.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_2_GetManifest_System_Type_
+  commentId: M:Modulight.Modules.Hosting.ModuleHostFilterCollection`2.GetManifest(System.Type)
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule, TManifest>.GetManifest(System.Type)
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule, TManifest).GetManifest(System.Type)
+  nameWithType: ModuleHostFilterCollection<TModule, TManifest>.GetManifest(Type)
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule, TManifest).GetManifest(Type)
+- uid: Modulight.Modules.Hosting.ModuleHostFilterCollection`2.GetManifest*
+  name: GetManifest
+  href: api/Modulight.Modules.Hosting.ModuleHostFilterCollection-2.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_2_GetManifest_
+  commentId: Overload:Modulight.Modules.Hosting.ModuleHostFilterCollection`2.GetManifest
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.ModuleHostFilterCollection<TModule, TManifest>.GetManifest
+  fullName.vb: Modulight.Modules.Hosting.ModuleHostFilterCollection(Of TModule, TManifest).GetManifest
+  nameWithType: ModuleHostFilterCollection<TModule, TManifest>.GetManifest
+  nameWithType.vb: ModuleHostFilterCollection(Of TModule, TManifest).GetManifest
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions
+  name: RazorComponentClientModuleExtensions
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html
+  commentId: T:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions
+  nameWithType: RazorComponentClientModuleExtensions
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection(Modulight.Modules.Hosting.IModuleHost)
+  name: GetRazorComponentClientModuleCollection(IModuleHost)
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_GetRazorComponentClientModuleCollection_Modulight_Modules_Hosting_IModuleHost_
+  commentId: M:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection(Modulight.Modules.Hosting.IModuleHost)
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection(Modulight.Modules.Hosting.IModuleHost)
+  nameWithType: RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection(IModuleHost)
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection*
+  name: GetRazorComponentClientModuleCollection
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_GetRazorComponentClientModuleCollection_
+  commentId: Overload:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection
+  nameWithType: RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.UseRazorComponentClientModules(Modulight.Modules.Hosting.IModuleHostBuilder)
+  name: UseRazorComponentClientModules(IModuleHostBuilder)
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_UseRazorComponentClientModules_Modulight_Modules_Hosting_IModuleHostBuilder_
+  commentId: M:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.UseRazorComponentClientModules(Modulight.Modules.Hosting.IModuleHostBuilder)
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.UseRazorComponentClientModules(Modulight.Modules.Hosting.IModuleHostBuilder)
+  nameWithType: RazorComponentClientModuleExtensions.UseRazorComponentClientModules(IModuleHostBuilder)
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.UseRazorComponentClientModules*
+  name: UseRazorComponentClientModules
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_UseRazorComponentClientModules_
+  commentId: Overload:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.UseRazorComponentClientModules
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.UseRazorComponentClientModules
+  nameWithType: RazorComponentClientModuleExtensions.UseRazorComponentClientModules
 - uid: Modulight.Modules.IModule
   name: IModule
   href: api/Modulight.Modules.IModule.html
@@ -1766,19 +1894,6 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.IModuleManifestBuilder.Author
   nameWithType: IModuleManifestBuilder.Author
-- uid: Modulight.Modules.IModuleManifestBuilder.Build
-  name: Build()
-  href: api/Modulight.Modules.IModuleManifestBuilder.html#Modulight_Modules_IModuleManifestBuilder_Build
-  commentId: M:Modulight.Modules.IModuleManifestBuilder.Build
-  fullName: Modulight.Modules.IModuleManifestBuilder.Build()
-  nameWithType: IModuleManifestBuilder.Build()
-- uid: Modulight.Modules.IModuleManifestBuilder.Build*
-  name: Build
-  href: api/Modulight.Modules.IModuleManifestBuilder.html#Modulight_Modules_IModuleManifestBuilder_Build_
-  commentId: Overload:Modulight.Modules.IModuleManifestBuilder.Build
-  isSpec: "True"
-  fullName: Modulight.Modules.IModuleManifestBuilder.Build
-  nameWithType: IModuleManifestBuilder.Build
 - uid: Modulight.Modules.IModuleManifestBuilder.Dependencies
   name: Dependencies
   href: api/Modulight.Modules.IModuleManifestBuilder.html#Modulight_Modules_IModuleManifestBuilder_Dependencies
@@ -1883,6 +1998,32 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.IModuleManifestBuilder.Version
   nameWithType: IModuleManifestBuilder.Version
+- uid: Modulight.Modules.IModuleManifestBuilder`2
+  name: IModuleManifestBuilder<TModule, TManifest>
+  href: api/Modulight.Modules.IModuleManifestBuilder-2.html
+  commentId: T:Modulight.Modules.IModuleManifestBuilder`2
+  name.vb: IModuleManifestBuilder(Of TModule, TManifest)
+  fullName: Modulight.Modules.IModuleManifestBuilder<TModule, TManifest>
+  fullName.vb: Modulight.Modules.IModuleManifestBuilder(Of TModule, TManifest)
+  nameWithType: IModuleManifestBuilder<TModule, TManifest>
+  nameWithType.vb: IModuleManifestBuilder(Of TModule, TManifest)
+- uid: Modulight.Modules.IModuleManifestBuilder`2.Build
+  name: Build()
+  href: api/Modulight.Modules.IModuleManifestBuilder-2.html#Modulight_Modules_IModuleManifestBuilder_2_Build
+  commentId: M:Modulight.Modules.IModuleManifestBuilder`2.Build
+  fullName: Modulight.Modules.IModuleManifestBuilder<TModule, TManifest>.Build()
+  fullName.vb: Modulight.Modules.IModuleManifestBuilder(Of TModule, TManifest).Build()
+  nameWithType: IModuleManifestBuilder<TModule, TManifest>.Build()
+  nameWithType.vb: IModuleManifestBuilder(Of TModule, TManifest).Build()
+- uid: Modulight.Modules.IModuleManifestBuilder`2.Build*
+  name: Build
+  href: api/Modulight.Modules.IModuleManifestBuilder-2.html#Modulight_Modules_IModuleManifestBuilder_2_Build_
+  commentId: Overload:Modulight.Modules.IModuleManifestBuilder`2.Build
+  isSpec: "True"
+  fullName: Modulight.Modules.IModuleManifestBuilder<TModule, TManifest>.Build
+  fullName.vb: Modulight.Modules.IModuleManifestBuilder(Of TModule, TManifest).Build
+  nameWithType: IModuleManifestBuilder<TModule, TManifest>.Build
+  nameWithType.vb: IModuleManifestBuilder(Of TModule, TManifest).Build
 - uid: Modulight.Modules.IModuleStartup
   name: IModuleStartup
   href: api/Modulight.Modules.IModuleStartup.html
@@ -2845,6 +2986,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema
   nameWithType: GraphQLServerModuleStartup.ConfigureGraphQLSchema
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder)
+  name: ConfigureGraphQLServerModuleManifest(IGraphQLServerModuleManifestBuilder)
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_GraphQLServerModuleStartup_ConfigureGraphQLServerModuleManifest_Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_
+  commentId: M:Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder)
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder)
+  nameWithType: GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(IGraphQLServerModuleManifestBuilder)
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest*
+  name: ConfigureGraphQLServerModuleManifest
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_GraphQLServerModuleStartup_ConfigureGraphQLServerModuleManifest_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest
+  nameWithType: GraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest
 - uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModule
   name: IGraphQLServerModule
   href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html
@@ -2886,6 +3040,77 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints
   nameWithType: IGraphQLServerModuleCollection.MapEndpoints
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder
+  name: IGraphQLServerModuleManifestBuilder
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html
+  commentId: T:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder
+  nameWithType: IGraphQLServerModuleManifestBuilder
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.Endpoint
+  name: Endpoint
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_Endpoint
+  commentId: P:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.Endpoint
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.Endpoint
+  nameWithType: IGraphQLServerModuleManifestBuilder.Endpoint
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.Endpoint*
+  name: Endpoint
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_Endpoint_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.Endpoint
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.Endpoint
+  nameWithType: IGraphQLServerModuleManifestBuilder.Endpoint
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.MutationType
+  name: MutationType
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_MutationType
+  commentId: P:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.MutationType
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.MutationType
+  nameWithType: IGraphQLServerModuleManifestBuilder.MutationType
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.MutationType*
+  name: MutationType
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_MutationType_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.MutationType
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.MutationType
+  nameWithType: IGraphQLServerModuleManifestBuilder.MutationType
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.QueryType
+  name: QueryType
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_QueryType
+  commentId: P:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.QueryType
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.QueryType
+  nameWithType: IGraphQLServerModuleManifestBuilder.QueryType
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.QueryType*
+  name: QueryType
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_QueryType_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.QueryType
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.QueryType
+  nameWithType: IGraphQLServerModuleManifestBuilder.QueryType
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SchemaName
+  name: SchemaName
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_SchemaName
+  commentId: P:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SchemaName
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SchemaName
+  nameWithType: IGraphQLServerModuleManifestBuilder.SchemaName
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SchemaName*
+  name: SchemaName
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_SchemaName_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SchemaName
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SchemaName
+  nameWithType: IGraphQLServerModuleManifestBuilder.SchemaName
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SubscriptionType
+  name: SubscriptionType
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_SubscriptionType
+  commentId: P:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SubscriptionType
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SubscriptionType
+  nameWithType: IGraphQLServerModuleManifestBuilder.SubscriptionType
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SubscriptionType*
+  name: SubscriptionType
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_SubscriptionType_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SubscriptionType
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.SubscriptionType
+  nameWithType: IGraphQLServerModuleManifestBuilder.SubscriptionType
 - uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup
   name: IGraphQLServerModuleStartup
   href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html
@@ -2905,6 +3130,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema
   nameWithType: IGraphQLServerModuleStartup.ConfigureGraphQLSchema
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder)
+  name: ConfigureGraphQLServerModuleManifest(IGraphQLServerModuleManifestBuilder)
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleStartup_ConfigureGraphQLServerModuleManifest_Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_
+  commentId: M:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder)
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder)
+  nameWithType: IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest(IGraphQLServerModuleManifestBuilder)
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest*
+  name: ConfigureGraphQLServerModuleManifest
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleStartup_ConfigureGraphQLServerModuleManifest_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest
+  nameWithType: IGraphQLServerModuleStartup.ConfigureGraphQLServerModuleManifest
 - uid: Modulight.Modules.ServiceRegisterBehavior
   name: ServiceRegisterBehavior
   href: api/Modulight.Modules.ServiceRegisterBehavior.html

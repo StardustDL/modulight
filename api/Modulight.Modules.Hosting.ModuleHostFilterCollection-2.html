@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GraphQLServerModuleExtensions
+    <title>Class ModuleHostFilterCollection&lt;TModule, TManifest&gt;
    | Modulight </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GraphQLServerModuleExtensions
+    <meta name="title" content="Class ModuleHostFilterCollection&lt;TModule, TManifest&gt;
    | Modulight ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -78,21 +78,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions">
+            <article class="content wrap" id="_content" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`2">
   
   
-  <h1 id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions" class="text-break">Class GraphQLServerModuleExtensions
+  <h1 id="Modulight_Modules_Hosting_ModuleHostFilterCollection_2" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`2" class="text-break">Class ModuleHostFilterCollection&lt;TModule, TManifest&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Extension methods for aspnet modules.</p>
+  <div class="markdown level0 summary"><p>Filter modules in exact type.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GraphQLServerModuleExtensions</span></div>
+    <div class="level1"><a class="xref" href="Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html">ModuleHostFilterCollection</a>&lt;TModule&gt;</div>
+    <div class="level2"><span class="xref">ModuleHostFilterCollection&lt;TModule, TManifest&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-2.html">IModuleCollection</a>&lt;TModule, TManifest&gt;</div>
+    <div><a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html">IModuleCollection</a>&lt;TModule&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_Host">ModuleHostFilterCollection&lt;TModule&gt;.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_LoadedModules">ModuleHostFilterCollection&lt;TModule&gt;.LoadedModules</a>
+    </div>
+    <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_DefinedModules">ModuleHostFilterCollection&lt;TModule&gt;.DefinedModules</a>
+    </div>
+    <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostFilterCollection-1.html#Modulight_Modules_Hosting_ModuleHostFilterCollection_1_GetModule_System_Type_">ModuleHostFilterCollection&lt;TModule&gt;.GetModule(Type)</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -116,21 +134,40 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Hosting.html">Modulight.Modules.Hosting</a></h6>
-  <h6><strong>Assembly</strong>: Modulight.Modules.Server.GraphQL.dll</h6>
-  <h5 id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions_syntax">Syntax</h5>
+  <h6><strong>Assembly</strong>: Modulight.Modules.Core.dll</h6>
+  <h5 id="Modulight_Modules_Hosting_ModuleHostFilterCollection_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GraphQLServerModuleExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public class ModuleHostFilterCollection&lt;TModule, TManifest&gt; : ModuleHostFilterCollection&lt;TModule&gt;, IModuleCollection&lt;TModule, TManifest&gt;, IModuleCollection&lt;TModule&gt; where TModule : IModule where TManifest : ModuleManifest&lt;TModule&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TModule</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TManifest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
   </h3>
-  <a id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions_GetGraphQLServerModuleCollection_" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions.GetGraphQLServerModuleCollection*"></a>
-  <h4 id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions_GetGraphQLServerModuleCollection_Modulight_Modules_Hosting_IModuleHost_" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions.GetGraphQLServerModuleCollection(Modulight.Modules.Hosting.IModuleHost)">GetGraphQLServerModuleCollection(IModuleHost)</h4>
-  <div class="markdown level1 summary"><p>Get graphql module host from service provider.</p>
+  <a id="Modulight_Modules_Hosting_ModuleHostFilterCollection_2__ctor_" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`2.#ctor*"></a>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostFilterCollection_2__ctor_Modulight_Modules_Hosting_IModuleHost_" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`2.#ctor(Modulight.Modules.Hosting.IModuleHost)">ModuleHostFilterCollection(IModuleHost)</h4>
+  <div class="markdown level1 summary"><p>Create the filter instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IGraphQLServerModuleCollection GetGraphQLServerModuleCollection(this IModuleHost host)</code></pre>
+    <pre><code class="lang-csharp hljs">public ModuleHostFilterCollection(IModuleHost host)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,29 +186,16 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.html">IGraphQLServerModuleCollection</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions_UseGraphQLServerModules_" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions.UseGraphQLServerModules*"></a>
-  <h4 id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions_UseGraphQLServerModules_Modulight_Modules_Hosting_IModuleHostBuilder_" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions.UseGraphQLServerModules(Modulight.Modules.Hosting.IModuleHostBuilder)">UseGraphQLServerModules(IModuleHostBuilder)</h4>
-  <div class="markdown level1 summary"><p>Use building plugin for graphql modules.</p>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Modulight_Modules_Hosting_ModuleHostFilterCollection_2_GetManifest_" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`2.GetManifest*"></a>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostFilterCollection_2_GetManifest_System_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostFilterCollection`2.GetManifest(System.Type)">GetManifest(Type)</h4>
+  <div class="markdown level1 summary"><p>Get manifest for the module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IModuleHostBuilder UseGraphQLServerModules(this IModuleHostBuilder modules)</code></pre>
+    <pre><code class="lang-csharp hljs">public TManifest GetManifest(Type moduleType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,55 +207,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a></td>
-        <td><span class="parametername">modules</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions_WithDefaultsFromModuleType_" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType*"></a>
-  <h4 id="Modulight_Modules_Hosting_GraphQLServerModuleExtensions_WithDefaultsFromModuleType_Modulight_Modules_Server_GraphQL_IGraphQLServerModuleManifestBuilder_System_Type_" data-uid="Modulight.Modules.Hosting.GraphQLServerModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder,System.Type)">WithDefaultsFromModuleType(IGraphQLServerModuleManifestBuilder, Type)</h4>
-  <div class="markdown level1 summary"><p>Configure the builder by default from attributes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IGraphQLServerModuleManifestBuilder WithDefaultsFromModuleType(this IGraphQLServerModuleManifestBuilder builder, Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html">IGraphQLServerModuleManifestBuilder</a></td>
-        <td><span class="parametername">builder</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
+        <td><span class="parametername">moduleType</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -246,11 +224,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html">IGraphQLServerModuleManifestBuilder</a></td>
+        <td><span class="xref">TManifest</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-2.html">IModuleCollection&lt;TModule, TManifest&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html">IModuleCollection&lt;TModule&gt;</a>
+  </div>
 </article>
           </div>
           
