@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ModuleHostExtensions
    | Modulight ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -554,6 +554,73 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption*"></a>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption__1_Modulight_Modules_Hosting_IModuleHost_System_IServiceProvider_System_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption``1(Modulight.Modules.Hosting.IModuleHost,System.IServiceProvider,System.Type)">GetOption&lt;T&gt;(IModuleHost, IServiceProvider, Type)</h4>
+  <div class="markdown level1 summary"><p>Get option that belongs to the module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetOption&lt;T&gt;(this IModuleHost host, IServiceProvider provider, Type moduleType)
+    where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHost.html">IModuleHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">moduleType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption*"></a>
   <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption__2_Modulight_Modules_Hosting_IModuleHost_System_IServiceProvider_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption``2(Modulight.Modules.Hosting.IModuleHost,System.IServiceProvider)">GetOption&lt;TModule, T&gt;(IModuleHost, IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Get option that belongs to the module.</p>
 </div>
@@ -613,6 +680,72 @@
         <td><span class="parametername">TModule</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService*"></a>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService__1_Modulight_Modules_Hosting_IModuleHost_System_IServiceProvider_System_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService``1(Modulight.Modules.Hosting.IModuleHost,System.IServiceProvider,System.Type)">GetService&lt;T&gt;(IModuleHost, IServiceProvider, Type)</h4>
+  <div class="markdown level1 summary"><p>Get service that belongs to the module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetService&lt;T&gt;(this IModuleHost host, IServiceProvider provider, Type moduleType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHost.html">IModuleHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">moduleType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
         <td></td>
