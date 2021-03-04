@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AspNetServerModuleExtensions
+    <title>Class GraphQLServerModuleExtensions
    | Modulight </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AspNetServerModuleExtensions
+    <meta name="title" content="Class GraphQLServerModuleExtensions
    | Modulight ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -78,18 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions">
+            <article class="content wrap" id="_content" data-uid="Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions">
   
   
-  <h1 id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions" class="text-break">Class AspNetServerModuleExtensions
+  <h1 id="Microsoft_AspNetCore_Builder_GraphQLServerModuleExtensions" data-uid="Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions" class="text-break">Class GraphQLServerModuleExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Extension methods for aspnet modules.</p>
+  <div class="markdown level0 summary"><p>Extension methods for graphql modules.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AspNetServerModuleExtensions</span></div>
+    <div class="level1"><span class="xref">GraphQLServerModuleExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -115,63 +115,22 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Server.AspNet.html">Modulight.Modules.Server.AspNet</a></h6>
-  <h6><strong>Assembly</strong>: Modulight.Modules.Server.AspNet.dll</h6>
-  <h5 id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.AspNetCore.Builder.html">Microsoft.AspNetCore.Builder</a></h6>
+  <h6><strong>Assembly</strong>: Modulight.Modules.Server.GraphQL.dll</h6>
+  <h5 id="Microsoft_AspNetCore_Builder_GraphQLServerModuleExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class AspNetServerModuleExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GraphQLServerModuleExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions_GetAspNetServerModuleCollection_" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions.GetAspNetServerModuleCollection*"></a>
-  <h4 id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions_GetAspNetServerModuleCollection_System_IServiceProvider_" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions.GetAspNetServerModuleCollection(System.IServiceProvider)">GetAspNetServerModuleCollection(IServiceProvider)</h4>
-  <div class="markdown level1 summary"><p>Get aspnet module host from service provider.</p>
+  <a id="Microsoft_AspNetCore_Builder_GraphQLServerModuleExtensions_MapGraphQLServerModuleEndpoints_" data-uid="Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints*"></a>
+  <h4 id="Microsoft_AspNetCore_Builder_GraphQLServerModuleExtensions_MapGraphQLServerModuleEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_Action_Modulight_Modules_Server_GraphQL_IGraphQLServerModule_HotChocolate_AspNetCore_Extensions_GraphQLEndpointConventionBuilder__" data-uid="Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder})">MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder, Action&lt;IGraphQLServerModule, GraphQLEndpointConventionBuilder&gt;)</h4>
+  <div class="markdown level1 summary"><p>Map all registered graphql server module's endpoints.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IAspNetServerModuleCollection GetAspNetServerModuleCollection(this IServiceProvider provider)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
-        <td><span class="parametername">provider</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.Server.AspNet.IAspNetServerModuleCollection.html">IAspNetServerModuleCollection</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions_MapAspNetServerModuleEndpoints_" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions.MapAspNetServerModuleEndpoints*"></a>
-  <h4 id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions_MapAspNetServerModuleEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions.MapAspNetServerModuleEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)">MapAspNetServerModuleEndpoints(IEndpointRouteBuilder)</h4>
-  <div class="markdown level1 summary"><p>Map all registered aspnet server module's endpoints.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEndpointRouteBuilder MapAspNetServerModuleEndpoints(this IEndpointRouteBuilder builder)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEndpointRouteBuilder MapGraphQLServerModuleEndpoints(this IEndpointRouteBuilder builder, Action&lt;IGraphQLServerModule, GraphQLEndpointConventionBuilder&gt; postMapEndpoint = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,6 +147,12 @@
         <td><span class="parametername">builder</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html">IGraphQLServerModule</a>, <span class="xref">HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder</span>&gt;</td>
+        <td><span class="parametername">postMapEndpoint</span></td>
+        <td><p>Action to configure mapped GraphQL endpoints.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -201,47 +166,6 @@
     <tbody>
       <tr>
         <td><span class="xref">Microsoft.AspNetCore.Routing.IEndpointRouteBuilder</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions_UseAspNetServerModuleMiddlewares_" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions.UseAspNetServerModuleMiddlewares*"></a>
-  <h4 id="Modulight_Modules_Server_AspNet_AspNetServerModuleExtensions_UseAspNetServerModuleMiddlewares_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Modulight.Modules.Server.AspNet.AspNetServerModuleExtensions.UseAspNetServerModuleMiddlewares(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseAspNetServerModuleMiddlewares(IApplicationBuilder)</h4>
-  <div class="markdown level1 summary"><p>Use all registered aspnet server module's middlewares.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseAspNetServerModuleMiddlewares(this IApplicationBuilder builder)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span></td>
-        <td><span class="parametername">builder</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span></td>
         <td></td>
       </tr>
     </tbody>
