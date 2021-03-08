@@ -8,7 +8,7 @@
 	<ItemGroup>
 		<PackageReference Include="Cake.Coverlet" Version="2.5.4" />
 		<PackageReference Include="Cake.DocFx" Version="0.13.1" />
-		<PackageReference Include="Cake.Frosting" Version="1.0.0" />
+		<PackageReference Include="Cake.Frosting" Version="1.1.0" />
 		<PackageReference Include="Cake.Issues.PullRequests.GitHubActions" Version="0.9.0" />
 	</ItemGroup>
 </Project>
