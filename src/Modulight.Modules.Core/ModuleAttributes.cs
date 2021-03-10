@@ -25,7 +25,7 @@ namespace Modulight.Modules
         /// <summary>
         /// Name
         /// </summary>
-        public string? Name { get; init; }
+        public string? Name { get; }
 
         /// <summary>
         /// Display name
@@ -76,7 +76,7 @@ namespace Modulight.Modules
         /// <summary>
         /// The implementation type.
         /// </summary>
-        public Type ImplementationType { get; init; }
+        public Type ImplementationType { get; }
 
         /// <summary>
         /// Service lifetime (default as <see cref="ServiceLifetime.Scoped"/>).
@@ -86,7 +86,7 @@ namespace Modulight.Modules
         /// <summary>
         /// Behavior when the service been added.
         /// </summary>
-        public ServiceRegisterBehavior RegisterBehavior { get; init; }
+        public ServiceRegisterBehavior RegisterBehavior { get; init; } = ServiceRegisterBehavior.Normal;
     }
 
     /// <summary>
@@ -122,7 +122,7 @@ namespace Modulight.Modules
         /// <summary>
         /// Type for the option.
         /// </summary>
-        public Type OptionType { get; init; }
+        public Type OptionType { get; }
     }
 
     /// <summary>
@@ -143,7 +143,7 @@ namespace Modulight.Modules
         /// <summary>
         /// The startup type. It must implement <see cref="IModuleStartup"/>.
         /// </summary>
-        public Type StartupType { get; init; }
+        public Type StartupType { get; }
     }
 
     /// <summary>
@@ -164,6 +164,6 @@ namespace Modulight.Modules
         /// <summary>
         /// The dependency module type. It must implement <see cref="IModule"/>.
         /// </summary>
-        public Type ModuleType { get; init; }
+        public Type ModuleType { get; }
     }
 }

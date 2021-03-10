@@ -14,16 +14,6 @@ namespace Modulight.Modules.Server.GraphQL
         /// Specifies the object types for GraphQL server.
         /// </summary>
         /// <param name="schemaName">Schema name.</param>
-        public GraphQLModuleTypeAttribute(string schemaName)
-        {
-            SchemaName = schemaName;
-            Endpoint = $"/graphql/{SchemaName}";
-        }
-
-        /// <summary>
-        /// Specifies the object types for GraphQL server.
-        /// </summary>
-        /// <param name="schemaName">Schema name.</param>
         /// <param name="queryType">Query type.</param>
         public GraphQLModuleTypeAttribute(string schemaName, Type queryType)
         {
@@ -35,7 +25,7 @@ namespace Modulight.Modules.Server.GraphQL
         /// <summary>
         /// Schema name.
         /// </summary>
-        public string SchemaName { get; init; }
+        public string SchemaName { get; }
 
         /// <summary>
         /// Endpoint (default as /graphql/<see cref="SchemaName"/>).
@@ -45,7 +35,7 @@ namespace Modulight.Modules.Server.GraphQL
         /// <summary>
         /// Query type for <see cref="SchemaRequestExecutorBuilderExtensions.AddQueryType(IRequestExecutorBuilder, Type)"/>.
         /// </summary>
-        public Type? QueryType { get; init; }
+        public Type? QueryType { get; }
 
         /// <summary>
         /// Mutation type for <see cref="SchemaRequestExecutorBuilderExtensions.AddMutationType(IRequestExecutorBuilder, Type)"/>.

@@ -10,10 +10,9 @@ namespace Test.Modulights
     [TestClass]
     public class ManifestTest
     {
-        [Module(Author = ManifestString,
+        [Module(ManifestString, Author = ManifestString,
             Description = ManifestString,
             DisplayName = ManifestString,
-            Name = ManifestString,
             Url = ManifestString,
             Version = ManifestString)]
         class TestModule : BaseTestModule

@@ -20,7 +20,7 @@ namespace Modulight.Modules.Client.RazorComponents
         /// <summary>
         /// Root path.
         /// </summary>
-        public string RootPath { get; init; }
+        public string RootPath { get; }
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ namespace Modulight.Modules.Client.RazorComponents
         /// <summary>
         /// Root path.
         /// </summary>
-        public Type Type { get; init; }
+        public Type Type { get; }
     }
 
     /// <summary>
@@ -63,12 +63,12 @@ namespace Modulight.Modules.Client.RazorComponents
         /// <summary>
         /// Resource type.
         /// </summary>
-        public UIResourceType Type { get; init; }
+        public UIResourceType Type { get; }
 
         /// <summary>
         /// Resource relative path.
         /// </summary>
-        public string Path { get; init; } = string.Empty;
+        public string Path { get; } = string.Empty;
 
         /// <summary>
         /// Attributes for the resource.
