@@ -215,25 +215,44 @@ references:
   commentId: N:Modulight.Modules.Client.RazorComponents
   fullName: Modulight.Modules.Client.RazorComponents
   nameWithType: Modulight.Modules.Client.RazorComponents
+- uid: Modulight.Modules.Client.RazorComponents.IPageProvider
+  name: IPageProvider
+  href: api/Modulight.Modules.Client.RazorComponents.IPageProvider.html
+  commentId: T:Modulight.Modules.Client.RazorComponents.IPageProvider
+  fullName: Modulight.Modules.Client.RazorComponents.IPageProvider
+  nameWithType: IPageProvider
+- uid: Modulight.Modules.Client.RazorComponents.IPageProvider.Contains(System.String)
+  name: Contains(String)
+  href: api/Modulight.Modules.Client.RazorComponents.IPageProvider.html#Modulight_Modules_Client_RazorComponents_IPageProvider_Contains_System_String_
+  commentId: M:Modulight.Modules.Client.RazorComponents.IPageProvider.Contains(System.String)
+  fullName: Modulight.Modules.Client.RazorComponents.IPageProvider.Contains(System.String)
+  nameWithType: IPageProvider.Contains(String)
+- uid: Modulight.Modules.Client.RazorComponents.IPageProvider.Contains*
+  name: Contains
+  href: api/Modulight.Modules.Client.RazorComponents.IPageProvider.html#Modulight_Modules_Client_RazorComponents_IPageProvider_Contains_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.IPageProvider.Contains
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.IPageProvider.Contains
+  nameWithType: IPageProvider.Contains
+- uid: Modulight.Modules.Client.RazorComponents.IPageProvider.RootPath
+  name: RootPath
+  href: api/Modulight.Modules.Client.RazorComponents.IPageProvider.html#Modulight_Modules_Client_RazorComponents_IPageProvider_RootPath
+  commentId: P:Modulight.Modules.Client.RazorComponents.IPageProvider.RootPath
+  fullName: Modulight.Modules.Client.RazorComponents.IPageProvider.RootPath
+  nameWithType: IPageProvider.RootPath
+- uid: Modulight.Modules.Client.RazorComponents.IPageProvider.RootPath*
+  name: RootPath
+  href: api/Modulight.Modules.Client.RazorComponents.IPageProvider.html#Modulight_Modules_Client_RazorComponents_IPageProvider_RootPath_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.IPageProvider.RootPath
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.IPageProvider.RootPath
+  nameWithType: IPageProvider.RootPath
 - uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule
   name: IRazorComponentClientModule
   href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html
   commentId: T:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule
   fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule
   nameWithType: IRazorComponentClientModule
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Contains(System.String)
-  name: Contains(String)
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_Contains_System_String_
-  commentId: M:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Contains(System.String)
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Contains(System.String)
-  nameWithType: IRazorComponentClientModule.Contains(String)
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Contains*
-  name: Contains
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_Contains_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Contains
-  isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Contains
-  nameWithType: IRazorComponentClientModule.Contains
 - uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Icon
   name: Icon
   href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_Icon
@@ -247,19 +266,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.Icon
   nameWithType: IRazorComponentClientModule.Icon
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RootPath
-  name: RootPath
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_RootPath
-  commentId: P:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RootPath
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RootPath
-  nameWithType: IRazorComponentClientModule.RootPath
-- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RootPath*
-  name: RootPath
-  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_RootPath_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RootPath
+- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RazorComponentClientModuleManifest
+  name: RazorComponentClientModuleManifest
+  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_RazorComponentClientModuleManifest
+  commentId: P:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RazorComponentClientModuleManifest
+  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RazorComponentClientModuleManifest
+  nameWithType: IRazorComponentClientModule.RazorComponentClientModuleManifest
+- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RazorComponentClientModuleManifest*
+  name: RazorComponentClientModuleManifest
+  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_RazorComponentClientModuleManifest_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RazorComponentClientModuleManifest
   isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RootPath
-  nameWithType: IRazorComponentClientModule.RootPath
+  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.RazorComponentClientModuleManifest
+  nameWithType: IRazorComponentClientModule.RazorComponentClientModuleManifest
 - uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection
   name: IRazorComponentClientModuleCollection
   href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.html
@@ -324,6 +343,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.GlobalComponents
   nameWithType: IRazorComponentClientModuleManifestBuilder.GlobalComponents
+- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.PageProvider
+  name: PageProvider
+  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_PageProvider
+  commentId: P:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.PageProvider
+  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.PageProvider
+  nameWithType: IRazorComponentClientModuleManifestBuilder.PageProvider
+- uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.PageProvider*
+  name: PageProvider
+  href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_PageProvider_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.PageProvider
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.PageProvider
+  nameWithType: IRazorComponentClientModuleManifestBuilder.PageProvider
 - uid: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.Resources
   name: Resources
   href: api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder.html#Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_Resources
@@ -356,6 +388,70 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleStartup.ConfigureRazorComponentClientModuleManifest
   nameWithType: IRazorComponentClientModuleStartup.ConfigureRazorComponentClientModuleManifest
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute
+  name: ModulePageProviderAttribute
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.html
+  commentId: T:Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute
+  nameWithType: ModulePageProviderAttribute
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.#ctor(System.Type)
+  name: ModulePageProviderAttribute(Type)
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageProviderAttribute__ctor_System_Type_
+  commentId: M:Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.#ctor(System.Type)
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.ModulePageProviderAttribute(System.Type)
+  nameWithType: ModulePageProviderAttribute.ModulePageProviderAttribute(Type)
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.#ctor*
+  name: ModulePageProviderAttribute
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageProviderAttribute__ctor_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.#ctor
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.ModulePageProviderAttribute
+  nameWithType: ModulePageProviderAttribute.ModulePageProviderAttribute
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.Type
+  name: Type
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageProviderAttribute_Type
+  commentId: P:Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.Type
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.Type
+  nameWithType: ModulePageProviderAttribute.Type
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.Type*
+  name: Type
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageProviderAttribute_Type_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.Type
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageProviderAttribute.Type
+  nameWithType: ModulePageProviderAttribute.Type
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute
+  name: ModulePageRootPathAttribute
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.html
+  commentId: T:Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute
+  nameWithType: ModulePageRootPathAttribute
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.#ctor(System.String)
+  name: ModulePageRootPathAttribute(String)
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageRootPathAttribute__ctor_System_String_
+  commentId: M:Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.#ctor(System.String)
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.ModulePageRootPathAttribute(System.String)
+  nameWithType: ModulePageRootPathAttribute.ModulePageRootPathAttribute(String)
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.#ctor*
+  name: ModulePageRootPathAttribute
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageRootPathAttribute__ctor_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.#ctor
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.ModulePageRootPathAttribute
+  nameWithType: ModulePageRootPathAttribute.ModulePageRootPathAttribute
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.RootPath
+  name: RootPath
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageRootPathAttribute_RootPath
+  commentId: P:Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.RootPath
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.RootPath
+  nameWithType: ModulePageRootPathAttribute.RootPath
+- uid: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.RootPath*
+  name: RootPath
+  href: api/Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModulePageRootPathAttribute_RootPath_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.RootPath
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.ModulePageRootPathAttribute.RootPath
+  nameWithType: ModulePageRootPathAttribute.RootPath
 - uid: Modulight.Modules.Client.RazorComponents.ModuleUIGlobalComponentAttribute
   name: ModuleUIGlobalComponentAttribute
   href: api/Modulight.Modules.Client.RazorComponents.ModuleUIGlobalComponentAttribute.html
@@ -446,38 +542,51 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Client.RazorComponents.ModuleUIResourceAttribute.Type
   nameWithType: ModuleUIResourceAttribute.Type
-- uid: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute
-  name: ModuleUIRootPathAttribute
-  href: api/Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.html
-  commentId: T:Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute
-  fullName: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute
-  nameWithType: ModuleUIRootPathAttribute
-- uid: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.#ctor(System.String)
-  name: ModuleUIRootPathAttribute(String)
-  href: api/Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModuleUIRootPathAttribute__ctor_System_String_
-  commentId: M:Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.#ctor(System.String)
-  fullName: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.ModuleUIRootPathAttribute(System.String)
-  nameWithType: ModuleUIRootPathAttribute.ModuleUIRootPathAttribute(String)
-- uid: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.#ctor*
-  name: ModuleUIRootPathAttribute
-  href: api/Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModuleUIRootPathAttribute__ctor_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.#ctor
+- uid: Modulight.Modules.Client.RazorComponents.PageProvider
+  name: PageProvider
+  href: api/Modulight.Modules.Client.RazorComponents.PageProvider.html
+  commentId: T:Modulight.Modules.Client.RazorComponents.PageProvider
+  fullName: Modulight.Modules.Client.RazorComponents.PageProvider
+  nameWithType: PageProvider
+- uid: Modulight.Modules.Client.RazorComponents.PageProvider.#ctor
+  name: PageProvider()
+  href: api/Modulight.Modules.Client.RazorComponents.PageProvider.html#Modulight_Modules_Client_RazorComponents_PageProvider__ctor
+  commentId: M:Modulight.Modules.Client.RazorComponents.PageProvider.#ctor
+  fullName: Modulight.Modules.Client.RazorComponents.PageProvider.PageProvider()
+  nameWithType: PageProvider.PageProvider()
+- uid: Modulight.Modules.Client.RazorComponents.PageProvider.#ctor*
+  name: PageProvider
+  href: api/Modulight.Modules.Client.RazorComponents.PageProvider.html#Modulight_Modules_Client_RazorComponents_PageProvider__ctor_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.PageProvider.#ctor
   isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.ModuleUIRootPathAttribute
-  nameWithType: ModuleUIRootPathAttribute.ModuleUIRootPathAttribute
-- uid: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.RootPath
-  name: RootPath
-  href: api/Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModuleUIRootPathAttribute_RootPath
-  commentId: P:Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.RootPath
-  fullName: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.RootPath
-  nameWithType: ModuleUIRootPathAttribute.RootPath
-- uid: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.RootPath*
-  name: RootPath
-  href: api/Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.html#Modulight_Modules_Client_RazorComponents_ModuleUIRootPathAttribute_RootPath_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.RootPath
+  fullName: Modulight.Modules.Client.RazorComponents.PageProvider.PageProvider
+  nameWithType: PageProvider.PageProvider
+- uid: Modulight.Modules.Client.RazorComponents.PageProvider.Contains(System.String)
+  name: Contains(String)
+  href: api/Modulight.Modules.Client.RazorComponents.PageProvider.html#Modulight_Modules_Client_RazorComponents_PageProvider_Contains_System_String_
+  commentId: M:Modulight.Modules.Client.RazorComponents.PageProvider.Contains(System.String)
+  fullName: Modulight.Modules.Client.RazorComponents.PageProvider.Contains(System.String)
+  nameWithType: PageProvider.Contains(String)
+- uid: Modulight.Modules.Client.RazorComponents.PageProvider.Contains*
+  name: Contains
+  href: api/Modulight.Modules.Client.RazorComponents.PageProvider.html#Modulight_Modules_Client_RazorComponents_PageProvider_Contains_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.PageProvider.Contains
   isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.ModuleUIRootPathAttribute.RootPath
-  nameWithType: ModuleUIRootPathAttribute.RootPath
+  fullName: Modulight.Modules.Client.RazorComponents.PageProvider.Contains
+  nameWithType: PageProvider.Contains
+- uid: Modulight.Modules.Client.RazorComponents.PageProvider.RootPath
+  name: RootPath
+  href: api/Modulight.Modules.Client.RazorComponents.PageProvider.html#Modulight_Modules_Client_RazorComponents_PageProvider_RootPath
+  commentId: P:Modulight.Modules.Client.RazorComponents.PageProvider.RootPath
+  fullName: Modulight.Modules.Client.RazorComponents.PageProvider.RootPath
+  nameWithType: PageProvider.RootPath
+- uid: Modulight.Modules.Client.RazorComponents.PageProvider.RootPath*
+  name: RootPath
+  href: api/Modulight.Modules.Client.RazorComponents.PageProvider.html#Modulight_Modules_Client_RazorComponents_PageProvider_RootPath_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.PageProvider.RootPath
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.PageProvider.RootPath
+  nameWithType: PageProvider.RootPath
 - uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule
   name: RazorComponentClientModule
   href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html
@@ -497,19 +606,32 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModule
   nameWithType: RazorComponentClientModule.RazorComponentClientModule
-- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains(System.String)
-  name: Contains(String)
-  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Contains_System_String_
-  commentId: M:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains(System.String)
-  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains(System.String)
-  nameWithType: RazorComponentClientModule.Contains(String)
-- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains*
-  name: Contains
-  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Contains_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains
+- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection
+  name: Collection
+  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Collection
+  commentId: P:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection
+  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection
+  nameWithType: RazorComponentClientModule.Collection
+- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection*
+  name: Collection
+  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Collection_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection
   isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains
-  nameWithType: RazorComponentClientModule.Contains
+  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection
+  nameWithType: RazorComponentClientModule.Collection
+- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider
+  name: GetPageProvider()
+  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_GetPageProvider
+  commentId: M:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider
+  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider()
+  nameWithType: RazorComponentClientModule.GetPageProvider()
+- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider*
+  name: GetPageProvider
+  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_GetPageProvider_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider
+  isSpec: "True"
+  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider
+  nameWithType: RazorComponentClientModule.GetPageProvider
 - uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Icon
   name: Icon
   href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Icon
@@ -523,19 +645,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Icon
   nameWithType: RazorComponentClientModule.Icon
-- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath
-  name: RootPath
-  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RootPath
-  commentId: P:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath
-  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath
-  nameWithType: RazorComponentClientModule.RootPath
-- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath*
-  name: RootPath
-  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RootPath_
-  commentId: Overload:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath
+- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest
+  name: RazorComponentClientModuleManifest
+  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RazorComponentClientModuleManifest
+  commentId: P:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest
+  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest
+  nameWithType: RazorComponentClientModule.RazorComponentClientModuleManifest
+- uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest*
+  name: RazorComponentClientModuleManifest
+  href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RazorComponentClientModuleManifest_
+  commentId: Overload:Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest
   isSpec: "True"
-  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath
-  nameWithType: RazorComponentClientModule.RootPath
+  fullName: Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest
+  nameWithType: RazorComponentClientModule.RazorComponentClientModuleManifest
 - uid: Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions
   name: RazorComponentClientModuleCollectionExtensions
   href: api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions.html
@@ -1804,6 +1926,41 @@ references:
   commentId: T:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions
   fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions
   nameWithType: RazorComponentClientModuleExtensions
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider(System.Type)
+  name: EnsurePageProvider(Type)
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_EnsurePageProvider_System_Type_
+  commentId: M:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider(System.Type)
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider(System.Type)
+  nameWithType: RazorComponentClientModuleExtensions.EnsurePageProvider(Type)
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider*
+  name: EnsurePageProvider
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_EnsurePageProvider_
+  commentId: Overload:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider
+  nameWithType: RazorComponentClientModuleExtensions.EnsurePageProvider
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider``1(System.Type)
+  name: EnsurePageProvider<T>(Type)
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_EnsurePageProvider__1_System_Type_
+  commentId: M:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider``1(System.Type)
+  name.vb: EnsurePageProvider(Of T)(Type)
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider<T>(System.Type)
+  fullName.vb: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.EnsurePageProvider(Of T)(System.Type)
+  nameWithType: RazorComponentClientModuleExtensions.EnsurePageProvider<T>(Type)
+  nameWithType.vb: RazorComponentClientModuleExtensions.EnsurePageProvider(Of T)(Type)
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetPageProvider(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule,Modulight.Modules.Hosting.IModuleHost)
+  name: GetPageProvider(IRazorComponentClientModule, IModuleHost)
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_GetPageProvider_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_Modulight_Modules_Hosting_IModuleHost_
+  commentId: M:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetPageProvider(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule,Modulight.Modules.Hosting.IModuleHost)
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetPageProvider(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule, Modulight.Modules.Hosting.IModuleHost)
+  nameWithType: RazorComponentClientModuleExtensions.GetPageProvider(IRazorComponentClientModule, IModuleHost)
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetPageProvider*
+  name: GetPageProvider
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_GetPageProvider_
+  commentId: Overload:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetPageProvider
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetPageProvider
+  nameWithType: RazorComponentClientModuleExtensions.GetPageProvider
 - uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection(Modulight.Modules.Hosting.IModuleHost)
   name: GetRazorComponentClientModuleCollection(IModuleHost)
   href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_GetRazorComponentClientModuleCollection_Modulight_Modules_Hosting_IModuleHost_
@@ -1817,6 +1974,28 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection
   nameWithType: RazorComponentClientModuleExtensions.GetRazorComponentClientModuleCollection
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider(System.Type,System.Type)
+  name: IsPageProvider(Type, Type)
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_IsPageProvider_System_Type_System_Type_
+  commentId: M:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider(System.Type,System.Type)
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider(System.Type, System.Type)
+  nameWithType: RazorComponentClientModuleExtensions.IsPageProvider(Type, Type)
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider*
+  name: IsPageProvider
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_IsPageProvider_
+  commentId: Overload:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider
+  nameWithType: RazorComponentClientModuleExtensions.IsPageProvider
+- uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider``1(System.Type)
+  name: IsPageProvider<T>(Type)
+  href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_IsPageProvider__1_System_Type_
+  commentId: M:Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider``1(System.Type)
+  name.vb: IsPageProvider(Of T)(Type)
+  fullName: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider<T>(System.Type)
+  fullName.vb: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.IsPageProvider(Of T)(System.Type)
+  nameWithType: RazorComponentClientModuleExtensions.IsPageProvider<T>(Type)
+  nameWithType.vb: RazorComponentClientModuleExtensions.IsPageProvider(Of T)(Type)
 - uid: Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.UseRazorComponentClientModules(Modulight.Modules.Hosting.IModuleHostBuilder)
   name: UseRazorComponentClientModules(IModuleHostBuilder)
   href: api/Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_UseRazorComponentClientModules_Modulight_Modules_Hosting_IModuleHostBuilder_
@@ -2708,6 +2887,28 @@ references:
   fullName.vb: Modulight.Modules.RazorComponentClientModuleExtensions.WithGlobalComponent(Of T)(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder)
   nameWithType: RazorComponentClientModuleExtensions.WithGlobalComponent<T>(IRazorComponentClientModuleManifestBuilder)
   nameWithType.vb: RazorComponentClientModuleExtensions.WithGlobalComponent(Of T)(IRazorComponentClientModuleManifestBuilder)
+- uid: Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder,System.Type)
+  name: WithPageProvider(IRazorComponentClientModuleManifestBuilder, Type)
+  href: api/Modulight.Modules.RazorComponentClientModuleExtensions.html#Modulight_Modules_RazorComponentClientModuleExtensions_WithPageProvider_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_System_Type_
+  commentId: M:Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder,System.Type)
+  fullName: Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder, System.Type)
+  nameWithType: RazorComponentClientModuleExtensions.WithPageProvider(IRazorComponentClientModuleManifestBuilder, Type)
+- uid: Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider*
+  name: WithPageProvider
+  href: api/Modulight.Modules.RazorComponentClientModuleExtensions.html#Modulight_Modules_RazorComponentClientModuleExtensions_WithPageProvider_
+  commentId: Overload:Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider
+  isSpec: "True"
+  fullName: Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider
+  nameWithType: RazorComponentClientModuleExtensions.WithPageProvider
+- uid: Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider``1(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder)
+  name: WithPageProvider<T>(IRazorComponentClientModuleManifestBuilder)
+  href: api/Modulight.Modules.RazorComponentClientModuleExtensions.html#Modulight_Modules_RazorComponentClientModuleExtensions_WithPageProvider__1_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_
+  commentId: M:Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider``1(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder)
+  name.vb: WithPageProvider(Of T)(IRazorComponentClientModuleManifestBuilder)
+  fullName: Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider<T>(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder)
+  fullName.vb: Modulight.Modules.RazorComponentClientModuleExtensions.WithPageProvider(Of T)(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder)
+  nameWithType: RazorComponentClientModuleExtensions.WithPageProvider<T>(IRazorComponentClientModuleManifestBuilder)
+  nameWithType.vb: RazorComponentClientModuleExtensions.WithPageProvider(Of T)(IRazorComponentClientModuleManifestBuilder)
 - uid: Modulight.Modules.RazorComponentClientModuleExtensions.WithResource(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleManifestBuilder,UIResource)
   name: WithResource(IRazorComponentClientModuleManifestBuilder, UIResource)
   href: api/Modulight.Modules.RazorComponentClientModuleExtensions.html#Modulight_Modules_RazorComponentClientModuleExtensions_WithResource_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleManifestBuilder_UIResource_
@@ -2948,6 +3149,32 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModule
   nameWithType: GraphQLServerModule.GraphQLServerModule
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.Collection
+  name: Collection
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html#Modulight_Modules_Server_GraphQL_GraphQLServerModule_Collection
+  commentId: P:Modulight.Modules.Server.GraphQL.GraphQLServerModule.Collection
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.Collection
+  nameWithType: GraphQLServerModule.Collection
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.Collection*
+  name: Collection
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html#Modulight_Modules_Server_GraphQL_GraphQLServerModule_Collection_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.GraphQLServerModule.Collection
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.Collection
+  nameWithType: GraphQLServerModule.Collection
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModuleManifest
+  name: GraphQLServerModuleManifest
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html#Modulight_Modules_Server_GraphQL_GraphQLServerModule_GraphQLServerModuleManifest
+  commentId: P:Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModuleManifest
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModuleManifest
+  nameWithType: GraphQLServerModule.GraphQLServerModuleManifest
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModuleManifest*
+  name: GraphQLServerModuleManifest
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html#Modulight_Modules_Server_GraphQL_GraphQLServerModule_GraphQLServerModuleManifest_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModuleManifest
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModuleManifest
+  nameWithType: GraphQLServerModule.GraphQLServerModuleManifest
 - uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
   name: MapEndpoint(IEndpointRouteBuilder)
   href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html#Modulight_Modules_Server_GraphQL_GraphQLServerModule_MapEndpoint_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_
@@ -2999,6 +3226,19 @@ references:
   commentId: T:Modulight.Modules.Server.GraphQL.IGraphQLServerModule
   fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModule
   nameWithType: IGraphQLServerModule
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.GraphQLServerModuleManifest
+  name: GraphQLServerModuleManifest
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModule_GraphQLServerModuleManifest
+  commentId: P:Modulight.Modules.Server.GraphQL.IGraphQLServerModule.GraphQLServerModuleManifest
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.GraphQLServerModuleManifest
+  nameWithType: IGraphQLServerModule.GraphQLServerModuleManifest
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.GraphQLServerModuleManifest*
+  name: GraphQLServerModuleManifest
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModule_GraphQLServerModuleManifest_
+  commentId: Overload:Modulight.Modules.Server.GraphQL.IGraphQLServerModule.GraphQLServerModuleManifest
+  isSpec: "True"
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.GraphQLServerModuleManifest
+  nameWithType: IGraphQLServerModule.GraphQLServerModuleManifest
 - uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
   name: MapEndpoint(IEndpointRouteBuilder)
   href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModule_MapEndpoint_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_

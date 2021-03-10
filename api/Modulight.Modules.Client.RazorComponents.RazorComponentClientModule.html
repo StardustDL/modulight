@@ -179,6 +179,30 @@ public abstract class RazorComponentClientModule : Module, IRazorComponentClient
   </table>
   <h3 id="properties">Properties
   </h3>
+  <a id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Collection_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection*"></a>
+  <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Collection" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Collection">Collection</h4>
+  <div class="markdown level1 summary"><p>Get collection of razor component modules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IRazorComponentClientModuleCollection Collection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.html">IRazorComponentClientModuleCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Icon_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Icon*"></a>
   <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Icon" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Icon">Icon</h4>
   <div class="markdown level1 summary"><p>Get module icon.</p>
@@ -203,15 +227,14 @@ public abstract class RazorComponentClientModule : Module, IRazorComponentClient
       </tr>
     </tbody>
   </table>
-  <a id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RootPath_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath*"></a>
-  <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RootPath" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RootPath">RootPath</h4>
-  <div class="markdown level1 summary"><p>Get module UI route root path, such as home, search, and so on.
-Use <span class="xref">System.String.Empty</span> for no page module.</p>
+  <a id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RazorComponentClientModuleManifest_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest*"></a>
+  <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_RazorComponentClientModuleManifest" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.RazorComponentClientModuleManifest">RazorComponentClientModuleManifest</h4>
+  <div class="markdown level1 summary"><p>Get the manifest.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RootPath { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RazorComponentClientModuleManifest RazorComponentClientModuleManifest { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,40 +246,22 @@ Use <span class="xref">System.String.Empty</span> for no page module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">RazorComponentClientModuleManifest</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Contains_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains*"></a>
-  <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_Contains_System_String_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.Contains(System.String)">Contains(String)</h4>
-  <div class="markdown level1 summary"><p>Check if a path is belongs to this module UI.</p>
+  <a id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_GetPageProvider_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider*"></a>
+  <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModule_GetPageProvider" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.GetPageProvider">GetPageProvider()</h4>
+  <div class="markdown level1 summary"><p>Get page provider.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool Contains(string path)</code></pre>
+    <pre><code class="lang-csharp hljs">protected IPageProvider GetPageProvider()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">path</span></td>
-        <td><p>Route path.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -267,7 +272,7 @@ Use <span class="xref">System.String.Empty</span> for no page module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="Modulight.Modules.Client.RazorComponents.IPageProvider.html">IPageProvider</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -278,6 +283,10 @@ Use <span class="xref">System.String.Empty</span> for no page module.</p>
   </div>
   <div>
       <a class="xref" href="Modulight.Modules.IModule.html">IModule</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_GetPageProvider_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModule_Modulight_Modules_Hosting_IModuleHost_">RazorComponentClientModuleExtensions.GetPageProvider(IRazorComponentClientModule, IModuleHost)</a>
   </div>
 </article>
           </div>
