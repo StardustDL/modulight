@@ -2851,12 +2851,6 @@ references:
   commentId: T:Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute
   fullName: Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute
   nameWithType: GraphQLModuleTypeAttribute
-- uid: Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.#ctor(System.String)
-  name: GraphQLModuleTypeAttribute(String)
-  href: api/Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.html#Modulight_Modules_Server_GraphQL_GraphQLModuleTypeAttribute__ctor_System_String_
-  commentId: M:Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.#ctor(System.String)
-  fullName: Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.GraphQLModuleTypeAttribute(System.String)
-  nameWithType: GraphQLModuleTypeAttribute.GraphQLModuleTypeAttribute(String)
 - uid: Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.#ctor(System.String,System.Type)
   name: GraphQLModuleTypeAttribute(String, Type)
   href: api/Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.html#Modulight_Modules_Server_GraphQL_GraphQLModuleTypeAttribute__ctor_System_String_System_Type_
