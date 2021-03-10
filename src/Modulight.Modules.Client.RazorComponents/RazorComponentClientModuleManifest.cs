@@ -17,5 +17,10 @@ namespace Modulight.Modules.Client.RazorComponents
         /// Get global components.
         /// </summary>
         public Type[] GlobalComponents { get; init; } = Array.Empty<Type>();
+
+        /// <summary>
+        /// Get page provider.
+        /// </summary>
+        public Type? PageProvider { get; init; }
     }
 }

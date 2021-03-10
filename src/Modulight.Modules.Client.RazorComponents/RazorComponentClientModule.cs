@@ -20,17 +20,9 @@ namespace Modulight.Modules.Client.RazorComponents
         RenderFragment? Icon { get; }
 
         /// <summary>
-        /// Get module UI route root path, such as home, search, and so on.
-        /// Use <see cref="string.Empty"/> for no page module.
+        /// Get the manifest.
         /// </summary>
-        string RootPath { get; }
-
-        /// <summary>
-        /// Check if a path is belongs to this module UI.
-        /// </summary>
-        /// <param name="path">Route path.</param>
-        /// <returns></returns>
-        bool Contains(string path);
+        RazorComponentClientModuleManifest RazorComponentClientModuleManifest { get; }
     }
 
     /// <summary>
@@ -39,37 +31,34 @@ namespace Modulight.Modules.Client.RazorComponents
     [ModuleDependency(typeof(RazorComponentClientCoreModule))]
     public abstract class RazorComponentClientModule : Module, IRazorComponentClientModule
     {
+        readonly Lazy<RazorComponentClientModuleManifest> _manifest;
+
         /// <summary>
         /// Create the instance.
         /// </summary>
         /// <param name="host"></param>
         protected RazorComponentClientModule(IModuleHost host) : base(host)
         {
-            RootPath = "";
-            var type = GetType();
-            {
-                var attr = type.GetCustomAttribute<ModuleUIRootPathAttribute>();
-                if (attr is not null)
-                    RootPath = attr.RootPath;
-            }
+            Collection = host.GetRazorComponentClientModuleCollection();
+            _manifest = new Lazy<RazorComponentClientModuleManifest>(() => Collection.GetManifest(GetType()));
         }
 
         /// <inheritdoc/>
         public virtual RenderFragment? Icon => null;
 
         /// <inheritdoc/>
-        public string RootPath { get; }
+        public RazorComponentClientModuleManifest RazorComponentClientModuleManifest => _manifest.Value;
 
-        /// <inheritdoc/>
-        public virtual bool Contains(string path)
-        {
-            if (RootPath is "")
-            {
-                return true;
-            }
-            path = path.Trim('/') + "/";
-            return path.StartsWith($"{RootPath}/");
-        }
+        /// <summary>
+        /// Get collection of razor component modules.
+        /// </summary>
+        protected IRazorComponentClientModuleCollection Collection { get; }
+
+        /// <summary>
+        /// Get page provider.
+        /// </summary>
+        /// <returns></returns>
+        protected IPageProvider? GetPageProvider() => this.GetPageProvider(Host);
     }
 
     [Module(Author = "StardustDL", Description = "Provide services for razor component client modules.", Url = "https://github.com/StardustDL/delights")]

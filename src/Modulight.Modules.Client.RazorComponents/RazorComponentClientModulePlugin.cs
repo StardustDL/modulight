@@ -24,6 +24,12 @@ namespace Modulight.Modules.Client.RazorComponents
 
                 var manifest = manifestBuilder.Build();
 
+                if (manifest.PageProvider is not null)
+                {
+                    manifest.PageProvider.EnsurePageProvider();
+                    services.AddScoped(manifest.PageProvider);
+                }
+
                 services.RegisterModuleManifest(new ModuleManifestServiceEntry<IRazorComponentClientModule, RazorComponentClientModuleManifest>(module.Type, manifest));
             }
             base.AfterModule(module, services);

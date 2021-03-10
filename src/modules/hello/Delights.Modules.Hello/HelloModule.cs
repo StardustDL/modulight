@@ -26,8 +26,8 @@ namespace Delights.Modules.Hello
 
     [Module(Url = SharedManifest.Url, Author = SharedManifest.Author, Description = SharedManifest.Description)]
     [ModuleStartup(typeof(Startup))]
+    [ModulePageProvider(typeof(MPageProvider))]
     [ModuleService(typeof(ModuleService))]
-    [ModuleUIRootPath("hello")]
     [ModuleUIResource(UIResourceType.Assembly, "Delights.Modules.Hello.UI")]
     [ModuleDependency(typeof(MaterialDesignIconModule))]
     public class HelloModule : RazorComponentClientModule
@@ -37,6 +37,12 @@ namespace Delights.Modules.Hello
         }
 
         public override RenderFragment Icon => Fragments.Icon;
+    }
+
+    [ModulePageRootPath("hello")]
+    class MPageProvider : PageProvider
+    {
+        
     }
 
     class Startup : ModuleStartup

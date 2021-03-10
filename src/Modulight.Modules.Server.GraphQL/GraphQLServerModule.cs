@@ -20,6 +20,11 @@ namespace Modulight.Modules.Server.GraphQL
         /// <param name="builder"></param>
         /// <returns></returns>
         GraphQLEndpointConventionBuilder? MapEndpoint(IEndpointRouteBuilder builder);
+
+        /// <summary>
+        /// Get the manifest.
+        /// </summary>
+        GraphQLServerModuleManifest GraphQLServerModuleManifest { get; }
     }
 
     /// <summary>
@@ -29,12 +34,24 @@ namespace Modulight.Modules.Server.GraphQL
     public abstract class GraphQLServerModule : Module, IGraphQLServerModule
     {
         /// <summary>
+        /// Get the collection.
+        /// </summary>
+        protected IGraphQLServerModuleCollection Collection { get; }
+
+        readonly Lazy<GraphQLServerModuleManifest> _manifest;
+
+        /// <summary>
         /// Create the instance.
         /// </summary>
         /// <param name="host"></param>
         protected GraphQLServerModule(IModuleHost host) : base(host)
         {
+            Collection = host.GetGraphQLServerModuleCollection();
+            _manifest = new Lazy<GraphQLServerModuleManifest>(() => Collection.GetManifest(GetType()));
         }
+
+        /// <inheritdoc/>
+        public GraphQLServerModuleManifest GraphQLServerModuleManifest => _manifest.Value;
 
         /// <inheritdoc/>
         public virtual GraphQLEndpointConventionBuilder? MapEndpoint(IEndpointRouteBuilder builder)

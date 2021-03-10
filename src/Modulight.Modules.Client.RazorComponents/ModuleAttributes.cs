@@ -4,15 +4,15 @@ using System;
 namespace Modulight.Modules.Client.RazorComponents
 {
     /// <summary>
-    /// Specifies <see cref="IRazorComponentClientModule.RootPath"/> for the razor component module.
+    /// Specifies <see cref="IPageProvider.RootPath"/> for the razor component module.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public class ModuleUIRootPathAttribute : Attribute
+    public class ModulePageRootPathAttribute : Attribute
     {
         /// <summary>
-        /// Specifies <see cref="IRazorComponentClientModule.RootPath"/> for the razor component module.
+        /// Specifies <see cref="IPageProvider.RootPath"/> for the razor component module.
         /// </summary>
-        public ModuleUIRootPathAttribute(string rootPath)
+        public ModulePageRootPathAttribute(string rootPath)
         {
             RootPath = rootPath;
         }
@@ -21,6 +21,26 @@ namespace Modulight.Modules.Client.RazorComponents
         /// Root path.
         /// </summary>
         public string RootPath { get; }
+    }
+
+    /// <summary>
+    /// Specifies <see cref="RazorComponentClientModuleManifest.PageProvider"/> for the razor component module.
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    public class ModulePageProviderAttribute : Attribute
+    {
+        /// <summary>
+        /// Specifies <see cref="RazorComponentClientModuleManifest.PageProvider"/> for the razor component module.
+        /// </summary>
+        public ModulePageProviderAttribute(Type type)
+        {
+            Type = type;
+        }
+
+        /// <summary>
+        /// Page provider.
+        /// </summary>
+        public Type Type { get; }
     }
 
     /// <summary>
@@ -38,7 +58,7 @@ namespace Modulight.Modules.Client.RazorComponents
         }
 
         /// <summary>
-        /// Root path.
+        /// Global component.
         /// </summary>
         public Type Type { get; }
     }

@@ -111,16 +111,20 @@ namespace Modulight.Modules.Client.RazorComponents
             HashSet<string> rootPaths = new HashSet<string>();
             foreach (var module in LoadedModules)
             {
-                if (module.RootPath is not "")
+                var pages = module.GetPageProvider(Host);
+                if (pages is not null)
                 {
-                    if (rootPaths.Contains(module.RootPath))
+                    if (pages.RootPath is not "")
                     {
-                        throw new Exception($"Same RootPath in modules: {module.RootPath} @ {module.Manifest.Name}");
+                        if (rootPaths.Contains(pages.RootPath))
+                        {
+                            throw new Exception($"Same RootPath in modules: {pages.RootPath} @ {module.Manifest.Name}");
+                        }
+                        rootPaths.Add(pages.RootPath);
                     }
-                    rootPaths.Add(module.RootPath);
-                }
 
-                await GetAssembliesForRouting($"/{module.RootPath}", throwOnError: true);
+                    await GetAssembliesForRouting($"/{pages.RootPath}", throwOnError: true);
+                }
             }
         }
 
@@ -142,7 +146,9 @@ namespace Modulight.Modules.Client.RazorComponents
 
                 toLoad.Enqueue(module.GetType().GetAssemblyName());
 
-                if (module.Contains(path))
+                var pages = module.GetPageProvider(Host);
+
+                if (pages is null || pages is not null && pages.Contains(path))
                 {
                     foreach (var resource in GetManifest(module.GetType()).Resources.Where(x => x.Type is UIResourceType.Assembly))
                     {

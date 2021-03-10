@@ -37,12 +37,12 @@ namespace Modulight.Modules
         /// <summary>
         /// Get the module host.
         /// </summary>
-        public IModuleHost Host { get; }
+        protected IModuleHost Host { get; }
 
         /// <summary>
         /// Get the service provider.
         /// </summary>
-        public IServiceProvider Services { get; }
+        protected IServiceProvider Services { get; }
 
         /// <summary>
         /// Create module instance.
@@ -59,10 +59,10 @@ namespace Modulight.Modules
         public ModuleManifest Manifest => _manifest.Value;
 
         /// <inheritdoc/>
-        public T GetService<T>(IServiceProvider provider) where T : notnull => Host.GetService<T>(provider, GetType());
+        protected T GetService<T>(IServiceProvider provider) where T : notnull => Host.GetService<T>(provider, GetType());
 
         /// <inheritdoc/>
-        public T GetOption<T>(IServiceProvider provider) where T : class => Host.GetOption<T>(provider, GetType());
+        protected T GetOption<T>(IServiceProvider provider) where T : class => Host.GetOption<T>(provider, GetType());
 
         /// <inheritdoc/>
         public virtual Task Initialize() => Task.CompletedTask;

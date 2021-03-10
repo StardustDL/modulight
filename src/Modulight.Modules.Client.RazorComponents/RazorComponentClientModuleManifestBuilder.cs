@@ -19,6 +19,11 @@ namespace Modulight.Modules.Client.RazorComponents
         /// Get global components.
         /// </summary>
         IList<Type> GlobalComponents { get; }
+
+        /// <summary>
+        /// Get page provider.
+        /// </summary>
+        public Type? PageProvider { get; set; }
     }
 
     class DefaultRazorComponentClientModuleManifestBuilder : IRazorComponentClientModuleManifestBuilder
@@ -27,12 +32,15 @@ namespace Modulight.Modules.Client.RazorComponents
 
         public IList<Type> GlobalComponents { get; } = new List<Type>();
 
+        public Type? PageProvider { get; set; }
+
         public RazorComponentClientModuleManifest Build()
         {
             return new RazorComponentClientModuleManifest
             {
                 GlobalComponents = GlobalComponents.ToArray(),
-                Resources = Resources.ToArray()
+                Resources = Resources.ToArray(),
+                PageProvider = PageProvider
             };
         }
     }
