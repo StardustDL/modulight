@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Modulight.Modules.Client.RazorComponents;
+using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Components;
 using Modulight.UI.Blazor.Layouts;
 using System;
@@ -88,15 +89,19 @@ namespace Modulight.UI.Blazor.Services
     public class BlazorUIProvider : IBlazorUIProvider
     {
         /// <inheritdoc/>
-        public BlazorUIProvider(IRazorComponentClientModuleCollection razorComponentClientModuleCollection)
+        public BlazorUIProvider(IModuleHost host)
         {
-            RazorComponentClientModuleCollection = razorComponentClientModuleCollection;
+            Host = host;
+            RazorComponentClientModuleCollection = host.GetRazorComponentClientModuleCollection();
             SiteInfo = new SiteInfo
             {
                 Name = AppAssembly.GetName().Name ?? "Site",
                 StartTime = DateTimeOffset.Now
             };
         }
+
+        /// <inheritdoc/>
+        public IModuleHost Host { get; }
 
         /// <inheritdoc/>
         protected IRazorComponentClientModuleCollection RazorComponentClientModuleCollection { get; }
@@ -126,6 +131,13 @@ namespace Modulight.UI.Blazor.Services
         public virtual Type RootComponent => typeof(App);
 
         /// <inheritdoc/>
-        public virtual IEnumerable<IRazorComponentClientModule> GetVisibleClientModules() => RazorComponentClientModuleCollection.LoadedModules.Where(x => x.RootPath is not "");
+        public virtual IEnumerable<IRazorComponentClientModule> GetVisibleClientModules()
+        {
+            return RazorComponentClientModuleCollection.LoadedModules.Where(x =>
+            {
+                var provider = x.GetPageProvider(Host);
+                return provider is not null && provider.RootPath != "";
+            });
+        }
     }
 }

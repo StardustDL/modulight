@@ -13,7 +13,7 @@ namespace Test.Modulights.UI
 {
     public class TestBlazorUIProvider : BlazorUIProvider
     {
-        public TestBlazorUIProvider(IRazorComponentClientModuleCollection razorComponentClientModuleCollection) : base(razorComponentClientModuleCollection)
+        public TestBlazorUIProvider(IModuleHost host) : base(host)
         {
         }
     }

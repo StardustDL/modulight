@@ -4,6 +4,7 @@ using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Services;
 using StardustDL.RazorComponents.AntDesigns;
+using StardustDL.RazorComponents.Bootstraps;
 using StardustDL.RazorComponents.MaterialDesignIcons;
 
 namespace Modulight.UI.Blazor
@@ -13,8 +14,7 @@ namespace Modulight.UI.Blazor
     /// </summary>
     [ModuleService(typeof(BlazorUIProvider), ServiceType = typeof(IBlazorUIProvider), RegisterBehavior = ServiceRegisterBehavior.Optional)]
     [Module(Url = "https://github.com/StardustDL/delights", Author = "StardustDL", Description = "Provide user interfaces for blazor client module hosting.")]
-    [ModuleUIResource(UIResourceType.StyleSheet, "https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css")]
-    [ModuleUIResource(UIResourceType.Script, "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js")]
+    [ModuleDependency(typeof(BootstrapModule))]
     [ModuleDependency(typeof(AntDesignModule))]
     [ModuleDependency(typeof(MaterialDesignIconModule))]
     public class BlazorUiModule : RazorComponentClientModule

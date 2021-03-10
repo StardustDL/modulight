@@ -4,7 +4,6 @@
     <TargetFramework>net5.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Nullable>enable</Nullable>
     <Authors>StardustDL</Authors>
     <Copyright>StardustDL</Copyright>

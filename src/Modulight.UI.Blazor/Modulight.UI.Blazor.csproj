@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Nullable>enable</Nullable>
     <Authors>StardustDL</Authors>
     <Copyright>StardustDL</Copyright>
@@ -21,9 +20,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.4" />
-    <PackageReference Include="StardustDL.RazorComponents.AntDesigns" Version="0.7.1.27" />
-    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="5.9.55.27" />
+    <PackageReference Include="StardustDL.RazorComponents.AntDesigns" Version="0.7.1.29" />
+    <PackageReference Include="StardustDL.RazorComponents.Bootstraps" Version="4.6.0.29" />
+    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="5.9.55.29" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modulight.Modules.Client.RazorComponents\Modulight.Modules.Client.RazorComponents.csproj" />
   </ItemGroup>
 
 </Project>

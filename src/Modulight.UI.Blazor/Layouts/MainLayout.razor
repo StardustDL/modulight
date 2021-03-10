@@ -13,9 +13,9 @@
             </MenuItem>
             @foreach (var module in UIProvider.GetVisibleClientModules())
             {
-                <MenuItem OnClick="@(()=>NavigationManager.NavigateTo(module.RootPath))">
+                <MenuItem OnClick="@(()=>OnClickMenuItem(module))">
                     <AntModuleIcon Module="module"></AntModuleIcon>
-                    <MenuLink Href="@module.RootPath" hidden="@IsCollapsed">@module?.Manifest.DisplayName</MenuLink>
+                    <MenuLink Href="@GetRootPath(module)" hidden="@IsCollapsed">@module?.Manifest.DisplayName</MenuLink>
                 </MenuItem>
             }
         </Menu>
@@ -39,5 +39,27 @@
     void OnCollapse(bool isCollapsed)
     {
         IsCollapsed = isCollapsed;
+    }
+
+    string GetRootPath(IRazorComponentClientModule module)
+    {
+        var provider = module.GetPageProvider(ModuleHost);
+        if (provider is not null)
+        {
+            return provider.RootPath;
+        }
+        else
+        {
+            return "";
+        }
+    }
+
+    void OnClickMenuItem(IRazorComponentClientModule module)
+    {
+        var provider = module.GetPageProvider(ModuleHost);
+        if (provider is not null)
+        {
+            NavigationManager.NavigateTo(provider.RootPath);
+        }
     }
 }

@@ -4,7 +4,6 @@
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<RootNamespace>Modulight.Modules</RootNamespace>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
 		<Authors>StardustDL</Authors>
