@@ -87,6 +87,10 @@ namespace Build
                     "Modulight.Modules.Client.RazorComponents",
                     "Modulight.Modules.Server.AspNet",
                     "Modulight.Modules.Server.GraphQL",
+                };
+
+        readonly List<string> UIPackages = new List<string>
+                {
                     "Modulight.UI.Blazor",
                     "Modulight.UI.Blazor.Hosting",
                 };
@@ -99,6 +103,9 @@ namespace Build
             {
                 case SolutionType.All:
                     packageList.AddRange(ModulightPackages);
+                    break;
+                case SolutionType.UI:
+                    packageList.AddRange(UIPackages);
                     break;
             }
 

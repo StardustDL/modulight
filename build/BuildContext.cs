@@ -14,6 +14,7 @@ namespace Build
     {
         None,
         All,
+        UI,
     }
 
     public class BuildContext : FrostingContext
@@ -40,6 +41,7 @@ namespace Build
 
         public IEnumerable<FilePath> SolutionFiles => Solution switch
         {
+            SolutionType.UI => new[] { Paths.UISolution },
             _ => Paths.Solutions,
         };
 
@@ -64,6 +66,7 @@ namespace Build
             Solution = context.Argument("solution", "").ToLowerInvariant() switch
             {
                 "all" => SolutionType.All,
+                "ui" => SolutionType.UI,
                 _ => Solution,
             };
 
