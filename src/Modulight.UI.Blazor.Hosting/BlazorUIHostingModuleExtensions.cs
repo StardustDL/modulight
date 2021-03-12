@@ -40,7 +40,11 @@ namespace Modulight.Modules
             {
                 services.AddRazorPages();
                 services.AddServerSideBlazor();
-            }).AddBlazorUI<TUIProvider>().AddBlazorUIHosting(
+            }).AddBlazorUI<TUIProvider>((o, sp) =>
+            {
+                // Disable inner render, because of the server render.
+                o.RenderUIResources = false;
+            }).AddBlazorUIHosting(
                     (o, sp) =>
                     {
                         o.HostingModel = HostingModel.Server;
@@ -58,7 +62,11 @@ namespace Modulight.Modules
         /// <returns></returns>
         public static IModuleHostBuilder AddClientSideBlazorUI<TUIProvider>(this IModuleHostBuilder builder, Action<BlazorUiHostingModuleOption, IServiceProvider>? configureOptions = null) where TUIProvider : class, IBlazorUIProvider
         {
-            return builder.ConfigureServices(services => services.AddRazorPages()).AddBlazorUI<TUIProvider>().AddBlazorUIHosting(
+            return builder.ConfigureServices(services => services.AddRazorPages()).AddBlazorUI<TUIProvider>((o, sp) =>
+            {
+                // Disable inner render, because of the server render.
+                o.RenderUIResources = false;
+            }).AddBlazorUIHosting(
                     (o, sp) =>
                     {
                         o.HostingModel = HostingModel.Client;

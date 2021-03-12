@@ -28,7 +28,7 @@
                     <BreadcrumbItem>
                         <span>
                             <AntModuleIcon Module="context.Module"></AntModuleIcon>
-                            <span>@(context.Module?.Manifest.Name ?? "")</span>
+                            <span>@(context.Module?.Manifest.DisplayName ?? context.Module?.Manifest.Name ?? "")</span>
                         </span>
                     </BreadcrumbItem>
                 </Breadcrumb>

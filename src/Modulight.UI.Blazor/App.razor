@@ -1,8 +1,12 @@
 @using System.Reflection
 @inject IRazorComponentClientModuleCollection ClientModuleHost
 @inject IBlazorUIProvider UIProvider
+@inject IOptions<BlazorUiModuleOption> Options
 
-<Modulight.Modules.Client.RazorComponents.UI.ResourceDeclare />
+@if (Options.Value.RenderUIResources)
+{
+    <Modulight.Modules.Client.RazorComponents.UI.ResourceDeclare />
+}
 
 <Router AppAssembly="@UIProvider.AppAssembly"
         PreferExactMatches="@true" AdditionalAssemblies="@AdditionalAssemblies"

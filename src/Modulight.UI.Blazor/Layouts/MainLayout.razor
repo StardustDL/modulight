@@ -15,7 +15,7 @@
             {
                 <MenuItem OnClick="@(()=>OnClickMenuItem(module))">
                     <AntModuleIcon Module="module"></AntModuleIcon>
-                    <MenuLink Href="@GetRootPath(module)" hidden="@IsCollapsed">@module?.Manifest.DisplayName</MenuLink>
+                    <MenuLink Href="@GetRootPath(module)" hidden="@IsCollapsed">@(module?.Manifest.DisplayName ?? module?.Manifest.Name ?? "")</MenuLink>
                 </MenuItem>
             }
         </Menu>

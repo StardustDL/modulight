@@ -136,7 +136,7 @@ namespace Modulight.UI.Blazor.Services
             return RazorComponentClientModuleCollection.LoadedModules.Where(x =>
             {
                 var provider = x.GetPageProvider(Host);
-                return provider is not null && provider.RootPath != "";
+                return provider is not null && provider.RootPath is not "";
             });
         }
     }

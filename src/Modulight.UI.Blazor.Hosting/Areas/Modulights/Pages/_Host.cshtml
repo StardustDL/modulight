@@ -18,6 +18,8 @@
     <link href="@(UIProvider.AppAssembly.GetName().Name).styles.css" rel="stylesheet" />
 </head>
 <body>
+    <component type="@typeof(Modulight.Modules.Client.RazorComponents.UI.ResourceDeclare)" render-mode="Static" />
+
     <component type="@UIProvider.RootComponent" render-mode="@Model.AppRenderMode" />
 
     <div id="blazor-error-ui" class="alert alert-danger mdi mdi-alert" role="alert" style="display: none">

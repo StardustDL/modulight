@@ -2,6 +2,7 @@
 using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor;
 using Modulight.UI.Blazor.Services;
+using System;
 
 namespace Modulight.Modules
 {
@@ -16,9 +17,14 @@ namespace Modulight.Modules
         /// <typeparam name="TUIProvider"></typeparam>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public static IModuleHostBuilder AddBlazorUI<TUIProvider>(this IModuleHostBuilder builder) where TUIProvider : class, IBlazorUIProvider
+        public static IModuleHostBuilder AddBlazorUI<TUIProvider>(this IModuleHostBuilder builder, Action<BlazorUiModuleOption, IServiceProvider>? configureOptions = null) where TUIProvider : class, IBlazorUIProvider
         {
-            return builder.ConfigureServices(sc => sc.AddScoped<IBlazorUIProvider, TUIProvider>()).AddModule<BlazorUiModule>();
+            builder.ConfigureServices(sc => sc.AddScoped<IBlazorUIProvider, TUIProvider>()).AddModule<BlazorUiModule>();
+            if (configureOptions is not null)
+            {
+                builder.ConfigureOptions(configureOptions);
+            }
+            return builder;
         }
     }
 }
