@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Nullable>enable</Nullable>
     <Authors>StardustDL</Authors>
@@ -24,10 +25,6 @@
     <PackageReference Include="StardustDL.RazorComponents.Bootstraps" Version="4.6.0.29" />
     <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="5.9.55.29" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Modulight.Modules.Client.RazorComponents\Modulight.Modules.Client.RazorComponents.csproj" />
   </ItemGroup>
 
 </Project>
