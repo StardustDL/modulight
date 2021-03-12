@@ -32,7 +32,7 @@ services.AddModules(builder => {
 });
 ```
 
-1. Configure the module initilizing & shutdown.
+2. Configure the module initilizing & shutdown.
 
 ```cs
 var host = services.GetModuleHost();
@@ -48,6 +48,18 @@ await host.Shutdown();
 await using var _ = await services.UseModuleHost();
 
 // do something
+```
+
+Or use extension methods for hosting:
+
+```cs
+// ASP.NET hosting. (provided by package Modulight.Modules.Server.AspNet)
+// in Program: Task Main(string[] args)
+await CreateHostBuilder(args).Build().RunAsyncWithModules();
+
+// WebAssembly hosting. (provided by package Modulight.Modules.Client.RazorComponents)
+// in Program: Task Main(string[] args)
+await builder.Build().RunAsyncWithModules();
 ```
 
 ### Addition steps
@@ -114,18 +126,6 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-### Hosting
-
-```cs
-// ASP.NET hosting. (provided by package Modulight.Modules.Server.AspNet)
-// in Program: Task Main(string[] args)
-await CreateHostBuilder(args).Build().RunAsyncWithModules();
-
-// WebAssembly hosting. (provided by package Modulight.Modules.Client.RazorComponents)
-// in Program: Task Main(string[] args)
-await builder.Build().RunAsyncWithModules();
-```
-
 ### Use Blazor UI Template
 
 Modulight provide a template project for Blazor hosting with Razor Component Client modules.
@@ -146,7 +146,7 @@ class CustomBlazorUIProvider : BlazorUIProvider
 
 services.AddModules(builder =>
 {
-    builder.AddServerSideBlazorUI<CustomBlazorUIProvider>();
+    builder.UseRazorComponentClientModules().AddServerSideBlazorUI<CustomBlazorUIProvider>();
 });
 
 // void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -158,6 +158,9 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapAspNetServerModuleEndpoints();
 });
+
+// in Program: Task Main(string[] args)
+await CreateHostBuilder(args).Build().RunAsyncWithModules();
 ```
 
 A [Sample startup](https://github.com/StardustDL/modulight/blob/master/test/Test.Modulights.UI/Startup.cs).

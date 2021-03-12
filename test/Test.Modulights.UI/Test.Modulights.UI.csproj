@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\modules\hello\Delights.Modules.Hello.Server\Delights.Modules.Hello.Server.csproj" />
-    <ProjectReference Include="..\..\src\Modulight.Modules.Server.AspNet\Modulight.Modules.Server.AspNet.csproj" />
     <ProjectReference Include="..\..\src\Modulight.UI.Blazor.Hosting\Modulight.UI.Blazor.Hosting.csproj" />
     <ProjectReference Include="..\Test.Modulights.UI.Wasm\Test.Modulights.UI.Wasm.csproj" />
   </ItemGroup>
