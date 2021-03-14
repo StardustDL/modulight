@@ -233,8 +233,8 @@ var assemblies = [
       { "name": "Modulight.Modules.Client.RazorComponents.PageProvider", "rp": "Modulight.Modules.Client.RazorComponents_PageProvider.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 57, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 4, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientCoreModule", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientCoreModule.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 87, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModule", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModule.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 87, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollection", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleCollection.html", "cl": 0, "ucl": 77, "cal": 77, "tl": 220, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 46, "lch": [], "bch": [], "hc": [] },
-      { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleCollectionExtensions.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 220, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollection", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleCollection.html", "cl": 0, "ucl": 82, "cal": 82, "tl": 235, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 52, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleCollectionExtensions.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 235, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleManifest", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleManifest.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModulePlugin", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModulePlugin.html", "cl": 0, "ucl": 14, "cal": 14, "tl": 39, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 6, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleStartup", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleStartup.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
@@ -298,9 +298,17 @@ var assemblies = [
 var historicCoverageExecutionTimes = [];
 
 var riskHotspotMetrics = [
+      { "name": "Cyclomatic complexity", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" },
+      { "name": "NPath complexity", "explanationUrl": "https://modess.io/npath-complexity-cyclomatic-complexity-explained" },
 ];
 
 var riskHotspots = [
+  {
+    "assembly": "Modulight.Modules.Client.RazorComponents", "class": "Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollection", "reportPath": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleCollection.html", "methodName": "GetAssembliesForRouting()", "methodShortName": "GetAssembliesForRouting()", "fileIndex": 0, "line": 133,
+    "metrics": [
+      { "value": 34, "exceeded": true },
+      { "value": 0, "exceeded": false },
+    ]},
 ];
 
 var branchCoverageAvailable = true;
