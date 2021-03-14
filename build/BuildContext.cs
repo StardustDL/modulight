@@ -63,6 +63,12 @@ namespace Build
             }
 
             Solution = SolutionType.All;
+
+            if (CommitMessage.Contains("[ui]"))
+            {
+                Solution = SolutionType.UI;
+            }
+
             Solution = context.Argument("solution", "").ToLowerInvariant() switch
             {
                 "all" => SolutionType.All,

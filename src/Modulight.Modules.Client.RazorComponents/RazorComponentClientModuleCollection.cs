@@ -136,6 +136,8 @@ namespace Modulight.Modules.Client.RazorComponents
 
             var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies();
 
+            HashSet<string> processed = new HashSet<string>();
+
             List<Assembly> results = new List<Assembly>();
 
             Queue<string> toLoad = new Queue<string>();
@@ -144,7 +146,12 @@ namespace Modulight.Modules.Client.RazorComponents
             {
                 cancellationToken.ThrowIfCancellationRequested();
 
-                toLoad.Enqueue(module.GetType().GetAssemblyName());
+                var name = module.GetType().GetAssemblyName();
+
+                if (processed.Add(name))
+                {
+                    toLoad.Enqueue(name);
+                }
 
                 var pages = module.GetPageProvider(Host);
 
@@ -154,7 +161,10 @@ namespace Modulight.Modules.Client.RazorComponents
                     {
                         cancellationToken.ThrowIfCancellationRequested();
 
-                        toLoad.Enqueue(resource.Path);
+                        if (processed.Add(resource.Path))
+                        {
+                            toLoad.Enqueue(resource.Path);
+                        }
                     }
                 }
             }
@@ -209,7 +219,12 @@ namespace Modulight.Modules.Client.RazorComponents
                     {
                         cancellationToken.ThrowIfCancellationRequested();
                         if (refe.Name is not null)
-                            toLoad.Enqueue(refe.Name);
+                        {
+                            if (processed.Add(refe.Name))
+                            {
+                                toLoad.Enqueue(refe.Name);
+                            }
+                        }
                     }
                 }
             }

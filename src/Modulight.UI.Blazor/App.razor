@@ -24,6 +24,7 @@
         AdditionalAssemblies.Clear();
 
         var results = await ClientModuleHost.GetAssembliesForRouting(context.Path, cancellationToken: context.CancellationToken);
-        AdditionalAssemblies.AddRange(results.Where(x => x != UIProvider.AppAssembly));
+        var filterdResults = new HashSet<Assembly>(results);
+        AdditionalAssemblies.AddRange(filterdResults.Where(x => x != UIProvider.AppAssembly));
     }
 }
