@@ -27,8 +27,8 @@ jobs:
       with:
         name: artifacts
         path: ./dist
-  deploy:
-    needs: ci
+  docs:
+    needs: deploy
     runs-on: ubuntu-18.04
     steps:
     - name: Checkout
