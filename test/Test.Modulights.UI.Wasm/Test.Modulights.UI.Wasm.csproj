@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\modules\hello\Delights.Modules.Hello.UI\Delights.Modules.Hello.UI.csproj" />
-    <ProjectReference Include="..\..\src\modules\hello\Delights.Modules.Hello\Delights.Modules.Hello.csproj" />
     <ProjectReference Include="..\..\src\Modulight.UI.Blazor\Modulight.UI.Blazor.csproj" />
   </ItemGroup>
 

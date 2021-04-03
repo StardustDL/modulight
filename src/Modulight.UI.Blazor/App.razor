@@ -1,5 +1,4 @@
 @using System.Reflection
-@inject IRazorComponentClientModuleCollection ClientModuleHost
 @inject IBlazorUIProvider UIProvider
 @inject IOptions<BlazorUiModuleOption> Options
 
@@ -23,8 +22,8 @@
     {
         AdditionalAssemblies.Clear();
 
-        var results = await ClientModuleHost.GetAssembliesForRouting(context.Path, cancellationToken: context.CancellationToken);
-        var filterdResults = new HashSet<Assembly>(results);
-        AdditionalAssemblies.AddRange(filterdResults.Where(x => x != UIProvider.AppAssembly));
+        await UIProvider.OnNavigateAsync(context);
+
+        AdditionalAssemblies.AddRange(UIProvider.AdditionalAssemblies.Where(x => x != UIProvider.AppAssembly));
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Routing;
 using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Components;
@@ -7,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace Modulight.UI.Blazor.Services
 {
@@ -81,6 +83,18 @@ namespace Modulight.UI.Blazor.Services
         /// Default assembly.
         /// </summary>
         Assembly AppAssembly { get; }
+
+        /// <summary>
+        /// Additional assemblies
+        /// </summary>
+        IEnumerable<Assembly> AdditionalAssemblies { get; }
+
+        /// <summary>
+        /// On router navigating
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        Task OnNavigateAsync(NavigationContext context);
     }
 
     /// <summary>
@@ -131,6 +145,9 @@ namespace Modulight.UI.Blazor.Services
         public virtual Type RootComponent => typeof(App);
 
         /// <inheritdoc/>
+        public virtual IEnumerable<Assembly> AdditionalAssemblies { get; protected set; } = Array.Empty<Assembly>();
+
+        /// <inheritdoc/>
         public virtual IEnumerable<IRazorComponentClientModule> GetVisibleClientModules()
         {
             return RazorComponentClientModuleCollection.LoadedModules.Where(x =>
@@ -138,6 +155,14 @@ namespace Modulight.UI.Blazor.Services
                 var provider = x.GetPageProvider(Host);
                 return provider is not null && provider.RootPath is not "";
             });
+        }
+
+        /// <inheritdoc/>
+        public virtual async Task OnNavigateAsync(NavigationContext context)
+        {
+            var results = await RazorComponentClientModuleCollection.GetAssembliesForRouting(context.Path, cancellationToken: context.CancellationToken);
+            var filterdResults = new HashSet<Assembly>(results);
+            AdditionalAssemblies = filterdResults.Where(x => x != AppAssembly);
         }
     }
 }

@@ -49,12 +49,11 @@ namespace Delights.Modules.Hello
     {
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient<HelloClient>((sp, client) =>
-                {
-                    var option = sp.GetRequiredService<IOptions<ModuleOption>>().Value;
-                    client.BaseAddress = new Uri(option.GraphQLEndpoint.TrimEnd('/') + $"/Hello");
-                });
-            services.AddHelloClient();
+            services.AddHelloClient().ConfigureHttpClient((sp, client) =>
+            {
+                var option = sp.GetRequiredService<IOptions<ModuleOption>>().Value;
+                client.BaseAddress = new Uri(option.GraphQLEndpoint.TrimEnd('/') + $"/Hello");
+            });
             base.ConfigureServices(services);
         }
     }
