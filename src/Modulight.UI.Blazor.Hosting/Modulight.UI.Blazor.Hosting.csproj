@@ -24,7 +24,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.4">
       <PrivateAssets>contentFiles</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Modulight.Modules.Server.AspNet" Version="0.0.5-preview.13" />
+    <PackageReference Include="Modulight.Modules.Server.AspNet" Version="0.0.5" />
   </ItemGroup>
 
   <ItemGroup>
