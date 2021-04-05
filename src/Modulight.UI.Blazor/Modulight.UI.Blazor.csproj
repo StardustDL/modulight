@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.4" />
-    <PackageReference Include="StardustDL.RazorComponents.AntDesigns" Version="0.7.3" />
+    <PackageReference Include="StardustDL.RazorComponents.AntDesigns" Version="0.7.3.39" />
     <PackageReference Include="StardustDL.RazorComponents.Bootstraps" Version="4.6.0.30" />
     <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="5.9.55.30" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
