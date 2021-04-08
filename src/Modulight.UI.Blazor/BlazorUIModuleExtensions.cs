@@ -16,6 +16,7 @@ namespace Modulight.Modules
         /// </summary>
         /// <typeparam name="TUIProvider"></typeparam>
         /// <param name="builder"></param>
+        /// <param name="configureOptions"></param>
         /// <returns></returns>
         public static IModuleHostBuilder AddBlazorUI<TUIProvider>(this IModuleHostBuilder builder, Action<BlazorUiModuleOption, IServiceProvider>? configureOptions = null) where TUIProvider : class, IBlazorUIProvider
         {

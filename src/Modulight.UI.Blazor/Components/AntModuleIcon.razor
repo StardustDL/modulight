@@ -2,7 +2,13 @@
 
 <Icon>
     <Component>
-        <ModuleIcon Module="Module" Fallback="@UIProvider.DefaultModuleIcon">
+        <ModuleIcon Module="Module">
+            <Fallback>
+                @if (UIProvider.DefaultModuleIcon is not null)
+                {
+                    @UIProvider.DefaultModuleIcon
+                }
+            </Fallback>
         </ModuleIcon>
     </Component>
 </Icon>

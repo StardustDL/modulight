@@ -9,7 +9,19 @@
 
 <Router AppAssembly="@UIProvider.AppAssembly"
         PreferExactMatches="@true" AdditionalAssemblies="@AdditionalAssemblies"
-        OnNavigateAsync="@OnNavigateAsync" NotFound="@UIProvider.RouterNotFound" Navigating="@UIProvider.RouterNavigating">
+        OnNavigateAsync="@OnNavigateAsync">
+    <NotFound>
+        @if (UIProvider.RouterNotFound is not null)
+        {
+            @UIProvider.RouterNotFound
+        }
+    </NotFound>
+    <Navigating>
+        @if (UIProvider.RouterNavigating is not null)
+        {
+            @UIProvider.RouterNavigating
+        }
+    </Navigating>
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@UIProvider.DefaultLayout" />
     </Found>

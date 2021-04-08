@@ -13,7 +13,7 @@ namespace Modulight.UI.Blazor
     /// Blazor UI Module
     /// </summary>
     [ModuleService(typeof(BlazorUIProvider), ServiceType = typeof(IBlazorUIProvider), RegisterBehavior = ServiceRegisterBehavior.Optional)]
-    [Module(Url = "https://github.com/StardustDL/delights", Author = "StardustDL", Description = "Provide user interfaces for blazor client module hosting.")]
+    [Module(Url = "https://github.com/StardustDL/modulight", Author = "StardustDL", Description = "Provide user interfaces for blazor client module hosting.")]
     [ModuleOption(typeof(BlazorUiModuleOption))]
     [ModuleDependency(typeof(BootstrapModule))]
     [ModuleDependency(typeof(AntDesignModule))]

@@ -12,6 +12,7 @@ namespace Modulight.UI.Blazor.Hosting
     /// Blazor UI Hosting Module
     /// </summary>
     [ModuleStartup(typeof(Startup))]
+    [Module(Url = "https://github.com/StardustDL/modulight", Author = "StardustDL", Description = "Provide hosting services and prerendering for blazor client module hosting.")]
     [ModuleDependency(typeof(BlazorUiModule))]
     [ModuleOption(typeof(BlazorUiHostingModuleOption))]
     public class BlazorUiHostingModule : AspNetServerModule
