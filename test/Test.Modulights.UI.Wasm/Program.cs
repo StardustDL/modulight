@@ -39,7 +39,7 @@ namespace Test.Modulights.UI.Wasm
 
             builder.Services.AddModules(builder =>
             {
-                builder.AddBlazorUI<TestBlazorUIProvider>()
+                builder.UseRazorComponentClientModules().AddBlazorUI<TestBlazorUIProvider>((o, sp) => o.RenderUIResources = true)
                     .AddModule<TestModule>()
                     .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001/graphql");
             });

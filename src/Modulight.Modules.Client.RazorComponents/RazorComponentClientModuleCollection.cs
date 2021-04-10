@@ -59,8 +59,6 @@ namespace Modulight.Modules.Client.RazorComponents
 
     internal class RazorComponentClientModuleCollection : ModuleHostFilterCollection<IRazorComponentClientModule, RazorComponentClientModuleManifest>, IRazorComponentClientModuleCollection
     {
-        Dictionary<Type, RazorComponentClientModuleManifest> Manifests { get; } = new Dictionary<Type, RazorComponentClientModuleManifest>();
-
         public RazorComponentClientModuleCollection(IModuleHost host) : base(host)
         {
             Logger = host.Services.GetRequiredService<ILogger<RazorComponentClientModuleCollection>>();
@@ -74,14 +72,16 @@ namespace Modulight.Modules.Client.RazorComponents
             var provider = scope.ServiceProvider;
             var ui = provider.GetRequiredService<ModuleUILoader>();
 
-            var targetModules = LoadedModules;
+            var targetModules = DefinedModules;
             if (moduleType is not null)
             {
-                targetModules = targetModules.Where(x => x.GetType().IsModule(moduleType));
+                targetModules = targetModules.Where(x => x.IsModule(moduleType));
             }
 
-            foreach (var manifest in Manifests.Values)
+            foreach (var module in targetModules)
             {
+                var manifest = GetManifest(module);
+
                 foreach (var resource in manifest.Resources)
                 {
                     try
