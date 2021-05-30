@@ -1,2 +1,2 @@
-# Modulight.Modules.RazorComponents
+# Modulight.Modules.Client.RazorComponents
 

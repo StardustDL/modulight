@@ -84,6 +84,7 @@ namespace Build
         readonly List<string> ModulightPackages = new List<string>
                 {
                     "Modulight.Modules.Core",
+                    "Modulight.Modules.CommandLine",
                     "Modulight.Modules.Client.RazorComponents",
                     "Modulight.Modules.Server.AspNet",
                     "Modulight.Modules.Server.GraphQL",
