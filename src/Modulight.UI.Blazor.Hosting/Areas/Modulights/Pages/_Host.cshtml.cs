@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 
 namespace Modulight.UI.Blazor.Hosting.Areas.Modulights.Pages
 {
-    public class HostModel : PageModel
+    internal class HostModel : PageModel
     {
         public HostModel(IOptions<BlazorUiHostingModuleOption> options)
         {

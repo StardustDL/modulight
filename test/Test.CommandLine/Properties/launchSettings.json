@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Test.CommandLine": {
+      "commandName": "Project",
+      "commandLineArgs": "100"
+    }
+  }
+}
