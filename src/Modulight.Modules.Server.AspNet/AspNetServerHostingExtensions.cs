@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Modulight.Modules.Server.AspNet;
 using System.Threading.Tasks;
 
 namespace Microsoft.Extensions.Hosting

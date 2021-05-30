@@ -24,7 +24,7 @@ namespace Modulight.Modules.Hosting
             return modules.ConfigureBuilderServices(services =>
             {
                 services.TryAddTransient<IRazorComponentClientModuleManifestBuilder, DefaultRazorComponentClientModuleManifestBuilder>();
-            }).UsePlugin<RazorComponentClientModulePlugin>();
+            }).UsePlugin<RazorComponentClientModulePlugin>().AddModule<RazorComponentClientCoreModule>();
         }
 
         /// <summary>

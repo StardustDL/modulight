@@ -10,7 +10,7 @@ using System.Reflection;
 namespace Modulight.Modules.Hosting
 {
     /// <summary>
-    /// Extension methods for aspnet modules.
+    /// Extension methods for graphql modules.
     /// </summary>
     public static class GraphQLServerModuleExtensions
     {
@@ -24,7 +24,7 @@ namespace Modulight.Modules.Hosting
             return modules.ConfigureBuilderServices(services =>
             {
                 services.TryAddTransient<IGraphQLServerModuleManifestBuilder, DefaultGraphQLServerModuleManifestBuilder>();
-            }).UsePlugin<GraphQLServerModulePlugin>();
+            }).UsePlugin<GraphQLServerModulePlugin>().AddModule<GraphqlServerCoreModule>();
         }
 
         /// <summary>
