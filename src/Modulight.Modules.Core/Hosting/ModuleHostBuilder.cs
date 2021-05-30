@@ -242,7 +242,7 @@ namespace Modulight.Modules.Hosting
                 BeforeModule(services, definition, plugins, builderService);
 
                 services.RegisterModuleManifest(new ModuleManifestServiceEntry<IModule, ModuleManifest>(type, manifest));
-                services.AddSingleton(type);
+                services.TryAddSingleton(type);
                 foreach (var service in manifest.Services)
                 {
                     var des = new ServiceDescriptor(service.ServiceType, service.ImplementationType, service.Lifetime);

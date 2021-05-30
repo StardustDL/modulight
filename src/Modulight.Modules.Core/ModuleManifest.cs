@@ -30,7 +30,6 @@ namespace Modulight.Modules
     /// <typeparam name="TModule"></typeparam>
     public record ModuleManifest<TModule> where TModule : IModule
     {
-
     }
 
     /// <summary>
@@ -82,5 +81,10 @@ namespace Modulight.Modules
         /// Dependencies
         /// </summary>
         public Type[] Dependencies { get; init; } = Array.Empty<Type>();
+
+        /// <summary>
+        /// Full name
+        /// </summary>
+        public string FullName => $"{Name}@{Version}";
     }
 }

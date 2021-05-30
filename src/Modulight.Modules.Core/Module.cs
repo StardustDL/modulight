@@ -1,4 +1,6 @@
-﻿using Modulight.Modules.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Modulight.Modules.Hosting;
 using System;
 using System.Threading.Tasks;
 
@@ -35,6 +37,11 @@ namespace Modulight.Modules
         readonly Lazy<ModuleManifest> _manifest;
 
         /// <summary>
+        /// Get the logger.
+        /// </summary>
+        protected ILogger Logger { get; }
+
+        /// <summary>
         /// Get the module host.
         /// </summary>
         protected IModuleHost Host { get; }
@@ -52,6 +59,7 @@ namespace Modulight.Modules
         {
             Host = host;
             Services = host.Services;
+            Logger = Services.GetRequiredService<ILogger<Module>>();
             _manifest = new Lazy<ModuleManifest>(() => Host.GetManifest(GetType()));
         }
 
@@ -65,9 +73,17 @@ namespace Modulight.Modules
         protected T GetOption<T>(IServiceProvider provider) where T : class => Host.GetOption<T>(provider, GetType());
 
         /// <inheritdoc/>
-        public virtual Task Initialize() => Task.CompletedTask;
+        public virtual Task Initialize()
+        {
+            Logger.LogDebug($"Module Initialized: {Manifest.FullName}.");
+            return Task.CompletedTask;
+        }
 
         /// <inheritdoc/>
-        public virtual Task Shutdown() => Task.CompletedTask;
+        public virtual Task Shutdown()
+        {
+            Logger.LogDebug($"Module Shutdowned: {Manifest.FullName}.");
+            return Task.CompletedTask;
+        }
     }
 }

@@ -64,10 +64,12 @@ namespace Modulight.Modules.Client.RazorComponents
             Logger = host.Services.GetRequiredService<ILogger<RazorComponentClientModuleCollection>>();
         }
 
-        public ILogger<RazorComponentClientModuleCollection> Logger { get; }
+        public ILogger Logger { get; }
 
         public async Task LoadResources(Type? moduleType = null)
         {
+            Logger.LogInformation($"Loading resources for {(moduleType is null ? "all" : moduleType.FullName)} modules.");
+
             using var scope = Host.Services.CreateScope();
             var provider = scope.ServiceProvider;
             var ui = provider.GetRequiredService<ModuleUILoader>();
@@ -80,28 +82,36 @@ namespace Modulight.Modules.Client.RazorComponents
 
             foreach (var module in targetModules)
             {
-                var manifest = GetManifest(module);
+                var manifest = Host.GetManifest(module);
 
-                foreach (var resource in manifest.Resources)
+                Logger.LogInformation($"Loading resources for {manifest.FullName}.");
+
+                var rcmanifest = GetManifest(module);
+
+                foreach (var resource in rcmanifest.Resources)
                 {
                     try
                     {
                         switch (resource.Type)
                         {
                             case UIResourceType.Script:
+                                Logger.LogDebug($"Load script {resource.Path} of {manifest.FullName}.");
                                 await ui.LoadScript(resource.Path);
                                 break;
                             case UIResourceType.StyleSheet:
+                                Logger.LogDebug($"Load stylesheet {resource.Path} of {manifest.FullName}.");
                                 await ui.LoadStyleSheet(resource.Path);
                                 break;
                         }
                     }
                     catch (JSException ex)
                     {
-                        Logger.LogError(ex, $"Failed to load resource {resource.Path}");
+                        Logger.LogError(ex, $"Failed to load resource {resource.Path} of {manifest.FullName}");
                     }
                 }
             }
+
+            Logger.LogInformation($"Loaded resources for {(moduleType is null ? "all" : moduleType.FullName)} modules.");
         }
 
         public async Task Validate()
