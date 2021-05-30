@@ -52,6 +52,7 @@ namespace Modulight.Modules.Hosting
         {
             foreach (var item in host.Services.GetModuleManifests<TModule, TManifest>())
             {
+                // TODO: check dup manifest 
                 Manifests.Add(item.Type, item.Manifest);
             }
         }

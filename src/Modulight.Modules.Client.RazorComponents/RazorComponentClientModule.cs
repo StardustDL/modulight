@@ -61,7 +61,7 @@ namespace Modulight.Modules.Client.RazorComponents
         protected IPageProvider? GetPageProvider() => this.GetPageProvider(Host);
     }
 
-    [Module(Author = "StardustDL", Description = "Provide services for razor component client modules.", Url = "https://github.com/StardustDL/delights")]
+    [Module(Author = "StardustDL", Description = "Provide services for razor component client modules.", Url = "https://github.com/StardustDL/modulight")]
     [ModuleService(typeof(RazorComponentClientModuleCollection), ServiceType = typeof(IRazorComponentClientModuleCollection), Lifetime = ServiceLifetime.Singleton)]
     [ModuleService(typeof(JSModuleProvider<>), ServiceType = typeof(IJSModuleProvider<>))]
     [ModuleService(typeof(LazyAssemblyLoader))]

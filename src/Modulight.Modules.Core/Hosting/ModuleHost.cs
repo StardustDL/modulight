@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,10 +73,14 @@ namespace Modulight.Modules.Hosting
 
         IReadOnlyDictionary<Type, ModuleManifest> _DefinedModules { get; set; }
 
+        ILogger Logger { get; set; }
+
         public DefaultModuleHost(IServiceProvider services)
         {
             Services = services;
+            Logger = services.GetRequiredService<ILogger<DefaultModuleHost>>();
 
+            // TODO: check dup manifest
             _DefinedModules = new Dictionary<Type, ModuleManifest>(services.GetModuleManifests<IModule, ModuleManifest>().Select(x => new KeyValuePair<Type, ModuleManifest>(x.Type, x.Manifest)));
         }
 
@@ -101,6 +106,8 @@ namespace Modulight.Modules.Hosting
 
         public virtual async Task Initialize()
         {
+            Logger.LogInformation("Loading modules.");
+
             var modules = new List<(Type, IModule)>();
             foreach (var type in DefinedModules)
             {
@@ -108,20 +115,30 @@ namespace Modulight.Modules.Hosting
             }
             _LoadedModules = new Dictionary<Type, IModule>(modules.Select(x => new KeyValuePair<Type, IModule>(x.Item1, x.Item2)));
 
+            Logger.LogInformation($"Loaded {_LoadedModules.Count} modules.");
+
+            Logger.LogInformation("Initializing modules.");
+
             foreach (var module in LoadedModules)
             {
                 await module.Initialize();
             }
+
+            Logger.LogInformation("Initialized modules.");
         }
 
         public virtual async Task Shutdown()
         {
+            Logger.LogInformation("Shutdowning modules.");
+
             foreach (var module in LoadedModules.Reverse())
             {
                 await module.Shutdown();
             }
 
             _LoadedModules = new Dictionary<Type, IModule>();
+
+            Logger.LogInformation("Shutdowned modules.");
         }
     }
 }

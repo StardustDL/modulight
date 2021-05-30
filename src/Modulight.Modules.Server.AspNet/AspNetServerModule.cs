@@ -47,7 +47,7 @@ namespace Modulight.Modules.Server.AspNet
         public virtual void UseMiddleware(IApplicationBuilder builder) { }
     }
 
-    [Module(Author = "StardustDL", Description = "Provide services for aspnet server modules.", Url = "https://github.com/StardustDL/delights")]
+    [Module(Author = "StardustDL", Description = "Provide services for aspnet server modules.", Url = "https://github.com/StardustDL/modulight")]
     [ModuleService(typeof(AspNetServerModuleCollection), ServiceType = typeof(IAspNetServerModuleCollection), Lifetime = ServiceLifetime.Singleton)]
     class AspnetServerCoreModule : Module
     {

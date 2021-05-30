@@ -61,7 +61,7 @@ namespace Modulight.Modules.Server.GraphQL
         }
     }
 
-    [Module(Author = "StardustDL", Description = "Provide services for graphql server modules.", Url = "https://github.com/StardustDL/delights")]
+    [Module(Author = "StardustDL", Description = "Provide services for graphql server modules.", Url = "https://github.com/StardustDL/modulight")]
     [ModuleService(typeof(GraphQLServerModuleCollection), ServiceType = typeof(IGraphQLServerModuleCollection), Lifetime = ServiceLifetime.Singleton)]
     class GraphqlServerCoreModule : Module
     {
