@@ -378,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.AspNetServerModuleExtensions.html",
-          "hash": "Mfy5HrGEoCEoQMo/2lQ+5uho4A3syEQoqTEevaQ+qq4="
+          "hash": "nUSv73pKre82I/0XWTtQBTlxBkkrwcNefoGZiDu8XtQ="
         }
       },
       "is_incremental": false,
@@ -390,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.GraphQLServerModuleExtensions.html",
-          "hash": "v9VlhZn0YXlxXbfJbbJQuayrnhLVQIXjYLovlSsiCns="
+          "hash": "SQr4vnDEPNUkzAo3l2IAnInVGLNigjMA0FQ4B7dxrQ0="
         }
       },
       "is_incremental": false,
@@ -438,7 +438,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.IModuleHostBuilder.html",
-          "hash": "X8DWPKD56sDeR2FFcRVVLbEJqAsJyL97hXKWDDkb6hM="
+          "hash": "aY+gun3NrigYOxokCNX8/c9nYFb91hWEV10v2dRA3N8="
         }
       },
       "is_incremental": false,
@@ -534,7 +534,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.html",
-          "hash": "0L6B2/WvNZ4OBhnJrZjCoxVhtIKUWd4uYn5zC0vso9E="
+          "hash": "G2AT2XI2bgBjLGq0SiMKkPsHJkQ44XLdhIqHFepfFqs="
         }
       },
       "is_incremental": false,

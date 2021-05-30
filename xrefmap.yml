@@ -1205,6 +1205,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Hosting.AspNetServerModuleExtensions.GetAspNetServerModuleCollection
   nameWithType: AspNetServerModuleExtensions.GetAspNetServerModuleCollection
+- uid: Modulight.Modules.Hosting.AspNetServerModuleExtensions.UseAspNetServerModules(Modulight.Modules.Hosting.IModuleHostBuilder)
+  name: UseAspNetServerModules(IModuleHostBuilder)
+  href: api/Modulight.Modules.Hosting.AspNetServerModuleExtensions.html#Modulight_Modules_Hosting_AspNetServerModuleExtensions_UseAspNetServerModules_Modulight_Modules_Hosting_IModuleHostBuilder_
+  commentId: M:Modulight.Modules.Hosting.AspNetServerModuleExtensions.UseAspNetServerModules(Modulight.Modules.Hosting.IModuleHostBuilder)
+  fullName: Modulight.Modules.Hosting.AspNetServerModuleExtensions.UseAspNetServerModules(Modulight.Modules.Hosting.IModuleHostBuilder)
+  nameWithType: AspNetServerModuleExtensions.UseAspNetServerModules(IModuleHostBuilder)
+- uid: Modulight.Modules.Hosting.AspNetServerModuleExtensions.UseAspNetServerModules*
+  name: UseAspNetServerModules
+  href: api/Modulight.Modules.Hosting.AspNetServerModuleExtensions.html#Modulight_Modules_Hosting_AspNetServerModuleExtensions_UseAspNetServerModules_
+  commentId: Overload:Modulight.Modules.Hosting.AspNetServerModuleExtensions.UseAspNetServerModules
+  isSpec: "True"
+  fullName: Modulight.Modules.Hosting.AspNetServerModuleExtensions.UseAspNetServerModules
+  nameWithType: AspNetServerModuleExtensions.UseAspNetServerModules
 - uid: Modulight.Modules.Hosting.GraphQLServerModuleExtensions
   name: GraphQLServerModuleExtensions
   href: api/Modulight.Modules.Hosting.GraphQLServerModuleExtensions.html
