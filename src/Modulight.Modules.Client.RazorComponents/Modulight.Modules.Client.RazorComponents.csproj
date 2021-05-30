@@ -12,6 +12,8 @@
 		<PackageProjectUrl>https://github.com/StardustDL/modulight</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/StardustDL/modulight</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>blazor;razor-components;razor;modular</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -25,5 +27,9 @@
 	<ItemGroup>
 		<ProjectReference Include="..\Modulight.Modules.Core\Modulight.Modules.Core.csproj" />
 	</ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>

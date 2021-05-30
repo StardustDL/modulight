@@ -13,6 +13,8 @@
     <RepositoryType>Git</RepositoryType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Provide user interfaces for blazor client module hosting.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>blazor;razor-components;razor;modular</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,4 +29,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  
 </Project>

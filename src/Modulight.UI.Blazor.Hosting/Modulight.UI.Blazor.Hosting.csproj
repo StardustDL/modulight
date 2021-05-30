@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -14,6 +14,8 @@
     <RepositoryType>Git</RepositoryType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Support ASP.NET hosting for Modulight.UI.Blazor.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>blazor;razor-components;razor;aspnet;modular</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,6 +31,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Modulight.UI.Blazor\Modulight.UI.Blazor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
