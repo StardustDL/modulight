@@ -4,8 +4,15 @@ using Microsoft.Extensions.Options;
 
 namespace Modulight.UI.Blazor.Hosting.Areas.Modulights.Pages
 {
-    internal class HostModel : PageModel
+    /// <summary>
+    /// 
+    /// </summary>
+    public class HostModel : PageModel
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="options"></param>
         public HostModel(IOptions<BlazorUiHostingModuleOption> options)
         {
             Options = options.Value;
@@ -19,8 +26,14 @@ namespace Modulight.UI.Blazor.Hosting.Areas.Modulights.Pages
             };
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public BlazorUiHostingModuleOption Options { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public RenderMode AppRenderMode { get; }
     }
 }
