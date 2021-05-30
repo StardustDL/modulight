@@ -2312,6 +2312,19 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Module.Initialize
   nameWithType: Module.Initialize
+- uid: Modulight.Modules.Module.Logger
+  name: Logger
+  href: api/Modulight.Modules.Module.html#Modulight_Modules_Module_Logger
+  commentId: P:Modulight.Modules.Module.Logger
+  fullName: Modulight.Modules.Module.Logger
+  nameWithType: Module.Logger
+- uid: Modulight.Modules.Module.Logger*
+  name: Logger
+  href: api/Modulight.Modules.Module.html#Modulight_Modules_Module_Logger_
+  commentId: Overload:Modulight.Modules.Module.Logger
+  isSpec: "True"
+  fullName: Modulight.Modules.Module.Logger
+  nameWithType: Module.Logger
 - uid: Modulight.Modules.Module.Manifest
   name: Manifest
   href: api/Modulight.Modules.Module.html#Modulight_Modules_Module_Manifest
