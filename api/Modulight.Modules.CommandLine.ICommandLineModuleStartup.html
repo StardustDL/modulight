@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ModuleStartup
+    <title>Interface ICommandLineModuleStartup
    | Modulight </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ModuleStartup
+    <meta name="title" content="Interface ICommandLineModuleStartup
    | Modulight ">
     <meta name="generator" content="docfx 2.57.2.0">
     
@@ -78,66 +78,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Modulight.Modules.ModuleStartup">
+            <article class="content wrap" id="_content" data-uid="Modulight.Modules.CommandLine.ICommandLineModuleStartup">
   
   
-  <h1 id="Modulight_Modules_ModuleStartup" data-uid="Modulight.Modules.ModuleStartup" class="text-break">Class ModuleStartup
+  <h1 id="Modulight_Modules_CommandLine_ICommandLineModuleStartup" data-uid="Modulight.Modules.CommandLine.ICommandLineModuleStartup" class="text-break">Interface ICommandLineModuleStartup
   </h1>
-  <div class="markdown level0 summary"><p>Empty implementation for <a class="xref" href="Modulight.Modules.IModuleStartup.html">IModuleStartup</a>.</p>
+  <div class="markdown level0 summary"><p>Startup for commandline module.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ModuleStartup</span></div>
-      <div class="level2"><a class="xref" href="Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleStartup.html">RazorComponentClientModuleStartup</a></div>
-      <div class="level2"><a class="xref" href="Modulight.Modules.CommandLine.CommandLineModuleStartup.html">CommandLineModuleStartup</a></div>
-      <div class="level2"><a class="xref" href="Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html">GraphQLServerModuleStartup</a></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Modulight.Modules.IModuleStartup.html">IModuleStartup</a></div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="Modulight.Modules.IModuleStartup.html#Modulight_Modules_IModuleStartup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_">IModuleStartup.ConfigureServices(IServiceCollection)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="Modulight.Modules.IModuleStartup.html#Modulight_Modules_IModuleStartup_ConfigureManifest_Modulight_Modules_IModuleManifestBuilder_">IModuleStartup.ConfigureManifest(IModuleManifestBuilder)</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.html">Modulight.Modules</a></h6>
-  <h6><strong>Assembly</strong>: Modulight.Modules.Core.dll</h6>
-  <h5 id="Modulight_Modules_ModuleStartup_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.CommandLine.html">Modulight.Modules.CommandLine</a></h6>
+  <h6><strong>Assembly</strong>: Modulight.Modules.CommandLine.dll</h6>
+  <h5 id="Modulight_Modules_CommandLine_ICommandLineModuleStartup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ModuleStartup : IModuleStartup</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ICommandLineModuleStartup : IModuleStartup</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Modulight_Modules_ModuleStartup_ConfigureManifest_" data-uid="Modulight.Modules.ModuleStartup.ConfigureManifest*"></a>
-  <h4 id="Modulight_Modules_ModuleStartup_ConfigureManifest_Modulight_Modules_IModuleManifestBuilder_" data-uid="Modulight.Modules.ModuleStartup.ConfigureManifest(Modulight.Modules.IModuleManifestBuilder)">ConfigureManifest(IModuleManifestBuilder)</h4>
-  <div class="markdown level1 summary"><p>Configure the module manifest.</p>
+  <a id="Modulight_Modules_CommandLine_ICommandLineModuleStartup_ConfigureCommandLineModuleManifest_" data-uid="Modulight.Modules.CommandLine.ICommandLineModuleStartup.ConfigureCommandLineModuleManifest*"></a>
+  <h4 id="Modulight_Modules_CommandLine_ICommandLineModuleStartup_ConfigureCommandLineModuleManifest_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_" data-uid="Modulight.Modules.CommandLine.ICommandLineModuleStartup.ConfigureCommandLineModuleManifest(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder)">ConfigureCommandLineModuleManifest(ICommandLineModuleManifestBuilder)</h4>
+  <div class="markdown level1 summary"><p>Configure manifest for commandline module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void ConfigureManifest(IModuleManifestBuilder builder)</code></pre>
+    <pre><code class="lang-csharp hljs">void ConfigureCommandLineModuleManifest(ICommandLineModuleManifestBuilder builder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,42 +123,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Modulight.Modules.IModuleManifestBuilder.html">IModuleManifestBuilder</a></td>
+        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
         <td><span class="parametername">builder</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Modulight_Modules_ModuleStartup_ConfigureServices_" data-uid="Modulight.Modules.ModuleStartup.ConfigureServices*"></a>
-  <h4 id="Modulight_Modules_ModuleStartup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Modulight.Modules.ModuleStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">ConfigureServices(IServiceCollection)</h4>
-  <div class="markdown level1 summary"><p>Configure the target services.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void ConfigureServices(IServiceCollection services)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><span class="parametername">services</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Modulight.Modules.IModuleStartup.html">IModuleStartup</a>
-  </div>
 </article>
           </div>
           

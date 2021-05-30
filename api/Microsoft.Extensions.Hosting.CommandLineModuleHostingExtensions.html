@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ModuleStartup
+    <title>Class CommandLineModuleHostingExtensions
    | Modulight </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ModuleStartup
+    <meta name="title" content="Class CommandLineModuleHostingExtensions
    | Modulight ">
     <meta name="generator" content="docfx 2.57.2.0">
     
@@ -78,25 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Modulight.Modules.ModuleStartup">
+            <article class="content wrap" id="_content" data-uid="Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions">
   
   
-  <h1 id="Modulight_Modules_ModuleStartup" data-uid="Modulight.Modules.ModuleStartup" class="text-break">Class ModuleStartup
+  <h1 id="Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions" data-uid="Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions" class="text-break">Class CommandLineModuleHostingExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Empty implementation for <a class="xref" href="Modulight.Modules.IModuleStartup.html">IModuleStartup</a>.</p>
+  <div class="markdown level0 summary"><p>Extension methods for commandline hosting.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ModuleStartup</span></div>
-      <div class="level2"><a class="xref" href="Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleStartup.html">RazorComponentClientModuleStartup</a></div>
-      <div class="level2"><a class="xref" href="Modulight.Modules.CommandLine.CommandLineModuleStartup.html">CommandLineModuleStartup</a></div>
-      <div class="level2"><a class="xref" href="Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html">GraphQLServerModuleStartup</a></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Modulight.Modules.IModuleStartup.html">IModuleStartup</a></div>
+    <div class="level1"><span class="xref">CommandLineModuleHostingExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -122,22 +115,21 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.html">Modulight.Modules</a></h6>
-  <h6><strong>Assembly</strong>: Modulight.Modules.Core.dll</h6>
-  <h5 id="Modulight_Modules_ModuleStartup_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.Extensions.Hosting.html">Microsoft.Extensions.Hosting</a></h6>
+  <h6><strong>Assembly</strong>: Modulight.Modules.CommandLine.dll</h6>
+  <h5 id="Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ModuleStartup : IModuleStartup</code></pre>
+    <pre><code class="lang-csharp hljs">public static class CommandLineModuleHostingExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Modulight_Modules_ModuleStartup_ConfigureManifest_" data-uid="Modulight.Modules.ModuleStartup.ConfigureManifest*"></a>
-  <h4 id="Modulight_Modules_ModuleStartup_ConfigureManifest_Modulight_Modules_IModuleManifestBuilder_" data-uid="Modulight.Modules.ModuleStartup.ConfigureManifest(Modulight.Modules.IModuleManifestBuilder)">ConfigureManifest(IModuleManifestBuilder)</h4>
-  <div class="markdown level1 summary"><p>Configure the module manifest.</p>
-</div>
+  <a id="Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_AddCommandLineWorker_" data-uid="Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker*"></a>
+  <h4 id="Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_AddCommandLineWorker_Microsoft_Extensions_Hosting_IHostBuilder_" data-uid="Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker(Microsoft.Extensions.Hosting.IHostBuilder)">AddCommandLineWorker(IHostBuilder)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void ConfigureManifest(IModuleManifestBuilder builder)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IHostBuilder AddCommandLineWorker(this IHostBuilder hostBuilder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,20 +142,35 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Modulight.Modules.IModuleManifestBuilder.html">IModuleManifestBuilder</a></td>
-        <td><span class="parametername">builder</span></td>
+        <td><span class="xref">Microsoft.Extensions.Hosting.IHostBuilder</span></td>
+        <td><span class="parametername">hostBuilder</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Modulight_Modules_ModuleStartup_ConfigureServices_" data-uid="Modulight.Modules.ModuleStartup.ConfigureServices*"></a>
-  <h4 id="Modulight_Modules_ModuleStartup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Modulight.Modules.ModuleStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">ConfigureServices(IServiceCollection)</h4>
-  <div class="markdown level1 summary"><p>Configure the target services.</p>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Hosting.IHostBuilder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_RunConsoleAsyncWithModules_" data-uid="Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules*"></a>
+  <h4 id="Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_RunConsoleAsyncWithModules_Microsoft_Extensions_Hosting_IHostBuilder_System_Nullable_System_Boolean__" data-uid="Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules(Microsoft.Extensions.Hosting.IHostBuilder,System.Nullable{System.Boolean})">RunConsoleAsyncWithModules(IHostBuilder, Nullable&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Run with modules</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void ConfigureServices(IServiceCollection services)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task RunConsoleAsyncWithModules(this IHostBuilder hostBuilder, bool? suppressStatusMessages = default(bool? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,16 +183,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><span class="parametername">services</span></td>
+        <td><span class="xref">Microsoft.Extensions.Hosting.IHostBuilder</span></td>
+        <td><span class="parametername">hostBuilder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">suppressStatusMessages</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Modulight.Modules.IModuleStartup.html">IModuleStartup</a>
-  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

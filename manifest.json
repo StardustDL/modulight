@@ -110,11 +110,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.html",
+          "hash": "35eYKUj+agCzlhAWyXqgqStg1KQ1lTnyr9XBBp/Ns6A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Microsoft.Extensions.Hosting.yml",
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.Hosting.html",
-          "hash": "4m6gZ4HUY3iuDk/znZhw+gZoWhBpWjRnWRB07VNYugM="
+          "hash": "hEkOQgEN8wKkfcft59ty/x/6/17PC8ULUE7R/xmDU8M="
         }
       },
       "is_incremental": false,
@@ -374,11 +386,155 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.CommandFromAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.CommandFromAttribute.html",
+          "hash": "akUwhpoDZvmpfWt8Eti0ov53Xv5kRrvxg73oYdC9LJk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.CommandLineModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.CommandLineModule.html",
+          "hash": "V35E5vCSzZUrCXQMc8siWXIQPUE2+qvSb4RC5lMZqvA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.CommandLineModuleStartup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.CommandLineModuleStartup.html",
+          "hash": "KecAbrPQp72Zo+weQtuSgn+C8GB5esKAUb5HOWxvpPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.CommandsFromAssemblyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.CommandsFromAssemblyAttribute.html",
+          "hash": "z0F1M3RyxN8rGRhb6IouxZqoirYzo+iYQdUSPmep/uk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModule.html",
+          "hash": "RFBUGI7ENlyPGc2xmnUqe9znSuM0zak4lbYTnzUpdvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModuleCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModuleCollection.html",
+          "hash": "GmEw0TI+tWIuzXWOCMCzqjH6o3i3FP+4FAFd/KiK8ig="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html",
+          "hash": "u6fpBP2cLgMlpiZCNNU+hd/HkYBeu0ylJoKU/qFE0Io="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModuleStartup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModuleStartup.html",
+          "hash": "M4weruMtmx0PBRXcAuAzSO4afk/8p+AhMs8ll/EsJ4w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.ModuleCommand-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.ModuleCommand-1.html",
+          "hash": "b8WflYpFgh7Nxiq6H6Bf8EL7NCxoySVhN9BGxAjnBro="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.ModuleCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.ModuleCommand.html",
+          "hash": "dWv4lWfpaUWkBtcCZu6K8PY8zZpKMq07/olASfXW0Q8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.html",
+          "hash": "HBUMEY3L7wmHt+EOoRORxrq4zLVluvp7crzZ4tO8pVo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Modulight.Modules.Hosting.AspNetServerModuleExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.AspNetServerModuleExtensions.html",
           "hash": "nUSv73pKre82I/0XWTtQBTlxBkkrwcNefoGZiDu8XtQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.Hosting.CommandLineModuleExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html",
+          "hash": "5HhPbFzq2bWO/UxkM3Bi4BlNfGoCEOn6+tnbLHkn2HQ="
         }
       },
       "is_incremental": false,
@@ -426,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.IModuleHost.html",
-          "hash": "0INSktAQ45iBUDizTTVZVQLVeqx5L7Bc8/1wNjuQimo="
+          "hash": "tjUdNfIwAvMfkCmzHRptKjYKw7E2mpGwheSvri5p82o="
         }
       },
       "is_incremental": false,
@@ -438,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.IModuleHostBuilder.html",
-          "hash": "aY+gun3NrigYOxokCNX8/c9nYFb91hWEV10v2dRA3N8="
+          "hash": "+4I/gE6afu2zZ6yfOyLbj6y4bJ+JV+4BxZtz/6XVH/c="
         }
       },
       "is_incremental": false,
@@ -534,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.html",
-          "hash": "G2AT2XI2bgBjLGq0SiMKkPsHJkQ44XLdhIqHFepfFqs="
+          "hash": "M33UHvyGZXBP5RuZyIcBVvMpJWJ/ZzxNKJ3yp0KI2/I="
         }
       },
       "is_incremental": false,
@@ -594,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Module.html",
-          "hash": "0I2gx2IZH/lKM3jAhT9NCUy2uke/aXUk34DYeBfOeYY="
+          "hash": "SdwksCQBIG3SGmEa1/twxrOrpEhBR2mNBGH4ygRscHo="
         }
       },
       "is_incremental": false,
@@ -666,7 +822,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.ModuleStartup.html",
-          "hash": "7+8xjBl8j7NyYJVi0H2Kn+qjJiLUvb3Y0k1PIF8UnJw="
+          "hash": "R3CVOlSPtP2f2BRNOJ6n/HbpRJh0iNNkzzN3CLS2lNo="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "NVGFaSFwmog5l+fAw6Txt1L40UVF1o350PvNNmc9oF8="
+          "hash": "IDRAwmXcCVW4zDa03sbXKO4qZhwaxXbQ0l5LqdGHeIk="
         }
       },
       "is_incremental": false,
@@ -1080,7 +1236,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 82,
+          "total_file_count": 95,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
