@@ -23,14 +23,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.6" />
-    <PackageReference Include="StardustDL.RazorComponents.AntDesigns" Version="0.8.1" />
-    <PackageReference Include="StardustDL.RazorComponents.Bootstraps" Version="4.6.0.39" />
-    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="5.9.55.39" />
+    <PackageReference Include="StardustDL.RazorComponents.AntDesigns" Version="0.8.1.50" />
+    <PackageReference Include="StardustDL.RazorComponents.Bootstraps" Version="5.0.1.50" />
+    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="5.9.55.50" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   
 </Project>

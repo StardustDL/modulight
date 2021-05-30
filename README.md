@@ -66,6 +66,8 @@ await builder.Build().RunAsyncWithModules();
 
 #### Use Razor component modules
 
+[![](https://buildstats.info/nuget/Modulight.Modules.Client.RazorComponents)](https://www.nuget.org/packages/Modulight.Modules.Client.RazorComponents/)
+
 ```cs
 // in Startup: void ConfigureServices(ISeviceCollection services)
 
@@ -91,7 +93,15 @@ await host.Services.GetRazorComponentClientModuleCollection().LoadResources();
 
 #### Use ASP.NET modules
 
+[![](https://buildstats.info/nuget/Modulight.Modules.Server.AspNet)](https://www.nuget.org/packages/Modulight.Modules.Server.AspNet/)
+
 ```cs
+// in Startup: void ConfigureServices(ISeviceCollection services)
+
+services.AddModules(builder => {
+    builder.UseAspNetServerModules().AddModule<FooModule>();
+});
+
 // in Startup: void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 app.UseAspNetServerModuleMiddlewares();
@@ -103,6 +113,8 @@ app.UseEndpoints(endpoints =>
 ```
 
 #### Use GraphQL modules
+
+[![](https://buildstats.info/nuget/Modulight.Modules.Server.GraphQL)](https://www.nuget.org/packages/Modulight.Modules.Server.GraphQL/)
 
 ```cs
 // in Startup: void ConfigureServices(ISeviceCollection services)

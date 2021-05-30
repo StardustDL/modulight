@@ -16,6 +16,16 @@ namespace Modulight.Modules.Hosting
         /// <param name="host"></param>
         /// <returns></returns>
         public static IAspNetServerModuleCollection GetAspNetServerModuleCollection(this IModuleHost host) => host.Services.GetRequiredService<IAspNetServerModuleCollection>();
+
+        /// <summary>
+        /// Use aspnet modules.
+        /// </summary>
+        /// <param name="modules"></param>
+        /// <returns></returns>
+        public static IModuleHostBuilder UseAspNetServerModules(this IModuleHostBuilder modules)
+        {
+            return modules.AddModule<AspnetServerCoreModule>();
+        }
     }
 }
 
