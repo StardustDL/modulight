@@ -19,9 +19,9 @@ namespace Build
 
     public class BuildContext : FrostingContext
     {
-        const string Version = "0.0.7";
+        const string Version = "0.0.8";
 
-        const int BuildRunNumberOffset = 97;
+        const int BuildRunNumberOffset = 107;
 
         public string CommitMessage { get; set; }
 

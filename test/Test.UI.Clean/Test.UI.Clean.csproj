@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Modulight.Modules.Hosting\Modulight.Modules.Hosting.csproj" />
     <ProjectReference Include="..\..\src\Modulight.UI.Blazor.Hosting\Modulight.UI.Blazor.Hosting.csproj" />
   </ItemGroup>
 </Project>
