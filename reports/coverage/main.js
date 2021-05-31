@@ -253,10 +253,32 @@ var assemblies = [
       { "name": "Modulight.Modules.RazorComponentClientModuleExtensions", "rp": "Modulight.Modules.Client.RazorComponents_RazorComponentClientModuleExtensions.2.html", "cl": 0, "ucl": 21, "cal": 21, "tl": 189, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 8, "lch": [], "bch": [], "hc": [] },
     ]},
   {
+    "name": "Modulight.Modules.CommandLine",
+    "classes": [
+      { "name": "Modulight.Modules.CommandLine.CommandFromAttribute", "rp": "Modulight.Modules.CommandLine_CommandFromAttribute.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 39, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineCoreModule", "rp": "Modulight.Modules.CommandLine_CommandLineCoreModule.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 53, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineModule", "rp": "Modulight.Modules.CommandLine_CommandLineModule.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 53, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions", "rp": "Modulight.Modules.CommandLine_CommandLineModuleBuilderOptions.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineModuleCollection", "rp": "Modulight.Modules.CommandLine_CommandLineModuleCollection.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 18, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineModuleManifest", "rp": "Modulight.Modules.CommandLine_CommandLineModuleManifest.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 15, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineModulePlugin", "rp": "Modulight.Modules.CommandLine_CommandLineModulePlugin.html", "cl": 0, "ucl": 27, "cal": 27, "tl": 69, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 8, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineModuleStartup", "rp": "Modulight.Modules.CommandLine_CommandLineModuleStartup.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandLineWorker", "rp": "Modulight.Modules.CommandLine_CommandLineWorker.html", "cl": 0, "ucl": 24, "cal": 24, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 6, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.CommandsFromAssemblyAttribute", "rp": "Modulight.Modules.CommandLine_CommandsFromAssemblyAttribute.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 39, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.DefaultCommandLineModuleManifestBuilder", "rp": "Modulight.Modules.CommandLine_DefaultCommandLineModuleManifestBuilder.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 31, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.ModuleCommand", "rp": "Modulight.Modules.CommandLine_ModuleCommand.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 52, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.CommandLine.ModuleCommand<T>", "rp": "Modulight.Modules.CommandLine_ModuleCommand_1.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 52, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Modulight.Modules.Hosting.CommandLineModuleExtensions", "rp": "Modulight.Modules.CommandLine_CommandLineModuleExtensions.html", "cl": 0, "ucl": 29, "cal": 29, "tl": 130, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 16, "lch": [], "bch": [], "hc": [] },
+    ]},
+  {
+    "name": "Modulight.Modules.Hosting",
+    "classes": [
+      { "name": "Microsoft.Extensions.Hosting.ModuleHostingExtensions", "rp": "Modulight.Modules.Hosting_ModuleHostingExtensions.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 8, "lch": [], "bch": [], "hc": [] },
+    ]},
+  {
     "name": "Modulight.Modules.Server.AspNet",
     "classes": [
       { "name": "Microsoft.AspNetCore.Builder.AspNetServerModuleExtensions", "rp": "Modulight.Modules.Server.AspNet_AspNetServerModuleExtensions.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions", "rp": "Modulight.Modules.Server.AspNet_AspNetServerModuleHostingExtensions.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 8, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Hosting.AspNetServerModuleExtensions", "rp": "Modulight.Modules.Server.AspNet_AspNetServerModuleExtensions.2.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Server.AspNet.AspnetServerCoreModule", "rp": "Modulight.Modules.Server.AspNet_AspnetServerCoreModule.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Modulight.Modules.Server.AspNet.AspNetServerModule", "rp": "Modulight.Modules.Server.AspNet_AspNetServerModule.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },

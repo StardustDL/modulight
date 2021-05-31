@@ -184,60 +184,25 @@ references:
   commentId: N:Microsoft.Extensions.Hosting
   fullName: Microsoft.Extensions.Hosting
   nameWithType: Microsoft.Extensions.Hosting
-- uid: Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions
-  name: AspNetServerModuleHostingExtensions
-  href: api/Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.html
-  commentId: T:Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions
-  fullName: Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions
-  nameWithType: AspNetServerModuleHostingExtensions
-- uid: Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
+- uid: Microsoft.Extensions.Hosting.ModuleHostingExtensions
+  name: ModuleHostingExtensions
+  href: api/Microsoft.Extensions.Hosting.ModuleHostingExtensions.html
+  commentId: T:Microsoft.Extensions.Hosting.ModuleHostingExtensions
+  fullName: Microsoft.Extensions.Hosting.ModuleHostingExtensions
+  nameWithType: ModuleHostingExtensions
+- uid: Microsoft.Extensions.Hosting.ModuleHostingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
   name: RunAsyncWithModules(IHost)
-  href: api/Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.html#Microsoft_Extensions_Hosting_AspNetServerModuleHostingExtensions_RunAsyncWithModules_Microsoft_Extensions_Hosting_IHost_
-  commentId: M:Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
-  fullName: Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
-  nameWithType: AspNetServerModuleHostingExtensions.RunAsyncWithModules(IHost)
-- uid: Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.RunAsyncWithModules*
+  href: api/Microsoft.Extensions.Hosting.ModuleHostingExtensions.html#Microsoft_Extensions_Hosting_ModuleHostingExtensions_RunAsyncWithModules_Microsoft_Extensions_Hosting_IHost_
+  commentId: M:Microsoft.Extensions.Hosting.ModuleHostingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
+  fullName: Microsoft.Extensions.Hosting.ModuleHostingExtensions.RunAsyncWithModules(Microsoft.Extensions.Hosting.IHost)
+  nameWithType: ModuleHostingExtensions.RunAsyncWithModules(IHost)
+- uid: Microsoft.Extensions.Hosting.ModuleHostingExtensions.RunAsyncWithModules*
   name: RunAsyncWithModules
-  href: api/Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.html#Microsoft_Extensions_Hosting_AspNetServerModuleHostingExtensions_RunAsyncWithModules_
-  commentId: Overload:Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.RunAsyncWithModules
+  href: api/Microsoft.Extensions.Hosting.ModuleHostingExtensions.html#Microsoft_Extensions_Hosting_ModuleHostingExtensions_RunAsyncWithModules_
+  commentId: Overload:Microsoft.Extensions.Hosting.ModuleHostingExtensions.RunAsyncWithModules
   isSpec: "True"
-  fullName: Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.RunAsyncWithModules
-  nameWithType: AspNetServerModuleHostingExtensions.RunAsyncWithModules
-- uid: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions
-  name: CommandLineModuleHostingExtensions
-  href: api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.html
-  commentId: T:Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions
-  fullName: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions
-  nameWithType: CommandLineModuleHostingExtensions
-- uid: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker(Microsoft.Extensions.Hosting.IHostBuilder)
-  name: AddCommandLineWorker(IHostBuilder)
-  href: api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.html#Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_AddCommandLineWorker_Microsoft_Extensions_Hosting_IHostBuilder_
-  commentId: M:Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker(Microsoft.Extensions.Hosting.IHostBuilder)
-  fullName: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker(Microsoft.Extensions.Hosting.IHostBuilder)
-  nameWithType: CommandLineModuleHostingExtensions.AddCommandLineWorker(IHostBuilder)
-- uid: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker*
-  name: AddCommandLineWorker
-  href: api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.html#Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_AddCommandLineWorker_
-  commentId: Overload:Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker
-  isSpec: "True"
-  fullName: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.AddCommandLineWorker
-  nameWithType: CommandLineModuleHostingExtensions.AddCommandLineWorker
-- uid: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules(Microsoft.Extensions.Hosting.IHostBuilder,System.Nullable{System.Boolean})
-  name: RunConsoleAsyncWithModules(IHostBuilder, Nullable<Boolean>)
-  href: api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.html#Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_RunConsoleAsyncWithModules_Microsoft_Extensions_Hosting_IHostBuilder_System_Nullable_System_Boolean__
-  commentId: M:Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules(Microsoft.Extensions.Hosting.IHostBuilder,System.Nullable{System.Boolean})
-  name.vb: RunConsoleAsyncWithModules(IHostBuilder, Nullable(Of Boolean))
-  fullName: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules(Microsoft.Extensions.Hosting.IHostBuilder, System.Nullable<System.Boolean>)
-  fullName.vb: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules(Microsoft.Extensions.Hosting.IHostBuilder, System.Nullable(Of System.Boolean))
-  nameWithType: CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules(IHostBuilder, Nullable<Boolean>)
-  nameWithType.vb: CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules(IHostBuilder, Nullable(Of Boolean))
-- uid: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules*
-  name: RunConsoleAsyncWithModules
-  href: api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.html#Microsoft_Extensions_Hosting_CommandLineModuleHostingExtensions_RunConsoleAsyncWithModules_
-  commentId: Overload:Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules
-  isSpec: "True"
-  fullName: Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules
-  nameWithType: CommandLineModuleHostingExtensions.RunConsoleAsyncWithModules
+  fullName: Microsoft.Extensions.Hosting.ModuleHostingExtensions.RunAsyncWithModules
+  nameWithType: ModuleHostingExtensions.RunAsyncWithModules
 - uid: Modulight.Modules
   name: Modulight.Modules
   href: api/Modulight.Modules.html
@@ -1298,6 +1263,25 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.CommandLine.CommandLineModule.CommandLineModuleManifest
   nameWithType: CommandLineModule.CommandLineModuleManifest
+- uid: Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions
+  name: CommandLineModuleBuilderOptions
+  href: api/Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.html
+  commentId: T:Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions
+  fullName: Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions
+  nameWithType: CommandLineModuleBuilderOptions
+- uid: Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.SuppressStatusMessages
+  name: SuppressStatusMessages
+  href: api/Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.html#Modulight_Modules_CommandLine_CommandLineModuleBuilderOptions_SuppressStatusMessages
+  commentId: P:Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.SuppressStatusMessages
+  fullName: Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.SuppressStatusMessages
+  nameWithType: CommandLineModuleBuilderOptions.SuppressStatusMessages
+- uid: Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.SuppressStatusMessages*
+  name: SuppressStatusMessages
+  href: api/Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.html#Modulight_Modules_CommandLine_CommandLineModuleBuilderOptions_SuppressStatusMessages_
+  commentId: Overload:Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.SuppressStatusMessages
+  isSpec: "True"
+  fullName: Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.SuppressStatusMessages
+  nameWithType: CommandLineModuleBuilderOptions.SuppressStatusMessages
 - uid: Modulight.Modules.CommandLine.CommandLineModuleStartup
   name: CommandLineModuleStartup
   href: api/Modulight.Modules.CommandLine.CommandLineModuleStartup.html
@@ -1511,73 +1495,15 @@ references:
   commentId: T:Modulight.Modules.Hosting.CommandLineModuleExtensions
   fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions
   nameWithType: CommandLineModuleExtensions
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)
-  name: AddCommand(ICommandLineModuleManifestBuilder, Type)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder, System.Type)
-  nameWithType: CommandLineModuleExtensions.AddCommand(ICommandLineModuleManifestBuilder, Type)
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand*
-  name: AddCommand
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_
-  commentId: Overload:Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand
-  nameWithType: CommandLineModuleExtensions.AddCommand
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand``1(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder)
-  name: AddCommand<T>(ICommandLineModuleManifestBuilder)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand__1_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand``1(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder)
-  name.vb: AddCommand(Of T)(ICommandLineModuleManifestBuilder)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand<T>(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder)
-  fullName.vb: Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand(Of T)(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder)
-  nameWithType: CommandLineModuleExtensions.AddCommand<T>(ICommandLineModuleManifestBuilder)
-  nameWithType.vb: CommandLineModuleExtensions.AddCommand(Of T)(ICommandLineModuleManifestBuilder)
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand(System.Type)
-  name: EnsureCommand(Type)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_EnsureCommand_System_Type_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand(System.Type)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand(System.Type)
-  nameWithType: CommandLineModuleExtensions.EnsureCommand(Type)
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand*
-  name: EnsureCommand
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_EnsureCommand_
-  commentId: Overload:Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand
-  nameWithType: CommandLineModuleExtensions.EnsureCommand
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection(Modulight.Modules.Hosting.IModuleHost)
-  name: GetCommandLineModuleCollection(IModuleHost)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_GetCommandLineModuleCollection_Modulight_Modules_Hosting_IModuleHost_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection(Modulight.Modules.Hosting.IModuleHost)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection(Modulight.Modules.Hosting.IModuleHost)
-  nameWithType: CommandLineModuleExtensions.GetCommandLineModuleCollection(IModuleHost)
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection*
-  name: GetCommandLineModuleCollection
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_GetCommandLineModuleCollection_
-  commentId: Overload:Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection
-  nameWithType: CommandLineModuleExtensions.GetCommandLineModuleCollection
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand(System.Type)
-  name: IsCommand(Type)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_IsCommand_System_Type_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand(System.Type)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand(System.Type)
-  nameWithType: CommandLineModuleExtensions.IsCommand(Type)
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand*
-  name: IsCommand
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_IsCommand_
-  commentId: Overload:Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand
-  nameWithType: CommandLineModuleExtensions.IsCommand
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder)
-  name: UseCommandLineModules(IModuleHostBuilder)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_Modulight_Modules_Hosting_IModuleHostBuilder_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder)
-  nameWithType: CommandLineModuleExtensions.UseCommandLineModules(IModuleHostBuilder)
+- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder,System.Action{Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions})
+  name: UseCommandLineModules(IModuleHostBuilder, Action<CommandLineModuleBuilderOptions>)
+  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action_Modulight_Modules_CommandLine_CommandLineModuleBuilderOptions__
+  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder,System.Action{Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions})
+  name.vb: UseCommandLineModules(IModuleHostBuilder, Action(Of CommandLineModuleBuilderOptions))
+  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder, System.Action<Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions>)
+  fullName.vb: Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder, System.Action(Of Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions))
+  nameWithType: CommandLineModuleExtensions.UseCommandLineModules(IModuleHostBuilder, Action<CommandLineModuleBuilderOptions>)
+  nameWithType.vb: CommandLineModuleExtensions.UseCommandLineModules(IModuleHostBuilder, Action(Of CommandLineModuleBuilderOptions))
 - uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules*
   name: UseCommandLineModules
   href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_
@@ -1585,32 +1511,6 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules
   nameWithType: CommandLineModuleExtensions.UseCommandLineModules
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)
-  name: WithCommandsFromModuleAssembly(ICommandLineModuleManifestBuilder, Type)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_WithCommandsFromModuleAssembly_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder, System.Type)
-  nameWithType: CommandLineModuleExtensions.WithCommandsFromModuleAssembly(ICommandLineModuleManifestBuilder, Type)
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly*
-  name: WithCommandsFromModuleAssembly
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_WithCommandsFromModuleAssembly_
-  commentId: Overload:Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly
-  nameWithType: CommandLineModuleExtensions.WithCommandsFromModuleAssembly
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)
-  name: WithDefaultsFromModuleType(ICommandLineModuleManifestBuilder, Type)
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_WithDefaultsFromModuleType_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_
-  commentId: M:Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder, System.Type)
-  nameWithType: CommandLineModuleExtensions.WithDefaultsFromModuleType(ICommandLineModuleManifestBuilder, Type)
-- uid: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType*
-  name: WithDefaultsFromModuleType
-  href: api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_WithDefaultsFromModuleType_
-  commentId: Overload:Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType
-  isSpec: "True"
-  fullName: Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType
-  nameWithType: CommandLineModuleExtensions.WithDefaultsFromModuleType
 - uid: Modulight.Modules.Hosting.GraphQLServerModuleExtensions
   name: GraphQLServerModuleExtensions
   href: api/Modulight.Modules.Hosting.GraphQLServerModuleExtensions.html

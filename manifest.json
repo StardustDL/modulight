@@ -98,23 +98,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.yml",
+      "source_relative_path": "api/Microsoft.Extensions.Hosting.ModuleHostingExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Microsoft.Extensions.Hosting.AspNetServerModuleHostingExtensions.html",
-          "hash": "FC8yW5mvL0fIMYPH+HOFDL6yYXFo2V2NF+4SQXIv5c4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.Hosting.CommandLineModuleHostingExtensions.html",
-          "hash": "35eYKUj+agCzlhAWyXqgqStg1KQ1lTnyr9XBBp/Ns6A="
+          "relative_path": "api/Microsoft.Extensions.Hosting.ModuleHostingExtensions.html",
+          "hash": "bS8kYCgoOLLqYa6ydU9a4GC5HDbfqs/qZga3U9vliEQ="
         }
       },
       "is_incremental": false,
@@ -126,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.Hosting.html",
-          "hash": "hEkOQgEN8wKkfcft59ty/x/6/17PC8ULUE7R/xmDU8M="
+          "hash": "y3VYEnoMvv29T7kQe8S0aPmcv9P52rWrhxbyWFI973I="
         }
       },
       "is_incremental": false,
@@ -410,6 +398,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.html",
+          "hash": "YuLGAfXoK1YPt+NCTZgKM90UNKDviZj2a2pGpXw13Rk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Modulight.Modules.CommandLine.CommandLineModuleStartup.yml",
       "output": {
         ".html": {
@@ -426,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.CommandLine.CommandsFromAssemblyAttribute.html",
-          "hash": "z0F1M3RyxN8rGRhb6IouxZqoirYzo+iYQdUSPmep/uk="
+          "hash": "T5JuWsT4zqq5Mcvu/OlZiTVgxKiTTKorI8dggKmPFYY="
         }
       },
       "is_incremental": false,
@@ -462,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html",
-          "hash": "u6fpBP2cLgMlpiZCNNU+hd/HkYBeu0ylJoKU/qFE0Io="
+          "hash": "GQvMSC5sSESQgRahuLbKCb/aNKvP4D9r9gluPa5vOZY="
         }
       },
       "is_incremental": false,
@@ -510,7 +510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.CommandLine.html",
-          "hash": "HBUMEY3L7wmHt+EOoRORxrq4zLVluvp7crzZ4tO8pVo="
+          "hash": "3rhug8aFMzXR8/oQI+SUhDAK6cpb2P8IvycSzWmNqTE="
         }
       },
       "is_incremental": false,
@@ -534,7 +534,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.CommandLineModuleExtensions.html",
-          "hash": "5HhPbFzq2bWO/UxkM3Bi4BlNfGoCEOn6+tnbLHkn2HQ="
+          "hash": "1WFWX+8xpAq3cubE5OWSOBfDocVz/Ag8tH61SWMzr/g="
         }
       },
       "is_incremental": false,
@@ -582,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.IModuleHost.html",
-          "hash": "tjUdNfIwAvMfkCmzHRptKjYKw7E2mpGwheSvri5p82o="
+          "hash": "0INSktAQ45iBUDizTTVZVQLVeqx5L7Bc8/1wNjuQimo="
         }
       },
       "is_incremental": false,
@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Hosting.IModuleHostBuilder.html",
-          "hash": "+4I/gE6afu2zZ6yfOyLbj6y4bJ+JV+4BxZtz/6XVH/c="
+          "hash": "wn+24RbFUeXWwYOHNHtd3XbWLQzkLl0vIdfbmzNw9EA="
         }
       },
       "is_incremental": false,
@@ -1170,7 +1170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "IDRAwmXcCVW4zDa03sbXKO4qZhwaxXbQ0l5LqdGHeIk="
+          "hash": "iUSmydYCpk8tvLOYF/paoRN1+NTK8BQgUAw12uGEjgo="
         }
       },
       "is_incremental": false,

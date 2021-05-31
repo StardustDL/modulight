@@ -123,225 +123,14 @@
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)">AddCommand(ICommandLineModuleManifestBuilder, Type)</h4>
-  <div class="markdown level1 summary"><p>Add a command type to manifest.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICommandLineModuleManifestBuilder AddCommand(this ICommandLineModuleManifestBuilder builder, Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
-        <td><span class="parametername">builder</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand__1_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand``1(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder)">AddCommand&lt;T&gt;(ICommandLineModuleManifestBuilder)</h4>
-  <div class="markdown level1 summary"><p>Add a command type to manifest.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICommandLineModuleManifestBuilder AddCommand&lt;T&gt;(this ICommandLineModuleManifestBuilder builder)
-    where T : ICommand</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
-        <td><span class="parametername">builder</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_EnsureCommand_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_EnsureCommand_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand(System.Type)">EnsureCommand(Type)</h4>
-  <div class="markdown level1 summary"><p>Ensure a type is a command type.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void EnsureCommand(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_GetCommandLineModuleCollection_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_GetCommandLineModuleCollection_Modulight_Modules_Hosting_IModuleHost_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.GetCommandLineModuleCollection(Modulight.Modules.Hosting.IModuleHost)">GetCommandLineModuleCollection(IModuleHost)</h4>
-  <div class="markdown level1 summary"><p>Get commandline module host from service provider.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICommandLineModuleCollection GetCommandLineModuleCollection(this IModuleHost host)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHost.html">IModuleHost</a></td>
-        <td><span class="parametername">host</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleCollection.html">ICommandLineModuleCollection</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_IsCommand_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_IsCommand_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand(System.Type)">IsCommand(Type)</h4>
-  <div class="markdown level1 summary"><p>Test a type is a command type.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsCommand(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_Modulight_Modules_Hosting_IModuleHostBuilder_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder)">UseCommandLineModules(IModuleHostBuilder)</h4>
+  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action_Modulight_Modules_CommandLine_CommandLineModuleBuilderOptions__" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder,System.Action{Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions})">UseCommandLineModules(IModuleHostBuilder, Action&lt;CommandLineModuleBuilderOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Use building plugin for commandline modules.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IModuleHostBuilder UseCommandLineModules(this IModuleHostBuilder modules)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IModuleHostBuilder UseCommandLineModules(this IModuleHostBuilder modules, Action&lt;CommandLineModuleBuilderOptions&gt; configureOptions = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,6 +147,11 @@
         <td><span class="parametername">modules</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.html">CommandLineModuleBuilderOptions</a>&gt;</td>
+        <td><span class="parametername">configureOptions</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -371,98 +165,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithCommandsFromModuleAssembly_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithCommandsFromModuleAssembly_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)">WithCommandsFromModuleAssembly(ICommandLineModuleManifestBuilder, Type)</h4>
-  <div class="markdown level1 summary"><p>Add commands from the assembly of module.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICommandLineModuleManifestBuilder WithCommandsFromModuleAssembly(this ICommandLineModuleManifestBuilder builder, Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
-        <td><span class="parametername">builder</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithDefaultsFromModuleType_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithDefaultsFromModuleType_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)">WithDefaultsFromModuleType(ICommandLineModuleManifestBuilder, Type)</h4>
-  <div class="markdown level1 summary"><p>Configure the builder by default from attributes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICommandLineModuleManifestBuilder WithDefaultsFromModuleType(this ICommandLineModuleManifestBuilder builder, Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
-        <td><span class="parametername">builder</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder.html">ICommandLineModuleManifestBuilder</a></td>
         <td></td>
       </tr>
     </tbody>
