@@ -10,7 +10,7 @@
 
 For general modules:
 
-```cs
+```csharp
 services.AddModules(builder => {
     builder.AddModule<FooModule>();
 });
@@ -18,7 +18,7 @@ services.AddModules(builder => {
 
 2. Configure the module initilizing & shutdown.
 
-```cs
+```csharp
 var host = services.GetModuleHost();
 await host.Initialize();
 
@@ -36,8 +36,8 @@ await using var _ = await services.UseModuleHost();
 
 Or use extension methods for hosting:
 
-```cs
-// ASP.NET hosting. (provided by package Modulight.Modules.Server.AspNet)
+```csharp
+// Generic hosting. (provided by package Modulight.Modules.Hosting)
 // in Program: Task Main(string[] args)
 await CreateHostBuilder(args).Build().RunAsyncWithModules();
 

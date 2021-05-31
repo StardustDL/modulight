@@ -28,29 +28,29 @@
 
 ### Use modules
 
-See [README](./src/Modulight.Modules.Core/README.md) for details.
+See [here](./src/Modulight.Modules.Core/README.md) for details.
 
 ### Addition steps
 
 #### Use Command line modules
 
-See [README](./src/Modulight.Modules.CommandLine/README.md) for details.
+See [here](./src/Modulight.Modules.CommandLine/README.md) for details.
 
 #### Use Razor component modules
 
-See [README](./src/Modulight.Modules.Client.RazorComponents/README.md) for details.
+See [here](./src/Modulight.Modules.Client.RazorComponents/README.md) for details.
 
 #### Use Blazor UI hosting template
 
-See [README](./src/Modulight.UI.Blazor/README.md) for details.
+See [here](./src/Modulight.UI.Blazor/README.md) for details.
 
 #### Use ASP.NET modules
 
-See [README](./src/Modulight.Modules.Server.AspNet/README.md) for details.
+See [here](./src/Modulight.Modules.Server.AspNet/README.md) for details.
 
 #### Use GraphQL modules
 
-See [README](./src/Modulight.Modules.Server.GraphQL/README.md) for details.
+See [here](./src/Modulight.Modules.Server.GraphQL/README.md) for details.
 
 ## Example codes
 

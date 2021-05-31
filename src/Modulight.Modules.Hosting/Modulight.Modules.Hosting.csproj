@@ -8,26 +8,24 @@
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <Authors>StardustDL</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Basic types for command line modules in Modulight modular framework.</Description>
+    <Description>Hosting for Modulight modular framework.</Description>
     <PackageProjectUrl>https://github.com/StardustDL/modulight</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/modulight</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags>command-line;modular</PackageTags>
+    <PackageTags>modular;hosting</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
-    <PackageReference Include="CliFx" Version="2.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Modulight.Modules.Core\Modulight.Modules.Core.csproj" />
-    <ProjectReference Include="..\Modulight.Modules.Hosting\Modulight.Modules.Hosting.csproj" />
   </ItemGroup>
 
   <ItemGroup>

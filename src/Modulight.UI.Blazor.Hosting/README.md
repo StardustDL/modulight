@@ -1,5 +1,7 @@
 # Modulight.UI.Blazor.Hosting
 
+[Modulight.UI.Blazor.Hosting ![](https://buildstats.info/nuget/Modulight.UI.Blazor.Hosting?includePreReleases=true)](https://www.nuget.org/packages/Modulight.UI.Blazor.Hosting/)
+
 ```cs
 // void ConfigureServices(IServiceCollection services)
 

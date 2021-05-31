@@ -14,7 +14,7 @@ namespace Test.CommandLine
 {
     class Program
     {
-        public static async Task Main(string[] args) => await CreateHostBuilder(args).RunConsoleAsyncWithModules(true);
+        public static async Task Main(string[] args) => await CreateHostBuilder(args).Build().RunAsyncWithModules();
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

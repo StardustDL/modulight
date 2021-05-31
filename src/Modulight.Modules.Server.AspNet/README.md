@@ -2,7 +2,7 @@
 
 [![](https://buildstats.info/nuget/Modulight.Modules.Server.AspNet)](https://www.nuget.org/packages/Modulight.Modules.Server.AspNet/)
 
-```cs
+```csharp
 // in Startup: void ConfigureServices(ISeviceCollection services)
 
 services.AddModules(builder => {

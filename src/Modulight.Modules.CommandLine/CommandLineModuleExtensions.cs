@@ -18,12 +18,18 @@ namespace Modulight.Modules.Hosting
         /// Use building plugin for commandline modules.
         /// </summary>
         /// <param name="modules"></param>
+        /// <param name="configureOptions"></param>
         /// <returns></returns>
-        public static IModuleHostBuilder UseCommandLineModules(this IModuleHostBuilder modules)
+        public static IModuleHostBuilder UseCommandLineModules(this IModuleHostBuilder modules, Action<CommandLineModuleBuilderOptions>? configureOptions = null)
         {
             return modules.ConfigureBuilderServices(services =>
             {
                 services.TryAddTransient<ICommandLineModuleManifestBuilder, DefaultCommandLineModuleManifestBuilder>();
+                var optionsBuilder = services.AddOptions<CommandLineModuleBuilderOptions>();
+                if (configureOptions is not null)
+                {
+                    optionsBuilder.Configure(configureOptions);
+                }
             }).UsePlugin<CommandLineModulePlugin>().AddModule<CommandLineCoreModule>();
         }
 
@@ -98,7 +104,7 @@ namespace Modulight.Modules.Hosting
 
             var cmdAttrs = type.GetCustomAttributes<CommandFromAttribute>(true);
 
-            foreach(var attr in cmdAttrs)
+            foreach (var attr in cmdAttrs)
             {
                 builder.AddCommand(attr.Type);
             }

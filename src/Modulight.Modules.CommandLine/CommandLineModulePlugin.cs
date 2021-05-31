@@ -2,6 +2,8 @@
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Internal;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Modulight.Modules.CommandLine;
 using Modulight.Modules.Hosting;
 using System;
@@ -11,9 +13,34 @@ namespace Modulight.Modules.CommandLine
 {
     internal sealed class CommandLineModulePlugin : ModuleHostBuilderPlugin
     {
-        public CommandLineModulePlugin(IServiceProvider builderServices) => BuilderServices = builderServices;
+        public CommandLineModulePlugin(IServiceProvider builderServices, IOptions<CommandLineModuleBuilderOptions> options)
+        {
+            BuilderServices = builderServices;
+            Options = options.Value;
+        }
 
         IServiceProvider BuilderServices { get; }
+
+        public CommandLineModuleBuilderOptions Options { get; }
+
+        public override void AfterBuild(ModuleDefinition[] modules, IServiceCollection services)
+        {
+            services.AddHostedService<CommandLineWorker>();
+
+            if (Options.SuppressStatusMessages is true)
+            {
+                services.AddLogging(builder =>
+                {
+                    builder.AddFilter("Modulight.Modules.Hosting", LogLevel.Warning);
+                });
+            }
+
+            // From HostBuilder.UseConsoleLifetime
+            services.AddSingleton<IHostLifetime, ConsoleLifetime>();
+            services.Configure<ConsoleLifetimeOptions>(o => o.SuppressStatusMessages = Options.SuppressStatusMessages);
+
+            base.AfterBuild(modules, services);
+        }
 
         public override void AfterModule(ModuleDefinition module, IServiceCollection services)
         {

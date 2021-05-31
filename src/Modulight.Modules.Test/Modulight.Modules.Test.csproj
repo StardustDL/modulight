@@ -12,7 +12,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Modulight.Modules.Client.RazorComponents\Modulight.Modules.Client.RazorComponents.csproj" />
+    <ProjectReference Include="..\Modulight.Modules.CommandLine\Modulight.Modules.CommandLine.csproj" />
     <ProjectReference Include="..\Modulight.Modules.Core\Modulight.Modules.Core.csproj" />
+    <ProjectReference Include="..\Modulight.Modules.Hosting\Modulight.Modules.Hosting.csproj" />
     <ProjectReference Include="..\Modulight.Modules.Server.AspNet\Modulight.Modules.Server.AspNet.csproj" />
     <ProjectReference Include="..\Modulight.Modules.Server.GraphQL\Modulight.Modules.Server.GraphQL.csproj" />
   </ItemGroup>
