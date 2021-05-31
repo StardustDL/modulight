@@ -89,15 +89,8 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Microsoft.AspNetCore.Components.ComponentBase</span></div>
-    <div class="level2"><a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.BasePage.html">BasePage</a></div>
-    <div class="level3"><span class="xref">BasePage&lt;TModule&gt;</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">Microsoft.AspNetCore.Components.IComponent</span></div>
-    <div><span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span></div>
-    <div><span class="xref">Microsoft.AspNetCore.Components.IHandleAfterRender</span></div>
+    <div class="level1"><a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.BasePage.html">BasePage</a></div>
+    <div class="level2"><span class="xref">BasePage&lt;TModule&gt;</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -107,75 +100,12 @@
     <div>
       <a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.BasePage.html#Modulight_Modules_Client_RazorComponents_UI_BasePage_OnInitialized">BasePage.OnInitialized()</a>
     </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.ShouldRender()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnAfterRenderAsync(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func&lt;System.Threading.Tasks.Task&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.Microsoft.AspNetCore.Components.IComponent.Attach(Microsoft.AspNetCore.Components.RenderHandle)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.Microsoft.AspNetCore.Components.IHandleEvent.HandleEventAsync(Microsoft.AspNetCore.Components.EventCallbackWorkItem, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.Microsoft.AspNetCore.Components.IHandleAfterRender.OnAfterRenderAsync()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.html">Modulight.Modules.Client.RazorComponents.UI</a></h6>
   <h6><strong>Assembly</strong>: Modulight.Modules.Client.RazorComponents.dll</h6>
   <h5 id="Modulight_Modules_Client_RazorComponents_UI_BasePage_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BasePage&lt;TModule&gt; : BasePage, IComponent, IHandleEvent, IHandleAfterRender where TModule : IRazorComponentClientModule</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BasePage&lt;TModule&gt; : BasePage where TModule : IRazorComponentClientModule</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,8 +131,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Inject]
-public TModule Module { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TModule Module { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,16 +176,6 @@ public TModule Module { get; set; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.BasePage.html#Modulight_Modules_Client_RazorComponents_UI_BasePage_GetModule">BasePage.GetModule()</a></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">Microsoft.AspNetCore.Components.IComponent</span>
-  </div>
-  <div>
-      <span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span>
-  </div>
-  <div>
-      <span class="xref">Microsoft.AspNetCore.Components.IHandleAfterRender</span>
-  </div>
 </article>
           </div>
           

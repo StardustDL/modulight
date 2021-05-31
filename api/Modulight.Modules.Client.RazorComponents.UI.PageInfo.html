@@ -89,86 +89,13 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Microsoft.AspNetCore.Components.ComponentBase</span></div>
-    <div class="level2"><span class="xref">PageInfo</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">Microsoft.AspNetCore.Components.IComponent</span></div>
-    <div><span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span></div>
-    <div><span class="xref">Microsoft.AspNetCore.Components.IHandleAfterRender</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnInitialized()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.ShouldRender()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnAfterRenderAsync(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func&lt;System.Threading.Tasks.Task&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.Microsoft.AspNetCore.Components.IComponent.Attach(Microsoft.AspNetCore.Components.RenderHandle)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.Microsoft.AspNetCore.Components.IHandleEvent.HandleEventAsync(Microsoft.AspNetCore.Components.EventCallbackWorkItem, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.Components.ComponentBase.Microsoft.AspNetCore.Components.IHandleAfterRender.OnAfterRenderAsync()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">PageInfo</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.html">Modulight.Modules.Client.RazorComponents.UI</a></h6>
   <h6><strong>Assembly</strong>: Modulight.Modules.Client.RazorComponents.dll</h6>
   <h5 id="Modulight_Modules_Client_RazorComponents_UI_PageInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PageInfo : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender</code></pre>
+    <pre><code class="lang-csharp hljs">public class PageInfo : ComponentBase</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -179,8 +106,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment Breadcrumb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? Breadcrumb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,7 +118,7 @@ public RenderFragment Breadcrumb { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -204,8 +130,7 @@ public RenderFragment Breadcrumb { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment Footer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? Footer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,7 +142,7 @@ public RenderFragment Footer { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -229,8 +154,7 @@ public RenderFragment Footer { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment HeaderContent { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? HeaderContent { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,7 +166,7 @@ public RenderFragment HeaderContent { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -254,8 +178,7 @@ public RenderFragment HeaderContent { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment HeaderExtra { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? HeaderExtra { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,7 +190,7 @@ public RenderFragment HeaderExtra { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,8 +202,7 @@ public RenderFragment HeaderExtra { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment HeaderFooter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? HeaderFooter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +214,7 @@ public RenderFragment HeaderFooter { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -304,8 +226,7 @@ public RenderFragment HeaderFooter { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string Icon { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Icon { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,8 +250,7 @@ public string Icon { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment IconFragment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? IconFragment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,7 +262,7 @@ public RenderFragment IconFragment { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -354,8 +274,7 @@ public RenderFragment IconFragment { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CascadingParameter]
-protected PageParent Parent { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected PageParent Parent { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,8 +298,7 @@ protected PageParent Parent { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment SubtitleFragment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? SubtitleFragment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,7 +310,7 @@ public RenderFragment SubtitleFragment { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -404,8 +322,7 @@ public RenderFragment SubtitleFragment { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment Tags { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? Tags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -417,7 +334,7 @@ public RenderFragment Tags { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -429,8 +346,7 @@ public RenderFragment Tags { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string Title { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,8 +370,7 @@ public string Title { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment TitleFragment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderFragment? TitleFragment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -467,7 +382,7 @@ public RenderFragment TitleFragment { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">RenderFragment</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -481,18 +396,6 @@ public RenderFragment TitleFragment { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void OnParametersSet()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet()</span></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">Microsoft.AspNetCore.Components.IComponent</span>
-  </div>
-  <div>
-      <span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span>
-  </div>
-  <div>
-      <span class="xref">Microsoft.AspNetCore.Components.IHandleAfterRender</span>
   </div>
 </article>
           </div>

@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.html",
-          "hash": "nS6hs+9abhqQE57Gihqltnmz6pEOvXThAIoBhiSfbNs="
+          "hash": "qLWjmhSghCRS7dbyYPgl99c9kW4Nnkr0N/7kRvI24ws="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.html",
-          "hash": "+3smzoqXQBC8pFANMxgYZuty/iY+B8l2XTrjzqEDclQ="
+          "hash": "IZ675rp6A7e0HvhKvhXWdjh1L0OGfiJKHSgYXhPsU/c="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Client.RazorComponents.IRazorComponentClientModule.html",
-          "hash": "337Cq1zrahtHgW9VvuiyqYsu4XHMJi5VfCK2hqsOfhE="
+          "hash": "5fuW3GBgEVKU8sGXxGjUtj7u6Yau3XJ3s/7NfvXp2+8="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Client.RazorComponents.RazorComponentClientModule.html",
-          "hash": "hQqhqy8HFPyv5Yhl+zjNbIS66wwhEfw1rLCg8+U2NE8="
+          "hash": "OZTHbDiwidRcgokssKJgHSHZOY1G/PDJNg0ZnXLk75c="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Client.RazorComponents.UI.BasePage-1.html",
-          "hash": "/Z+/V+m1hLJf5U10EilVJV5vb17aiHO5spRhnVyCKHo="
+          "hash": "qnCttRVdQXlvqMccoaLtaeYyKNkLgp90bewMSm/x93g="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Client.RazorComponents.UI.BasePage.html",
-          "hash": "kmyhmu7vtYev0k5yDSDjkMpLfaYkKHsOc6CN5sQUfGM="
+          "hash": "tYpDMlqoW7WZjmSQk9ZkNZJ8H3HbxS2az3zYuUw0BnI="
         }
       },
       "is_incremental": false,
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Client.RazorComponents.UI.IJSModuleProvider-1.html",
-          "hash": "41/RnNe8kgJuNjtNcNUg35Wqmd6SEWEMXt3o2Bq2jAc="
+          "hash": "yeEEjysGTuoHAyb8OSm4Fp1i86ab4tH97eKsCA8frM4="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Client.RazorComponents.UI.PageInfo.html",
-          "hash": "xSsKJ7QgKHRyrQdFme/nn75wicvyQmV+MpQq6VPFkig="
+          "hash": "SxOunuCu7s0KxVr5VTse7KJx6xoCik6MVxavfqRei4I="
         }
       },
       "is_incremental": false,
@@ -330,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Client.RazorComponents.UI.PageParent.html",
-          "hash": "y3E2O8O8YjaBJerWjg3FshpfNlua/b2h2UPCBdSdUnU="
+          "hash": "w/ygHoPd4VEViWM05wFW9IN5MErE4GQwo4wTMemF6b4="
         }
       },
       "is_incremental": false,
@@ -486,7 +486,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.CommandLine.ModuleCommand-1.html",
-          "hash": "b8WflYpFgh7Nxiq6H6Bf8EL7NCxoySVhN9BGxAjnBro="
+          "hash": "JQ3GaSH9dLdnRxhwyUF5wEB1fS75E7NLpMIyFCk6kX0="
         }
       },
       "is_incremental": false,
@@ -498,7 +498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.CommandLine.ModuleCommand.html",
-          "hash": "dWv4lWfpaUWkBtcCZu6K8PY8zZpKMq07/olASfXW0Q8="
+          "hash": "WEwYIvTOjYjP2wObDxOHPaTjmcuqJffgzGHb1ktvpDA="
         }
       },
       "is_incremental": false,
@@ -906,7 +906,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Server.GraphQL.GraphQLModuleTypeAttribute.html",
-          "hash": "vdtQikbHbi8fYTBUNqiZtE+fG8TDkketLQbYhLt6COc="
+          "hash": "pWZtlXb1pRsK3moWoSjahJUdqL15XIlzwEWhjBcHgMk="
         }
       },
       "is_incremental": false,
@@ -918,7 +918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html",
-          "hash": "zvDYGXR2yNfHj5eS8IaNFEOuVtqEIJNmogD3ignZ5aw="
+          "hash": "BRMqFy6mUVuGnWd3RSYx+qaJrBwEg+WKj5SXzn3qXb0="
         }
       },
       "is_incremental": false,
@@ -930,7 +930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html",
-          "hash": "gZ1jWXL/phLwdCnyVT2mKkofXo4oNq+Q5f3vgQ8mWbg="
+          "hash": "jk5RYtWp921xkes0m/IrryLSpnOtIVNtvCP8WVhfGms="
         }
       },
       "is_incremental": false,
@@ -942,7 +942,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html",
-          "hash": "QW4TH4Ifz+LLeh4TCUKKPKErzRRjTpaBiTpqHCqraxg="
+          "hash": "+HXV39HE5WRnk2tzH/WheatojUwbDCL/EbmyHMloPtk="
         }
       },
       "is_incremental": false,
@@ -954,7 +954,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.html",
-          "hash": "X1g5CQyIJEMTfPMqAWXx+h4mKdhnLE8TXuL9aXzyIas="
+          "hash": "u3a83D5HAcdiAxfH9qfOP19fJHEcSye55gwPe8oLqJg="
         }
       },
       "is_incremental": false,
@@ -966,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleManifestBuilder.html",
-          "hash": "4oFwHlgweywHoD3puOsEJaj/JS4XXYYzNPOH/uALftI="
+          "hash": "MfpAm/5r2AbMaTvwDGfPreu4ulnqXUiYR1XvRLa3GGo="
         }
       },
       "is_incremental": false,
@@ -978,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html",
-          "hash": "JDbs31g2AHyd/cTQMJXixv4dNdPHARxoE24ebOzrRbA="
+          "hash": "KUNWfS3iAJVRWoM1wUNc5bxvFxhRB0bcJH2jl0u1PW4="
         }
       },
       "is_incremental": false,

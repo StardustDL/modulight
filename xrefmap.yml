@@ -45,13 +45,13 @@ references:
   commentId: T:Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions
   fullName: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions
   nameWithType: GraphQLServerModuleExtensions
-- uid: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder})
+- uid: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,GraphQLEndpointConventionBuilder})
   name: MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder, Action<IGraphQLServerModule, GraphQLEndpointConventionBuilder>)
-  href: api/Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.html#Microsoft_AspNetCore_Builder_GraphQLServerModuleExtensions_MapGraphQLServerModuleEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_Action_Modulight_Modules_Server_GraphQL_IGraphQLServerModule_HotChocolate_AspNetCore_Extensions_GraphQLEndpointConventionBuilder__
-  commentId: M:Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder})
+  href: api/Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.html#Microsoft_AspNetCore_Builder_GraphQLServerModuleExtensions_MapGraphQLServerModuleEndpoints_IEndpointRouteBuilder_System_Action_Modulight_Modules_Server_GraphQL_IGraphQLServerModule_GraphQLEndpointConventionBuilder__
+  commentId: M:Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,GraphQLEndpointConventionBuilder})
   name.vb: MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder, Action(Of IGraphQLServerModule, GraphQLEndpointConventionBuilder))
-  fullName: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, System.Action<Modulight.Modules.Server.GraphQL.IGraphQLServerModule, HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder>)
-  fullName.vb: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, System.Action(Of Modulight.Modules.Server.GraphQL.IGraphQLServerModule, HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder))
+  fullName: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder, System.Action<Modulight.Modules.Server.GraphQL.IGraphQLServerModule, GraphQLEndpointConventionBuilder>)
+  fullName.vb: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder, System.Action(Of Modulight.Modules.Server.GraphQL.IGraphQLServerModule, GraphQLEndpointConventionBuilder))
   nameWithType: GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder, Action<IGraphQLServerModule, GraphQLEndpointConventionBuilder>)
   nameWithType.vb: GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints(IEndpointRouteBuilder, Action(Of IGraphQLServerModule, GraphQLEndpointConventionBuilder))
 - uid: Microsoft.AspNetCore.Builder.GraphQLServerModuleExtensions.MapGraphQLServerModuleEndpoints*
@@ -73,11 +73,11 @@ references:
   commentId: T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions
   fullName: Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions
   nameWithType: WebAssemblyClientModuleHostingExtensions
-- uid: Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost)
+- uid: Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules(WebAssemblyHost)
   name: RunAsyncWithModules(WebAssemblyHost)
-  href: api/Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.html#Microsoft_AspNetCore_Components_WebAssembly_Hosting_WebAssemblyClientModuleHostingExtensions_RunAsyncWithModules_Microsoft_AspNetCore_Components_WebAssembly_Hosting_WebAssemblyHost_
-  commentId: M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost)
-  fullName: Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost)
+  href: api/Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.html#Microsoft_AspNetCore_Components_WebAssembly_Hosting_WebAssemblyClientModuleHostingExtensions_RunAsyncWithModules_WebAssemblyHost_
+  commentId: M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules(WebAssemblyHost)
+  fullName: Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules(WebAssemblyHost)
   nameWithType: WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules(WebAssemblyHost)
 - uid: Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyClientModuleHostingExtensions.RunAsyncWithModules*
   name: RunAsyncWithModules
@@ -1389,17 +1389,17 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.CommandLine.ModuleCommand.ModuleCommand
   nameWithType: ModuleCommand.ModuleCommand
-- uid: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(CliFx.Infrastructure.IConsole)
+- uid: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(IConsole)
   name: ExecuteAsync(IConsole)
-  href: api/Modulight.Modules.CommandLine.ModuleCommand.html#Modulight_Modules_CommandLine_ModuleCommand_ExecuteAsync_CliFx_Infrastructure_IConsole_
-  commentId: M:Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(CliFx.Infrastructure.IConsole)
-  fullName: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(CliFx.Infrastructure.IConsole)
+  href: api/Modulight.Modules.CommandLine.ModuleCommand.html#Modulight_Modules_CommandLine_ModuleCommand_ExecuteAsync_IConsole_
+  commentId: M:Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(IConsole)
+  fullName: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(IConsole)
   nameWithType: ModuleCommand.ExecuteAsync(IConsole)
-- uid: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(CliFx.Infrastructure.IConsole,System.Threading.CancellationToken)
+- uid: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(IConsole,System.Threading.CancellationToken)
   name: ExecuteAsync(IConsole, CancellationToken)
-  href: api/Modulight.Modules.CommandLine.ModuleCommand.html#Modulight_Modules_CommandLine_ModuleCommand_ExecuteAsync_CliFx_Infrastructure_IConsole_System_Threading_CancellationToken_
-  commentId: M:Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(CliFx.Infrastructure.IConsole,System.Threading.CancellationToken)
-  fullName: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(CliFx.Infrastructure.IConsole, System.Threading.CancellationToken)
+  href: api/Modulight.Modules.CommandLine.ModuleCommand.html#Modulight_Modules_CommandLine_ModuleCommand_ExecuteAsync_IConsole_System_Threading_CancellationToken_
+  commentId: M:Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(IConsole,System.Threading.CancellationToken)
+  fullName: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync(IConsole, System.Threading.CancellationToken)
   nameWithType: ModuleCommand.ExecuteAsync(IConsole, CancellationToken)
 - uid: Modulight.Modules.CommandLine.ModuleCommand.ExecuteAsync*
   name: ExecuteAsync
@@ -3494,11 +3494,11 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.GraphQLServerModuleManifest
   nameWithType: GraphQLServerModule.GraphQLServerModuleManifest
-- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
   name: MapEndpoint(IEndpointRouteBuilder)
-  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html#Modulight_Modules_Server_GraphQL_GraphQLServerModule_MapEndpoint_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_
-  commentId: M:Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
-  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModule.html#Modulight_Modules_Server_GraphQL_GraphQLServerModule_MapEndpoint_IEndpointRouteBuilder_
+  commentId: M:Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
   nameWithType: GraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
 - uid: Modulight.Modules.Server.GraphQL.GraphQLServerModule.MapEndpoint*
   name: MapEndpoint
@@ -3513,11 +3513,11 @@ references:
   commentId: T:Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup
   fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup
   nameWithType: GraphQLServerModuleStartup
-- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)
+- uid: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
   name: ConfigureGraphQLSchema(IRequestExecutorBuilder)
-  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_GraphQLServerModuleStartup_ConfigureGraphQLSchema_HotChocolate_Execution_Configuration_IRequestExecutorBuilder_
-  commentId: M:Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)
-  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)
+  href: api/Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_GraphQLServerModuleStartup_ConfigureGraphQLSchema_IRequestExecutorBuilder_
+  commentId: M:Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
+  fullName: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
   nameWithType: GraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
 - uid: Modulight.Modules.Server.GraphQL.GraphQLServerModuleStartup.ConfigureGraphQLSchema*
   name: ConfigureGraphQLSchema
@@ -3558,11 +3558,11 @@ references:
   isSpec: "True"
   fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.GraphQLServerModuleManifest
   nameWithType: IGraphQLServerModule.GraphQLServerModuleManifest
-- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
   name: MapEndpoint(IEndpointRouteBuilder)
-  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModule_MapEndpoint_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_
-  commentId: M:Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
-  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModule.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModule_MapEndpoint_IEndpointRouteBuilder_
+  commentId: M:Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
   nameWithType: IGraphQLServerModule.MapEndpoint(IEndpointRouteBuilder)
 - uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModule.MapEndpoint*
   name: MapEndpoint
@@ -3577,13 +3577,13 @@ references:
   commentId: T:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection
   fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection
   nameWithType: IGraphQLServerModuleCollection
-- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder})
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,GraphQLEndpointConventionBuilder})
   name: MapEndpoints(IEndpointRouteBuilder, Action<IGraphQLServerModule, GraphQLEndpointConventionBuilder>)
-  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleCollection_MapEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_Action_Modulight_Modules_Server_GraphQL_IGraphQLServerModule_HotChocolate_AspNetCore_Extensions_GraphQLEndpointConventionBuilder__
-  commentId: M:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder})
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleCollection_MapEndpoints_IEndpointRouteBuilder_System_Action_Modulight_Modules_Server_GraphQL_IGraphQLServerModule_GraphQLEndpointConventionBuilder__
+  commentId: M:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.GraphQL.IGraphQLServerModule,GraphQLEndpointConventionBuilder})
   name.vb: MapEndpoints(IEndpointRouteBuilder, Action(Of IGraphQLServerModule, GraphQLEndpointConventionBuilder))
-  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, System.Action<Modulight.Modules.Server.GraphQL.IGraphQLServerModule, HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder>)
-  fullName.vb: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, System.Action(Of Modulight.Modules.Server.GraphQL.IGraphQLServerModule, HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder))
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(IEndpointRouteBuilder, System.Action<Modulight.Modules.Server.GraphQL.IGraphQLServerModule, GraphQLEndpointConventionBuilder>)
+  fullName.vb: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints(IEndpointRouteBuilder, System.Action(Of Modulight.Modules.Server.GraphQL.IGraphQLServerModule, GraphQLEndpointConventionBuilder))
   nameWithType: IGraphQLServerModuleCollection.MapEndpoints(IEndpointRouteBuilder, Action<IGraphQLServerModule, GraphQLEndpointConventionBuilder>)
   nameWithType.vb: IGraphQLServerModuleCollection.MapEndpoints(IEndpointRouteBuilder, Action(Of IGraphQLServerModule, GraphQLEndpointConventionBuilder))
 - uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleCollection.MapEndpoints*
@@ -3670,11 +3670,11 @@ references:
   commentId: T:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup
   fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup
   nameWithType: IGraphQLServerModuleStartup
-- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)
+- uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
   name: ConfigureGraphQLSchema(IRequestExecutorBuilder)
-  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleStartup_ConfigureGraphQLSchema_HotChocolate_Execution_Configuration_IRequestExecutorBuilder_
-  commentId: M:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)
-  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)
+  href: api/Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.html#Modulight_Modules_Server_GraphQL_IGraphQLServerModuleStartup_ConfigureGraphQLSchema_IRequestExecutorBuilder_
+  commentId: M:Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
+  fullName: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
   nameWithType: IGraphQLServerModuleStartup.ConfigureGraphQLSchema(IRequestExecutorBuilder)
 - uid: Modulight.Modules.Server.GraphQL.IGraphQLServerModuleStartup.ConfigureGraphQLSchema*
   name: ConfigureGraphQLSchema
