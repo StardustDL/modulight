@@ -137,11 +137,11 @@ namespace Modulight.Modules.Hosting
             {
                 var result = new List<ModuleDefinition>();
 
-                Dictionary<Type, IModuleStartup?> startups = new Dictionary<Type, IModuleStartup?>();
-                Dictionary<Type, ModuleManifest> manifests = new Dictionary<Type, ModuleManifest>();
-                Dictionary<Type, int> inDegrees = new Dictionary<Type, int>();
+                Dictionary<Type, IModuleStartup?> startups = new();
+                Dictionary<Type, ModuleManifest> manifests = new();
+                Dictionary<Type, int> inDegrees = new();
 
-                Queue<Type> queue = new Queue<Type>();
+                Queue<Type> queue = new();
 
                 void addModule(Type type)
                 {
@@ -226,7 +226,7 @@ namespace Modulight.Modules.Hosting
             BeforeBuild(initialModules, services, plugins, builderService);
 
             var modules = ResolveModuleDependency(initialModules, builderService);
-            Dictionary<Type, Type> moduleStartups = new Dictionary<Type, Type>();
+            Dictionary<Type, Type> moduleStartups = new();
 
             foreach (var definition in modules)
             {

@@ -160,7 +160,7 @@ namespace Modulight.UI.Blazor.Services
         /// <inheritdoc/>
         public virtual async Task OnNavigateAsync(NavigationContext context)
         {
-            var results = await RazorComponentClientModuleCollection.GetAssembliesForRouting(context.Path, cancellationToken: context.CancellationToken);
+            var results = await RazorComponentClientModuleCollection.GetAssembliesForRouting(context.Path, cancellationToken: context.CancellationToken).ConfigureAwait(false);
             var filterdResults = new HashSet<Assembly>(results);
             AdditionalAssemblies = filterdResults.Where(x => x != AppAssembly);
         }

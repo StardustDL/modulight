@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Modulight.Modules.Hosting
@@ -58,13 +59,13 @@ namespace Modulight.Modules.Hosting
         /// Initialize the module.
         /// </summary>
         /// <returns></returns>
-        Task Initialize();
+        Task Initialize(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Shutdown the module.
         /// </summary>
         /// <returns></returns>
-        Task Shutdown();
+        Task Shutdown(CancellationToken cancellationToken = default);
     }
 
     internal class DefaultModuleHost : IModuleHost
@@ -104,13 +105,14 @@ namespace Modulight.Modules.Hosting
                 : throw new Exception($"No such loaded module: {moduleType.FullName}.");
         }
 
-        public virtual async Task Initialize()
+        public virtual async Task Initialize(CancellationToken cancellationToken = default)
         {
             Logger.LogInformation("Loading modules.");
 
             var modules = new List<(Type, IModule)>();
             foreach (var type in DefinedModules)
             {
+                cancellationToken.ThrowIfCancellationRequested();
                 modules.Add((type, (IModule)Services.GetRequiredService(type)));
             }
             _LoadedModules = new Dictionary<Type, IModule>(modules.Select(x => new KeyValuePair<Type, IModule>(x.Item1, x.Item2)));
@@ -121,19 +123,21 @@ namespace Modulight.Modules.Hosting
 
             foreach (var module in LoadedModules)
             {
-                await module.Initialize();
+                cancellationToken.ThrowIfCancellationRequested();
+                await module.Initialize(cancellationToken).ConfigureAwait(false);
             }
 
             Logger.LogInformation("Initialized modules.");
         }
 
-        public virtual async Task Shutdown()
+        public virtual async Task Shutdown(CancellationToken cancellationToken = default)
         {
             Logger.LogInformation("Shutdowning modules.");
 
             foreach (var module in LoadedModules.Reverse())
             {
-                await module.Shutdown();
+                cancellationToken.ThrowIfCancellationRequested();
+                await module.Shutdown(cancellationToken).ConfigureAwait(false);
             }
 
             _LoadedModules = new Dictionary<Type, IModule>();

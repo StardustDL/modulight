@@ -159,7 +159,7 @@ namespace Modulight.Modules
                     typeName = typeName[0..^6];
                 List<int> splitIndexs;
                 {
-                    SortedSet<int> indexSet = new SortedSet<int>(new[] { 0, typeName.Length });
+                    SortedSet<int> indexSet = new(new[] { 0, typeName.Length });
                     foreach (int i in Enumerable.Range(0, typeName.Length))
                     {
                         if (char.IsUpper(typeName[i]))
@@ -167,7 +167,7 @@ namespace Modulight.Modules
                     }
                     splitIndexs = indexSet.ToList();
                 }
-                List<string> names = new List<string>();
+                List<string> names = new();
                 foreach (int i in Enumerable.Range(0, splitIndexs.Count - 1))
                 {
                     names.Add(typeName[splitIndexs[i]..splitIndexs[i + 1]]);
