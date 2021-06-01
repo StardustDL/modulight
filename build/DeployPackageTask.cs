@@ -81,8 +81,8 @@ namespace Build
         {
         }
 
-        readonly List<string> ModulightPackages = new List<string>
-                {
+        readonly List<string> ModulightPackages = new()
+        {
                     "Modulight.Modules.Core",
                     "Modulight.Modules.Hosting",
                     "Modulight.Modules.CommandLine",
@@ -91,15 +91,15 @@ namespace Build
                     "Modulight.Modules.Server.GraphQL",
                 };
 
-        readonly List<string> UIPackages = new List<string>
-                {
+        readonly List<string> UIPackages = new()
+        {
                     "Modulight.UI.Blazor",
                     "Modulight.UI.Blazor.Hosting",
                 };
 
         void DeployTo(BuildContext context, DotNetCoreNuGetPushSettings settings)
         {
-            List<string> packageList = new List<string>();
+            List<string> packageList = new();
 
             switch (context.Solution)
             {

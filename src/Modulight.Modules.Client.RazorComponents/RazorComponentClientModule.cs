@@ -5,6 +5,7 @@ using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
 using System;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Modulight.Modules.Client.RazorComponents
@@ -75,13 +76,13 @@ namespace Modulight.Modules.Client.RazorComponents
 
         public IRazorComponentClientModuleCollection Collection { get; }
 
-        public override async Task Initialize()
+        public override async Task Initialize(CancellationToken cancellationToken = default)
         {
             if (Environment.OSVersion.Platform is PlatformID.Other)
             {
-                await Collection.LoadResources();
+                await Collection.LoadResources(cancellationToken: cancellationToken).ConfigureAwait(false);
             }
-            await base.Initialize();
+            await base.Initialize(cancellationToken).ConfigureAwait(false);
         }
     }
 }

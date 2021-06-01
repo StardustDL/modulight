@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Modulight.Modules.Hosting;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Modulight.Modules
@@ -15,13 +16,13 @@ namespace Modulight.Modules
         /// Initialize the module.
         /// </summary>
         /// <returns></returns>
-        Task Initialize();
+        Task Initialize(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Shutdown the module.
         /// </summary>
         /// <returns></returns>
-        Task Shutdown();
+        Task Shutdown(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Get the module manifest.
@@ -73,14 +74,14 @@ namespace Modulight.Modules
         protected T GetOption<T>(IServiceProvider provider) where T : class => Host.GetOption<T>(provider, GetType());
 
         /// <inheritdoc/>
-        public virtual Task Initialize()
+        public virtual Task Initialize(CancellationToken cancellationToken = default)
         {
             Logger.LogDebug($"Module Initialized: {Manifest.FullName}.");
             return Task.CompletedTask;
         }
 
         /// <inheritdoc/>
-        public virtual Task Shutdown()
+        public virtual Task Shutdown(CancellationToken cancellationToken = default)
         {
             Logger.LogDebug($"Module Shutdowned: {Manifest.FullName}.");
             return Task.CompletedTask;

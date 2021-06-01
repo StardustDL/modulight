@@ -33,14 +33,17 @@ namespace Modulight.Modules.Client.RazorComponents
         /// Validate modules.
         /// Check if route roots conflict or assembly loading fails.
         /// </summary>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task Validate();
+        Task Validate(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Load all <see cref="UIResource"/> defined in modules into DOM.
         /// </summary>
+        /// <param name="moduleType"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task LoadResources(Type? moduleType = null);
+        Task LoadResources(Type? moduleType = null, CancellationToken cancellationToken = default);
     }
 
     /// <summary>
@@ -53,8 +56,9 @@ namespace Modulight.Modules.Client.RazorComponents
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="collection"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static Task LoadResources<T>(this IRazorComponentClientModuleCollection collection) where T : IModule => collection.LoadResources(typeof(T));
+        public static Task LoadResources<T>(this IRazorComponentClientModuleCollection collection, CancellationToken cancellationToken = default) where T : IModule => collection.LoadResources(typeof(T), cancellationToken);
     }
 
     internal class RazorComponentClientModuleCollection : ModuleHostFilterCollection<IRazorComponentClientModule, RazorComponentClientModuleManifest>, IRazorComponentClientModuleCollection
@@ -66,7 +70,7 @@ namespace Modulight.Modules.Client.RazorComponents
 
         public ILogger Logger { get; }
 
-        public async Task LoadResources(Type? moduleType = null)
+        public async Task LoadResources(Type? moduleType = null, CancellationToken cancellationToken = default)
         {
             Logger.LogInformation($"Loading resources for {(moduleType is null ? "all" : moduleType.FullName)} modules.");
 
@@ -96,11 +100,11 @@ namespace Modulight.Modules.Client.RazorComponents
                         {
                             case UIResourceType.Script:
                                 Logger.LogDebug($"Load script {resource.Path} of {manifest.FullName}.");
-                                await ui.LoadScript(resource.Path);
+                                await ui.LoadScript(resource.Path,cancellationToken).ConfigureAwait(false);
                                 break;
                             case UIResourceType.StyleSheet:
                                 Logger.LogDebug($"Load stylesheet {resource.Path} of {manifest.FullName}.");
-                                await ui.LoadStyleSheet(resource.Path);
+                                await ui.LoadStyleSheet(resource.Path,cancellationToken).ConfigureAwait(false);
                                 break;
                         }
                     }
@@ -114,11 +118,11 @@ namespace Modulight.Modules.Client.RazorComponents
             Logger.LogInformation($"Loaded resources for {(moduleType is null ? "all" : moduleType.FullName)} modules.");
         }
 
-        public async Task Validate()
+        public async Task Validate(CancellationToken cancellationToken = default)
         {
             using var scope = Host.Services.CreateScope();
             var provider = scope.ServiceProvider;
-            HashSet<string> rootPaths = new HashSet<string>();
+            HashSet<string> rootPaths = new();
             foreach (var module in LoadedModules)
             {
                 var pages = module.GetPageProvider(Host);
@@ -133,7 +137,7 @@ namespace Modulight.Modules.Client.RazorComponents
                         rootPaths.Add(pages.RootPath);
                     }
 
-                    await GetAssembliesForRouting($"/{pages.RootPath}", throwOnError: true);
+                    await GetAssembliesForRouting($"/{pages.RootPath}", throwOnError: true,cancellationToken:cancellationToken).ConfigureAwait(false);
                 }
             }
         }
@@ -146,11 +150,11 @@ namespace Modulight.Modules.Client.RazorComponents
 
             var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies();
 
-            HashSet<string> processed = new HashSet<string>();
+            HashSet<string> processed = new();
 
-            List<Assembly> results = new List<Assembly>();
+            List<Assembly> results = new();
 
-            Queue<string> toLoad = new Queue<string>();
+            Queue<string> toLoad = new();
 
             foreach (var module in LoadedModules)
             {
@@ -195,7 +199,7 @@ namespace Modulight.Modules.Client.RazorComponents
                     {
                         // Logger.LogInformation($"Loading assembly {current}");
                         assembly = Environment.OSVersion.Platform == PlatformID.Other
-                            ? (await lazyLoader.LoadAssembliesAsync(new[] { current + ".dll" })).FirstOrDefault()
+                            ? (await lazyLoader.LoadAssembliesAsync(new[] { current + ".dll" }).ConfigureAwait(false)).FirstOrDefault()
                             : Assembly.Load(current);
                     }
                     catch (Exception ex)

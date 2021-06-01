@@ -5,6 +5,7 @@ using Modulight.Modules.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -58,11 +59,12 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </code>
         /// </summary>
         /// <param name="services"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<IAsyncDisposable> UseModules(this IServiceProvider services)
+        public static async Task<IAsyncDisposable> UseModules(this IServiceProvider services, CancellationToken cancellationToken = default)
         {
             var host = services.GetModuleHost();
-            await host.Initialize().ConfigureAwait(false);
+            await host.Initialize(cancellationToken).ConfigureAwait(false);
             return new ModuleHostContext(host);
         }
 

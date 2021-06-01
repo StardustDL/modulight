@@ -32,13 +32,17 @@ namespace Modulight.Modules.CommandLine
             var app = new CliApplicationBuilder();
 
             {
-                HashSet<Type> addedCommands = new HashSet<Type>();
+                HashSet<Type> addedCommands = new();
 
                 foreach (var module in Collection.LoadedModules)
                 {
+                    stoppingToken.ThrowIfCancellationRequested();
+
                     var cmanifest = Collection.GetManifest(module.GetType());
                     foreach (var cmd in cmanifest.Commands)
                     {
+                        stoppingToken.ThrowIfCancellationRequested();
+
                         if (addedCommands.Contains(cmd))
                             continue;
                         app.AddCommand(cmd);
@@ -51,7 +55,7 @@ namespace Modulight.Modules.CommandLine
             var exitCode = await app
                 .UseTypeActivator(scope.ServiceProvider.GetRequiredService)
                 .Build()
-                .RunAsync();
+                .RunAsync().ConfigureAwait(false);
 
             Environment.ExitCode = exitCode;
 

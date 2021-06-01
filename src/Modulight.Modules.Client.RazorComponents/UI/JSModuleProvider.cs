@@ -2,6 +2,7 @@
 using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Modulight.Modules.Client.RazorComponents.UI
@@ -17,8 +18,9 @@ namespace Modulight.Modules.Client.RazorComponents.UI
         /// </summary>
         /// <param name="jsPath">Javascript file path.</param>
         /// <param name="assemblyName">Assembly name, null for the assembly which <typeparamref name="T"/> defined.</param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<IJSObjectReference> GetJSModule(string jsPath, string? assemblyName = null);
+        Task<IJSObjectReference> GetJSModule(string jsPath, string? assemblyName = null, CancellationToken cancellationToken = default);
     }
 
     internal class JSModuleProvider<T> : IJSModuleProvider<T>
@@ -41,7 +43,7 @@ namespace Modulight.Modules.Client.RazorComponents.UI
         /// </summary>
         protected ILogger<T> Logger { get; }
 
-        public Task<IJSObjectReference> GetJSModule(string jsPath, string? assemblyName = null)
+        public Task<IJSObjectReference> GetJSModule(string jsPath, string? assemblyName = null, CancellationToken cancellationToken = default)
         {
             if (assemblyName is null)
                 assemblyName = typeof(T).Assembly.GetName().Name ?? "";
@@ -52,7 +54,7 @@ namespace Modulight.Modules.Client.RazorComponents.UI
             {
                 Logger.LogInformation($"Create JS invoker: {id}.");
                 JSInvokers.Add(id, new(() =>
-                    JSRuntime.InvokeAsync<IJSObjectReference>("import", $"./_content/{id}").AsTask()));
+                    JSRuntime.InvokeAsync<IJSObjectReference>("import", cancellationToken, $"./_content/{id}").AsTask()));
             }
 
             return JSInvokers[id].Value;
@@ -68,8 +70,8 @@ namespace Modulight.Modules.Client.RazorComponents.UI
                 if (invoker.Value.IsValueCreated)
                 {
                     Logger.LogInformation($"Dispose JS invoker: {invoker.Key}.");
-                    var value = await invoker.Value.Value;
-                    await value.DisposeAsync();
+                    var value = await invoker.Value.Value.ConfigureAwait(false);
+                    await value.DisposeAsync().ConfigureAwait(false);
                 }
             }
             JSInvokers.Clear();
@@ -78,7 +80,7 @@ namespace Modulight.Modules.Client.RazorComponents.UI
         /// <inheritdoc/>
         public async ValueTask DisposeAsync()
         {
-            await DisposeAsyncCore();
+            await DisposeAsyncCore().ConfigureAwait(false);
 
             Dispose(disposing: false);
             GC.SuppressFinalize(this);

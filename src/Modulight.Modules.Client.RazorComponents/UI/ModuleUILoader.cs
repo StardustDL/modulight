@@ -1,4 +1,5 @@
 ﻿using Microsoft.JSInterop;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Modulight.Modules.Client.RazorComponents.UI
@@ -14,24 +15,24 @@ namespace Modulight.Modules.Client.RazorComponents.UI
 
         public IJSModuleProvider<ModuleUILoader> Provider { get; }
 
-        Task<IJSObjectReference> GetEntryJSModule() => Provider.GetJSModule("module.js");
+        Task<IJSObjectReference> GetEntryJSModule(CancellationToken cancellationToken = default) => Provider.GetJSModule("module.js", cancellationToken: cancellationToken);
 
-        public async ValueTask CacheDataFromPath(string path, bool forceUpdate = false)
+        public async ValueTask CacheDataFromPath(string path, bool forceUpdate = false, CancellationToken cancellationToken = default)
         {
-            var js = await GetEntryJSModule();
-            await js.InvokeVoidAsync("cacheDataFromPath", path, forceUpdate);
+            var js = await GetEntryJSModule(cancellationToken).ConfigureAwait(false);
+            await js.InvokeVoidAsync("cacheDataFromPath", cancellationToken, path, forceUpdate);
         }
 
-        public async ValueTask LoadScript(string src)
+        public async ValueTask LoadScript(string src, CancellationToken cancellationToken = default)
         {
-            var js = await GetEntryJSModule();
-            await js.InvokeVoidAsync("loadScript", src, ResourceTagAttrName);
+            var js = await GetEntryJSModule(cancellationToken).ConfigureAwait(false);
+            await js.InvokeVoidAsync("loadScript", cancellationToken, src, ResourceTagAttrName).ConfigureAwait(false);
         }
 
-        public async ValueTask LoadStyleSheet(string href)
+        public async ValueTask LoadStyleSheet(string href, CancellationToken cancellationToken = default)
         {
-            var js = await GetEntryJSModule();
-            await js.InvokeVoidAsync("loadStyleSheet", href, ResourceTagAttrName);
+            var js = await GetEntryJSModule(cancellationToken).ConfigureAwait(false);
+            await js.InvokeVoidAsync("loadStyleSheet", cancellationToken, href, ResourceTagAttrName).ConfigureAwait(false);
         }
     }
 }

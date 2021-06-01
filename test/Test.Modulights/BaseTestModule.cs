@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules;
 using Modulight.Modules.Hosting;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Test.Modulights
@@ -16,7 +17,7 @@ namespace Test.Modulights
 
         public bool HasShutdowned { get; protected set; }
 
-        public override Task Initialize()
+        public override Task Initialize(CancellationToken cancellationToken = default)
         {
             Assert.IsFalse(HasInitialized, $"The module {GetType().FullName} has initialized.");
             foreach (var depType in Manifest.Dependencies)
@@ -32,14 +33,14 @@ namespace Test.Modulights
                 Host.Services.GetRequiredService(service.ServiceType);
             }
             HasInitialized = true;
-            return base.Initialize();
+            return base.Initialize(cancellationToken);
         }
 
-        public override Task Shutdown()
+        public override Task Shutdown(CancellationToken cancellationToken = default)
         {
             Assert.IsFalse(HasShutdowned, $"The module {GetType().FullName} has shutdowned.");
             HasShutdowned = true;
-            return base.Shutdown();
+            return base.Shutdown(cancellationToken);
         }
     }
 }
