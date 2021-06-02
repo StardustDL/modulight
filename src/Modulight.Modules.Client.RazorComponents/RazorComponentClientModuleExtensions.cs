@@ -65,7 +65,7 @@ namespace Modulight.Modules.Hosting
         public static void EnsurePageProvider<T>(this Type type) where T : IPageProvider
         {
             if (!type.IsPageProvider<T>())
-                throw new Exception($"{type.FullName} is not a page provider typed {typeof(T).FullName}.");
+                throw new IncompatibleTypeException(type, typeof(T));
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Modulight.Modules
             }
             else
             {
-                throw new Exception($"The type {type} is not a copmonent.");
+                throw new IncompatibleTypeException(type, typeof(IComponent));
             }
             return builder;
         }
