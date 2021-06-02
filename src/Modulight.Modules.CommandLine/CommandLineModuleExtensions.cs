@@ -45,17 +45,7 @@ namespace Modulight.Modules.Hosting
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static bool IsCommand(this Type type)
-        {
-            // From CliFx source code AddCommandsFromThisAssembly()
-
-            if (type.GetInterfaces().Contains(typeof(ICommand)) && type.IsDefined(typeof(CommandAttribute)) && !type.IsAbstract)
-            {
-                return !type.IsInterface;
-            }
-
-            return false;
-        }
+        public static bool IsCommand(this Type type) => type.IsAssignableTo(typeof(ICommand));
 
         /// <summary>
         /// Ensure a type is a command type.
@@ -65,7 +55,7 @@ namespace Modulight.Modules.Hosting
         public static void EnsureCommand(this Type type)
         {
             if (!type.IsCommand())
-                throw new Exception($"{type.FullName} is not a command typed.");
+                throw new IncompatibleTypeException(type, typeof(ICommand));
         }
 
         /// <summary>
@@ -120,7 +110,19 @@ namespace Modulight.Modules.Hosting
         /// <returns></returns>
         public static ICommandLineModuleManifestBuilder WithCommandsFromModuleAssembly(this ICommandLineModuleManifestBuilder builder, Type type)
         {
-            foreach (Type item in type.Assembly.ExportedTypes.Where(x => x.IsCommand()))
+            static bool IsCommand(Type type)
+            {
+                // From CliFx source code AddCommandsFromThisAssembly()
+
+                if (type.GetInterfaces().Contains(typeof(ICommand)) && type.IsDefined(typeof(CommandAttribute)) && !type.IsAbstract)
+                {
+                    return !type.IsInterface;
+                }
+
+                return false;
+            }
+
+            foreach (Type item in type.Assembly.ExportedTypes.Where(IsCommand))
             {
                 builder.AddCommand(item);
             }

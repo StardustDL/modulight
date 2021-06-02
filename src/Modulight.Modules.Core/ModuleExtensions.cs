@@ -56,7 +56,7 @@ namespace Modulight.Modules
         public static void EnsureModule<T>(this Type type) where T : IModule
         {
             if (!type.IsModule<T>())
-                throw new Exception($"{type.FullName} is not a module typed {typeof(T).FullName}.");
+                throw new IncompatibleTypeException(type, typeof(T));
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Modulight.Modules
         public static void EnsureModuleStartup<T>(this Type type) where T : IModuleStartup
         {
             if (!type.IsModuleStartup<T>())
-                throw new Exception($"{type.FullName} is not a module startup typed {typeof(T).FullName}.");
+                throw new IncompatibleTypeException(type, typeof(T));
         }
 
         /// <summary>

@@ -132,7 +132,7 @@ namespace Modulight.Modules.Client.RazorComponents
                     {
                         if (rootPaths.Contains(pages.RootPath))
                         {
-                            throw new Exception($"Same RootPath in modules: {pages.RootPath} @ {module.Manifest.Name}");
+                            throw new ModulightException($"Same RootPath in modules: {pages.RootPath} @ {module.Manifest.Name}");
                         }
                         rootPaths.Add(pages.RootPath);
                     }

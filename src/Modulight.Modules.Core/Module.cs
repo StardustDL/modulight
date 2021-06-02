@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Modulight.Modules
 {
+
     /// <summary>
     /// Specifies the contract for modules.
     /// </summary>

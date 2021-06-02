@@ -125,7 +125,7 @@ namespace Modulight.Modules.Hosting
             var type = typeof(T);
             return manifest.Services.Any(x => x.ServiceType == type)
                 ? provider.GetRequiredService<T>()
-                : throw new Exception($"No such service for the module {moduleType.FullName}: {type.FullName}.");
+                : throw new ModulightException($"No such service for the module {moduleType.FullName}: {type.FullName}.");
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Modulight.Modules.Hosting
             var type = typeof(T);
             return manifest.Options.Any(x => x == type)
                 ? provider.GetRequiredService<IOptionsSnapshot<T>>().Value
-                : throw new Exception($"No such option for the module {moduleType.FullName}: {type.FullName}.");
+                : throw new ModulightException($"No such option for the module {moduleType.FullName}: {type.FullName}.");
         }
         /// <summary>
         /// Get the module instance with module type.
@@ -217,7 +217,7 @@ namespace Modulight.Modules.Hosting
         internal static void EnsureHostBuilderPlugin(this Type type)
         {
             if (!type.IsHostBuilderPlugin())
-                throw new Exception($"{type.FullName} is not a module host builder plugin.");
+                throw new IncompatibleTypeException(type, typeof(IModuleHostBuilderPlugin));
         }
     }
 }
