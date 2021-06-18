@@ -74,7 +74,7 @@ namespace Modulight.Modules.Client.RazorComponents
         {
             Logger.LogInformation($"Loading resources for {(moduleType is null ? "all" : moduleType.FullName)} modules.");
 
-            using var scope = Host.Services.CreateScope();
+            await using var scope = Host.Services.CreateAsyncScope();
             var provider = scope.ServiceProvider;
             var ui = provider.GetRequiredService<ModuleUILoader>();
 
@@ -120,7 +120,7 @@ namespace Modulight.Modules.Client.RazorComponents
 
         public async Task Validate(CancellationToken cancellationToken = default)
         {
-            using var scope = Host.Services.CreateScope();
+            await using var scope = Host.Services.CreateAsyncScope();
             var provider = scope.ServiceProvider;
             HashSet<string> rootPaths = new();
             foreach (var module in LoadedModules)
@@ -144,7 +144,7 @@ namespace Modulight.Modules.Client.RazorComponents
 
         public async Task<List<Assembly>> GetAssembliesForRouting(string path, bool recurse = false, bool throwOnError = false, CancellationToken cancellationToken = default)
         {
-            using var scope = Host.Services.CreateScope();
+            await using var scope = Host.Services.CreateAsyncScope();
             var provider = scope.ServiceProvider;
             var lazyLoader = provider.GetRequiredService<LazyAssemblyLoader>();
 
@@ -206,7 +206,7 @@ namespace Modulight.Modules.Client.RazorComponents
                     {
                         if (throwOnError)
                         {
-                            throw;
+                            throw new ModulightException($"Failed to load assembly {current}", ex);
                         }
                         else
                         {

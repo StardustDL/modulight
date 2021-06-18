@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31410.414
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modulight.Modules.Core", "src\Modulight.Modules.Core\Modulight.Modules.Core.csproj", "{98A82654-6348-4398-B643-1FBD6C224228}"
 EndProject
@@ -47,7 +47,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modulight.Modules.CommandLi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.CommandLine", "test\Test.CommandLine\Test.CommandLine.csproj", "{AA8B4F34-F756-4ADC-B869-9F8A5695E2C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modulight.Modules.Hosting", "src\Modulight.Modules.Hosting\Modulight.Modules.Hosting.csproj", "{60A21C6F-1B3E-4157-AB7C-6DB9FB27BCF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modulight.Modules.Hosting", "src\Modulight.Modules.Hosting\Modulight.Modules.Hosting.csproj", "{60A21C6F-1B3E-4157-AB7C-6DB9FB27BCF6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4DA65C6-7D97-4C3D-85F0-BB5152691461}"
 	ProjectSection(SolutionItems) = preProject
