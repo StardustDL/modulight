@@ -1,13 +1,10 @@
 ﻿
 <CascadingValue Value="@this" TValue="PageParent">
-    @if (ChildContent is not null)
-    {
-        @ChildContent(this)
-    }
+    @ChildContent?.Invoke(this)
 </CascadingValue>
 
 
-@code{
+@code {
     [Parameter]
     public RenderFragment<PageParent>? ChildContent { get; set; }
 }

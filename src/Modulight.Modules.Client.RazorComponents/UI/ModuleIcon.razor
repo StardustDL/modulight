@@ -2,17 +2,23 @@
 
 @if (Module?.Icon is null)
 {
-    if (Fallback is not null)
-    {
-        @Fallback
-    }
+    @Fallback
 }
 else
 {
-    @Module.Icon
+    <ErrorBoundary @ref="errorBoundary">
+        <ChildContent>
+            @Module.Icon
+        </ChildContent>
+        <ErrorContent>
+            @Fallback
+        </ErrorContent>
+    </ErrorBoundary>
 }
 
 @code {
+    ErrorBoundary? errorBoundary;
+
     /// <summary>
     /// Module.
     /// </summary>
@@ -24,4 +30,10 @@ else
     /// </summary>
     [Parameter]
     public RenderFragment? Fallback { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        errorBoundary?.Recover();
+        base.OnParametersSet();
+    }
 }

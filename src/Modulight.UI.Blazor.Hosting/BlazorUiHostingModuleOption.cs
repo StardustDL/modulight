@@ -44,5 +44,9 @@
         /// Client
         /// </summary>
         Client,
+        /// <summary>
+        /// WebView
+        /// </summary>
+        WebView,
     }
 }

@@ -21,6 +21,7 @@ namespace Modulight.Modules.Client.RazorComponents.UI
         [Parameter]
         public string Title { get; set; } = "";
 
+
         /// <summary>
         /// Set <seealso cref="PageParent.Icon"/>.
         /// </summary>
