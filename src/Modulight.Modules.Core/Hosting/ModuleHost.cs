@@ -95,14 +95,14 @@ namespace Modulight.Modules.Hosting
         {
             return _DefinedModules.TryGetValue(moduleType, out var value)
                 ? value
-                : throw new ModulightException($"No such defined module: {moduleType.FullName}.");
+                : throw new ModuleNotFoundException($"No such defined module: {moduleType.FullName}.");
         }
 
         public virtual IModule GetModule(Type moduleType)
         {
             return _LoadedModules.TryGetValue(moduleType, out var value)
                 ? value
-                : throw new ModulightException($"No such loaded module: {moduleType.FullName}.");
+                : throw new ModuleNotFoundException($"No such loaded module: {moduleType.FullName}.");
         }
 
         public virtual async Task Initialize(CancellationToken cancellationToken = default)

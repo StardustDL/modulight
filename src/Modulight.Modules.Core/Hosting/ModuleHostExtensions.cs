@@ -125,7 +125,7 @@ namespace Modulight.Modules.Hosting
             var type = typeof(T);
             return manifest.Services.Any(x => x.ServiceType == type)
                 ? provider.GetRequiredService<T>()
-                : throw new ModulightException($"No such service for the module {moduleType.FullName}: {type.FullName}.");
+                : throw new ModuleNotFoundException($"No such service for the module {moduleType.FullName}: {type.FullName}.");
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Modulight.Modules.Hosting
             var type = typeof(T);
             return manifest.Options.Any(x => x == type)
                 ? provider.GetRequiredService<IOptionsSnapshot<T>>().Value
-                : throw new ModulightException($"No such option for the module {moduleType.FullName}: {type.FullName}.");
+                : throw new ModuleNotFoundException($"No such option for the module {moduleType.FullName}: {type.FullName}.");
         }
         /// <summary>
         /// Get the module instance with module type.

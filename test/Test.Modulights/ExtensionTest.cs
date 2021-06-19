@@ -24,10 +24,10 @@ namespace Test.Modulights
         public void Type()
         {
             typeof(TestModule).EnsureModule();
-            Assert.ThrowsException<Exception>(() => typeof(object).EnsureModule());
+            Assert.ThrowsException<IncompatibleTypeException>(() => typeof(object).EnsureModule());
 
             typeof(Startup).EnsureModuleStartup();
-            Assert.ThrowsException<Exception>(() => typeof(object).EnsureModuleStartup());
+            Assert.ThrowsException<IncompatibleTypeException>(() => typeof(object).EnsureModuleStartup());
         }
     }
 }

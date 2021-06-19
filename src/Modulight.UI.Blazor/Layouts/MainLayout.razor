@@ -26,17 +26,14 @@
     <AntDesign.Layout Style="background: initial;">
         <Content>@Body</Content>
         <Footer Class="text-center p-1">
-            @if (UIProvider.Footer is not null)
-            {
-                @UIProvider.Footer
-            }
+            @UIProvider.Footer
         </Footer>
     </AntDesign.Layout>
 </AntDesign.Layout>
 
 <BackTop></BackTop>
 
-@code{
+@code {
     bool IsCollapsed { get; set; } = false;
 
     void OnCollapse(bool isCollapsed)

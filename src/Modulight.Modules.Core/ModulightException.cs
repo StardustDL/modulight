@@ -30,6 +30,29 @@ namespace Modulight.Modules
     }
 
     /// <summary>
+    /// Module or its service / option is not found.
+    /// </summary>
+    [Serializable]
+    public class ModuleNotFoundException : ModulightException
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public ModuleNotFoundException() { }
+
+        /// <inheritdoc/>
+        public ModuleNotFoundException(string message) : base(message) { }
+
+        /// <inheritdoc/>
+        public ModuleNotFoundException(string message, Exception inner) : base(message, inner) { }
+
+        /// <inheritdoc/>
+        protected ModuleNotFoundException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+
+    /// <summary>
     /// Incompatible type
     /// </summary>
     [Serializable]
@@ -54,4 +77,6 @@ namespace Modulight.Modules
             ExpectedType = expected;
         }
     }
+
+    
 }

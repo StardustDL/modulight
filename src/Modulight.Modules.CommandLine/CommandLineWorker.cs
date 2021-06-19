@@ -28,7 +28,7 @@ namespace Modulight.Modules.CommandLine
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            using var scope = Services.CreateScope();
+            await using var scope = Services.CreateAsyncScope();
             var app = new CliApplicationBuilder();
 
             {
