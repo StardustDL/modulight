@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IModuleHostBuilder
+   | Modulight </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IModuleHostBuilder
+   | Modulight ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder">
+  
+  
+  <h1 id="Modulight_Modules_Hosting_IModuleHostBuilder" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder" class="text-break">Interface IModuleHostBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Specifies the contract for module host builder.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Hosting.html">Modulight.Modules.Hosting</a></h6>
+  <h6><strong>Assembly</strong>: Modulight.Modules.Core.dll</h6>
+  <h5 id="Modulight_Modules_Hosting_IModuleHostBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IModuleHostBuilder</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Modulight_Modules_Hosting_IModuleHostBuilder_Modules_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.Modules*"></a>
+  <h4 id="Modulight_Modules_Hosting_IModuleHostBuilder_Modules" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.Modules">Modules</h4>
+  <div class="markdown level1 summary"><p>Get all registered modules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;Type&gt; Modules { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_IModuleHostBuilder_Plugins_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.Plugins*"></a>
+  <h4 id="Modulight_Modules_Hosting_IModuleHostBuilder_Plugins" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.Plugins">Plugins</h4>
+  <div class="markdown level1 summary"><p>Get all registered plugins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;Type&gt; Plugins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Modulight_Modules_Hosting_IModuleHostBuilder_AddModule_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.AddModule*"></a>
+  <h4 id="Modulight_Modules_Hosting_IModuleHostBuilder_AddModule_System_Type_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.AddModule(System.Type)">AddModule(Type)</h4>
+  <div class="markdown level1 summary"><p>Add module in given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IModuleHostBuilder AddModule(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Module type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_IModuleHostBuilder_Build_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.Build*"></a>
+  <h4 id="Modulight_Modules_Hosting_IModuleHostBuilder_Build_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.Build(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.IServiceCollection)">Build(IServiceCollection, IServiceCollection)</h4>
+  <div class="markdown level1 summary"><p>Build the modules and the module host in service collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Build(IServiceCollection services, IServiceCollection builderServices = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="parametername">services</span></td>
+        <td><p>Target service collection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="parametername">builderServices</span></td>
+        <td><p>Service collection for builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_IModuleHostBuilder_ConfigureBuilderServices_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.ConfigureBuilderServices*"></a>
+  <h4 id="Modulight_Modules_Hosting_IModuleHostBuilder_ConfigureBuilderServices_System_Action_Microsoft_Extensions_DependencyInjection_IServiceCollection__" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.ConfigureBuilderServices(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})">ConfigureBuilderServices(Action&lt;IServiceCollection&gt;)</h4>
+  <div class="markdown level1 summary"><p>Configure the services for the builder, also for all <a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilderPlugin.html">IModuleHostBuilderPlugin</a> and <a class="xref" href="Modulight.Modules.IModuleStartup.html">IModuleStartup</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IModuleHostBuilder ConfigureBuilderServices(Action&lt;IServiceCollection&gt; configureBuilderServices)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span>&gt;</td>
+        <td><span class="parametername">configureBuilderServices</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_IModuleHostBuilder_ConfigureServices_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.ConfigureServices*"></a>
+  <h4 id="Modulight_Modules_Hosting_IModuleHostBuilder_ConfigureServices_System_Action_Microsoft_Extensions_DependencyInjection_IServiceCollection__" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.ConfigureServices(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})">ConfigureServices(Action&lt;IServiceCollection&gt;)</h4>
+  <div class="markdown level1 summary"><p>Configure the services for the target <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IModuleHostBuilder ConfigureServices(Action&lt;IServiceCollection&gt; configureServices)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span>&gt;</td>
+        <td><span class="parametername">configureServices</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_IModuleHostBuilder_UsePlugin_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.UsePlugin*"></a>
+  <h4 id="Modulight_Modules_Hosting_IModuleHostBuilder_UsePlugin_System_Type_" data-uid="Modulight.Modules.Hosting.IModuleHostBuilder.UsePlugin(System.Type)">UsePlugin(Type)</h4>
+  <div class="markdown level1 summary"><p>Add plugin in given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IModuleHostBuilder UsePlugin(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Plugin type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.GraphQLServerModuleExtensions.html#Modulight_Modules_Hosting_GraphQLServerModuleExtensions_UseGraphQLServerModules_Modulight_Modules_Hosting_IModuleHostBuilder_">GraphQLServerModuleExtensions.UseGraphQLServerModules(IModuleHostBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.RazorComponentClientModuleExtensions.html#Modulight_Modules_Hosting_RazorComponentClientModuleExtensions_UseRazorComponentClientModules_Modulight_Modules_Hosting_IModuleHostBuilder_">RazorComponentClientModuleExtensions.UseRazorComponentClientModules(IModuleHostBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_AddModule__1_Modulight_Modules_Hosting_IModuleHostBuilder_">ModuleHostExtensions.AddModule&lt;T&gt;(IModuleHostBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_UsePlugin__1_Modulight_Modules_Hosting_IModuleHostBuilder_">ModuleHostExtensions.UsePlugin&lt;T&gt;(IModuleHostBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureBuilderOptions__1_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action___0_System_IServiceProvider__">ModuleHostExtensions.ConfigureBuilderOptions&lt;T&gt;(IModuleHostBuilder, Action&lt;T, IServiceProvider&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.ModuleHostExtensions.html#Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureOptions__1_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action___0_System_IServiceProvider__">ModuleHostExtensions.ConfigureOptions&lt;T&gt;(IModuleHostBuilder, Action&lt;T, IServiceProvider&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.CommandLineModuleExtensions.html#Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action_Modulight_Modules_CommandLine_CommandLineModuleBuilderOptions__">CommandLineModuleExtensions.UseCommandLineModules(IModuleHostBuilder, Action&lt;CommandLineModuleBuilderOptions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Modulight.Modules.Hosting.AspNetServerModuleExtensions.html#Modulight_Modules_Hosting_AspNetServerModuleExtensions_UseAspNetServerModules_Modulight_Modules_Hosting_IModuleHostBuilder_">AspNetServerModuleExtensions.UseAspNetServerModules(IModuleHostBuilder)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © StardustDL.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
