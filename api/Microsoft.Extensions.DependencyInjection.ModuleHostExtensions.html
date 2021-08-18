@@ -124,13 +124,13 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_AddModules_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.AddModules*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_AddModules_Microsoft_Extensions_DependencyInjection_IServiceCollection_Modulight_Modules_Hosting_IModuleHostBuilder_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.AddModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,Modulight.Modules.Hosting.IModuleHostBuilder)">AddModules(IServiceCollection, IModuleHostBuilder)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_AddModules_Microsoft_Extensions_DependencyInjection_IServiceCollection_Modulight_Modules_Hosting_IModuleHostBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.AddModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,Modulight.Modules.Hosting.IModuleHostBuilder,Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddModules(IServiceCollection, IModuleHostBuilder, IServiceCollection)</h4>
   <div class="markdown level1 summary"><p>Add Modulight module services.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddModules(this IServiceCollection services, IModuleHostBuilder builder)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddModules(this IServiceCollection services, IModuleHostBuilder builder, IServiceCollection builderServices = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,6 +152,12 @@
         <td><span class="parametername">builder</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="parametername">builderServices</span></td>
+        <td><p>Service collection for builder.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -170,13 +176,13 @@
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_AddModules_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.AddModules*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_AddModules_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Modulight_Modules_Hosting_IModuleHostBuilder__" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.AddModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Modulight.Modules.Hosting.IModuleHostBuilder})">AddModules(IServiceCollection, Action&lt;IModuleHostBuilder&gt;)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_AddModules_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Nullable_Action_Modulight_Modules_Hosting_IModuleHostBuilder___Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.AddModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Nullable{Action{Modulight.Modules.Hosting.IModuleHostBuilder}},Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddModules(IServiceCollection, Nullable&lt;Action&lt;IModuleHostBuilder&gt;&gt;, IServiceCollection)</h4>
   <div class="markdown level1 summary"><p>Add Modulight module services.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddModules(this IServiceCollection services, Action&lt;IModuleHostBuilder&gt; configureBuilder = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddModules(this IServiceCollection services, Action&lt;IModuleHostBuilder&gt;? configureBuilder = default(Action&lt;IModuleHostBuilder&gt;? ), IServiceCollection builderServices = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,9 +200,15 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="Modulight.Modules.Hosting.IModuleHostBuilder.html">IModuleHostBuilder</a>&gt;&gt;</td>
         <td><span class="parametername">configureBuilder</span></td>
         <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="parametername">builderServices</span></td>
+        <td><p>Service collection for builder.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -216,7 +228,7 @@
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleHost_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleHost*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleHost_System_IServiceProvider_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleHost(System.IServiceProvider)">GetModuleHost(IServiceProvider)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleHost_IServiceProvider_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleHost(IServiceProvider)">GetModuleHost(IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Get default module host from service provider.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -235,7 +247,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">services</span></td>
         <td></td>
       </tr>
@@ -257,7 +269,7 @@
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleManifests_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleManifests__2_System_IServiceProvider_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests``2(System.IServiceProvider)">GetModuleManifests&lt;TModule, TManifest&gt;(IServiceProvider)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_GetModuleManifests__2_IServiceProvider_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.GetModuleManifests``2(IServiceProvider)">GetModuleManifests&lt;TModule, TManifest&gt;(IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Get all registered module manifests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -277,7 +289,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">services</span></td>
         <td></td>
       </tr>
@@ -293,7 +305,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Modulight.Modules.ModuleManifestServiceEntry-2.html">ModuleManifestServiceEntry</a>&lt;TModule, TManifest&gt;&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Modulight.Modules.ModuleManifestServiceEntry-2.html">ModuleManifestServiceEntry</a>&lt;TModule, TManifest&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -384,7 +396,7 @@
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_UseModules_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.UseModules*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_UseModules_System_IServiceProvider_System_Threading_CancellationToken_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.UseModules(System.IServiceProvider,System.Threading.CancellationToken)">UseModules(IServiceProvider, CancellationToken)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ModuleHostExtensions_UseModules_IServiceProvider_CancellationToken_" data-uid="Microsoft.Extensions.DependencyInjection.ModuleHostExtensions.UseModules(IServiceProvider,CancellationToken)">UseModules(IServiceProvider, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Create a context to control module host initializing, shutdown.
 For example:</p>
 <pre><code>await using var _ = await services.UseModules();</code></pre>
@@ -392,7 +404,7 @@ For example:</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async Task&lt;IAsyncDisposable&gt; UseModules(this IServiceProvider services, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public static async Task&lt;IAsyncDisposable&gt; UseModules(this IServiceProvider services, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -405,12 +417,12 @@ For example:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">services</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -426,7 +438,7 @@ For example:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.IAsyncDisposable</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IAsyncDisposable</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

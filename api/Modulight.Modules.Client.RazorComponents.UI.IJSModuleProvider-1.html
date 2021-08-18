@@ -86,15 +86,6 @@
   <div class="markdown level0 summary"><p>Provide JS modules.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.IDisposable.Dispose()</span>
-    </div>
-    <div>
-      <span class="xref">System.IAsyncDisposable.DisposeAsync()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.html">Modulight.Modules.Client.RazorComponents.UI</a></h6>
   <h6><strong>Assembly</strong>: Modulight.Modules.Client.RazorComponents.dll</h6>
   <h5 id="Modulight_Modules_Client_RazorComponents_UI_IJSModuleProvider_1_syntax">Syntax</h5>
@@ -119,13 +110,13 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Modulight_Modules_Client_RazorComponents_UI_IJSModuleProvider_1_GetJSModule_" data-uid="Modulight.Modules.Client.RazorComponents.UI.IJSModuleProvider`1.GetJSModule*"></a>
-  <h4 id="Modulight_Modules_Client_RazorComponents_UI_IJSModuleProvider_1_GetJSModule_System_String_System_String_System_Threading_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.UI.IJSModuleProvider`1.GetJSModule(System.String,System.String,System.Threading.CancellationToken)">GetJSModule(String, String, CancellationToken)</h4>
+  <h4 id="Modulight_Modules_Client_RazorComponents_UI_IJSModuleProvider_1_GetJSModule_System_String_System_String_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.UI.IJSModuleProvider`1.GetJSModule(System.String,System.String,CancellationToken)">GetJSModule(String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Get a lazy javascript module at /_content/<code data-dev-comment-type="paramref" class="paramref">assemblyName</code>/<code data-dev-comment-type="paramref" class="paramref">jsPath</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IJSObjectReference&gt; GetJSModule(string jsPath, string assemblyName = null, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IJSObjectReference&gt; GetJSModule(string jsPath, string assemblyName = null, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,7 +141,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -166,7 +157,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.JSInterop.IJSObjectReference</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.JSInterop.IJSObjectReference</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -124,7 +124,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)">AddCommand(ICommandLineModuleManifestBuilder, Type)</h4>
+  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_AddCommand_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.AddCommand(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,Type)">AddCommand(ICommandLineModuleManifestBuilder, Type)</h4>
   <div class="markdown level1 summary"><p>Add a command type to manifest.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -148,7 +148,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
@@ -227,7 +227,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_EnsureCommand_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_EnsureCommand_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand(System.Type)">EnsureCommand(Type)</h4>
+  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_EnsureCommand_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.EnsureCommand(Type)">EnsureCommand(Type)</h4>
   <div class="markdown level1 summary"><p>Ensure a type is a command type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -246,7 +246,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
@@ -294,7 +294,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_IsCommand_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_IsCommand_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand(System.Type)">IsCommand(Type)</h4>
+  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_IsCommand_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.IsCommand(Type)">IsCommand(Type)</h4>
   <div class="markdown level1 summary"><p>Test a type is a command type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -313,7 +313,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
@@ -335,13 +335,13 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action_Modulight_Modules_CommandLine_CommandLineModuleBuilderOptions__" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder,System.Action{Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions})">UseCommandLineModules(IModuleHostBuilder, Action&lt;CommandLineModuleBuilderOptions&gt;)</h4>
+  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_UseCommandLineModules_Modulight_Modules_Hosting_IModuleHostBuilder_System_Nullable_Action_Modulight_Modules_CommandLine_CommandLineModuleBuilderOptions___" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.UseCommandLineModules(Modulight.Modules.Hosting.IModuleHostBuilder,System.Nullable{Action{Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions}})">UseCommandLineModules(IModuleHostBuilder, Nullable&lt;Action&lt;CommandLineModuleBuilderOptions&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Use building plugin for commandline modules.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IModuleHostBuilder UseCommandLineModules(this IModuleHostBuilder modules, Action&lt;CommandLineModuleBuilderOptions&gt; configureOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IModuleHostBuilder UseCommandLineModules(this IModuleHostBuilder modules, Action&lt;CommandLineModuleBuilderOptions&gt;? configureOptions = default(Action&lt;CommandLineModuleBuilderOptions&gt;? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,7 +359,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.html">CommandLineModuleBuilderOptions</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="Modulight.Modules.CommandLine.CommandLineModuleBuilderOptions.html">CommandLineModuleBuilderOptions</a>&gt;&gt;</td>
         <td><span class="parametername">configureOptions</span></td>
         <td></td>
       </tr>
@@ -381,7 +381,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithCommandsFromModuleAssembly_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithCommandsFromModuleAssembly_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)">WithCommandsFromModuleAssembly(ICommandLineModuleManifestBuilder, Type)</h4>
+  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithCommandsFromModuleAssembly_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithCommandsFromModuleAssembly(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,Type)">WithCommandsFromModuleAssembly(ICommandLineModuleManifestBuilder, Type)</h4>
   <div class="markdown level1 summary"><p>Add commands from the assembly of module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -405,7 +405,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
@@ -427,7 +427,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithDefaultsFromModuleType_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType*"></a>
-  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithDefaultsFromModuleType_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_System_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,System.Type)">WithDefaultsFromModuleType(ICommandLineModuleManifestBuilder, Type)</h4>
+  <h4 id="Modulight_Modules_Hosting_CommandLineModuleExtensions_WithDefaultsFromModuleType_Modulight_Modules_CommandLine_ICommandLineModuleManifestBuilder_Type_" data-uid="Modulight.Modules.Hosting.CommandLineModuleExtensions.WithDefaultsFromModuleType(Modulight.Modules.CommandLine.ICommandLineModuleManifestBuilder,Type)">WithDefaultsFromModuleType(ICommandLineModuleManifestBuilder, Type)</h4>
   <div class="markdown level1 summary"><p>Configure the builder by default from attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -451,7 +451,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>

@@ -89,7 +89,7 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-2.html#Modulight_Modules_Hosting_IModuleCollection_2_GetManifest_System_Type_">IModuleCollection&lt;IRazorComponentClientModule, RazorComponentClientModuleManifest&gt;.GetManifest(Type)</a>
+      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-2.html#Modulight_Modules_Hosting_IModuleCollection_2_GetManifest_Type_">IModuleCollection&lt;IRazorComponentClientModule, RazorComponentClientModuleManifest&gt;.GetManifest(Type)</a>
     </div>
     <div>
       <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_LoadedModules">IModuleCollection&lt;IRazorComponentClientModule&gt;.LoadedModules</a>
@@ -98,7 +98,7 @@
       <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_DefinedModules">IModuleCollection&lt;IRazorComponentClientModule&gt;.DefinedModules</a>
     </div>
     <div>
-      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_GetModule_System_Type_">IModuleCollection&lt;IRazorComponentClientModule&gt;.GetModule(Type)</a>
+      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_GetModule_Type_">IModuleCollection&lt;IRazorComponentClientModule&gt;.GetModule(Type)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Client.RazorComponents.html">Modulight.Modules.Client.RazorComponents</a></h6>
@@ -110,13 +110,13 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_GetAssembliesForRouting_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetAssembliesForRouting*"></a>
-  <h4 id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_GetAssembliesForRouting_System_String_System_Boolean_System_Boolean_System_Threading_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetAssembliesForRouting(System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)">GetAssembliesForRouting(String, Boolean, Boolean, CancellationToken)</h4>
+  <h4 id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_GetAssembliesForRouting_System_String_System_Boolean_System_Boolean_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.GetAssembliesForRouting(System.String,System.Boolean,System.Boolean,CancellationToken)">GetAssembliesForRouting(String, Boolean, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Load related assemblies for a given route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;List&lt;Assembly&gt;&gt; GetAssembliesForRouting(string path, bool recurse = false, bool throwOnError = false, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;Assembly&gt;&gt; GetAssembliesForRouting(string path, bool recurse = false, bool throwOnError = false, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,7 +147,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -163,19 +163,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Reflection.Assembly</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<span class="xref">System.Reflection.Assembly</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_LoadResources_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.LoadResources*"></a>
-  <h4 id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_LoadResources_System_Type_System_Threading_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.LoadResources(System.Type,System.Threading.CancellationToken)">LoadResources(Type, CancellationToken)</h4>
+  <h4 id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_LoadResources_System_Nullable_Type__CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.LoadResources(System.Nullable{Type},CancellationToken)">LoadResources(Nullable&lt;Type&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Load all <a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.UIResource.html">UIResource</a> defined in modules into DOM.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task LoadResources(Type moduleType = null, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task LoadResources(Type? moduleType = default(Type? ), CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,12 +188,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Type</span>&gt;</td>
         <td><span class="parametername">moduleType</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -209,20 +209,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_Validate_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.Validate*"></a>
-  <h4 id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_Validate_System_Threading_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.Validate(System.Threading.CancellationToken)">Validate(CancellationToken)</h4>
+  <h4 id="Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_Validate_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection.Validate(CancellationToken)">Validate(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Validate modules.
 Check if route roots conflict or assembly loading fails.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task Validate(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task Validate(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,7 +235,7 @@ Check if route roots conflict or assembly loading fails.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -251,14 +251,14 @@ Check if route roots conflict or assembly loading fails.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModuleCollectionExtensions_LoadResources__1_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_System_Threading_CancellationToken_">RazorComponentClientModuleCollectionExtensions.LoadResources&lt;T&gt;(IRazorComponentClientModuleCollection, CancellationToken)</a>
+      <a class="xref" href="Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions.html#Modulight_Modules_Client_RazorComponents_RazorComponentClientModuleCollectionExtensions_LoadResources__1_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_CancellationToken_">RazorComponentClientModuleCollectionExtensions.LoadResources&lt;T&gt;(IRazorComponentClientModuleCollection, CancellationToken)</a>
   </div>
 </article>
           </div>

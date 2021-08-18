@@ -95,7 +95,7 @@
       <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_DefinedModules">IModuleCollection&lt;IAspNetServerModule&gt;.DefinedModules</a>
     </div>
     <div>
-      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_GetModule_System_Type_">IModuleCollection&lt;IAspNetServerModule&gt;.GetModule(Type)</a>
+      <a class="xref" href="Modulight.Modules.Hosting.IModuleCollection-1.html#Modulight_Modules_Hosting_IModuleCollection_1_GetModule_Type_">IModuleCollection&lt;IAspNetServerModule&gt;.GetModule(Type)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Modulight.Modules.Server.AspNet.html">Modulight.Modules.Server.AspNet</a></h6>
@@ -107,14 +107,14 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Modulight_Modules_Server_AspNet_IAspNetServerModuleCollection_MapEndpoints_" data-uid="Modulight.Modules.Server.AspNet.IAspNetServerModuleCollection.MapEndpoints*"></a>
-  <h4 id="Modulight_Modules_Server_AspNet_IAspNetServerModuleCollection_MapEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_Action_Modulight_Modules_Server_AspNet_IAspNetServerModule_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder__" data-uid="Modulight.Modules.Server.AspNet.IAspNetServerModuleCollection.MapEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Action{Modulight.Modules.Server.AspNet.IAspNetServerModule,Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})">MapEndpoints(IEndpointRouteBuilder, Action&lt;IAspNetServerModule, IEndpointRouteBuilder&gt;)</h4>
+  <h4 id="Modulight_Modules_Server_AspNet_IAspNetServerModuleCollection_MapEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_Nullable_Action_Modulight_Modules_Server_AspNet_IAspNetServerModule_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder___" data-uid="Modulight.Modules.Server.AspNet.IAspNetServerModuleCollection.MapEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Nullable{Action{Modulight.Modules.Server.AspNet.IAspNetServerModule,Microsoft.AspNetCore.Routing.IEndpointRouteBuilder}})">MapEndpoints(IEndpointRouteBuilder, Nullable&lt;Action&lt;IAspNetServerModule, IEndpointRouteBuilder&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Map all registered module's endpoints.
-Used in <span class="xref">Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})</span>.</p>
+Used in <see cref="!:EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder, Action&lt;IEndpointRouteBuilder>)"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void MapEndpoints(IEndpointRouteBuilder builder, Action&lt;IAspNetServerModule, IEndpointRouteBuilder&gt; postMapEndpoint = null)</code></pre>
+    <pre><code class="lang-csharp hljs">void MapEndpoints(IEndpointRouteBuilder builder, Action&lt;IAspNetServerModule, IEndpointRouteBuilder&gt;? postMapEndpoint = default(Action&lt;IAspNetServerModule, IEndpointRouteBuilder&gt;? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +132,7 @@ Used in <span class="xref">Microsoft.AspNetCore.Builder.EndpointRoutingApplicati
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modulight.Modules.Server.AspNet.IAspNetServerModule.html">IAspNetServerModule</a>, <span class="xref">Microsoft.AspNetCore.Routing.IEndpointRouteBuilder</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="Modulight.Modules.Server.AspNet.IAspNetServerModule.html">IAspNetServerModule</a>, <span class="xref">Microsoft.AspNetCore.Routing.IEndpointRouteBuilder</span>&gt;&gt;</td>
         <td><span class="parametername">postMapEndpoint</span></td>
         <td><p>Action to configure mapped GraphQL endpoints.</p>
 </td>
@@ -142,7 +142,7 @@ Used in <span class="xref">Microsoft.AspNetCore.Builder.EndpointRoutingApplicati
   <a id="Modulight_Modules_Server_AspNet_IAspNetServerModuleCollection_UseMiddlewares_" data-uid="Modulight.Modules.Server.AspNet.IAspNetServerModuleCollection.UseMiddlewares*"></a>
   <h4 id="Modulight_Modules_Server_AspNet_IAspNetServerModuleCollection_UseMiddlewares_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Modulight.Modules.Server.AspNet.IAspNetServerModuleCollection.UseMiddlewares(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseMiddlewares(IApplicationBuilder)</h4>
   <div class="markdown level1 summary"><p>Use all registered module's middlewares.
-Used for <span class="xref">Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.UseMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Type,System.Object[])</span></p>
+Used for <see cref="!:UseMiddlewareExtensions.UseMiddleware(IApplicationBuilder, Type, object[])"></see></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

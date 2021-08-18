@@ -124,13 +124,13 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModuleCollectionExtensions_LoadResources_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions.LoadResources*"></a>
-  <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModuleCollectionExtensions_LoadResources__1_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_System_Threading_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions.LoadResources``1(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection,System.Threading.CancellationToken)">LoadResources&lt;T&gt;(IRazorComponentClientModuleCollection, CancellationToken)</h4>
+  <h4 id="Modulight_Modules_Client_RazorComponents_RazorComponentClientModuleCollectionExtensions_LoadResources__1_Modulight_Modules_Client_RazorComponents_IRazorComponentClientModuleCollection_CancellationToken_" data-uid="Modulight.Modules.Client.RazorComponents.RazorComponentClientModuleCollectionExtensions.LoadResources``1(Modulight.Modules.Client.RazorComponents.IRazorComponentClientModuleCollection,CancellationToken)">LoadResources&lt;T&gt;(IRazorComponentClientModuleCollection, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Load all <a class="xref" href="Modulight.Modules.Client.RazorComponents.UI.UIResource.html">UIResource</a> defined in modules into DOM.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task LoadResources&lt;T&gt;(this IRazorComponentClientModuleCollection collection, CancellationToken cancellationToken = default(CancellationToken))
+    <pre><code class="lang-csharp hljs">public static Task LoadResources&lt;T&gt;(this IRazorComponentClientModuleCollection collection, CancellationToken cancellationToken = null)
     where T : IModule</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -149,7 +149,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -165,7 +165,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>

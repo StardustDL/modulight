@@ -183,7 +183,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureBuilderOptions_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.ConfigureBuilderOptions*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureBuilderOptions__1_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action___0_System_IServiceProvider__" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.ConfigureBuilderOptions``1(Modulight.Modules.Hosting.IModuleHostBuilder,System.Action{``0,System.IServiceProvider})">ConfigureBuilderOptions&lt;T&gt;(IModuleHostBuilder, Action&lt;T, IServiceProvider&gt;)</h4>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureBuilderOptions__1_Modulight_Modules_Hosting_IModuleHostBuilder_Action___0_IServiceProvider__" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.ConfigureBuilderOptions``1(Modulight.Modules.Hosting.IModuleHostBuilder,Action{``0,IServiceProvider})">ConfigureBuilderOptions&lt;T&gt;(IModuleHostBuilder, Action&lt;T, IServiceProvider&gt;)</h4>
   <div class="markdown level1 summary"><p>Configure builder options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -208,7 +208,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;T, <span class="xref">System.IServiceProvider</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;T, <span class="xref">IServiceProvider</span>&gt;</td>
         <td><span class="parametername">configureOptions</span></td>
         <td></td>
       </tr>
@@ -245,7 +245,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureOptions_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.ConfigureOptions*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureOptions__1_Modulight_Modules_Hosting_IModuleHostBuilder_System_Action___0_System_IServiceProvider__" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.ConfigureOptions``1(Modulight.Modules.Hosting.IModuleHostBuilder,System.Action{``0,System.IServiceProvider})">ConfigureOptions&lt;T&gt;(IModuleHostBuilder, Action&lt;T, IServiceProvider&gt;)</h4>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_ConfigureOptions__1_Modulight_Modules_Hosting_IModuleHostBuilder_Action___0_IServiceProvider__" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.ConfigureOptions``1(Modulight.Modules.Hosting.IModuleHostBuilder,Action{``0,IServiceProvider})">ConfigureOptions&lt;T&gt;(IModuleHostBuilder, Action&lt;T, IServiceProvider&gt;)</h4>
   <div class="markdown level1 summary"><p>Configure options for target services.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -270,7 +270,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;T, <span class="xref">System.IServiceProvider</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;T, <span class="xref">IServiceProvider</span>&gt;</td>
         <td><span class="parametername">configureOptions</span></td>
         <td></td>
       </tr>
@@ -302,6 +302,31 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_ModuleHostExtensions_EnsureHostBuilderPlugin_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.EnsureHostBuilderPlugin*"></a>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_EnsureHostBuilderPlugin_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.EnsureHostBuilderPlugin(Type)">EnsureHostBuilderPlugin(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EnsureHostBuilderPlugin(this Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -421,7 +446,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption__1_Modulight_Modules_Hosting_IModuleHost_System_IServiceProvider_System_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption``1(Modulight.Modules.Hosting.IModuleHost,System.IServiceProvider,System.Type)">GetOption&lt;T&gt;(IModuleHost, IServiceProvider, Type)</h4>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption__1_Modulight_Modules_Hosting_IModuleHost_IServiceProvider_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption``1(Modulight.Modules.Hosting.IModuleHost,IServiceProvider,Type)">GetOption&lt;T&gt;(IModuleHost, IServiceProvider, Type)</h4>
   <div class="markdown level1 summary"><p>Get option that belongs to the module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -446,12 +471,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">moduleType</span></td>
         <td></td>
       </tr>
@@ -488,7 +513,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption__2_Modulight_Modules_Hosting_IModuleHost_System_IServiceProvider_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption``2(Modulight.Modules.Hosting.IModuleHost,System.IServiceProvider)">GetOption&lt;TModule, T&gt;(IModuleHost, IServiceProvider)</h4>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetOption__2_Modulight_Modules_Hosting_IModuleHost_IServiceProvider_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetOption``2(Modulight.Modules.Hosting.IModuleHost,IServiceProvider)">GetOption&lt;TModule, T&gt;(IModuleHost, IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Get option that belongs to the module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -513,7 +538,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
@@ -554,7 +579,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService__1_Modulight_Modules_Hosting_IModuleHost_System_IServiceProvider_System_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService``1(Modulight.Modules.Hosting.IModuleHost,System.IServiceProvider,System.Type)">GetService&lt;T&gt;(IModuleHost, IServiceProvider, Type)</h4>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService__1_Modulight_Modules_Hosting_IModuleHost_IServiceProvider_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService``1(Modulight.Modules.Hosting.IModuleHost,IServiceProvider,Type)">GetService&lt;T&gt;(IModuleHost, IServiceProvider, Type)</h4>
   <div class="markdown level1 summary"><p>Get service that belongs to the module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -578,12 +603,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">moduleType</span></td>
         <td></td>
       </tr>
@@ -620,7 +645,7 @@
     </tbody>
   </table>
   <a id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService*"></a>
-  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService__2_Modulight_Modules_Hosting_IModuleHost_System_IServiceProvider_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService``2(Modulight.Modules.Hosting.IModuleHost,System.IServiceProvider)">GetService&lt;TModule, T&gt;(IModuleHost, IServiceProvider)</h4>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_GetService__2_Modulight_Modules_Hosting_IModuleHost_IServiceProvider_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.GetService``2(Modulight.Modules.Hosting.IModuleHost,IServiceProvider)">GetService&lt;TModule, T&gt;(IModuleHost, IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Get service that belongs to the module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -645,7 +670,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
@@ -681,6 +706,46 @@
       </tr>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Modulight_Modules_Hosting_ModuleHostExtensions_IsHostBuilderPlugin_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.IsHostBuilderPlugin*"></a>
+  <h4 id="Modulight_Modules_Hosting_ModuleHostExtensions_IsHostBuilderPlugin_Type_" data-uid="Modulight.Modules.Hosting.ModuleHostExtensions.IsHostBuilderPlugin(Type)">IsHostBuilderPlugin(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsHostBuilderPlugin(this Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
