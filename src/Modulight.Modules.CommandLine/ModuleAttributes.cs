@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Modulight.Modules.Hosting;
-using System;
+﻿using Modulight.Modules.Hosting;
 
 namespace Modulight.Modules.CommandLine
 {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Modulight.Modules.Client.RazorComponents.UI
+﻿namespace Modulight.Modules.Client.RazorComponents.UI
 {
     /// <summary>
     /// UI Resource type.

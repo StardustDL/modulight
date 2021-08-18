@@ -3,8 +3,6 @@ using CliFx.Attributes;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Modulight.Modules.CommandLine;
-using System;
-using System.Linq;
 using System.Reflection;
 
 namespace Modulight.Modules.Hosting

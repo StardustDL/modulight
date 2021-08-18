@@ -1,13 +1,9 @@
 using Delights.Modules.Hello;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules;
 using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Services;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Test.Modulights.UI
 {

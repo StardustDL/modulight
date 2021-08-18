@@ -5,8 +5,6 @@ using Microsoft.Extensions.Logging;
 using Modulight.Modules;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Server.GraphQL;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Delights.Modules.Hello.Server
 {

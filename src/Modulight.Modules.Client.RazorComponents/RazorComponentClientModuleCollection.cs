@@ -4,12 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.JSInterop;
 using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Modulight.Modules.Client.RazorComponents
 {
@@ -100,11 +95,11 @@ namespace Modulight.Modules.Client.RazorComponents
                         {
                             case UIResourceType.Script:
                                 Logger.LogDebug($"Load script {resource.Path} of {manifest.FullName}.");
-                                await ui.LoadScript(resource.Path,cancellationToken).ConfigureAwait(false);
+                                await ui.LoadScript(resource.Path, cancellationToken).ConfigureAwait(false);
                                 break;
                             case UIResourceType.StyleSheet:
                                 Logger.LogDebug($"Load stylesheet {resource.Path} of {manifest.FullName}.");
-                                await ui.LoadStyleSheet(resource.Path,cancellationToken).ConfigureAwait(false);
+                                await ui.LoadStyleSheet(resource.Path, cancellationToken).ConfigureAwait(false);
                                 break;
                         }
                     }
@@ -137,7 +132,7 @@ namespace Modulight.Modules.Client.RazorComponents
                         rootPaths.Add(pages.RootPath);
                     }
 
-                    await GetAssembliesForRouting($"/{pages.RootPath}", throwOnError: true,cancellationToken:cancellationToken).ConfigureAwait(false);
+                    await GetAssembliesForRouting($"/{pages.RootPath}", throwOnError: true, cancellationToken: cancellationToken).ConfigureAwait(false);
                 }
             }
         }

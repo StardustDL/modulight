@@ -3,10 +3,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
-using System;
-using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Modulight.Modules.Client.RazorComponents
 {

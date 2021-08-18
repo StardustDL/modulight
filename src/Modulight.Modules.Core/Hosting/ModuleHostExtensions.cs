@@ -2,11 +2,6 @@
 using Microsoft.Extensions.Options;
 using Modulight.Modules;
 using Modulight.Modules.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -20,13 +15,14 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services"></param>
         /// <param name="configureBuilder"></param>
+        /// <param name="builderServices">Service collection for builder.</param>
         /// <returns></returns>
-        public static IServiceCollection AddModules(this IServiceCollection services, Action<IModuleHostBuilder>? configureBuilder = null)
+        public static IServiceCollection AddModules(this IServiceCollection services, Action<IModuleHostBuilder>? configureBuilder = null, IServiceCollection? builderServices = null)
         {
             var builder = ModuleHostBuilder.CreateDefaultBuilder();
             if (configureBuilder is not null)
                 configureBuilder(builder);
-            return services.AddModules(builder);
+            return services.AddModules(builder, builderServices);
         }
 
         /// <summary>
@@ -34,10 +30,11 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services"></param>
         /// <param name="builder"></param>
+        /// <param name="builderServices">Service collection for builder.</param>
         /// <returns></returns>
-        public static IServiceCollection AddModules(this IServiceCollection services, IModuleHostBuilder builder)
+        public static IServiceCollection AddModules(this IServiceCollection services, IModuleHostBuilder builder, IServiceCollection? builderServices = null)
         {
-            builder.Build(services);
+            builder.Build(services, builderServices);
             return services;
         }
 
@@ -76,11 +73,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <param name="services"></param>
         /// <param name="entry"></param>
         /// <returns></returns>
-        public static IServiceCollection RegisterModuleManifest<TModule, TManifest>(this IServiceCollection services, ModuleManifestServiceEntry<TModule, TManifest> entry) where TModule : IModule where TManifest : ModuleManifest<TModule>
-        {
-            services.AddSingleton(entry);
-            return services;
-        }
+        public static IServiceCollection RegisterModuleManifest<TModule, TManifest>(this IServiceCollection services, ModuleManifestServiceEntry<TModule, TManifest> entry) where TModule : IModule where TManifest : ModuleManifest<TModule> => services.AddSingleton(entry);
 
         /// <summary>
         /// Get all registered module manifests.
@@ -89,10 +82,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <typeparam name="TManifest"></typeparam>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IEnumerable<ModuleManifestServiceEntry<TModule, TManifest>> GetModuleManifests<TModule, TManifest>(this IServiceProvider services) where TModule : IModule where TManifest : ModuleManifest<TModule>
-        {
-            return services.GetServices<ModuleManifestServiceEntry<TModule, TManifest>>();
-        }
+        public static IEnumerable<ModuleManifestServiceEntry<TModule, TManifest>> GetModuleManifests<TModule, TManifest>(this IServiceProvider services) where TModule : IModule where TManifest : ModuleManifest<TModule> => services.GetServices<ModuleManifestServiceEntry<TModule, TManifest>>();
     }
 }
 
@@ -195,10 +185,7 @@ namespace Modulight.Modules.Hosting
         /// <param name="builder"></param>
         /// <param name="configureOptions"></param>
         /// <returns></returns>
-        public static IModuleHostBuilder ConfigureBuilderOptions<T>(this IModuleHostBuilder builder, Action<T, IServiceProvider> configureOptions) where T : class
-        {
-            return builder.ConfigureBuilderServices(services => services.AddOptions<T>().Configure(configureOptions));
-        }
+        public static IModuleHostBuilder ConfigureBuilderOptions<T>(this IModuleHostBuilder builder, Action<T, IServiceProvider> configureOptions) where T : class => builder.ConfigureBuilderServices(services => services.AddOptions<T>().Configure(configureOptions));
 
         /// <summary>
         /// Configure options for target services.
@@ -207,14 +194,20 @@ namespace Modulight.Modules.Hosting
         /// <param name="builder"></param>
         /// <param name="configureOptions"></param>
         /// <returns></returns>
-        public static IModuleHostBuilder ConfigureOptions<T>(this IModuleHostBuilder builder, Action<T, IServiceProvider> configureOptions) where T : class
-        {
-            return builder.ConfigureServices(services => services.AddOptions<T>().Configure(configureOptions));
-        }
+        public static IModuleHostBuilder ConfigureOptions<T>(this IModuleHostBuilder builder, Action<T, IServiceProvider> configureOptions) where T : class => builder.ConfigureServices(services => services.AddOptions<T>().Configure(configureOptions));
 
-        internal static bool IsHostBuilderPlugin(this Type type) => type.IsAssignableTo(typeof(IModuleHostBuilderPlugin));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool IsHostBuilderPlugin(this Type type) => type.IsAssignableTo(typeof(IModuleHostBuilderPlugin));
 
-        internal static void EnsureHostBuilderPlugin(this Type type)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type"></param>
+        public static void EnsureHostBuilderPlugin(this Type type)
         {
             if (!type.IsHostBuilderPlugin())
                 throw new IncompatibleTypeException(type, typeof(IModuleHostBuilderPlugin));

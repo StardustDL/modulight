@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Hosting;
-using System;
-using System.Reflection;
 
 namespace Modulight.Modules.Server.GraphQL
 {

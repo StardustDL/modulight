@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Modulight.Modules.Hosting
+﻿namespace Modulight.Modules.Hosting
 {
     /// <summary>
     /// Data for a module in host builder.

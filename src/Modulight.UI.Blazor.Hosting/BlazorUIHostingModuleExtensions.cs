@@ -2,7 +2,6 @@
 using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Hosting;
 using Modulight.UI.Blazor.Services;
-using System;
 
 namespace Modulight.Modules
 {

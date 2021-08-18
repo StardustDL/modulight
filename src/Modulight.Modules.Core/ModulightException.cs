@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Modulight.Modules
+﻿namespace Modulight.Modules
 {
     /// <summary>
     /// Exception in modulight
@@ -78,5 +76,5 @@ namespace Modulight.Modules
         }
     }
 
-    
+
 }

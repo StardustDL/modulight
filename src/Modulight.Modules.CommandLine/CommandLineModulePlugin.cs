@@ -4,10 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Internal;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Modulight.Modules.CommandLine;
 using Modulight.Modules.Hosting;
-using System;
-using System.Collections.Generic;
 
 namespace Modulight.Modules.CommandLine
 {

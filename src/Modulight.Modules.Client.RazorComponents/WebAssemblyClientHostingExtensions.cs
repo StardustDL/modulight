@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Microsoft.AspNetCore.Components.WebAssembly.Hosting
 {

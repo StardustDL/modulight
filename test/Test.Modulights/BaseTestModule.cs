@@ -2,8 +2,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules;
 using Modulight.Modules.Hosting;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Test.Modulights
 {

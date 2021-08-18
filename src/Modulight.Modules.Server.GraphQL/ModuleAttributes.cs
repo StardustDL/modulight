@@ -1,6 +1,5 @@
 ﻿using HotChocolate.Execution.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace Modulight.Modules.Server.GraphQL
 {

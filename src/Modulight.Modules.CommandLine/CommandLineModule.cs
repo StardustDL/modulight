@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Hosting;
-using System;
 
 namespace Modulight.Modules.CommandLine
 {
@@ -10,6 +9,10 @@ namespace Modulight.Modules.CommandLine
     /// </summary>
     public interface ICommandLineModule : IModule
     {
+        /// <summary>
+        /// Get the manifest.
+        /// </summary>
+        CommandLineModuleManifest CommandLineModuleManifest { get; }
     }
 
     /// <summary>

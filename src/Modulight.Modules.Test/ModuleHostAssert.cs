@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules.Hosting;
-using System;
-using System.Linq;
 
 namespace Modulight.Modules.Test
 {

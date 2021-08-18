@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Modulight.Modules.Hosting;
 using Modulight.Modules.Server.GraphQL;
-using System;
 using System.Reflection;
 
 namespace Modulight.Modules.Hosting

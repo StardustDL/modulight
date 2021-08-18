@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Modulight.Modules.Hosting
+﻿namespace Modulight.Modules.Hosting
 {
     internal class ModuleHostContext : IAsyncDisposable
     {

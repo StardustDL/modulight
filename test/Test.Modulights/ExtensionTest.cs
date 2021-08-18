@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules;
 using Modulight.Modules.Hosting;
-using System;
 
 namespace Test.Modulights
 {

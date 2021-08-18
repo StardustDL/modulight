@@ -7,7 +7,6 @@ using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
 using StardustDL.RazorComponents.MaterialDesignIcons;
-using System;
 
 namespace Delights.Modules.Hello
 {
@@ -42,7 +41,7 @@ namespace Delights.Modules.Hello
     [ModulePageRootPath("hello")]
     class MPageProvider : PageProvider
     {
-        
+
     }
 
     class Startup : ModuleStartup

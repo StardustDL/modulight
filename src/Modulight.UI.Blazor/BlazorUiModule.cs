@@ -1,6 +1,5 @@
 using Modulight.Modules;
 using Modulight.Modules.Client.RazorComponents;
-using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Services;
 using StardustDL.RazorComponents.AntDesigns;

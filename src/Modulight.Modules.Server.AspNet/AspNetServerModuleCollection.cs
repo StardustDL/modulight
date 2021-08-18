@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Modulight.Modules.Hosting;
-using System;
 
 namespace Modulight.Modules.Server.AspNet
 {

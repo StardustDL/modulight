@@ -2,9 +2,6 @@
 using Microsoft.Extensions.Options;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modulight.Modules.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Modulight.Modules.Test.Context
 {

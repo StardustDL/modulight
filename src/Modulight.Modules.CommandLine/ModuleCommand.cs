@@ -1,7 +1,5 @@
 ﻿using CliFx;
 using CliFx.Infrastructure;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Modulight.Modules.CommandLine
 {

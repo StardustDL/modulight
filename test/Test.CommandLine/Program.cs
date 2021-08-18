@@ -1,14 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Modulight.Modules.Hosting;
-using System;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-using CliFx;
-using CliFx.Attributes;
+﻿using CliFx.Attributes;
 using CliFx.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Modulight.Modules.CommandLine;
-using System.Threading;
+using Modulight.Modules.Hosting;
 
 namespace Test.CommandLine
 {

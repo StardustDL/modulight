@@ -3,7 +3,6 @@ using Cake.Common.Tools.DotNetCore.Tool;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO.Arguments;
 using Cake.Frosting;
-using System;
 
 namespace Build
 {

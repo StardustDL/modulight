@@ -1,10 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
 
 namespace Modulight.Modules.Hosting
@@ -18,10 +15,7 @@ namespace Modulight.Modules.Hosting
         /// Create a defualt module host builder.
         /// </summary>
         /// <returns></returns>
-        public static IModuleHostBuilder CreateDefaultBuilder()
-        {
-            return new DefaultModuleHostBuilder();
-        }
+        public static IModuleHostBuilder CreateDefaultBuilder() => new DefaultModuleHostBuilder();
     }
 
     /// <summary>

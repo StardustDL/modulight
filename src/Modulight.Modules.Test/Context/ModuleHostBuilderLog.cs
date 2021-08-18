@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Modulight.Modules.Test.Context
+﻿namespace Modulight.Modules.Test.Context
 {
     public record ModuleHostBuilderLog
     {

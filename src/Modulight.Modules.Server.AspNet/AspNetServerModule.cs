@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Hosting;
-using System;
 
 namespace Modulight.Modules.Server.AspNet
 {

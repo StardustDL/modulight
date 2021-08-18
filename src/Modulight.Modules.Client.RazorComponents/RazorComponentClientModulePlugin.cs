@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Modulight.Modules.Hosting;
-using System;
 
 namespace Modulight.Modules.Client.RazorComponents
 {

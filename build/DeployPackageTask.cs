@@ -5,9 +5,6 @@ using Cake.Common.Tools.DotNetCore.NuGet.Push;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Frosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Build
 {
@@ -83,19 +80,19 @@ namespace Build
 
         readonly List<string> ModulightPackages = new()
         {
-                    "Modulight.Modules.Core",
-                    "Modulight.Modules.Hosting",
-                    "Modulight.Modules.CommandLine",
-                    "Modulight.Modules.Client.RazorComponents",
-                    "Modulight.Modules.Server.AspNet",
-                    "Modulight.Modules.Server.GraphQL",
-                };
+            "Modulight.Modules.Core",
+            "Modulight.Modules.Hosting",
+            "Modulight.Modules.CommandLine",
+            "Modulight.Modules.Client.RazorComponents",
+            "Modulight.Modules.Server.AspNet",
+            "Modulight.Modules.Server.GraphQL",
+        };
 
         readonly List<string> UIPackages = new()
         {
-                    "Modulight.UI.Blazor",
-                    "Modulight.UI.Blazor.Hosting",
-                };
+            "Modulight.UI.Blazor",
+            "Modulight.UI.Blazor.Hosting",
+        };
 
         void DeployTo(BuildContext context, DotNetCoreNuGetPushSettings settings)
         {

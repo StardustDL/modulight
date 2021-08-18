@@ -22,10 +22,7 @@ namespace Modulight.Modules.Hosting
         /// </summary>
         /// <param name="modules"></param>
         /// <returns></returns>
-        public static IModuleHostBuilder UseAspNetServerModules(this IModuleHostBuilder modules)
-        {
-            return modules.AddModule<AspnetServerCoreModule>();
-        }
+        public static IModuleHostBuilder UseAspNetServerModules(this IModuleHostBuilder modules) => modules.AddModule<AspnetServerCoreModule>();
     }
 }
 

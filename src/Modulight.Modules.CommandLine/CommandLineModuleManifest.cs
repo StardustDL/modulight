@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Modulight.Modules.CommandLine
+﻿namespace Modulight.Modules.CommandLine
 {
     /// <summary>
     /// Manifest for <see cref="CommandLineModule"/>.

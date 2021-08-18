@@ -4,11 +4,7 @@ using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Hosting;
 using Modulight.UI.Blazor.Components;
 using Modulight.UI.Blazor.Layouts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace Modulight.UI.Blazor.Services
 {

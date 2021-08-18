@@ -1,9 +1,4 @@
-﻿using Modulight.Modules.CommandLine;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Modulight.Modules.CommandLine
+﻿namespace Modulight.Modules.CommandLine
 {
     /// <summary>
     /// Specifies the interface to build a module manifest.

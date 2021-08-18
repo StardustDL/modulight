@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Modulight.Modules.Client.RazorComponents;
 using Modulight.Modules.Client.RazorComponents.UI;
 using Modulight.Modules.Hosting;
-using System;
 using System.Reflection;
 
 namespace Modulight.Modules.Hosting
@@ -187,3 +186,4 @@ namespace Modulight.Modules
         }
     }
 }
+
