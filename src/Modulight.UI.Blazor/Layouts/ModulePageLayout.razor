@@ -4,7 +4,8 @@
 @inject IModuleHost ModuleHost
 
 <PageParent>
-    <Microsoft.AspNetCore.Components.Web.Extensions.Head.Title Value="@($"{context.Title} - {context.Module?.Manifest.DisplayName} - {UIProvider.SiteInfo.Name}")"></Microsoft.AspNetCore.Components.Web.Extensions.Head.Title>
+   
+    <PageTitle>@($"{context.Title} - {context.Module?.Manifest.DisplayName} - {UIProvider.SiteInfo.Name}")</PageTitle>
 
     <PageHeader>
         <PageHeaderTitle>

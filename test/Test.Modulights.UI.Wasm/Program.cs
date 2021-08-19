@@ -1,4 +1,5 @@
 using Delights.Modules.Hello;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Modulight.Modules;
 using Modulight.Modules.Client.RazorComponents;
@@ -29,6 +30,8 @@ namespace Test.Modulights.UI.Wasm
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            builder.ConfigureBlazorUI();
+            
             builder.RootComponents.Add<Modulight.UI.Blazor.App>("app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
@@ -36,8 +39,8 @@ namespace Test.Modulights.UI.Wasm
             builder.Services.AddModules(builder =>
             {
                 builder.UseRazorComponentClientModules().AddBlazorUI<TestBlazorUIProvider>((o, sp) => o.RenderUIResources = true)
-                    .AddModule<TestModule>()
-                    .AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001/graphql");
+                    .AddModule<TestModule>();
+                    //.AddHelloModule((o, _) => o.GraphQLEndpoint = "https://localhost:5001/graphql");
             });
 
             await builder.Build().RunAsyncWithModules();

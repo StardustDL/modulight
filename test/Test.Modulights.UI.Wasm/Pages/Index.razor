@@ -3,9 +3,11 @@
 
 @inject AntDesign.MessageService MessageService
 
+<PageInfo Title="Home Page"/>
+
 <h3>Index</h3>
 
-@code { 
+@code {
     protected override async Task OnInitializedAsync()
     {
         await MessageService.Info("Test info");

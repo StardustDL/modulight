@@ -22,6 +22,8 @@ Then use the provider.
 #### In WebAssembly
 
 ```cs
+builder.ConfigureBlazorUI();
+
 builder.Services.AddModules(builder =>
 {
     builder.UseRazorComponentClientModules().AddBlazorUI<CustomBlazorUIProvider>();

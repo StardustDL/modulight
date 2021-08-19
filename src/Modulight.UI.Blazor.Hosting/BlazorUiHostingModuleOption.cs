@@ -1,4 +1,6 @@
-﻿namespace Modulight.UI.Blazor.Hosting
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace Modulight.UI.Blazor.Hosting
 {
     /// <summary>
     /// Options for Blazor UI Hosting module.
@@ -29,6 +31,24 @@
         /// Use default blazor framework files.
         /// </summary>
         public bool DefaultBlazorFrameworkFiles { get; set; } = true;
+
+        /// <summary>
+        /// Get render mode.
+        /// </summary>
+        /// <returns></returns>
+        public RenderMode GetRenderMode()
+        {
+            return this switch
+            {
+                { HostingModel: HostingModel.Server, EnablePrerendering: true } => RenderMode.ServerPrerendered,
+                { HostingModel: HostingModel.Server, EnablePrerendering: false } => RenderMode.Server,
+                { HostingModel: HostingModel.WebView, EnablePrerendering: true } => RenderMode.ServerPrerendered,
+                { HostingModel: HostingModel.WebView, EnablePrerendering: false } => RenderMode.Server,
+                { HostingModel: HostingModel.Client, EnablePrerendering: true } => RenderMode.WebAssemblyPrerendered,
+                { HostingModel: HostingModel.Client, EnablePrerendering: false } => RenderMode.WebAssembly,
+                _ => RenderMode.Static,
+            };
+        }
     }
 
     /// <summary>

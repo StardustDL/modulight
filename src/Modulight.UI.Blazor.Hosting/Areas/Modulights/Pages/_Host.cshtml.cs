@@ -16,14 +16,7 @@ namespace Modulight.UI.Blazor.Hosting.Areas.Modulights.Pages
         public HostModel(IOptions<BlazorUiHostingModuleOption> options)
         {
             Options = options.Value;
-            AppRenderMode = Options switch
-            {
-                { HostingModel: HostingModel.Server, EnablePrerendering: true } => RenderMode.ServerPrerendered,
-                { HostingModel: HostingModel.Server, EnablePrerendering: false } => RenderMode.Server,
-                { HostingModel: HostingModel.Client, EnablePrerendering: true } => RenderMode.WebAssemblyPrerendered,
-                { HostingModel: HostingModel.Client, EnablePrerendering: false } => RenderMode.WebAssembly,
-                _ => RenderMode.Static,
-            };
+            AppRenderMode = Options.GetRenderMode();
         }
 
         /// <summary>
