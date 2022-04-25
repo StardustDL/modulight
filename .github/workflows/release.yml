@@ -44,7 +44,7 @@ jobs:
         name: artifacts
         path: ./dist
     - name: Deploy documents
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: JamesIves/github-pages-deploy-action@v4.3.2
       with:
         token: ${{ secrets.PA_TOKEN }}
         branch: gh-pages
